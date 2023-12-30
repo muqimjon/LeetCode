@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D70E4901-4BA1-4918-951D-A558078D08A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Easy", "Easy", "{A9A3D927-062E-483A-B67E-DB9083E7BD1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays.ConsoleApp", "src\Easy\Arrays.ConsoleApp\Arrays.ConsoleApp.csproj", "{ADFC8AEB-0412-4328-93AA-C79CF37D79F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADFC8AEB-0412-4328-93AA-C79CF37D79F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFC8AEB-0412-4328-93AA-C79CF37D79F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFC8AEB-0412-4328-93AA-C79CF37D79F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFC8AEB-0412-4328-93AA-C79CF37D79F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9A3D927-062E-483A-B67E-DB9083E7BD1A} = {D70E4901-4BA1-4918-951D-A558078D08A0}
+		{ADFC8AEB-0412-4328-93AA-C79CF37D79F6} = {A9A3D927-062E-483A-B67E-DB9083E7BD1A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A13F742E-1DD2-4827-B3AA-0B8718C76EEF}
+	EndGlobalSection
+EndGlobal
