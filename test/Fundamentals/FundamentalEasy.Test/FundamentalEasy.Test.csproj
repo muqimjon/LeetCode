@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Fundamentals\Easy.ConsoleApp\Easy.ConsoleApp.csproj" />
+    <ProjectReference Include="..\..\..\src\Fundamentals\Easy\Easy.csproj" />
   </ItemGroup>
 
 </Project>
