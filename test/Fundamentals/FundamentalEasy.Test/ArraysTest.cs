@@ -36,5 +36,18 @@ public class ArraysTest
     }
     #endregion
 
+    #region 349. Intersection of Two Arrays
+    [Theory]
+    [InlineData(new[] { 1, 2, 2, 1 }, new[] { 2, 2 }, new[] { 2 })]
+    [InlineData(new[] { 9, 4, 9, 8, 4 }, new[] { 4, 9, 5 }, new[] { 9, 4 })]
+    [InlineData(new[] { 1, 2, 3 }, new[] { 4, 5, 6 }, new int[] { })]
+    public void Intersection_ShouldReturnCorrectResult(int[] nums1, int[] nums2, int[] expected)
+    {
+        // Act
+        var result = Solution.Intersection(nums1, nums2);
 
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
