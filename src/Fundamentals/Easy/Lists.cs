@@ -22,4 +22,36 @@ public class Lists
         return reversed == original;
     }
     #endregion
+
+    #region 13. Roman to Integer
+    /// <summary>
+    /// 13. Roman to Integer
+    /// </summary>
+    /// <param name="s"></param>
+    /// <returns>Integer</returns>
+    /// <time>61 ms</time>
+    /// <space>48.73 MB</space>
+    public int RomanToInt(string s)
+    {
+        Dictionary<char, int> numbers = new Dictionary<char, int>
+        {
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+        };
+
+        int result = 0;
+        for (int i = 0; i < s.Length; i++)
+            if (i < s.Length - 1 && numbers[s[i]] < numbers[s[i + 1]])
+                result -= numbers[s[i]];
+            else
+                result += numbers[s[i]];
+
+        return result;
+    }
+    #endregion
 }
