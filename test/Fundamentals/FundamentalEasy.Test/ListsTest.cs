@@ -41,4 +41,23 @@ public class ListsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 14. Longest Common Prefix
+    [Theory]
+    [InlineData(new[] { "flower", "flow", "flight" }, "fl")]
+    [InlineData(new[] { "dog", "racecar", "car" }, "")]
+    [InlineData(new[] { "apple", "apricot", "apology" }, "ap")]
+    [InlineData(new[] { "hello", "hell", "helicopter" }, "hel")]
+    [InlineData(new[] { "test" }, "test")]
+    [InlineData(new[] { "a" }, "a")] // Failed
+    [InlineData(new[] { "ab", "a" }, "a")] // Failed
+    public void LongestCommonPrefix_ShouldReturnCorrectResult(string[] strs, string expected)
+    {
+        // Act
+        var result = Solution.LongestCommonPrefix(strs);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

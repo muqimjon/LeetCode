@@ -54,4 +54,30 @@ public class Lists
         return result;
     }
     #endregion
+
+    #region 14. Longest Common Prefix
+    /// <summary>
+    /// 14. Longest Common Prefix 1
+    /// </summary>
+    /// <param name="words"></param>
+    /// <returns>string</returns>
+    /// <time>77 ms</time>
+    /// <space>41.50 MB</space>
+    public string LongestCommonPrefix(string[] words)
+    {
+        if (words.Length == 0)
+            return "";
+
+        int commonLength = words.Min(w => w.Length);
+        for (int i = 0; i < commonLength; i++)
+        {
+            char currentChar = words[0][i];
+
+            if (words.Any(w => w[i] != currentChar))
+                return words[0][0..i];
+        }
+
+        return words[0][0..commonLength];
+    }
+    #endregion
 }
