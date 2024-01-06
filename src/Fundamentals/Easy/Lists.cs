@@ -80,4 +80,25 @@ public class Lists
         return words[0][0..commonLength];
     }
     #endregion
+
+    #region 27. Remove Element
+    /// <summary>
+    /// 27. Remove Element
+    /// </summary>
+    /// <param name="nums">Integer array</param>
+    /// <param name="val">Value to remove</param>
+    /// <returns>Number of elements in nums which are not equal to val</returns>
+    /// <time>Runtime: O(n) [108 ms]</time>
+    /// <space>Memory: O(1) [45.41 MB]</space>
+    public int RemoveElement(int[] nums, int val)
+    {
+        var filteredList = nums.Where(i => i != val).ToList();
+        var counter = 0;
+
+        for (; counter < filteredList.Count; ++counter)
+            nums[counter] = filteredList[counter];
+
+        return counter;
+    }
+    #endregion
 }
