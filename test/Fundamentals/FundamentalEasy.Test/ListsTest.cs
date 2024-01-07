@@ -79,4 +79,38 @@ public class ListsTest
         Assert.Equal(expectedArray, nums.Take(expectedLength));
     }
     #endregion
+
+    #region 28. Find the Index of the First Occurrence in a String Tests
+    [Theory]
+    [InlineData("sadbutsad", "sad", 0)]
+    [InlineData("leetcode", "leeto", -1)]
+    [InlineData("hello", "ll", 2)]
+    [InlineData("abc", "", 0)]
+    [InlineData("abc", "d", -1)]
+    [InlineData("mississippi", "issip", 4)]
+    public void StrStr_ShouldReturnCorrectIndex(string haystack, string needle, int expectedIndex)
+    {
+        // Act
+        int resultIndex = Solution.StrStr(haystack, needle);
+
+        // Assert
+        Assert.Equal(expectedIndex, resultIndex);
+    }
+
+    [Theory]
+    [InlineData("anything", "", 0)]
+    [InlineData("apple", "le", 3)]
+    [InlineData("hello", "z", -1)]
+    [InlineData("abc", "abc", 0)]
+    [InlineData("abc", "d", -1)]
+    [InlineData("mississippi", "issip", 4)]
+    public void StrStr2_ShouldReturnCorrectIndex(string haystack, string needle, int expectedIndex)
+    {
+        // Act
+        int resultIndex = Solution.StrStr2(haystack, needle);
+
+        // Assert
+        Assert.Equal(expectedIndex, resultIndex);
+    }
+    #endregion
 }
