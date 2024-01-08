@@ -1,26 +1,9 @@
 ﻿namespace FundamentalEasy.Test;
 
-public class ListsTest
+public class StringsTest
 {
     // Arrange
-    private readonly Lists Solution = new();
-
-    #region 9. Palindrome Number
-    [Theory]
-    [InlineData(121, true)]
-    [InlineData(-121, false)]
-    [InlineData(10, false)]
-    [InlineData(12321, true)]
-    [InlineData(12345, false)]
-    public void IsPalindrome_ShouldReturnCorrectResult(int x, bool expected)
-    {
-        // Act
-        var result = Solution.IsPalindrome(x);
-
-        // Assert
-        Assert.Equal(expected, result);
-    }
-    #endregion
+    private readonly Strings Solution = new();
 
     #region 13. Roman to Integer
     [Theory]
@@ -61,25 +44,6 @@ public class ListsTest
     }
     #endregion
 
-    #region 27. Remove Element Tests
-    [Theory]
-    [InlineData(new[] { 3, 2, 2, 3 }, 3, 2, new[] { 2, 2 })]
-    [InlineData(new[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2, 5, new[] { 0, 1, 3, 0, 4 })]
-    [InlineData(new[] { 5, 5, 5, 5, 5 }, 5, 0, new int[] { })]
-    [InlineData(new int[] { }, 10, 0, new int[] { })]
-    [InlineData(new[] { 1, 2, 3, 4, 5 }, 6, 5, new[] { 1, 2, 3, 4, 5 })]
-    [InlineData(new[] { 1, 1, 1, 1, 1 }, 1, 0, new int[] { })]
-    public void RemoveElement_ShouldReturnCorrectResult(int[] nums, int val, int expectedLength, int[] expectedArray)
-    {
-        // Act
-        int resultLength = Solution.RemoveElement(nums, val);
-
-        // Assert
-        Assert.Equal(expectedLength, resultLength);
-        Assert.Equal(expectedArray, nums.Take(expectedLength));
-    }
-    #endregion
-
     #region 28. Find the Index of the First Occurrence in a String Tests
     [Theory]
     [InlineData("sadbutsad", "sad", 0)]
@@ -111,6 +75,25 @@ public class ListsTest
 
         // Assert
         Assert.Equal(expectedIndex, resultIndex);
+    }
+    #endregion
+
+    #region 709. To Lower Case Tests
+    [Theory]
+    [InlineData("Hello", "hello")]
+    [InlineData("here", "here")]
+    [InlineData("LOVELY", "lovely")]
+    [InlineData("12345", "12345")]
+    [InlineData("", "")]
+    [InlineData("aBCdEf", "abcdef")]
+    [InlineData("PrintableASCII", "printableascii")]
+    public void ToLowerCase_ShouldReturnCorrectResult(string s, string expected)
+    {
+        // Act
+        string result = Solution.ToLowerCase(s);
+
+        // Assert
+        Assert.Equal(expected, result);
     }
     #endregion
 }

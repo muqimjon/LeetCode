@@ -40,6 +40,34 @@ public class Arrays
     }
     #endregion
 
+    #region 27. Remove Element
+    /// <summary>
+    /// 27. Remove Element
+    /// </summary>
+    /// <param name="nums">Integer array</param>
+    /// <param name="val">Value to remove</param>
+    /// <returns>Number of elements in nums which are not equal to val</returns>
+    /// <time>Runtime: O(n) - Linear time complexity</time>
+    /// <space>Memory: O(1) - Constant space complexity</space>
+    public int RemoveElement(int[] nums, int val)
+    {
+        // Create a filtered list without the specified value
+        var filteredList = nums.Where(i => i != val).ToList();
+
+        // Initialize a counter for the elements without the specified value
+        var counter = 0;
+
+        // Iterate through the filtered list and update the original array
+        for (; counter < filteredList.Count; ++counter)
+        {
+            nums[counter] = filteredList[counter];
+        }
+
+        // Return the number of elements without the specified value
+        return counter;
+    }
+    #endregion
+
     #region 349. Intersection of Two Arrays
     /// <summary>
     /// 349. Intersection of Two Arrays

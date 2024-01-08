@@ -1,35 +1,7 @@
 ﻿namespace Easy;
 
-public class Lists
+public class Strings
 {
-    #region 9. Palindrome Number
-    /// <summary>
-    /// 9. Palindrome Number
-    /// </summary>
-    /// <param name="x">Integer to check for palindrome</param>
-    /// <returns>True if the integer is a palindrome, otherwise false</returns>
-    /// <time>Runtime: O(log10(x)) - Time complexity logarithmic with respect to the input size</time>
-    /// <space>Memory: O(1) - Constant space complexity, as only a few variables are used</space>
-    public bool IsPalindrome(int x)
-    {
-        // Variable to store the reversed integer
-        int reversed = 0;
-
-        // Variable to store the original integer
-        int original = x;
-
-        // Reverse the digits of the integer
-        while (x > 0)
-        {
-            reversed = reversed * 10 + x % 10;
-            x /= 10;
-        }
-
-        // Check if the reversed integer is equal to the original integer
-        return reversed == original;
-    }
-    #endregion
-
     #region 13. Roman to Integer
     /// <summary>
     /// 13. Roman to Integer
@@ -104,34 +76,6 @@ public class Lists
     }
     #endregion
 
-    #region 27. Remove Element
-    /// <summary>
-    /// 27. Remove Element
-    /// </summary>
-    /// <param name="nums">Integer array</param>
-    /// <param name="val">Value to remove</param>
-    /// <returns>Number of elements in nums which are not equal to val</returns>
-    /// <time>Runtime: O(n) - Linear time complexity</time>
-    /// <space>Memory: O(1) - Constant space complexity</space>
-    public int RemoveElement(int[] nums, int val)
-    {
-        // Create a filtered list without the specified value
-        var filteredList = nums.Where(i => i != val).ToList();
-
-        // Initialize a counter for the elements without the specified value
-        var counter = 0;
-
-        // Iterate through the filtered list and update the original array
-        for (; counter < filteredList.Count; ++counter)
-        {
-            nums[counter] = filteredList[counter];
-        }
-
-        // Return the number of elements without the specified value
-        return counter;
-    }
-    #endregion
-
     #region 28. Find the Index of the First Occurrence in a String
     /// <summary>
     /// 28. Find the Index of the First Occurrence in a String
@@ -196,5 +140,20 @@ public class Lists
         }
         return -1;
     }
-    #endregion  
+    #endregion
+
+    #region 709. To Lower Case
+    /// <summary>
+    /// 709. To Lower Case
+    /// Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The string after converting every uppercase letter to lowercase.</returns>
+    /// <time>Runtime: O(n) - Linear time complexity</time>
+    /// <space>Memory: O(n) - Linear space complexity</space>
+    public string ToLowerCase(string s)
+        => new(s.Select(c 
+            => char.IsUpper(c) ? (char)(c + 32) : c)
+            .ToArray());
+    #endregion
 }
