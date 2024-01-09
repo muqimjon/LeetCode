@@ -96,4 +96,20 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 58. Length of Last Word
+    [Theory]
+    [InlineData("Hello World", 5)]
+    [InlineData("   fly me   to   the moon  ", 4)]
+    [InlineData("luffy is still joyboy", 6)]
+    [InlineData("a", 1)]
+    public void LengthOfLastWord_ShouldReturnCorrectLength(string s, int expectedLength)
+    {
+        // Act
+        int resultLength = Solution.LengthOfLastWord(s);
+
+        // Assert
+        Assert.Equal(expectedLength, resultLength);
+    }
+    #endregion
 }

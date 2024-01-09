@@ -156,4 +156,17 @@ public class Strings
             => char.IsUpper(c) ? (char)(c + 32) : c)
             .ToArray());
     #endregion
+
+    #region 58. Length of Last Word
+    /// <summary>
+    /// 58. Length of Last Word
+    /// Returns the length of the last word in the given string, where a word is a substring of non-space characters.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The length of the last word in the string.</returns>
+    /// <time>Runtime: O(n) - Linear time complexity</time>
+    /// <space>Memory: O(n) - Linear space complexity</space>
+    public int LengthOfLastWord(string s)
+        => s.Split().Last(p => p.Length > 0).Length;
+    #endregion
 }
