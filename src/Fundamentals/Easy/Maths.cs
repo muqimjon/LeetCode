@@ -29,4 +29,28 @@ public class Maths
         return reversed == original;
     }
     #endregion
+
+    #region 70. Climbing Stairs
+    /// <summary>
+    /// Calculates the number of distinct ways to climb a staircase with n steps using dynamic programming.
+    /// </summary>
+    /// <param name="n">The number of steps in the staircase.</param>
+    /// <returns>The number of distinct ways to climb to the top.</returns>
+    /// <time>Runtime: O(n) - Linear time complexity</time>
+    /// <space>Memory: O(n) - Linear space complexity</space>
+    public int ClimbStairs(int n)
+        => Fibonacci(n + 1);
+
+    private Dictionary<int, int> memo = new Dictionary<int, int>();
+
+    private int Fibonacci(int n)
+    {
+        if (memo.ContainsKey(n))
+            return memo[n];
+
+        int result = (n <= 1) ? n : Fibonacci(n - 1) + Fibonacci(n - 2);
+        memo[n] = result;
+        return result;
+    }
+    #endregion
 }

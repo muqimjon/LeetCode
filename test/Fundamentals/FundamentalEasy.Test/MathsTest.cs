@@ -21,4 +21,23 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 70. Climbing Stairs
+    [Theory]
+    [InlineData(2, 2)]
+    [InlineData(3, 3)]
+    [InlineData(4, 5)]
+    [InlineData(5, 8)]
+    [InlineData(6, 13)]
+    [InlineData(43, 701408733)]
+    [InlineData(45, 1836311903)]
+    public void ClimbStairs_ShouldReturnCorrectResult(int n, int expected)
+    {
+        // Act
+        int result = Solution.ClimbStairs(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
