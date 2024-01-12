@@ -80,4 +80,28 @@ public class Arrays
                 .Distinct()
                 .ToArray();
     #endregion
+
+    #region 88. Merge Sorted Array
+    /// <summary>
+    /// Merges two sorted arrays in non-decreasing order.
+    /// </summary>
+    /// <param name="nums1">First sorted array (length = m + n).</param>
+    /// <param name="m">Number of elements in nums1.</param>
+    /// <param name="nums2">Second sorted array (length = n).</param>
+    /// <param name="n">Number of elements in nums2.</param>
+    /// <time>Runtime: O(m + n)</time>
+    /// <space>Memory: O(1)</space>
+    public void Merge(int[] nums1, int m, int[] nums2, int n)
+    {
+        int k = m + n - 1;
+        m--;
+        n--;
+
+        while (m >= 0 && n >= 0)
+            nums1[k--] = (nums1[m] >= nums2[n]) ? nums1[m--] : nums2[n--];
+
+        while (n >= 0)
+            nums1[k--] = nums2[n--];
+    }
+    #endregion
 }
