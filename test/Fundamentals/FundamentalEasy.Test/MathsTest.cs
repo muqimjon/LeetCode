@@ -40,4 +40,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 168. Excel Sheet Column Title
+    [Theory]
+    [InlineData(1, "A")]
+    [InlineData(28, "AB")]
+    [InlineData(701, "ZY")]
+    public void ConvertToTitle_ShouldReturnCorrectResult(int columnNumber, string expected)
+    {
+        // Act
+        var result = Solution.ConvertToTitle(columnNumber);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

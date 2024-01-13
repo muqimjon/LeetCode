@@ -1,4 +1,6 @@
-﻿namespace Easy;
+﻿using System.Text;
+
+namespace Easy;
 
 public class Maths
 {
@@ -51,6 +53,26 @@ public class Maths
         int result = (n <= 1) ? n : Fibonacci(n - 1) + Fibonacci(n - 2);
         memo[n] = result;
         return result;
+    }
+    #endregion
+
+    #region 171. Excel Sheet Column Title
+    /// <summary>
+    /// Converts an Excel column number to its corresponding title.
+    /// </summary>
+    /// <param name="columnNumber">The column number to convert.</param>
+    /// <returns>The Excel column title.</returns>
+    /// <time>Time complexity: O(log(n))</time>
+    /// <space>Space complexity: O(log(n))</space>
+    public string ConvertToTitle(int columnNumber)
+    {
+        StringBuilder result = new();
+
+        // Iterate over the column number, adjusting to a 0-based index, and convert each remainder to a character ('A' + remainder)
+        for (; columnNumber > 0; columnNumber /= 26)
+            result.Insert(0, (char)('A' + --columnNumber % 26));
+
+        return result.ToString();
     }
     #endregion
 }
