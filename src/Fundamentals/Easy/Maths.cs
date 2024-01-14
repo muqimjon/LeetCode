@@ -75,4 +75,24 @@ public class Maths
         return result.ToString();
     }
     #endregion
+
+    #region 190. Reverse Bits
+    /// <summary>
+    /// Reverses the bits of a 32-bit unsigned integer.
+    /// </summary>
+    /// <param name="n">The input unsigned integer.</param>
+    /// <returns>The result after reversing the bits.</returns>
+    /// <time>Time complexity: O(1)</time>
+    /// <space>Space complexity: O(1)</space>
+    public uint ReverseBits(uint n)
+    {
+        uint result = 0;
+
+        // Iterate through each bit of the input
+        for (int bits = 32; bits-- > 0; n >>= 1)
+            result = (result << 1) | (n & 1);
+
+        return result;
+    }
+    #endregion  
 }

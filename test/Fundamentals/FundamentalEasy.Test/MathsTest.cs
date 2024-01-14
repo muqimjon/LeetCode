@@ -55,4 +55,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 190. Reverse Bits
+    [Theory]
+    [InlineData(0b00000010100101000001111010011100U, 964176192U)]
+    [InlineData(0b11111111111111111111111111111101U, 3221225471U)]
+    public void ReverseBits_ShouldReturnCorrectResult(uint n, uint expected)
+    {
+        // Act
+        uint result = Solution.ReverseBits(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
