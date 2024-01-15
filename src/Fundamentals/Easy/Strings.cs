@@ -1,4 +1,6 @@
-﻿namespace Easy;
+﻿using System.Text;
+
+namespace Easy;
 
 public class Strings
 {
@@ -169,4 +171,32 @@ public class Strings
     public int LengthOfLastWord(string s)
         => s.Split().Last(p => p.Length > 0).Length;
     #endregion
+
+    #region 1768. Merge Strings Alternately
+    /// <summary>
+    /// Merges strings by alternating letters, starting with word1, and appends extra letters from the longer string.
+    /// </summary>
+    /// <param name="word1">The first input string.</param>
+    /// <param name="word2">The second input string.</param>
+    /// <returns>The merged string.</returns>
+    /// <time>Runtime: O(N,M)</time>
+    /// <space>Memory: O(N + M)</space>
+    public string MergeAlternately(string word1, string word2)
+    {
+        var word = new StringBuilder();
+        var length = Math.Min(word1.Length, word2.Length);
+        for (int i = 0; i < length; ++i)
+        {
+            word.Append(word1[i]);
+            word.Append(word2[i]);
+        }
+
+        word.Append(word1.Length > length ?
+            word1.Substring(length) :
+            word2.Substring(length)
+        ).ToString();
+
+        return word.ToString();
+    }
+    #endregion  
 }

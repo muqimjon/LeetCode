@@ -112,4 +112,21 @@ public class StringsTest
         Assert.Equal(expectedLength, resultLength);
     }
     #endregion
+
+    #region 1768. Merge Strings Alternately
+    [Theory]
+    [InlineData("abc", "", "abc")]
+    [InlineData("ab", "pqrs", "apbqrs")]
+    [InlineData("ab", "pqrsdsds", "apbqrsdsds")]
+    [InlineData("abcd", "pq", "apbqcd")]
+    [InlineData("abcdddd", "pq", "apbqcdddd")]
+    public void MergeAlternately_ShouldReturnCorrectResult(string word1, string word2, string expected)
+    {
+        // Act
+        string result = Solution.MergeAlternately(word1, word2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
