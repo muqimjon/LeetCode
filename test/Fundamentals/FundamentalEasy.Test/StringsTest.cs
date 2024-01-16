@@ -129,4 +129,20 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 125. Valid Palindrome
+    [Theory]
+    [InlineData("A man, a plan, a canal: Panama", true)]
+    [InlineData("race a car", false)]
+    [InlineData(" ", true)]
+    public void IsPalindrome_ShouldReturnCorrectResult(string input, bool expected)
+    {
+        // Act
+        bool result = Solution.IsPalindrome(input);
+
+        Console.WriteLine(result);
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

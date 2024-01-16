@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Easy;
 
@@ -198,5 +199,21 @@ public class Strings
 
         return word.ToString();
     }
-    #endregion  
+    #endregion
+
+    #region 125. Validating Polindrome
+    /// <summary>
+    /// Determines if a given string is a palindrome after removing non-alphanumeric characters and converting to lowercase.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>True if the string is a palindrome, false otherwise.</returns>
+    /// <time>Runtime: O(n)</time>
+    /// <space>Memory: O(n)</space>
+    public bool IsPalindrome(string s)
+    {
+        s = new string(s.Where(char.IsLetterOrDigit).ToArray()).ToLower();
+        return s == new string(s.Reverse().ToArray());
+    }
+
+    #endregion
 }
