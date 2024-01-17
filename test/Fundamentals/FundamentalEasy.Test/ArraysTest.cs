@@ -85,4 +85,19 @@ public class ArraysTest
         Assert.Equal(expected, nums1);
     }
     #endregion
+
+    #region 1207. Unique Number of Occurrences
+    [Theory]
+    [InlineData(new[] { 1, 2, 2, 1, 1, 3 }, true)]
+    [InlineData(new[] { 1, 2 }, false)]
+    [InlineData(new[] { -3, 0, 1, -3, 1, 1, 1, -3, 10, 0 }, true)]
+    public void UniqueOccurrencesCheck_ShouldReturnCorrectResult(int[] arr, bool expected)
+    {
+        // Act
+        var result = Solution.UniqueOccurrences(arr);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
