@@ -132,4 +132,16 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 1672. Richest Customer Wealth
+    /// <summary>
+    /// Calculates the wealth of the richest customer based on the given grid of bank accounts.
+    /// </summary>
+    /// <param name="accounts">m x n grid representing customer wealth in each bank.</param>
+    /// <returns>Wealth of the richest customer.</returns>
+    /// <time>Runtime: O(m * n)</time>
+    /// <space>Memory: O(1)</space>
+    public int MaximumWealth(int[][] accounts)
+        => accounts.Select(e => e.Sum()).Max();
+    #endregion
 }

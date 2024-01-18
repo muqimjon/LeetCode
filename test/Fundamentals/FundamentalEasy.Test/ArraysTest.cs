@@ -100,4 +100,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1672. Richest Customer Wealth
+    [Theory]
+    [InlineData(6, new[] { 1, 2, 3 }, new[] { 3, 2, 1 })]
+    [InlineData(10, new[] { 1, 5 }, new[] { 7, 3 }, new[] { 3, 5 })]
+    [InlineData(17, new int[] { 2, 8, 7 }, new[] { 7, 1, 3 }, new[] { 1, 9, 5 })]
+    public void MaximumWealth_ShouldReturnCorrectResult(int expected, params int[][] accounts)
+    {
+        // Act
+        var result = Solution.MaximumWealth(accounts);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
