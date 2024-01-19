@@ -1,4 +1,6 @@
-﻿namespace FundamentalEasy.Test;
+﻿using Easy;
+
+namespace FundamentalEasy.Test;
 
 public class MathsTest
 {
