@@ -20,4 +20,23 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3. Longest Substring Without Repeating Characters
+    [Theory]
+    [InlineData("abcabcbb", 3)]
+    [InlineData("bbbbb", 1)]
+    [InlineData("pwwkew", 3)]
+    [InlineData("", 0)]
+    [InlineData(" ", 1)]
+    [InlineData("aab", 2)]
+    [InlineData("dvdf", 3)]
+    public void LengthOfLongestSubstring_ShouldReturnCorrectResult(string s, int expected)
+    {
+        // Act
+        var result = Solution.LengthOfLongestSubstring(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

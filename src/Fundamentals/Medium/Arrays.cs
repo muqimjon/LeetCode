@@ -1,4 +1,5 @@
-﻿namespace Medium;
+﻿
+namespace Medium;
 
 public class Arrays
 {
@@ -32,20 +33,47 @@ public class Arrays
     //    // Iterate through the matrix starting from the second row.
     //    for (int r = 1; r < rows; r++)
     //    {
-    //        for (int c = 0; c < cols; c++)
+    //        for (int length = 0; length < cols; length++)
     //        {
     //            // Calculate the values from the upper row (left, middle, right).
-    //            int left = (c > 0) ? matrix[r - 1][c - 1] : int.MaxValue;
-    //            int middle = matrix[r - 1][c];
-    //            int right = (c < cols - 1) ? matrix[r - 1][c + 1] : int.MaxValue;
+    //            int left = (length > 0) ? matrix[r - 1][length - 1] : int.MaxValue;
+    //            int middle = matrix[r - 1][length];
+    //            int right = (length < cols - 1) ? matrix[r - 1][length + 1] : int.MaxValue;
 
     //            // Update the current element with the minimum sum.
-    //            matrix[r][c] += Math.Min(left, Math.Min(middle, right));
+    //            matrix[r][length] += Math.Min(left, Math.Min(middle, right));
     //        }
     //    }
 
     //    // Return the minimum sum from the last row.
     //    return matrix[rows - 1].Min();
     //}
+    #endregion
+
+    #region 3. Longest Substring Without Repeating Characters
+    /// <summary>
+    /// Finds the length of the longest substring without repeating characters.
+    /// </summary>
+    /// <param name="s">Input string.</param>
+    /// <returns>Length of the longest substring without repeating characters.</returns>
+    /// <time>Runtime: O(n^2)</time>
+    /// <space>Memory: O(k)</space>
+    public int LengthOfLongestSubstring(string s)
+    {
+        int longestLength = 0;
+        for (int i = 0; i < s.Length; ++i)
+        {
+            HashSet<char> set = [];
+            for (int j = i; j < s.Length; ++j)
+            {
+                if (set.Contains(s[j])) break;
+                set.Add(s[j]);
+
+                if (j - i + 1 > longestLength)
+                    longestLength = j - i + 1;
+            }
+        }
+        return longestLength;
+    }
     #endregion
 }
