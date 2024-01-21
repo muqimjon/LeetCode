@@ -39,4 +39,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 198. Uy qaroqchisi
+    [Theory]
+    [InlineData(4, new[] { 1, 2, 3, 1 })]
+    [InlineData(12, new[] { 2, 7, 9, 3, 1 })]
+    [InlineData(0, new int[] { })]
+    [InlineData(9, new[] { 9 })]
+    [InlineData(4, new[] { 2, 1, 1, 2 })]
+    public void Robbery_MaxAmountWithoutAlertingPolice(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.Rob(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

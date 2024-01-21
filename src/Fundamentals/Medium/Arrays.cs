@@ -76,4 +76,27 @@ public class Arrays
         return longestLength;
     }
     #endregion
+
+    #region 198. House Robber
+    /// <summary>
+    /// Calculates the maximum amount of money that can be robbed from houses.
+    /// </summary>
+    /// <param name="nums">An array representing the amount of money in each house.</param>
+    /// <returns>The maximum amount of money that can be robbed.</returns>
+    /// <time>Runtime: O(n)</time>
+    /// <space>Memory: O(1)</space>
+    public int Rob(int[] nums)
+    {
+        int prevMax = 0, currMax = 0;
+
+        foreach (var num in nums)
+        {
+            int temp = currMax;
+            currMax = Math.Max(prevMax + num, currMax);
+            prevMax = temp;
+        }
+
+        return currMax;
+    }
+    #endregion
 }
