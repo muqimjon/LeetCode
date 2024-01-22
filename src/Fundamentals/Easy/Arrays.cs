@@ -144,4 +144,36 @@ public class Arrays
     public int MaximumWealth(int[][] accounts)
         => accounts.Select(e => e.Sum()).Max();
     #endregion
+
+    #region 645. Set Mismatch
+    /// <summary>
+    /// Finds the duplicate and missing numbers in the given array after an error.
+    /// </summary>
+    /// <param name="nums">Input array.</param>
+    /// <returns>Array containing the duplicate and missing numbers.</returns>
+    /// <time>Runtime: O(n)</time>
+    /// <space>Memory: O(1)</space>
+    public int[] FindErrorNums(int[] nums)
+    {
+        int[] result = new int[2];
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int index = Math.Abs(nums[i]) - 1;
+            if (nums[index] > 0)
+                nums[index] = -nums[index];
+            else
+                result[0] = Math.Abs(nums[i]);
+        }
+
+        for (int i = 0; i < nums.Length; i++)
+            if (nums[i] > 0)
+            {
+                result[1] = i + 1;
+                break;
+            }
+
+        return result;
+    }
+    #endregion
 }

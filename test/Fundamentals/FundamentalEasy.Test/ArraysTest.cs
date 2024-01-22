@@ -117,4 +117,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 645. Set Mismatch
+    [Theory]
+    [InlineData(new[] { 2, 3 }, new[] { 1, 2, 2, 4 })]
+    [InlineData(new[] { 1, 2 }, new[] { 1, 1 })]
+    [InlineData(new[] { 2, 1 }, new[] { 2, 2 })]
+    public void FindErrorNums_ShouldReturnCorrectResult(int[] expected, int[] nums)
+    {
+        // Act
+        var result = Solution.FindErrorNums(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
