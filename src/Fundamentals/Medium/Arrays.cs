@@ -1,5 +1,4 @@
-﻿
-namespace Medium;
+﻿namespace Medium;
 
 public class Arrays
 {
@@ -97,6 +96,30 @@ public class Arrays
         }
 
         return currMax;
+    }
+    #endregion
+
+    #region 1239. Maximum Length of a Concatenated String with Unique Characters
+    /// <summary>
+    /// Calculates the max length of a unique-character concatenated string.
+    /// </summary>
+    /// <param name="arr">List of strings to form the concatenated string.</param>
+    /// <returns>Max length of the concatenated string.</returns>
+    /// <time>Runtime: O(2^n * m)</time>
+    /// <space>Memory: O(n * m)</space>
+    public int MaxLength(IList<string> arr)
+        => Backtrack(arr, 0, "");
+
+    private int Backtrack(IList<string> arr, int index, string current)
+    {
+        if (new HashSet<char>(current).Count != current.Length)
+            return 0;
+
+        int maxLength = current.Length;
+        for (int i = index; i < arr.Count; i++)
+            maxLength = Math.Max(maxLength, Backtrack(arr, i + 1, current + arr[i]));
+
+        return maxLength;
     }
     #endregion
 }

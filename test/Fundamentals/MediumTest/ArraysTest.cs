@@ -56,4 +56,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1239. Maximum Length of a Concatenated String with Unique Characters
+    [Theory]
+    [InlineData(4, new[] { "un", "iq", "ue" })]
+    [InlineData(6, new[] { "cha", "r", "act", "ers" })]
+    [InlineData(26, new[] { "abcdefghijklmnopqrstuvwxyz" })]
+    [InlineData(0, new string[] { })]
+    [InlineData(9, new[] { "abc", "def", "ghi" })]
+    public void MaxLength_ShouldReturnCorrectResult(int expected, string[] arr)
+    {
+        // Arrange & Act
+        var result = Solution.MaxLength(arr);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
