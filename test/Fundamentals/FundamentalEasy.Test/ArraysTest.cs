@@ -132,4 +132,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2133. Check if Every Row and Column Contains All Numbers
+    [Theory]
+    [InlineData(true, new[] { 1, 2, 3 }, new[] { 3, 1, 2 }, new[] { 2, 3, 1 })]
+    [InlineData(false, new[] { 1, 1, 1 }, new[] { 1, 2, 3 }, new[] { 1, 2, 3 })]
+    public void IsValidMatrix_ShouldReturnCorrectResult(bool expected, params int[][] matrix)
+    {
+        // Arrange & Act
+        var result = Solution.CheckValid(matrix);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

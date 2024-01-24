@@ -176,4 +176,28 @@ public class Arrays
         return result;
     }
     #endregion
+
+    #region 2133. Check if Every Row and Column Consist of the Same Element
+    /// <summary>
+    /// Checks if the given matrix is valid, where every row and column contains all integers from 1 to n.
+    /// </summary>
+    /// <param name="matrix">The matrix to check.</param>
+    /// <returns>True if the matrix is valid, otherwise false.</returns>
+    /// <time>Time Complexity: O(n^2)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public bool CheckValid(int[][] matrix)
+    {
+        for (int i = 0; i < matrix.Length; ++i)
+        {
+            if (matrix.Length != new HashSet<int>(matrix[i]).Count)
+                return false;
+
+            HashSet<int> col = [];
+            for (int j = 0; j < matrix.Length; ++j)
+                if (!col.Add(matrix[j][i]))
+                    return false;
+        }
+        return true;
+    }
+    #endregion
 }
