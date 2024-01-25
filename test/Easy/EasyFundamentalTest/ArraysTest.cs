@@ -1,6 +1,6 @@
-﻿using Fundamental;
+﻿using EasyFundamental;
 
-namespace FundamentalEasy.Test;
+namespace EasyFundamentalTest;
 
 public class ArraysTest
 {

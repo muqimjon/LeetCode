@@ -1,4 +1,4 @@
-﻿namespace Medium;
+﻿namespace MediumFundamental;
 
 public class Arrays
 {

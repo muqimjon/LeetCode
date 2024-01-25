@@ -1,4 +1,4 @@
-﻿namespace Easy;
+﻿namespace EasyFundamental;
 
 public class LinkedLists
 {
