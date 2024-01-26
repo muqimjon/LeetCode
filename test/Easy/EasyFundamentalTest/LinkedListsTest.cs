@@ -74,4 +74,22 @@ public class LinkedListsTest
         Assert.Equal(expectedArray, ConvertLinkedListToArray(result));
     }
     #endregion
+
+    [Theory]
+    [InlineData(true, new[] { 1, 2, 2, 1 })]
+    [InlineData(false, new[] { 1, 2 })]
+    [InlineData(false, new[] { 1, 0, 0 })]
+    [InlineData(true, new[] { 2, 4, 6, 4, 2 })]
+    [InlineData(false, new[] { 1, 2, 3, 4 })]
+    public void TestIsPalindrome(bool expected, int[] values)
+    {
+        // Arrange
+        ListNode head = CreateLinkedList(values);
+
+        // Act
+        bool result = Solution.IsPalindrome(head);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
 }

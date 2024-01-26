@@ -1,26 +1,11 @@
 ﻿
 
 
-
-
-
-
-
-using EasyIntermediate;
-
-var sol = new HashTables();
-
-sol.EqualFrequency("aazz");
-
-
-
-
-
+using EasyFundamental;
 
 recursive(5);
 
-
-void recursive(int n)
+static void recursive(int n)
 {
     if (n > 0)
     {
@@ -31,9 +16,23 @@ void recursive(int n)
 
 
 
+LinkedLists solution = new();
 
 
+ListNode CreateLinkedList(int[] arr)
+{
+    ListNode dummy = new(0);
+    ListNode current = dummy;
+    foreach (int val in arr)
+    {
+        current.next = new ListNode(val);
+        current = current.next;
+    }
+    return dummy.next;
+}
 
+
+solution.IsPalindrome(CreateLinkedList([1,2,5,2,1]));
 
 
 

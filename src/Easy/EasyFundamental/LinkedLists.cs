@@ -1,4 +1,6 @@
-﻿namespace EasyFundamental;
+﻿using System.Linq;
+
+namespace EasyFundamental;
 
 public class LinkedLists
 {
@@ -46,30 +48,55 @@ public class LinkedLists
     /// </summary>
     /// <param name="head">The head of the sorted linked list.</param>
     /// <returns>The head of the linked list after removing duplicates.</returns>
-    /// <time>Runtime: O(n) - Linear time complexity, where n is the number of nodes in the linked list.</time>
-    /// <space>Memory: O(1) - Constant space complexity, as no additional data structures are used.</space>
+    /// <time>Runtime: O(n)</time>
+    /// <space>Memory: O(1)</space>
     public ListNode DeleteDuplicates(ListNode head)
     {
-        // Check if the linked list is empty
         if (head is null)
             return null!;
 
-        // Create a reference to the current node
         var current = head;
 
-        // Iterate through the linked list
         while (head.next is not null)
-            // Check if the current node's value is equal to the next node's value
             if (head.val.Equals(head.next.val))
-                // Skip the next node by updating the current node's next pointer
                 head.next = head.next.next;
             else
-                // Move to the next node
                 head = head.next;
 
-        // Return the head of the modified linked list
         return current;
     }
+    #endregion
+
+    #region 234. Palindrome Linked List >>
+    /// <summary>
+    /// Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+    /// </summary>
+    /// <param name="head">The head of the singly linked list.</param>
+    /// <returns>True if the linked list is a palindrome, false otherwise.</returns>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public bool IsPalindrome(ListNode head)
+    {
+        Stack<int> stack = new();
+
+        stack.Push(head.val);
+
+        while ((head = head!.next) is not null)
+            stack.Push(head.val);
+
+        return stack.SequenceEqual(stack.Reverse());
+    }
+
+    //public bool IsPalindrome(ListNode head)
+    //{
+    //    List<int> ls = [head.val], sl = [head.val];
+    //    while ((head = head!.next) is not null)
+    //    {
+    //        ls.Insert(0, head.val);
+    //        sl.Add(head.val);
+    //    }
+    //    return ls.SequenceEqual(sl);
+    //}
     #endregion
 }
 
