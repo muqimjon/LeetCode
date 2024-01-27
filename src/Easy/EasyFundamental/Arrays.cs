@@ -200,4 +200,29 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 35. Search Insert Position
+    /// <summary>
+    /// Given a sorted array of distinct integers and a target value, return the index if the target is found.
+    /// </summary>
+    /// <param name="nums">The sorted array of distinct integers.</param>
+    /// <param name="target">The target value to search for.</param>
+    /// <returns>The index if the target is found; otherwise, the index where it would be inserted.</returns>
+    /// <time>Time Complexity: O(log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int SearchInsert(int[] nums, int target)
+    {
+        int left = 0, right = nums.Length - 1;
+
+        while (left <= right)
+        {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) return mid;
+            if (nums[mid] < target) left = mid + 1;
+            else right = mid - 1;
+        }
+
+        return left;
+    }
+    #endregion
 }

@@ -146,4 +146,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+    
+    #region 35. Search Insert Position
+    [Theory]
+    [InlineData(2, new[] { 1, 3, 5, 6 }, 5)]
+    [InlineData(1, new[] { 1, 3, 5, 6 }, 2)]
+    [InlineData(4, new[] { 1, 3, 5, 6 }, 7)]
+    [InlineData(0, new[] { 1, 3, 5, 6 }, 0)]
+    public void SearchInsert_ShouldReturnCorrectPosition(int expected, int[] nums, int target)
+    {
+        // Arrange & Act
+        var result = Solution.SearchInsert(nums, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
