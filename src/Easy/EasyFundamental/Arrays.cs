@@ -8,7 +8,7 @@ public class Arrays
     /// </summary>
     /// <param name="nums"></param>
     /// <param name="target"></param>
-    /// <returns></returns>
+    /// <link>https://leetcode.com/problems/two-sum/</link>
     public int[] TwoSum(int[] nums, int target)
     {
         Dictionary<int, int> numIndexMap = [];
@@ -28,7 +28,7 @@ public class Arrays
     /// 26. Remove Duplicates from Sorted Array
     /// </summary>
     /// <param name="nums"></param>
-    /// <returns></returns>
+    /// <link>https://leetcode.com/problems/remove-duplicates-from-sorted-array/</link>
     public int RemoveDuplicates(int[] nums)
     {
         int uniqueCount = 1;
@@ -47,6 +47,7 @@ public class Arrays
     /// <param name="nums">Integer array</param>
     /// <param name="val">Value to remove</param>
     /// <returns>Number of elements in nums which are not equal to val</returns>
+    /// <link>https://leetcode.com/problems/remove-element/</link>
     /// <time>Runtime: O(n) - Linear time complexity</time>
     /// <space>Memory: O(1) - Constant space complexity</space>
     public int RemoveElement(int[] nums, int val)
@@ -74,7 +75,9 @@ public class Arrays
     /// </summary>
     /// <param name="nums1"></param>
     /// <param name="nums2"></param>
-    /// <returns></returns>0
+    /// <link>https://leetcode.com/problems/intersection-of-two-arrays/</link>
+    /// <time>Runtime: O(n + m)</time>
+    /// <space>Memory: O(min(n, m))</space>
     public int[] Intersection(int[] nums1, int[] nums2)
         => nums1.Join(nums2, num => num, num => num, (num1, num2) => num1)
                 .Distinct()
@@ -89,6 +92,7 @@ public class Arrays
     /// <param name="m">Number of elements in nums1.</param>
     /// <param name="nums2">Second sorted array (length = n).</param>
     /// <param name="n">Number of elements in nums2.</param>
+    /// <link>https://leetcode.com/problems/merge-sorted-array/</link>
     /// <time>Runtime: O(m + n)</time>
     /// <space>Memory: O(1)</space>
     public void Merge(int[] nums1, int m, int[] nums2, int n)
@@ -109,6 +113,7 @@ public class Arrays
     /// </summary>
     /// <param name="arr">Input array of integers.</param>
     /// <returns>True if occurrences are unique, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/unique-number-of-occurrences/</link>
     /// <time>Runtime: O(n)</time>
     /// <space>Memory: O(n)</space>
     public bool UniqueOccurrences(int[] arr)
@@ -139,6 +144,7 @@ public class Arrays
     /// </summary>
     /// <param name="accounts">m x n grid representing customer wealth in each bank.</param>
     /// <returns>Wealth of the richest customer.</returns>
+    /// <link>https://leetcode.com/problems/richest-customer-wealth/</link>
     /// <time>Runtime: O(m * n)</time>
     /// <space>Memory: O(1)</space>
     public int MaximumWealth(int[][] accounts)
@@ -151,6 +157,7 @@ public class Arrays
     /// </summary>
     /// <param name="nums">Input array.</param>
     /// <returns>Array containing the duplicate and missing numbers.</returns>
+    /// <link>https://leetcode.com/problems/set-mismatch/</link>
     /// <time>Runtime: O(n)</time>
     /// <space>Memory: O(1)</space>
     public int[] FindErrorNums(int[] nums)
@@ -183,6 +190,7 @@ public class Arrays
     /// </summary>
     /// <param name="matrix">The matrix to check.</param>
     /// <returns>True if the matrix is valid, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers/</link>
     /// <time>Time Complexity: O(n^2)</time>
     /// <space>Space Complexity: O(n)</space>
     public bool CheckValid(int[][] matrix)
@@ -208,6 +216,7 @@ public class Arrays
     /// <param name="nums">The sorted array of distinct integers.</param>
     /// <param name="target">The target value to search for.</param>
     /// <returns>The index if the target is found; otherwise, the index where it would be inserted.</returns>
+    /// <link>https://leetcode.com/problems/search-insert-position/</link>
     /// <time>Time Complexity: O(log n)</time>
     /// <space>Space Complexity: O(1)</space>
     public int SearchInsert(int[] nums, int target)
