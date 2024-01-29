@@ -234,4 +234,37 @@ public class Arrays
         return left;
     }
     #endregion
+
+    #region 455. Assign Cookies
+    /// <summary>
+    /// Maximize content children with cookies and greed factors.
+    /// </summary>
+    /// <param name="g">The array of children's greed factors.</param>
+    /// <param name="s">The array of cookie sizes.</param>
+    /// <returns>The maximum number of content children.</returns>
+    /// <link>https://leetcode.com/problems/assign-cookies/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int FindContentChildren(int[] g, int[] s)
+    {
+        Array.Sort(g);
+        Array.Sort(s);
+
+        int contentChildren = 0;
+
+        for (int i = 0, j = 0; i < g.Length && j < s.Length; i++)
+        {
+            while (j < s.Length && s[j] < g[i])
+                j++;
+
+            if (j < s.Length)
+            {
+                contentChildren++;
+                j++;
+            }
+        }
+
+        return contentChildren;
+    }
+    #endregion
 }

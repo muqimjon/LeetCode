@@ -162,4 +162,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 455. Assign Cookies
+    [Theory]
+    [InlineData(1, new[] { 1, 2, 3 }, new[] { 1, 1 })]
+    [InlineData(2, new[] { 1, 2 }, new[] { 1, 2, 3 })]
+    [InlineData(3, new[] { 1, 2, 3 }, new[] { 3, 2, 1 })]
+    [InlineData(0, new[] { 5, 10, 15 }, new[] { 1, 2, 3 })]
+    [InlineData(2, new[] { 10, 9, 8, 7 }, new[] { 5, 6, 7, 8 })] // FAILED
+    public void FindContentChildren_ShouldReturnCorrectNumber(int expected, int[] g, int[] s)
+    {
+        // Arrange & Act
+        var result = Solution.FindContentChildren(g, s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
