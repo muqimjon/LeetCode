@@ -25,3 +25,13 @@ SELECT * FROM Patients
 WHERE conditions LIKE 'DIAB1%' 
 OR conditions LIKE '% DIAB1%';
 ------------------------------------------------------------------------------------
+
+-- 183. Customers Who Never Order
+-- https://leetcode.com/problems/customers-who-never-order/
+
+-- Time Complexity: O(N)
+-- Space Complexity: O(1)
+
+SELECT name Customers FROM Customers
+WHERE id NOT IN (SELECT CustomerID FROM Orders);
+------------------------------------------------------------------------------------
