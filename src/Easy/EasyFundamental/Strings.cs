@@ -216,4 +216,26 @@ public class Strings
     }
 
     #endregion
+
+    #region 1941. Check if All Characters Have Equal Number of Occurrences
+    /// <summary>
+    /// Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+    /// Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+    /// </summary>
+    /// <param name="nums">The input array consisting of 2n elements.</param>
+    /// <param name="n">The number of pairs.</param>
+    /// <returns>The array in the form [x1,y1,x2,y2,...,xn,yn].</returns>
+    /// <link>https://leetcode.com/problems/shuffle-the-array/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int[] Shuffle(int[] nums, int n)
+    {
+        var result = new int[2 * n];
+        for (int i = 0, j = 0; i < n; i++, j += 2)
+            (result[j], result[j + 1]) = (nums[i], nums[i + n]);
+
+        return result;
+    }
+
+    #endregion  
 }

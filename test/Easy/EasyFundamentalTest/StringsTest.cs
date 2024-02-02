@@ -147,4 +147,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1470. Shuffle the Array
+    [Theory]
+    [InlineData(new[] { 2, 3, 5, 4, 1, 7 }, new[] { 2, 5, 1, 3, 4, 7 }, 3)]
+    [InlineData(new[] { 1, 4, 2, 3, 3, 2, 4, 1 }, new[] { 1, 2, 3, 4, 4, 3, 2, 1 }, 4)]
+    [InlineData(new[] { 1, 2, 1, 2 }, new[] { 1, 1, 2, 2 }, 2)]
+    public void ShuffleArray_ShouldReturnCorrectResult(int[] expected, int[] nums, int n)
+    {
+        // Arrange & Act
+        var result = Solution.Shuffle(nums, n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion  
 }
