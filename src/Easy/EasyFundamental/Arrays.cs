@@ -267,4 +267,18 @@ public class Arrays
         return contentChildren;
     }
     #endregion
+
+    #region 1979. Find Greatest Common Divisor of Array
+    /// <summary>
+    /// Find the greatest common divisor of the smallest and largest numbers in the array.
+    /// </summary>
+    /// <param name="nums">The integer array.</param>
+    /// <returns>The greatest common divisor.</returns>
+    /// <link>https://leetcode.com/problems/find-greatest-common-divisor-of-array/</link>
+    /// <time>Time Complexity: O(log(minimum, maximum))</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int FindGCD(int[] nums) => CalculateGCD(nums.Min(), nums.Max());
+
+    private int CalculateGCD(int a, int b) => b == 0 ? Math.Abs(a) : CalculateGCD(b, a % b);
+    #endregion
 }

@@ -179,4 +179,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1979. Find Greatest Common Divisor of Array
+    [Theory]
+    [InlineData(2, new[] { 2, 5, 6, 9, 10 })]
+    [InlineData(1, new[] { 7, 5, 6, 8, 3 })]
+    [InlineData(3, new[] { 3, 3 })]
+    public void FindGCD_ShouldReturnCorrectNumber(int expected, int[] nums)
+    {
+        // Arrange & Act
+        var result = Solution.FindGCD(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
