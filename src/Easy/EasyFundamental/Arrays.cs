@@ -281,4 +281,33 @@ public class Arrays
 
     private int CalculateGCD(int a, int b) => b == 0 ? Math.Abs(a) : CalculateGCD(b, a % b);
     #endregion
+
+    #region 2855. Minimum Right Shifts to Sort the Array
+    /// <summary>
+    /// Returns the minimum number of right shifts required to sort the array, or -1 if it's not possible.
+    /// </summary>
+    /// <param name="nums">The list of distinct positive integers.</param>
+    /// <returns>The minimum number of right shifts or -1 if not possible.</returns>
+    /// <link>https://leetcode.com/problems/minimum-right-shifts-to-sort-the-array/</link>
+    /// <time>Time Complexity: O(n^2)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int MinimumRightShifts(IList<int> nums)
+    {
+        var sortedNums = nums.OrderBy(x => x).ToList();
+
+        for (int i = 0; i < nums.Count; i++)
+        {
+            if (nums.SequenceEqual(sortedNums))
+                return i;
+
+            int last = nums[nums.Count - 1];
+
+            for (int j = nums.Count - 1; j > 0; j--)
+                nums[j] = nums[j - 1];
+
+            nums[0] = last;
+        }
+        return -1;
+    }
+    #endregion
 }

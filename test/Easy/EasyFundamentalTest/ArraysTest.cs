@@ -194,4 +194,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2855. Minimum Right Shifts to Sort the Array
+    [Theory]
+    [InlineData(2, new[] { 3, 4, 5, 1, 2 })]
+    [InlineData(0, new[] { 1, 3, 5 })]
+    [InlineData(-1, new[] { 2, 1, 4 })]
+    public void MinRightShiftsToSort_ShouldReturnCorrectResult(int expected, int[] nums)
+    {
+        // Arrange & Act
+        var result = Solution.MinimumRightShifts(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
