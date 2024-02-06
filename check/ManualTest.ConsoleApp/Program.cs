@@ -2,6 +2,7 @@
 
 
 using EasyFundamental;
+using EasyIntermediate;
 
 recursive(5);
 
@@ -16,24 +17,9 @@ static void recursive(int n)
 
 
 
-LinkedLists solution = new();
+HashTables ht = new();
 
-
-ListNode CreateLinkedList(int[] arr)
-{
-    ListNode dummy = new(0);
-    ListNode current = dummy;
-    foreach (int val in arr)
-    {
-        current.next = new ListNode(val);
-        current = current.next;
-    }
-    return dummy.next;
-}
-
-
-solution.IsPalindrome(CreateLinkedList([1,2,5,2,1]));
-
+Console.WriteLine(ht.MaxNumberOfBalloons("leetcode"));
 
 
 
