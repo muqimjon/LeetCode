@@ -310,4 +310,43 @@ public class Arrays
         return -1;
     }
     #endregion
+
+    #region 1275. Find Winner on a Tic Tac Toe Game
+    /// <summary>
+    /// Determines the winner of a Tic Tac Toe game based on the moves made.
+    /// </summary>
+    /// <param name="moves">The moves made by players.</param>
+    /// <returns>The winner of the game: "A", "B", or "Draw" if the game is still pending.</returns>
+    /// <link>https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public string Tictactoe(int[][] moves)
+    {
+        // Initialize arrays to track row, column, diagonal, and anti-diagonal sums
+        int[] rows = new int[3], cols = new int[3];
+        int diag = 0, antiDiag = 0;
+        // Player 1 represents "X", Player -1 represents "O"
+        int player = 1;
+
+        // Iterate through each move
+        foreach (var move in moves)
+        {
+            int row = move[0], col = move[1];
+            // Update sums for the current row and column
+            rows[row] += player;
+            cols[col] += player;
+            // Update sums for the main diagonal and anti-diagonal if applicable
+            if (row == col) diag += player;
+            if (row + col == 2) antiDiag += player;
+            // Check if any player has won
+            if (Math.Abs(rows[row]) == 3 || Math.Abs(cols[col]) == 3 || Math.Abs(diag) == 3 || Math.Abs(antiDiag) == 3)
+                return player == 1 ? "A" : "B";
+            // Switch player for the next move
+            player *= -1;
+        }
+
+        // If all moves are made and no winner is found, check if the game is a draw or still pending
+        return moves.Length == 9 ? "Draw" : "Pending";
+    }
+    #endregion
 }

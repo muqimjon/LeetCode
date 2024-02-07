@@ -209,4 +209,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1275. Find Winner in Tic Tac Toe
+    [Theory]
+    [InlineData("A", new int[] {0, 0}, new int[] {2, 0}, new int[] {1, 1}, new int[] {2, 1}, new int[] {2, 2})]
+    [InlineData("B", new int[] {0, 0}, new int[] {1, 1}, new int[] {0, 1}, new int[] {0, 2}, new int[] {1, 0}, new int[] {2, 0})]
+    [InlineData("Draw", new int[] {0, 0}, new int[] {1, 1}, new int[] {2, 0}, new int[] {1, 0}, new int[] {1, 2}, new int[] {2, 1}, new int[] {0, 1}, new int[] {0, 2}, new int[] {2, 2})]
+    public void TicTacToe_Test(string expected, params int[][] moves)
+    {
+        // Act
+        var result = Solution.Tictactoe(moves);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
