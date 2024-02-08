@@ -237,5 +237,41 @@ public class Strings
         return result;
     }
 
-    #endregion  
+    #endregion
+
+    #region 2379. Minimum Recolors to Get K Consecutive Black Blocks
+    /// <summary>
+    /// Finds the minimum number of recolors needed to obtain K consecutive black blocks.
+    /// </summary>
+    /// <param name="blocks">The input string representing the color of blocks.</param>
+    /// <param name="k">The desired number of consecutive black blocks.</param>
+    /// <returns>The minimum number of recolors needed.</returns>
+    /// <link>https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MinimumRecolors(string blocks, int k)
+    {
+        int n = blocks.Length;
+        int windowStart = 0;
+        int minRecolors = int.MaxValue;
+        int numBlack = 0;
+
+        for (int windowEnd = 0; windowEnd < n; windowEnd++)
+        {
+            numBlack += blocks[windowEnd] == 'B' ? 1 : 0;
+
+            if (windowEnd - windowStart + 1 == k)
+            {
+                minRecolors = Math.Min(minRecolors, k - numBlack);
+
+                if (blocks[windowStart] == 'B')
+                    numBlack--;
+
+                windowStart++;
+            }
+        }
+
+        return minRecolors != int.MaxValue ? minRecolors : 0;
+    }
+    #endregion
 }

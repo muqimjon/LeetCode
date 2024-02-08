@@ -161,5 +161,21 @@ public class StringsTest
         // Assert
         Assert.Equal(expected, result);
     }
-    #endregion  
+    #endregion
+
+    #region 2379. Minimum Recolors to Get K Consecutive Black Blocks
+    [Theory]
+    [InlineData("WBBWWBBWBW", 7, 3)]
+    [InlineData("WBWBBBW", 2, 0)]
+    [InlineData("BBBBBBBB", 3, 0)]
+    [InlineData("", 1, 0)]
+    public void MinimumRecolors_ShouldReturnCorrectResult(string blocks, int k, int expected)
+    {
+        // Act
+        var result = Solution.MinimumRecolors(blocks, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
