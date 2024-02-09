@@ -23,4 +23,31 @@ public class HashTables
         return bl.Values.Min();
     }
     #endregion
+
+    #region 202. Happy Number
+    /// <summary>
+    /// Write an algorithm to determine if a number is "happy".
+    /// </summary>
+    /// <param name="n">The number to check.</param>
+    /// <returns>True if the number is "happy", false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/happy-number/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public bool IsHappy(int n)
+    {
+        HashSet<int> seen = new();
+        while (n != 1 && seen.Add(n))
+        {
+            int sum = 0;
+            while (n > 0)
+            {
+                int digit = n % 10;
+                sum += digit * digit;
+                n /= 10;
+            }
+            n = sum;
+        }
+        return n == 1;
+    }
+    #endregion
 }

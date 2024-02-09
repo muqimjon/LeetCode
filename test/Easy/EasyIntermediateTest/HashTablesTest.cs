@@ -22,4 +22,17 @@ public class HashTablesTest
     }
     #endregion
 
+    #region 202. Happy Number
+    [Theory]
+    [InlineData(19, true)]
+    [InlineData(2, false)]
+    public void IsHappy_WithValidInput_ReturnsExpected(int n, bool expected)
+    {
+        // Act
+        bool result = Solution.IsHappy(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
