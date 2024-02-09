@@ -31,7 +31,7 @@ public class HashTables
     /// <param name="n">The number to check.</param>
     /// <returns>True if the number is "happy", false otherwise.</returns>
     /// <link>https://leetcode.com/problems/happy-number/</link>
-    /// <time>Time Complexity: O(n)</time>
+    /// <time>Time Complexity: O(log(n))</time>
     /// <space>Space Complexity: O(n)</space>
     public bool IsHappy(int n)
     {

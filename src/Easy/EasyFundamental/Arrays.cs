@@ -349,4 +349,32 @@ public class Arrays
         return moves.Length == 9 ? "Draw" : "Pending";
     }
     #endregion
+
+    #region 2917. Find the K-or of an Array
+    /// <summary>
+    /// Returns the K-or of an integer array.
+    /// </summary>
+    /// <param name="nums">The integer array.</param>
+    /// <param name="k">The desired number of consecutive set bits in the K-or.</param>
+    /// <returns>The K-or of the array.</returns>
+    /// <link>https://leetcode.com/problems/find-the-k-or-of-an-array</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int FindKOr(int[] nums, int k)
+    {
+        int result = 0;
+
+        for (int i = 31; i >= 0; i--)
+        {
+            int count = 0;
+            foreach (int num in nums)
+                count += (num >> i) & 1;
+
+            if (count >= k)
+                result |= 1 << i;
+        }
+
+        return result;
+    }
+    #endregion
 }

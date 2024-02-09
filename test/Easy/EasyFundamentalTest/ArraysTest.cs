@@ -224,4 +224,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2191. Find Kth Positive Number in the Sequence
+    [Theory]
+    [InlineData(new int[] { 7, 12, 9, 8, 9, 15 }, 4, 9)]
+    [InlineData(new int[] { 2, 12, 1, 11, 4, 5 }, 6, 0)]
+    [InlineData(new int[] { 10, 8, 5, 9, 11, 6, 8 }, 1, 15)]
+    public void FindKOr_Test(int[] nums, int k, int expected)
+    {
+        // Act
+        int result = Solution.FindKOr(nums, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
