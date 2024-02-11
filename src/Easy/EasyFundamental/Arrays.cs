@@ -377,4 +377,24 @@ public class Arrays
         return result;
     }
     #endregion
+
+    #region 1491. Average Salary Excluding the Minimum and Maximum Salary
+    /// <summary>
+    /// Calculates the average salary excluding the minimum and maximum salaries.
+    /// </summary>
+    /// <param name="salary">An array of unique integers representing the salaries of employees.</param>
+    /// <returns>The average salary excluding the minimum and maximum salaries.</returns>
+    /// <link>https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public double Average(int[] salary)
+    {
+        Array.Sort(salary);
+        int sum = 0;
+        for (int i = 1; i < salary.Length - 1; i++)
+            sum += salary[i];
+
+        return (double)sum / (salary.Length - 2);
+    }
+    #endregion  
 }

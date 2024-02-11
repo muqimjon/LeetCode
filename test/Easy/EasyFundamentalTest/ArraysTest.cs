@@ -239,4 +239,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1491. Average Salary Excluding the Minimum and Maximum Salary
+    [Theory]
+    [InlineData(new int[] { 4000, 3000, 1000, 2000 }, 2500.0)]
+    [InlineData(new int[] { 1000, 2000, 3000 }, 2000.0)]
+    public void Average_ReturnsExpectedResult(int[] salary, double expected)
+    {
+        // Act
+        double actual = Solution.Average(salary);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
