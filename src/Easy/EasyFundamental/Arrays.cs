@@ -396,5 +396,21 @@ public class Arrays
 
         return (double)sum / (salary.Length - 2);
     }
-    #endregion  
+    #endregion
+
+    #region 169. Majority Element
+    /// <summary>
+    /// Finds the majority element in an integer array.
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>The majority element.</returns>
+    /// <link>https://leetcode.com/problems/majority-element/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MajorityElement(int[] nums)
+    {
+        Array.Sort(nums);
+        return nums[nums.Length / 2];
+    }
+    #endregion
 }

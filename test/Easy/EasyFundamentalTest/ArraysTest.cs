@@ -253,4 +253,18 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 169. Majority Element
+    [Theory]
+    [InlineData(new int[] { 3, 2, 3 }, 3)]
+    [InlineData(new int[] { 2, 2, 1, 1, 1, 2, 2 }, 2)]
+    public void MajorityElement_WithValidInput_ReturnsCorrectResult(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.MajorityElement(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
