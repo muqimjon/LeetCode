@@ -284,11 +284,11 @@ public class Arrays
 
     #region 2855. Minimum Right Shifts to Sort the Array
     /// <summary>
-    /// Returns the minimum number of right shifts required to sort the array, or -1 if it's not possible.
+    /// Returns the minimum number of r shifts required to sort the array, or -1 if it's not possible.
     /// </summary>
     /// <param name="nums">The list of distinct positive integers.</param>
-    /// <returns>The minimum number of right shifts or -1 if not possible.</returns>
-    /// <link>https://leetcode.com/problems/minimum-right-shifts-to-sort-the-array/</link>
+    /// <returns>The minimum number of r shifts or -1 if not possible.</returns>
+    /// <link>https://leetcode.com/problems/minimum-r-shifts-to-sort-the-array/</link>
     /// <time>Time Complexity: O(n^2)</time>
     /// <space>Space Complexity: O(n)</space>
     public int MinimumRightShifts(IList<int> nums)
@@ -411,6 +411,28 @@ public class Arrays
     {
         Array.Sort(nums);
         return nums[nums.Length / 2];
+    }
+    #endregion
+
+    #region 2108. Find First Palindromic String in the Array
+    /// <summary>
+    /// Returns the first palindromic string in the array.
+    /// </summary>
+    /// <param name="words">An array of strings.</param>
+    /// <returns>The first palindromic string in the array.</returns>
+    /// <link>https://leetcode.com/problems/find-first-palindromic-string-in-the-array/</link>
+    /// <time>Time Complexity: O(n∗m)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public string FirstPalindrome(string[] words)
+        => words.FirstOrDefault(word => IsPalindrome(word)) ?? "";
+
+    private bool IsPalindrome(string word)
+    {
+        for (int l = 0, r = word.Length - 1; l < r; l++, r--)
+            if (word[l] != word[r])
+                return false;
+
+        return true;
     }
     #endregion
 }
