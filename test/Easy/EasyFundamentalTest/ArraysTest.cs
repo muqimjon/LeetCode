@@ -267,4 +267,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2108. Find First Palindromic String in the Array
+    [Theory]
+    [InlineData(new string[] { "abc", "car", "ada", "racecar", "cool" }, "ada")]
+    [InlineData(new string[] { "notapalindrome", "racecar" }, "racecar")]
+    [InlineData(new string[] { "def", "ghi" }, "")]
+    public void FirstPalindrome_ValidInput_ReturnsExpected(string[] words, string expected)
+    {
+        // Act
+        string result = Solution.FirstPalindrome(words);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
