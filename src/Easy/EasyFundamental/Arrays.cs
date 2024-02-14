@@ -435,4 +435,30 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 118. Pascal's Triangle
+    /// <summary>
+    /// Generates Pascal's triangle up to a specified number of rows.
+    /// </summary>
+    /// <param name="numRows">The number of rows to generate.</param>
+    /// <returns>The Pascal's triangle up to the specified number of rows.</returns>
+    /// <link>https://leetcode.com/problems/pascals-triangle/</link>
+    /// <time>Time Complexity: O(n^2)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public IList<IList<int>> Generate(int numRows)
+    {
+        IList<IList<int>> triangle = new List<IList<int>>();
+
+        for (int i = 0; i < numRows; i++)
+        {
+            IList<int> row = new List<int>();
+
+            for (int j = 0; j <= i; j++)
+                row.Add(j == 0 || j == i ? 1 : triangle[i-1][j-1] + triangle[i-1][j]);
+            triangle.Add(row);
+        }
+
+        return triangle;
+    }
+    #endregion
 }

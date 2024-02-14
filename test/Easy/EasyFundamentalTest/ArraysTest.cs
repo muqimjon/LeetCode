@@ -282,4 +282,22 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 118. Pascal's Triangle
+    [Theory]
+    [InlineData(1, new int[] { 1 })]
+    [InlineData(2, new int[] { 1 }, new int[] { 1, 1 })]
+    [InlineData(3, new int[] { 1 }, new int[] { 1, 1 }, new int[] { 1, 2, 1 })]
+    [InlineData(5, new int[] { 1 }, new int[] { 1, 1 }, new int[] { 1, 2, 1 }, new int[] { 1, 3, 3, 1 }, new int[] { 1, 4, 6, 4, 1 })]
+    public void Generate_Test(int numRows, params int[][] expected)
+    {
+        // Act
+        IList<IList<int>> result = Solution.Generate(numRows);
+
+        // Assert
+        Assert.Equal(expected.Length, result.Count);
+        for (int i = 0; i < expected.Length; i++)
+            Assert.Equal(expected[i], result[i]);
+    }
+    #endregion
 }
