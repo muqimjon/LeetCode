@@ -461,4 +461,35 @@ public class Arrays
         return triangle;
     }
     #endregion
+
+    #region 706. Binary Search
+    /// <summary>
+    /// Performs binary search on a sorted array to find the target element.
+    /// </summary>
+    /// <param name="nums">The sorted array of integers.</param>
+    /// <param name="target">The target integer to search for.</param>
+    /// <returns>The index of the target element if found; otherwise, returns -1.</returns>
+    /// <link>https://leetcode.com/problems/binary-search/</link>
+    /// <time>Time Complexity: O(log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int Search(int[] nums, int target)
+    {
+        int left = 0;
+        int right = nums.Length - 1;
+
+        while (left <= right)
+        {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] == target)
+                return mid;
+            else if (nums[mid] < target)
+                left = mid + 1;
+            else
+                right = mid - 1;
+        }
+
+        return -1;
+    }
+    #endregion
 }

@@ -300,4 +300,25 @@ public class ArraysTest
             Assert.Equal(expected[i], result[i]);
     }
     #endregion
+
+    #region 706. Binary Search
+    [Theory]
+    [InlineData(new[] { -1, 0, 3, 5, 9, 12 }, 9, 4)]
+    [InlineData(new[] { -1, 0, 3, 5, 9, 12 }, 2, -1)]
+    [InlineData(new[] { 1, 3, 5, 7, 9 }, 3, 1)]
+    [InlineData(new[] { 1, 3, 5, 7, 9 }, 5, 2)]
+    [InlineData(new[] { 1, 3, 5, 7, 9 }, 7, 3)]
+    [InlineData(new[] { 1, 3, 5, 7, 9 }, 9, 4)]
+    [InlineData(new[] { 2, 4, 6, 8, 10 }, 1, -1)]
+    [InlineData(new[] { 2, 4, 6, 8, 10 }, 5, -1)]
+    [InlineData(new[] { 2, 4, 6, 8, 10 }, 11, -1)]
+    public void Search_WhenCalled_ReturnsExpectedIndex(int[] nums, int target, int expected)
+    {
+        // Act
+        int result = Solution.Search(nums, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
