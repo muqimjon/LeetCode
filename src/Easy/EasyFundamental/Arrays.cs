@@ -492,4 +492,31 @@ public class Arrays
         return -1;
     }
     #endregion
+
+    #region 1646. Get Maximum in Generated Array
+    /// <summary>
+    /// Returns the maximum integer in the generated array based on specific rules.
+    /// </summary>
+    /// <param name="n">The number of elements in the array.</param>
+    /// <returns>The maximum integer in the generated array.</returns>
+    /// <link>https://leetcode.com/problems/get-maximum-in-generated-array/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int GetMaximumGenerated(int n)
+    {
+        if (n == 0) return 0;
+
+        int[] nums = new int[n + 1];
+        nums[1] = 1;
+        int max = 1;
+
+        for (int i = 2; i <= n; i++)
+        {
+            nums[i] = nums[i / 2] + i % 2 * nums[i / 2 + 1];
+            max = Math.Max(max, nums[i]);
+        }
+
+        return max;
+    }
+    #endregion
 }

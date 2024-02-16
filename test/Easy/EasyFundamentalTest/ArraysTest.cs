@@ -321,4 +321,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1646. Get Maximum in Generated Array
+    [Theory]
+    [InlineData(7, 3)]
+    [InlineData(2, 1)]
+    [InlineData(3, 2)]
+    [InlineData(0, 0)]
+    public void TestGetMaximumGenerated(int n, int expected)
+    {
+        // Act
+        int result = Solution.GetMaximumGenerated(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
