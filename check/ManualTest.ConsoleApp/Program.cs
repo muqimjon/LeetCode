@@ -4,7 +4,7 @@
 using EasyFundamental;
 using EasyIntermediate;
 
-recursive(5);
+//recursive(5);
 
 static void recursive(int n)
 {
@@ -17,9 +17,8 @@ static void recursive(int n)
 
 
 
-HashTables ht = new();
-
-Console.WriteLine(ht.MaxNumberOfBalloons("leetcode"));
+Arrays arrays = new Arrays();
+arrays.DifferenceOfSum([1, 2, 3, 4, 5, 8, 3]);
 
 
 

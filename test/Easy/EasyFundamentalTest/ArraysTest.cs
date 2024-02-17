@@ -337,4 +337,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2535. Difference Between Element Sum and Digit Sum of an Array
+    [Theory]
+    [InlineData(new int[] { 1, 15, 6, 3 }, 9)]
+    [InlineData(new int[] { 1, 2, 3, 4 }, 0)]
+    [InlineData(new int[] { 9, 99, 999 }, 1053)]
+    [InlineData(new int[] { 123, 456, 789 }, 1323)]
+    [InlineData(new int[] { 10, 4, 4, 7, 7, 1, 5, 8, 3, 5 }, 9)] // FAIL
+    public void DifferenceOfSum_Test(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.DifferenceOfSum(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

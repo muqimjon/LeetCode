@@ -519,4 +519,11 @@ public class Arrays
         return max;
     }
     #endregion
+
+    #region 2535. Maximum Product Difference Between Two Pairs
+    public int DifferenceOfSum(int[] nums)
+        => Math.Abs(nums.Sum() - nums.Sum(num
+            => num.ToString().Select(c
+                => c - '0').Sum()));
+    #endregion
 }
