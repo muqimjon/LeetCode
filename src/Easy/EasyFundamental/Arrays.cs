@@ -520,10 +520,16 @@ public class Arrays
     }
     #endregion
 
-    #region 2535. Maximum Product Difference Between Two Pairs
+    #region 2535. Difference Between Element Sum and Digit Sum of an Array
+    /// <summary>
+    /// Calculates the absolute difference between the sum of all elements in an array and the sum of their digits.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The absolute difference between the sum of the elements and the sum of their digits.</returns>
+    /// <link>https://leetcode.com/problems/difference-between-sum-of-odd-and-even-numbers/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
     public int DifferenceOfSum(int[] nums)
-        => Math.Abs(nums.Sum() - nums.Sum(num
-            => num.ToString().Select(c
-                => c - '0').Sum()));
+        => Math.Abs(nums.Sum() - nums.Sum(num => num.ToString().Select(c => c - '0').Sum()));
     #endregion
 }
