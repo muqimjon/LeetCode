@@ -532,4 +532,18 @@ public class Arrays
     public int DifferenceOfSum(int[] nums)
         => Math.Abs(nums.Sum() - nums.Sum(num => num.ToString().Select(c => c - '0').Sum()));
     #endregion
+
+    #region 2788. Split Strings by Separator
+    /// <summary>
+    /// Splits a list of strings into individual words by a specified separator character, removing any empty entries.
+    /// </summary>
+    /// <param name="words">The list of strings to split.</param>
+    /// <param name="separator">The separator character.</param>
+    /// <returns>A list of individual words after splitting by the separator.</returns>
+    /// <link>https://leetcode.com/problems/split-strings-by-separator/</link>
+    /// <time>Time Complexity: 	O(n * m)</time>
+    /// <space>Space Complexity: O(m)</space>
+    public IList<string> SplitWordsBySeparator(IList<string> words, char separator)
+        => words.SelectMany(word => word.Split(separator, StringSplitOptions.RemoveEmptyEntries)).ToList();
+    #endregion
 }

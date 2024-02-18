@@ -354,4 +354,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2788. Split Strings by Separator
+    [Theory]
+    [InlineData(new string[] { "one.two.three", "four.five", "six" }, '.', new string[] { "one", "two", "three", "four", "five", "six" })]
+    [InlineData(new string[] { "$easy$", "$problem$" }, '$', new string[] { "easy", "problem" })]
+    [InlineData(new string[] { "|||" }, '|', new string[] { })]
+    public void ExampleTests(string[] words, char separator, string[] expected)
+    {
+        // Act
+        var result = Solution.SplitWordsBySeparator(words, separator);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
