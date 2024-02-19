@@ -546,4 +546,17 @@ public class Arrays
     public IList<string> SplitWordsBySeparator(IList<string> words, char separator)
         => words.SelectMany(word => word.Split(separator, StringSplitOptions.RemoveEmptyEntries)).ToList();
     #endregion
+
+    #region 231. Power of Two
+    /// <summary>
+    /// Determines whether the given integer is a power of two.
+    /// </summary>
+    /// <param name="n">The integer to check.</param>
+    /// <returns>True if the integer is a power of two; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/power-of-two/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool IsPowerOfTwo(int n)
+        => n > 0 && (n & (n - 1)) == 0;
+    #endregion
 }

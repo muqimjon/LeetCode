@@ -369,4 +369,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 231. Power of Two
+    [Theory]
+    [InlineData(1, true)]
+    [InlineData(16, true)]
+    [InlineData(3, false)]
+    [InlineData(0, false)]
+    [InlineData(-16, false)]
+    public void IsPowerOfTwo_Test(int n, bool expected)
+    {
+        // Act
+        bool result = Solution.IsPowerOfTwo(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
