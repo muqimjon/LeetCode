@@ -386,4 +386,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 268. Missing Number
+    [Theory]
+    [InlineData(new int[] { 3, 0, 1 }, 2)]
+    [InlineData(new int[] { 0, 1 }, 2)]
+    [InlineData(new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 }, 8)]
+    public void MissingNumber_ValidInput_ReturnsMissingNumber(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.MissingNumber(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

@@ -559,4 +559,17 @@ public class Arrays
     public bool IsPowerOfTwo(int n)
         => n > 0 && (n & (n - 1)) == 0;
     #endregion
+
+    #region 268. Missing Number
+    /// <summary>
+    /// Finds the missing number in a sequence of integers from 0 to n, where each integer appears exactly once, except for one missing number.
+    /// </summary>
+    /// <param name="nums">An array of integers representing the sequence.</param>
+    /// <returns>The missing number in the sequence.</returns>
+    /// <link>https://leetcode.com/problems/missing-number/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int MissingNumber(int[] nums)
+        => Enumerable.Range(0, nums.Length + 1).Except(nums).First();
+    #endregion
 }
