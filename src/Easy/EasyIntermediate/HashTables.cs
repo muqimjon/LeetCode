@@ -50,4 +50,27 @@ public class HashTables
         return n == 1;
     }
     #endregion
+
+    #region 2068. Check Whether Two Strings are Almost Equivalent
+    /// <summary>
+    /// Checks whether two strings are almost equivalent.
+    /// </summary>
+    /// <param names=["word1", "word2"]>Strings</param>
+    /// <returns>True if the strings are almost equivalent, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/check-whether-two-strings-are-almost-equivalent/</link>
+    /// <time>Time Complexity: O(m+n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool CheckAlmostEquivalent(string word1, string word2)
+    {
+        Dictionary<char, int> ab = new();
+
+        foreach (char a in word1)
+            ab[a] = ab.TryGetValue(a, out int value) ? value + 1 : 1;
+
+        foreach (var a in word2)
+            ab[a] = ab.TryGetValue(a, out int value) ? value - 1 : -1;
+
+        return ab.Values.All(e => e < 4 && e > -4);
+    }
+    #endregion
 }

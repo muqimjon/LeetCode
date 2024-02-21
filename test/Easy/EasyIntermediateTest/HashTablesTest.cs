@@ -35,4 +35,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2068. Check Whether Two Strings are Almost Equivalent
+    [Theory]
+    [InlineData("aaaa", "bccb", false)]
+    [InlineData("abcdeef", "abaaacc", true)]
+    [InlineData("cccddabba", "babababab", true)]
+    public void TestCheckAlmostEquivalent(string word1, string word2, bool expected)
+    {
+        // Act
+        bool result = Solution.CheckAlmostEquivalent(word1, word2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
