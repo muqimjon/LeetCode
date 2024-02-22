@@ -86,4 +86,18 @@ public class MathsTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1360. Number of Days Between Two Dates
+    [Theory]
+    [InlineData("2019-06-29", "2019-06-30", 1)]
+    [InlineData("2020-01-15", "2019-12-31", 15)]
+    public void DaysBetweenDates_InlineData_ReturnsCorrectResult(string date1, string date2, int expected)
+    {
+        // Act
+        int result = Solution.DaysBetweenDates(date1, date2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

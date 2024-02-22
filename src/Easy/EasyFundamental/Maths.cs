@@ -110,4 +110,20 @@ public class Maths
     public string DayOfTheWeek(int day, int month, int year)
         => Enum.GetName(new DateTime(year, month, day).DayOfWeek)!;
     #endregion
+
+    #region 1360. Number of Days Between Two Dates
+    /// <summary>
+    /// Calculates the number of days between two given dates.
+    /// </summary>
+    /// <param name="date1">The first date in the format "YYYY-MM-DD".</param>
+    /// <param name="date2">The second date in the format "YYYY-MM-DD".</param>
+    /// <returns>The number of days between the two dates.</returns>
+    /// <remarks>
+    /// The given dates are assumed to be valid and between the years 1971 and 2100.
+    /// </remarks>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int DaysBetweenDates(string date1, string date2)
+        => Math.Abs((DateTime.Parse(date1) - DateTime.Parse(date2)).Days);
+    #endregion
 }
