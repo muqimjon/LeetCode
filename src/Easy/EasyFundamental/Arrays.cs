@@ -572,4 +572,26 @@ public class Arrays
     public int MissingNumber(int[] nums)
         => Enumerable.Range(0, nums.Length + 1).Except(nums).First();
     #endregion
+
+    #region 1502. Can Make Arithmetic Progression From Sequence
+    /// <summary>
+    /// Determines whether the given array can be rearranged to form an arithmetic progression.
+    /// </summary>
+    /// <param name="arr">The array of numbers.</param>
+    /// <returns>True if the array can form an arithmetic progression; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool CanMakeArithmeticProgression(int[] arr)
+    {
+        Array.Sort(arr);
+        int commonDifference = arr[1] - arr[0];
+
+        for (int i = 2; i < arr.Length; i++)
+            if (arr[i] - arr[i - 1] != commonDifference)
+                return false;
+
+        return true;
+    }
+    #endregion
 }

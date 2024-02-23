@@ -401,4 +401,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1502. Can Make Arithmetic Progression From Sequence
+    [Theory]
+    [InlineData(new int[] { 3, 5, 1 }, true)]
+    [InlineData(new int[] { 1, 2, 4 }, false)]
+    public void CanMakeArithmeticProgression_FromSequence_Test(int[] arr, bool expected)
+    {
+        // Act
+        bool actual = Solution.CanMakeArithmeticProgression(arr);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
