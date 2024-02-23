@@ -94,5 +94,20 @@ public class Maths
 
         return result;
     }
-    #endregion  
+    #endregion
+
+    #region 1185. Day of the Week
+    /// <summary>
+    /// Returns the day of the week corresponding to the given date.
+    /// </summary>
+    /// <param name="day">The day of the month (1-31).</param>
+    /// <param name="month">The month (1-12).</param>
+    /// <param name="year">The year (1971-2100).</param>
+    /// <returns>The name of the day of the week.</returns>
+    /// <link>https://leetcode.com/problems/day-of-the-week/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public string DayOfTheWeek(int day, int month, int year)
+        => Enum.GetName(new DateTime(year, month, day).DayOfWeek)!;
+    #endregion
 }

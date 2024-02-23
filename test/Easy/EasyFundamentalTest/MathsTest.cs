@@ -71,4 +71,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1185. Day of the Week
+    [Theory]
+    [InlineData(31, 8, 2019, "Saturday")]
+    [InlineData(18, 7, 1999, "Sunday")]
+    [InlineData(15, 8, 1993, "Sunday")]
+    public void DayOfTheWeek_ReturnsCorrectDay(int day, int month, int year, string expected)
+    {
+        // Act
+        var actual = Solution.DayOfTheWeek(day, month, year);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
