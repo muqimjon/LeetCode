@@ -274,4 +274,28 @@ public class Strings
         return minRecolors != int.MaxValue ? minRecolors : 0;
     }
     #endregion
+
+    #region 1446. Consecutive Characters
+    /// <summary>
+    /// Finds the maximum power of consecutive characters in the given string.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The maximum power of consecutive characters.</returns>
+    /// <link>https://leetcode.com/problems/consecutive-characters/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MaxPower(string s)
+    {
+        int maxPower = 1;
+        int currentPower = 1;
+
+        for (int i = 1; i < s.Length; i++)
+            if (s[i] == s[i - 1])
+                maxPower = Math.Max(maxPower, ++currentPower);
+            else
+                currentPower = 1;
+
+        return maxPower;
+    }
+    #endregion
 }

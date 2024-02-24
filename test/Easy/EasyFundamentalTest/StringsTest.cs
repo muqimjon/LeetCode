@@ -178,4 +178,24 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1446. Consecutive Characters
+    [Theory]
+    [InlineData("leetcode", 2)]
+    [InlineData("abbcccddddeeeeedcba", 5)]
+    [InlineData("a", 1)]
+    [InlineData("ab", 1)]
+    [InlineData("aa", 2)]
+    [InlineData("abcde", 1)]
+    [InlineData("aaaaaaa", 7)]
+    [InlineData("abcdabcdabcdabcd", 1)]
+    public void MaxPower_ShouldReturnExpected(string s, int expected)
+    {
+        // Act
+        int result = Solution.MaxPower(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
