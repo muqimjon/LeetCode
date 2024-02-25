@@ -594,4 +594,24 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 2248. Intersection of Multiple Arrays
+    /// <summary>
+    /// Finds the intersection of multiple arrays.
+    /// </summary>
+    /// <param name="nums">A 2D integer array where nums[i] is a non-empty array of distinct positive integers.</param>
+    /// <returns>The list of integers that are present in each array of nums sorted in ascending order.</returns>
+    /// <link>https://leetcode.com/problems/intersection-of-multiple-arrays/</link>
+    /// <time>Time Complexity: O(n*m)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public IList<int> Intersection(int[][] nums)
+    {
+        HashSet<int> intersection = new(nums[0]);
+
+        for (int i = 1; i < nums.Length; i++)
+            intersection.IntersectWith(new HashSet<int>(nums[i]));
+
+        return intersection.OrderBy(x => x).ToList();
+    }
+    #endregion
 }

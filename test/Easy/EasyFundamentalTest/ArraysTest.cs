@@ -415,4 +415,19 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 2248. Intersection of Multiple Arrays
+
+    [Theory]
+    [InlineData(new int[] { 3, 4 }, new int[] { 3, 1, 2, 4, 5 }, new int[] { 1, 2, 3, 4 }, new int[] { 3, 4, 5, 6 })]
+    [InlineData(new int[] { }, new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 })]
+    public void IntersectionOfMultipleArrays_ValidInput_ReturnsCommonElements(int[] expected, params int[][] nums)
+    {
+        // Act
+        IList<int> result = Solution.Intersection(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
