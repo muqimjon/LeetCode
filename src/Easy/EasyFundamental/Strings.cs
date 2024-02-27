@@ -298,4 +298,26 @@ public class Strings
         return maxPower;
     }
     #endregion
+
+    #region 520. Detect Capital
+    /// <summary>
+    /// Determines if the usage of capitals in a word is correct.
+    /// </summary>
+    /// <param name="word">The word to check.</param>
+    /// <returns>True if the usage of capitals is correct, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/detect-capital/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool DetectCapitalUse(string word)
+    {
+        bool allUpper = char.IsUpper(word[0]);
+        bool lower = true;
+
+        foreach (char c in word[1..])
+            if (char.IsUpper(c)) lower = false;
+            else allUpper = false;
+
+        return lower || allUpper;
+    }
+    #endregion
 }

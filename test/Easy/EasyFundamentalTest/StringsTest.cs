@@ -198,4 +198,22 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 520. Detect Capital
+    [Theory]
+    [InlineData("USA", true)]
+    [InlineData("leetcode", true)]
+    [InlineData("Google", true)]
+    [InlineData("FlaG", false)]
+    [InlineData("LeetCode", false)]
+    [InlineData("APPLE", true)]
+    public void DetectCapitalUse_WithVariousInputs_ReturnsExpectedResult(string word, bool expected)
+    {
+        // Act
+        bool result = Solution.DetectCapitalUse(word);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
