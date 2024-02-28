@@ -73,4 +73,29 @@ public class HashTables
         return ab.Values.All(e => e < 4 && e > -4);
     }
     #endregion
+
+    #region 383. Ransom Note
+    /// <summary>
+    /// Determines whether the ransom note can be constructed using the letters from the magazine.
+    /// </summary>
+    /// <param name="ransomNote">The ransom note string.</param>
+    /// <param name="magazine">The magazine string.</param>
+    /// <returns>True if the ransom note can be constructed, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/ransom-note/</link>
+    /// <time>Time Complexity: O(m + n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool CanConstruct(string ransomNote, string magazine)
+    {
+        var count = new int[26];
+
+        foreach (var c in magazine)
+            count[c - 'a']++;
+
+        foreach (var c in ransomNote)
+            if (--count[c - 'a'] < 0)
+                return false;
+
+        return true;
+    }
+    #endregion
 }

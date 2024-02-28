@@ -50,4 +50,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 383. Ransom Note
+    [Theory]
+    [InlineData("aa", "aab", true)]
+    [InlineData("a", "b", false)]
+    [InlineData("aa", "ab", false)]
+    public void CanConstruct_ValidInput_ReturnsExpectedResult(string ransomNote, string magazine, bool expectedResult)
+    {
+        // Act
+        bool result = Solution.CanConstruct(ransomNote, magazine);
+
+        // Assert
+        Assert.Equal(expectedResult, result);
+    }
+    #endregion
 }
