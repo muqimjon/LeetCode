@@ -47,3 +47,16 @@ FROM ActorDirector
 GROUP BY actor_id, director_id
 HAVING COUNT(*) >= 3;
 ------------------------------------------------------------------------------------------------
+
+-- 627. Swap Salary
+-- https://leetcode.com/problems/swap-salary/
+
+-- Time Complexity: O(N)
+-- Space Complexity: O(1)
+
+UPDATE Salary
+SET sex = CASE 
+            WHEN sex = 'm' THEN 'f'
+            WHEN sex = 'f' THEN 'm'
+          END;
+--------------------------------------------------------------------------------------------
