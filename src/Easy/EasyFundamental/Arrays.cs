@@ -1,4 +1,6 @@
-﻿namespace EasyFundamental;
+﻿using System.Linq;
+
+namespace EasyFundamental;
 
 public class Arrays
 {
@@ -612,6 +614,32 @@ public class Arrays
             intersection.IntersectWith(new HashSet<int>(nums[i]));
 
         return intersection.OrderBy(x => x).ToList();
+    }
+    #endregion
+
+    #region 977. Squares of a Sorted Array
+    /// <summary>
+    /// Calculates the squares of the numbers in the input array and returns them in sorted order.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>An array containing the squares of the input numbers sorted in ascending order.</returns>
+    /// <link>https://leetcode.com/problems/squares-of-a-sorted-array/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int[] SortedSquares(int[] nums)
+    {
+        //int s = -8;
+        //int t = -2;
+        //s *= t;
+        //Console.WriteLine(s);
+
+        // for (int i = 0; i < nums.Length; ++i)
+        //    nums[i] *= nums[i] < 0 ? -nums[i] : nums[i];
+
+        // Array.Sort(nums);
+        // return nums;
+
+        return [.. nums.Select(num => Math.Abs(num * num)).Order()];
     }
     #endregion
 }

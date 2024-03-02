@@ -430,4 +430,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 977. Squares of a Sorted Array
+    [Theory]
+    [InlineData(new[] { -4, -1, 0, 3, 10 }, new[] { 0, 1, 9, 16, 100 })]
+    [InlineData(new[] { -7, -3, 2, 3, 11 }, new[] { 4, 9, 9, 49, 121 })]
+    [InlineData(new[] { -5, -4, -3, -2, -1 }, new[] { 1, 4, 9, 16, 25 })]
+    public void SortedSquares_ValidInput_ReturnsSortedSquares(int[] nums, int[] expected)
+    {
+        // Act
+        var result = Solution.SortedSquares(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

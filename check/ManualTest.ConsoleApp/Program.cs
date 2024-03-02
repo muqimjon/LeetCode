@@ -17,8 +17,8 @@ static void recursive(int n)
 
 
 
-Arrays arrays = new Arrays();
-arrays.DifferenceOfSum([1, 2, 3, 4, 5, 8, 3]);
+Arrays arrays = new();
+arrays.SortedSquares([]);
 
 
 
