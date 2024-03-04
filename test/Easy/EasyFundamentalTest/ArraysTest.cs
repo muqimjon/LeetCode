@@ -445,4 +445,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1929. Concatenation of Array
+    [Theory]
+    [InlineData(new[] { 1, 2, 1 }, new[] { 1, 2, 1, 1, 2, 1 })]
+    [InlineData(new[] { 1, 3, 2, 1 }, new[] { 1, 3, 2, 1, 1, 3, 2, 1 })]
+    [InlineData(new[] { 5, 10, 15 }, new[] { 5, 10, 15, 5, 10, 15 })]
+    public void GetConcatenation_WithValidInput_ReturnsExpectedResult(int[] nums, int[] expected)
+    {
+        // Act
+        var result = Solution.GetConcatenation(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

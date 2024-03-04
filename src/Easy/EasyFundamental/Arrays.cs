@@ -642,4 +642,17 @@ public class Arrays
         return [.. nums.Select(num => Math.Abs(num * num)).Order()];
     }
     #endregion
+
+    #region 1929. Concatenation of Array
+    /// <summary>
+    /// Concatenates the given array with itself.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The concatenated array.</returns>
+    /// <link>https://leetcode.com/problems/concatenation-of-array/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int[] GetConcatenation(int[] nums)
+        => [.. nums, .. nums];
+    #endregion
 }
