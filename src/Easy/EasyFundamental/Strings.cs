@@ -320,4 +320,17 @@ public class Strings
         return lower || allUpper;
     }
     #endregion
+
+    #region 1108. Defanging an IP Address
+    /// <summary>
+    /// Returns the defanged version of the given IP address.
+    /// </summary>
+    /// <param name="address">The IP address to defang.</param>
+    /// <returns>The defanged version of the given IP address.</returns>
+    /// <link>https://leetcode.com/problems/defanging-an-ip-address/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public string DefangIPaddr(string address)
+        => address.Replace(".", "[.]");
+    #endregion
 }

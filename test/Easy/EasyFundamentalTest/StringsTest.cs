@@ -216,4 +216,20 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1108. Defanging an IP Address
+    [Theory]
+    [InlineData("1.1.1.1", "1[.]1[.]1[.]1")]
+    [InlineData("255.100.50.0", "255[.]100[.]50[.]0")]
+    [InlineData("192.168.0.1", "192[.]168[.]0[.]1")]
+    [InlineData("10.0.0.1", "10[.]0[.]0[.]1")]
+    public void DefangIPaddr_ValidInput_ReturnsDefangedIP(string input, string expected)
+    {
+        // Act
+        var result = Solution.DefangIPaddr(input);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
