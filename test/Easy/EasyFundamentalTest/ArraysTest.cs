@@ -460,4 +460,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 744. Find Smallest Letter Greater Than Target
+    [Theory]
+    [InlineData(new char[] { 'c', 'f', 'j' }, 'a', 'c')]
+    [InlineData(new char[] { 'c', 'f', 'j' }, 'c', 'f')]
+    [InlineData(new char[] { 'x', 'x', 'y', 'y' }, 'z', 'x')]
+    public void NextGreatestLetter_WithTestData_ReturnsExpectedResult(char[] letters, char target, char expected)
+    {
+        // Act
+        char result = Solution.NextGreatestLetter(letters, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

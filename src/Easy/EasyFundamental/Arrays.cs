@@ -655,4 +655,24 @@ public class Arrays
     public int[] GetConcatenation(int[] nums)
         => [.. nums, .. nums];
     #endregion
+
+    #region 744. Find Smallest Letter Greater Than Target
+    /// <summary>
+    /// Finds the smallest letter greater than the target letter in the given array of letters.
+    /// </summary>
+    /// <param name="letters"> The array of letters.</param>
+    /// <param name="target"> The target letter. </param>
+    /// <returns> The smallest letter greater than the target letter in the given array of letters. </returns>
+    /// <link>https://leetcode.com/problems/find-smallest-letter-greater-than-target/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public char NextGreatestLetter(char[] letters, char target)
+    {
+        foreach (char letter in letters)
+            if (letter > target)
+                return letter;
+
+        return letters[0];
+    }
+    #endregion
 }
