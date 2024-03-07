@@ -118,9 +118,7 @@ public class Maths
     /// <param name="date1">The first date in the format "YYYY-MM-DD".</param>
     /// <param name="date2">The second date in the format "YYYY-MM-DD".</param>
     /// <returns>The number of days between the two dates.</returns>
-    /// <remarks>
-    /// The given dates are assumed to be valid and between the years 1971 and 2100.
-    /// </remarks>
+    /// <link>https://leetcode.com/problems/number-of-days-between-two-dates/</link>
     /// <time>Time Complexity: O(1)</time>
     /// <space>Space Complexity: O(1)</space>
     public int DaysBetweenDates(string date1, string date2)
