@@ -100,4 +100,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2520. Count the Digits That Divide a Number
+    [Theory]
+    [InlineData(7, 1)]
+    [InlineData(121, 2)]
+    [InlineData(1248, 4)]
+    public void CountDigits_Test(int num, int expected)
+    {
+        // Act
+        int result = Solution.CountDigits(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

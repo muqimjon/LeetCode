@@ -124,4 +124,17 @@ public class Maths
     public int DaysBetweenDates(string date1, string date2)
         => Math.Abs((DateTime.Parse(date1) - DateTime.Parse(date2)).Days);
     #endregion
+
+    #region 2520. Count the Digits That Divide a Number
+    /// <summary>
+    /// Counts the number of digits in the given number that divide the number itself.
+    /// </summary>
+    /// <param name="num">The integer number.</param>
+    /// <returns>The count of digits that divide the number.</returns>
+    /// <link>https://leetcode.com/problems/count-the-digits-that-divide-a-number/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int CountDigits(int num)
+            => num.ToString().Count(d => d % 48 > 0 && num % (d % 48) < 1);
+    #endregion
 }
