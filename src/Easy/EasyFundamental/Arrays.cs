@@ -675,4 +675,31 @@ public class Arrays
         return letters[0];
     }
     #endregion
+
+    #region 3000. Minimum Area Rectangle
+    /// <summary>
+    /// Calculates the area of the rectangle with the longest diagonal.
+    /// </summary>
+    /// <param name="dimensions">The dimensions of the rectangles.</param>
+    /// <returns>The area of the rectangle with the longest diagonal.</returns>
+    /// <link>https://leetcode.com/problems/minimum-area-rectangle/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int AreaOfMaxDiagonal(int[][] dimensions)
+    {
+        Dictionary<double, int> areas = new Dictionary<double, int>();
+
+        foreach (var dimension in dimensions)
+        {
+            var diameter = Math.Sqrt(dimension.Select(n => n * n).Sum());
+            var area = dimension[0] * dimension[1];
+            if (areas.TryGetValue(diameter, out int value))
+                areas[diameter] = value < area ? area : value;
+            else
+                areas[diameter] = area;
+        }
+
+        return areas[areas.Keys.Max()];
+    }
+    #endregion
 }

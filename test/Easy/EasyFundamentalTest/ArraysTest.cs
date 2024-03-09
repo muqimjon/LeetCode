@@ -146,7 +146,7 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
-    
+
     #region 35. Search Insert Position
     [Theory]
     [InlineData(2, new[] { 1, 3, 5, 6 }, 5)]
@@ -212,9 +212,9 @@ public class ArraysTest
 
     #region 1275. Find Winner in Tic Tac Toe
     [Theory]
-    [InlineData("A", new int[] {0, 0}, new int[] {2, 0}, new int[] {1, 1}, new int[] {2, 1}, new int[] {2, 2})]
-    [InlineData("B", new int[] {0, 0}, new int[] {1, 1}, new int[] {0, 1}, new int[] {0, 2}, new int[] {1, 0}, new int[] {2, 0})]
-    [InlineData("Draw", new int[] {0, 0}, new int[] {1, 1}, new int[] {2, 0}, new int[] {1, 0}, new int[] {1, 2}, new int[] {2, 1}, new int[] {0, 1}, new int[] {0, 2}, new int[] {2, 2})]
+    [InlineData("A", new int[] { 0, 0 }, new int[] { 2, 0 }, new int[] { 1, 1 }, new int[] { 2, 1 }, new int[] { 2, 2 })]
+    [InlineData("B", new int[] { 0, 0 }, new int[] { 1, 1 }, new int[] { 0, 1 }, new int[] { 0, 2 }, new int[] { 1, 0 }, new int[] { 2, 0 })]
+    [InlineData("Draw", new int[] { 0, 0 }, new int[] { 1, 1 }, new int[] { 2, 0 }, new int[] { 1, 0 }, new int[] { 1, 2 }, new int[] { 2, 1 }, new int[] { 0, 1 }, new int[] { 0, 2 }, new int[] { 2, 2 })]
     public void TicTacToe_Test(string expected, params int[][] moves)
     {
         // Act
@@ -470,6 +470,43 @@ public class ArraysTest
     {
         // Act
         char result = Solution.NextGreatestLetter(letters, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 3000. Maximum Area of Longest Diogonal Rectangle
+    [Theory]
+    [InlineData(48, new int[] { 9, 3 }, new int[] { 8, 6 })]
+    [InlineData(12, new int[] { 3, 4 }, new int[] { 4, 3 })]
+    [InlineData(80, new int[] { 4, 10 }, new int[] { 4, 9 }, new int[] { 9, 3 }, new int[] { 10, 8 })]
+    [InlineData(2028,
+    new int[] { 4, 7 }, new int[] { 8, 9 }, new int[] { 5, 3 }, new int[] { 6, 10 }, new int[] { 2, 9 },
+    new int[] { 3, 10 }, new int[] { 2, 2 }, new int[] { 5, 8 }, new int[] { 5, 10 }, new int[] { 5, 6 },
+    new int[] { 8, 9 }, new int[] { 10, 7 }, new int[] { 8, 9 }, new int[] { 3, 7 }, new int[] { 2, 6 },
+    new int[] { 5, 1 }, new int[] { 7, 4 }, new int[] { 1, 10 }, new int[] { 1, 7 }, new int[] { 6, 9 },
+    new int[] { 3, 3 }, new int[] { 4, 6 }, new int[] { 8, 2 }, new int[] { 10, 6 }, new int[] { 7, 9 },
+    new int[] { 9, 2 }, new int[] { 1, 2 }, new int[] { 3, 8 }, new int[] { 10, 2 }, new int[] { 4, 1 },
+    new int[] { 9, 7 }, new int[] { 10, 3 }, new int[] { 6, 9 }, new int[] { 9, 8 }, new int[] { 7, 7 },
+    new int[] { 5, 7 }, new int[] { 5, 4 }, new int[] { 6, 5 }, new int[] { 1, 8 }, new int[] { 2, 3 },
+    new int[] { 7, 10 }, new int[] { 3, 9 }, new int[] { 5, 7 }, new int[] { 2, 4 }, new int[] { 5, 6 },
+    new int[] { 9, 5 }, new int[] { 8, 8 }, new int[] { 8, 10 }, new int[] { 6, 8 }, new int[] { 5, 1 },
+    new int[] { 10, 8 }, new int[] { 7, 4 }, new int[] { 2, 1 }, new int[] { 2, 7 }, new int[] { 10, 3 },
+    new int[] { 2, 5 }, new int[] { 7, 6 }, new int[] { 10, 5 }, new int[] { 10, 9 }, new int[] { 5, 7 },
+    new int[] { 10, 6 }, new int[] { 4, 3 }, new int[] { 10, 4 }, new int[] { 1, 5 }, new int[] { 8, 9 },
+    new int[] { 3, 1 }, new int[] { 2, 5 }, new int[] { 9, 10 }, new int[] { 6, 6 }, new int[] { 5, 10 },
+    new int[] { 10, 2 }, new int[] { 6, 10 }, new int[] { 1, 1 }, new int[] { 8, 6 }, new int[] { 1, 7 },
+    new int[] { 6, 3 }, new int[] { 9, 3 }, new int[] { 1, 4 }, new int[] { 1, 1 }, new int[] { 10, 4 },
+    new int[] { 7, 9 }, new int[] { 4, 5 }, new int[] { 2, 8 }, new int[] { 7, 9 }, new int[] { 7, 3 },
+    new int[] { 4, 9 }, new int[] { 2, 8 }, new int[] { 4, 6 }, new int[] { 9, 1 }, new int[] { 8, 4 },
+    new int[] { 2, 4 }, new int[] { 7, 8 }, new int[] { 3, 5 }, new int[] { 7, 6 }, new int[] { 8, 6 },
+    new int[] { 4, 7 }, new int[] { 25, 60 }, new int[] { 39, 52 }, new int[] { 16, 63 }, new int[] { 33, 56 }
+    )] // FAILED
+    public void MaximalRectangleArea_Test(int expected, params int[][] dimensions)
+    {
+        // Act
+        int result = Solution.AreaOfMaxDiagonal(dimensions);
 
         // Assert
         Assert.Equal(expected, result);
