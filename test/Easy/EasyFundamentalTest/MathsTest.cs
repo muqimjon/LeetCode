@@ -115,4 +115,22 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 507. Perfect Number
+    [Theory]
+    [InlineData(28, true)]
+    [InlineData(7, false)]
+    [InlineData(6, true)]
+    [InlineData(496, true)]
+    [InlineData(8128, true)]
+    [InlineData(8127, false)]
+    public void CheckPerfectNumber_Test(int num, bool expected)
+    {
+        // Act
+        bool result = Solution.CheckPerfectNumber(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

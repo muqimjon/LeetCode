@@ -137,4 +137,28 @@ public class Maths
     public int CountDigits(int num)
             => num.ToString().Count(d => d % 48 > 0 && num % (d % 48) < 1);
     #endregion
+
+    #region 507. Perfect Number
+    /// <summary>
+    /// Checks if the given number is a perfect number.
+    /// </summary>
+    /// <param name="num">The number to check.</param>
+    /// <returns>True if the number is perfect, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/perfect-number/</link>
+    /// <time>Time Complexity: O(sqrt(n))</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool CheckPerfectNumber(int num)
+    {
+        if (num < 6)
+            return false;
+
+        int sum = 1;
+
+        for (int i = 2; i <= Math.Sqrt(num); i++)
+            if (num % i == 0)
+                sum += i + (i != num / i ? num / i : 0);
+
+        return sum == num;
+    }
+    #endregion
 }
