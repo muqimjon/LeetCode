@@ -232,4 +232,24 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 151. 796. Rotate String
+    [Theory]
+    [InlineData("abcde", "cdeab", true)]
+    [InlineData("abcde", "abced", false)]
+    [InlineData("", "", true)]
+    [InlineData("a", "a", true)]
+    [InlineData("ab", "ba", true)]
+    [InlineData("ab", "ab", true)]
+    [InlineData("abcde", "deabc", true)]
+    [InlineData("abcde", "eabcd", true)]
+    public void RotateString_TestCases(string s, string goal, bool expected)
+    {
+        // Act
+        bool result = Solution.RotateString(s, goal);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

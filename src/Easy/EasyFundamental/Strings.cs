@@ -333,4 +333,18 @@ public class Strings
     public string DefangIPaddr(string address)
         => address.Replace(".", "[.]");
     #endregion
+
+    #region 796. Rotate String
+    /// <summary>
+    /// Checks if s can become goal after some number of shifts.
+    /// </summary>
+    /// <param name="s">The original string.</param>
+    /// <param name="goal">The target string to achieve.</param>
+    /// <returns>True if s can become goal after some number of shifts, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/rotate-string/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public bool RotateString(string s, string goal)
+        => s.Length == goal.Length && (s + s).Contains(goal);
+    #endregion
 }
