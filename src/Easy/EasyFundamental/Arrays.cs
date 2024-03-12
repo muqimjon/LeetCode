@@ -702,4 +702,23 @@ public class Arrays
         return areas[areas.Keys.Max()];
     }
     #endregion
+
+    #region 3024. Type of Triangle
+    /// <summary>
+    /// Determines the type of triangle based on the given side lengths.
+    /// </summary>
+    /// <param name="nums">The array containing the side lengths of the triangle.</param>
+    /// <returns>The type of triangle formed by the given side lengths.</returns>
+    /// <link>Problem Link: https://leetcode.com/problems/type-of-triangle/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public string TriangleType(int[] nums)
+    {
+        Array.Sort(nums);
+        if (nums[0] + nums[1] <= nums[2]) return "none";
+        if (nums[0] == nums[1] && nums[1] == nums[2]) return "equilateral";
+        if (nums[0] == nums[1] || nums[1] == nums[2]) return "isosceles";
+        return "scalene";
+    }
+    #endregion
 }

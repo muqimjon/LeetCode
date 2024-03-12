@@ -512,4 +512,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3024. Type of Triangle
+    [Theory]
+    [InlineData("equilateral", new int[] { 3, 3, 3 })]
+    [InlineData("scalene", new int[] { 3, 4, 5 })]
+    [InlineData("isosceles", new int[] { 5, 5, 3 })]
+    [InlineData("none", new int[] { 1, 2, 3 })]
+    public void TriangleType_Test(string expected, int[] nums)
+    {
+        // Act
+        string result = Solution.TriangleType(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
