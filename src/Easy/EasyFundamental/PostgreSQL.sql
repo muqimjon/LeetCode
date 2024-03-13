@@ -60,3 +60,17 @@ SET sex = CASE
             WHEN sex = 'f' THEN 'm'
           END;
 --------------------------------------------------------------------------------------------
+
+-- 1731. The Number of Employees Which Report to Each Employee
+-- https://leetcode.com/problems/the-number-of-employees-which-report-to-each-employee/description/
+
+-- Time complexity: O(n * m)
+-- Space complexity: O(n)
+
+SELECT e.employee_id, e.name, count(r.employee_id) reports_count, round(avg(r.age), 0) average_age
+FROM Employees e
+LEFT JOIN Employees r ON e.employee_id = r.reports_to
+GROUP BY e.employee_id, e.name
+HAVING COUNT(r.employee_id) >= 1
+ORDER BY e.employee_id;
+--------------------------------------------------------------------------------------------
