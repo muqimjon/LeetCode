@@ -528,4 +528,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1816. Truncate Sentence
+    [Theory]
+    [InlineData("Hello how are you Contestant", 4, "Hello how are you")]
+    [InlineData("What is the solution to this problem", 4, "What is the solution")]
+    [InlineData("chopper is not a tanuki", 5, "chopper is not a tanuki")]
+    public void TruncateSentence_Test(string s, int k, string expected)
+    {
+        // Act
+        string result = Solution.TruncateSentence(s, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

@@ -721,4 +721,18 @@ public class Arrays
         return "scalene";
     }
     #endregion
+
+    #region 1816. Truncate Sentence
+    /// <summary>
+    /// Truncates the given sentence to contain only the first k words.
+    /// </summary>
+    /// <param name="s">The input sentence.</param>
+    /// <param name="k">The number of words to keep.</param>
+    /// <returns>The truncated sentence.</returns>
+    /// <link>https://leetcode.com/problems/truncate-sentence/</link>
+    /// <time>Time Complexity: O(n + k)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public string TruncateSentence(string s, int k)
+        => string.Join(' ', s.Split(' ').Take(k));
+    #endregion
 }
