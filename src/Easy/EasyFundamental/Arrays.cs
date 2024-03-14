@@ -735,4 +735,30 @@ public class Arrays
     public string TruncateSentence(string s, int k)
         => string.Join(' ', s.Split(' ').Take(k));
     #endregion
+
+    #region 1636. Sort Array by Increasing Frequency
+    /// <summary>
+    /// Sorts the array in ascending order based on the frequency of the numbers in the array.
+    /// </summary>
+    /// <param name="nums">The array to be sorted.</param>
+    /// <returns>The sorted array.</returns>
+    /// <link>https://leetcode.com/problems/sort-array-by-increasing-frequency/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int[] FrequencySort(int[] nums)
+    {
+        var freqMap = new Dictionary<int, int>();
+
+        foreach (var num in nums)
+            freqMap[num] = freqMap.TryGetValue(num, out var val) ? val + 1 : 1;
+
+        Array.Sort(nums, (a, b) =>
+        {
+            var freqComparison = freqMap[a] - freqMap[b];
+            return freqComparison != 0 ? freqComparison : b - a;
+        });
+
+        return nums;
+    }
+    #endregion
 }
