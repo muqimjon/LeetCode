@@ -65,4 +65,20 @@ public class HashTablesTest
         Assert.Equal(expectedResult, result);
     }
     #endregion
+
+    #region 771. Jewels and Stones
+    [Theory]
+    [InlineData("aA", "aAAbbbb", 3)]
+    [InlineData("z", "ZZ", 0)]
+    [InlineData("abc", "abcabcabc", 9)]
+    [InlineData("XYZ", "XYZXYZ", 6)]
+    public void NumJewelsInStones_TestCases(string jewels, string stones, int expected)
+    {
+        // Act
+        int result = Solution.NumJewelsInStones(jewels, stones);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

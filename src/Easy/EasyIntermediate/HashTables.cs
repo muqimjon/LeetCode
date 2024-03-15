@@ -98,4 +98,18 @@ public class HashTables
         return true;
     }
     #endregion
+
+    #region 771. Jewels and Stones
+    /// <summary>
+    /// Given two strings jewels and stones, each character in stones is a type of stone.
+    /// </summary>
+    /// <param name="jewels">The types of stones that are in the bag.</param>
+    /// <param name="stones">The stones that are in the bag.</param>
+    /// <returns>The number of stones that are also jewels.</returns>
+    /// <link>https://leetcode.com/problems/jewels-and-stones/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int NumJewelsInStones(string jewels, string stones)
+        => stones.Count(jewels.Contains);
+    #endregion
 }
