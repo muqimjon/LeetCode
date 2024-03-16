@@ -21,4 +21,21 @@ public class TwoPointers
         return new string(charArray);
     }
     #endregion
+
+    #region 344. Reverse String
+    /// <summary>
+    /// Reverses a string in place.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// returns>A string with the characters in reverse order.
+    /// <link>https://leetcode.com/problems/reverse-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public void ReverseString(char[] s)
+    {
+        int l = 0, r = s.Length - 1;
+        while (l < r)
+            (s[l], s[r]) = (s[r--], s[l++]);
+    }
+    #endregion
 }
