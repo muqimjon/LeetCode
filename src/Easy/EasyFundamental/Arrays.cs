@@ -761,4 +761,17 @@ public class Arrays
         return nums;
     }
     #endregion
+
+    #region 1480. Running Sum of 1d Array
+    /// <summary>
+    /// Calculates the running sum of an array.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The running sum of the array.</returns>
+    /// <link>https://leetcode.com/problems/running-sum-of-1d-array/</link>
+    /// <time>Time Complexity: O(n²)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int[] RunningSum(int[] nums)
+        => nums.Select((x, i) => nums.Take(i + 1).Sum()).ToArray();
+    #endregion
 }

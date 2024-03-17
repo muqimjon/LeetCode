@@ -558,4 +558,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1480. Running Sum of 1d Array
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 1, 3, 6, 10 })]
+    [InlineData(new int[] { 1, 1, 1, 1, 1 }, new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { 3, 1, 2, 10, 1 }, new int[] { 3, 4, 6, 16, 17 })]
+    public void RunningSum_ValidInput_ReturnsExpectedResult(int[] nums, int[] expected)
+    {
+        // Act
+        var result = Solution.RunningSum(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
