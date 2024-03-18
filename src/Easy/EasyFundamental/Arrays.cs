@@ -774,4 +774,18 @@ public class Arrays
     public int[] RunningSum(int[] nums)
         => nums.Select((x, i) => nums.Take(i + 1).Sum()).ToArray();
     #endregion
+
+    #region 1662. Check If Two String Arrays are Equivalent
+    /// <summary>
+    /// Checks if two string arrays are equivalent.
+    /// </summary>
+    /// <param name="word1">The first string array.</param>
+    /// <param name="word2">The second string array.</param>
+    /// <returns>True if the arrays are equivalent, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/</link>
+    /// <time>Time Complexity: O(n + m)</time>
+    /// <space>Space Complexity: O(n + m)</space>
+    public bool ArrayStringsAreEqual(string[] word1, string[] word2)
+        => string.Concat(word1) == string.Concat(word2);
+    #endregion
 }

@@ -573,4 +573,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1662. Check If Two String Arrays are Equivalent
+    [Theory]
+    [InlineData(new string[] { "ab", "c" }, new string[] { "a", "bc" }, true)]
+    [InlineData(new string[] { "a", "cb" }, new string[] { "ab", "c" }, false)]
+    [InlineData(new string[] { "abc", "d", "defg" }, new string[] { "abcddefg" }, true)]
+    public void ArrayStringsAreEqual_ShouldReturnExpectedResult(string[] word1, string[] word2, bool expected)
+    {
+        // Act
+        bool result = Solution.ArrayStringsAreEqual(word1, word2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
