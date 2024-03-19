@@ -133,4 +133,20 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 412. Fizz Buzz
+    [Theory]
+    [InlineData(1, new string[] { "1" })]
+    [InlineData(3, new string[] { "1", "2", "Fizz" })]
+    [InlineData(5, new string[] { "1", "2", "Fizz", "4", "Buzz" })]
+    [InlineData(15, new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" })]
+    public void FizzBuzz_ShouldReturnExpectedOutput(int n, string[] expected)
+    {
+        // Act
+        IList<string> result = Solution.FizzBuzz(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

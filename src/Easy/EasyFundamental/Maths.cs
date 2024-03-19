@@ -161,4 +161,19 @@ public class Maths
         return sum == num;
     }
     #endregion
+
+    #region 412. Fizz Buzz
+    /// <summary>
+    /// Returns a list of strings that represent the numbers from 1 to n.
+    /// </summary>
+    /// <param name="n">The number to generate.</param>
+    /// <returns>A list of strings that represent the numbers from 1 to n.</returns>
+    /// <link>https://leetcode.com/problems/fizz-buzz/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public IList<string> FizzBuzz(int n) =>
+        Enumerable.Range(1, n)
+            .Select(i => (i % 3 == 0 ? "Fizz" : "") + (i % 5 == 0 ? "Buzz" : "") + (i % 3 != 0 && i % 5 != 0 ? i.ToString() : ""))
+            .ToList();
+    #endregion
 }
