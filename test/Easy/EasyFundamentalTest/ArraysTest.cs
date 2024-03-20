@@ -588,4 +588,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1460. Make Two Arrays Equal by Reversing Sub-arrays
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 2, 4, 1, 3 }, true)]
+    [InlineData(new int[] { 7 }, new int[] { 7 }, true)]
+    [InlineData(new int[] { 3, 7, 9 }, new int[] { 3, 7, 11 }, false)]
+    [InlineData(new int[] { 1, 2, 2, 3 }, new int[] { 1, 1, 2, 3 }, false)] // FAILED
+    public void CanBeEqual_Test(int[] target, int[] arr, bool expected)
+    {
+        // Act
+        bool result = Solution.CanBeEqual(target, arr);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

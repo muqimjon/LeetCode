@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace EasyFundamental;
+﻿namespace EasyFundamental;
 
 public class Arrays
 {
@@ -787,5 +785,19 @@ public class Arrays
     /// <space>Space Complexity: O(n + m)</space>
     public bool ArrayStringsAreEqual(string[] word1, string[] word2)
         => string.Concat(word1) == string.Concat(word2);
+    #endregion
+
+    #region 1460. Make Two Arrays Equal
+    /// <summary>
+    /// Determines if two arrays are equal by comparing their elements in the same order.
+    /// </summary>
+    /// <param name="target">The first array.</param>
+    /// <param name="arr">The second array.</param>
+    /// <returns>True if the arrays are equal; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/make-two-arrays-equal/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool CanBeEqual(int[] target, int[] arr)
+        => target.OrderBy(x => x).SequenceEqual(arr.OrderBy(x => x));
     #endregion
 }
