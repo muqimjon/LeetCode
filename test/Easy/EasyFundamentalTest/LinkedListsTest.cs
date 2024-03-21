@@ -35,7 +35,6 @@ public class LinkedListsTest
     }
     #endregion
 
-
     #region 21. Merge Two Sorted Lists >>
     [Theory]
     [InlineData(new int[] { 1, 2, 4 }, new int[] { 1, 3, 4 }, new int[] { 1, 1, 2, 3, 4, 4 })]
@@ -75,6 +74,7 @@ public class LinkedListsTest
     }
     #endregion
 
+    #region 234. Palindrome Linked List >>
     [Theory]
     [InlineData(true, new[] { 1, 2, 2, 1 })]
     [InlineData(false, new[] { 1, 2 })]
@@ -92,4 +92,23 @@ public class LinkedListsTest
         // Assert
         Assert.Equal(expected, result);
     }
+    #endregion
+
+    #region 206. Reverse Linked List >>
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1 })]
+    [InlineData(new int[] { 1, 2 }, new int[] { 2, 1 })]
+    [InlineData(new int[] { }, new int[] { })]
+    public void TestReverseList(int[] inputValues, int[] expectedValues)
+    {
+        // Arrange
+        ListNode head = CreateLinkedList(inputValues);
+
+        // Act
+        ListNode result = Solution.ReverseList(head);
+
+        // Assert
+        Assert.Equal(expectedValues, ConvertLinkedListToArray(result));
+    }
+    #endregion
 }

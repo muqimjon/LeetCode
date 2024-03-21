@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace EasyFundamental;
+﻿namespace EasyFundamental;
 
 public class LinkedLists
 {
@@ -97,6 +95,18 @@ public class LinkedLists
     //    }
     //    return ls.SequenceEqual(sl);
     //}
+    #endregion
+
+    #region 206. Reverse Linked List >>
+    public ListNode ReverseList(ListNode head)
+    {
+        ListNode prev = null!, current = head;
+
+        while (current != null)
+            (current.next, prev, current) = (prev, current, current.next);
+
+        return prev;
+    }
     #endregion
 }
 
