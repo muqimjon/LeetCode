@@ -98,6 +98,14 @@ public class LinkedLists
     #endregion
 
     #region 206. Reverse Linked List >>
+    /// <summary>
+    /// Reverses a singly linked list.
+    /// </summary>
+    /// <param name="head">The head of the singly linked list.</param>
+    /// <returns>The head of the reversed linked list.</returns>
+    /// <link>https://leetcode.com/problems/reverse-linked-list/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
     public ListNode ReverseList(ListNode head)
     {
         ListNode prev = null!, current = head;

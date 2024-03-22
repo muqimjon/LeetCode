@@ -604,4 +604,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1437. Check If All 1's Are at Least Length K Places Away
+    [Theory]
+    [InlineData(new[] { 1, 0, 0, 0, 1, 0, 0, 1 }, 2, true)]
+    [InlineData(new[] { 1, 0, 0, 1, 0, 1 }, 2, false)]
+    [InlineData(new[] { 1, 0, 0, 0, 0, 1 }, 1, true)]
+    [InlineData(new[] { 1, 0, 0, 0, 0, 1 }, 2, true)]
+    [InlineData(new[] { 1, 0, 1, 0, 1, 0 }, 2, false)]
+    public void TestKLengthApart(int[] nums, int k, bool expected)
+    {
+        // Act
+        bool result = Solution.KLengthApart(nums, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

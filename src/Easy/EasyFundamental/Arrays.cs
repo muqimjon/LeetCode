@@ -800,4 +800,29 @@ public class Arrays
     public bool CanBeEqual(int[] target, int[] arr)
         => target.OrderBy(x => x).SequenceEqual(arr.OrderBy(x => x));
     #endregion
+
+    #region 1437. Check If All 1's Are at Least Length K Places Away
+    /// <summary>
+    /// Determines if all 1's are at least k places away from each other.
+    /// </summary>
+    /// <param name="nums">The array of integers.</param>
+    /// <param name="k">The number of places.</param>
+    /// <returns>True if all 1's are at least k places away from each other; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool KLengthApart(int[] nums, int k)
+    {
+        for (int i = 0, count = k; i < nums.Length; i++)
+            if (nums[i] == 1)
+            {
+                if (count < k) return false;
+                count = 0;
+            }
+            else
+                count++;
+
+        return true;
+    }
+    #endregion
 }
