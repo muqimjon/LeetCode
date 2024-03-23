@@ -825,4 +825,17 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 1920. Build Array from Permutation
+    /// <summary>
+    /// Builds an array from its permutation.
+    /// </summary>
+    /// <param name="nums">The array of integers.</param>
+    /// <returns>The array from its permutation.</returns>
+    /// <link>https://leetcode.com/problems/build-array-from-permutation/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int[] BuildArray(int[] nums)
+        => nums.Select(i => nums[i]).ToArray();
+    #endregion
 }

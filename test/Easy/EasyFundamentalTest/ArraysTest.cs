@@ -621,4 +621,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1920. Build Array from Permutation
+    [Theory]
+    [InlineData(new int[] { 0, 2, 1, 5, 3, 4 }, new int[] { 0, 1, 2, 4, 5, 3 })]
+    [InlineData(new int[] { 5, 0, 1, 2, 3, 4 }, new int[] { 4, 5, 0, 1, 2, 3 })]
+    public void TestBuildArrayFromPermutation(int[] nums, int[] expected)
+    {
+        // Act
+        int[] result = Solution.BuildArray(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
