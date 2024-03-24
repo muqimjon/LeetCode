@@ -149,4 +149,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 492. Construct the Rectangle
+    [Theory]
+    [InlineData(4, new int[] { 2, 2 })]
+    [InlineData(37, new int[] { 37, 1 })]
+    [InlineData(122122, new int[] { 427, 286 })]
+    public void ConstructRectangle_ValidInput_ReturnsExpected(int area, int[] expected)
+    {
+        // Act
+        int[] actual = Solution.ConstructRectangle(area);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }

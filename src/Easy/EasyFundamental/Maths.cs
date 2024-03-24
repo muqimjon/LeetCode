@@ -176,4 +176,23 @@ public class Maths
             .Select(i => (i % 3 == 0 ? "Fizz" : "") + (i % 5 == 0 ? "Buzz" : "") + (i % 3 != 0 && i % 5 != 0 ? i.ToString() : ""))
             .ToList();
     #endregion
+
+    #region 492. Construct the Rectangle
+    /// <summary>
+    /// Returns the smallest possible rectangle that can be formed with the given area.
+    /// </summary>
+    /// <param name="area">The area of the rectangle.</param>
+    /// <returns>The smallest possible rectangle that can be formed with the given area.</returns>
+    /// <link>https://leetcode.com/problems/construct-the-rectangle/</link>
+    /// <time>Time Complexity: O(sqrt(n))</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int[] ConstructRectangle(int area)
+    {
+        for (int width = (int)Math.Sqrt(area); width > 0; width--)
+            if (area % width == 0)
+                return [area / width, width];
+
+        return [0, 0];
+    }
+    #endregion
 }
