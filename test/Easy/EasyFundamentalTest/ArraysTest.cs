@@ -635,4 +635,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1464. Maximum Product of Two Elements in an Array
+    [Theory]
+    [InlineData(new int[] { 3, 4, 5, 2 }, 12)]
+    [InlineData(new int[] { 1, 5, 4, 5 }, 16)]
+    [InlineData(new int[] { 3, 7 }, 12)]
+    public void MaxProduct_ShouldReturnCorrectResult(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.MaxProduct(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

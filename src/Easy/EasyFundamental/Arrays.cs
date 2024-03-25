@@ -838,4 +838,27 @@ public class Arrays
     public int[] BuildArray(int[] nums)
         => nums.Select(i => nums[i]).ToArray();
     #endregion
+
+    #region 1464. Maximum Product of Two Elements in an Array
+    /// <summary>
+    /// Returns the maximum product of two integers in an array.
+    /// </summary>
+    /// <param name="nums">The array of integers.</param>
+    /// <returns>The maximum product of two integers in the array.</returns>
+    /// <link>https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MaxProduct(int[] nums)
+    {
+        int max1 = int.MinValue, max2 = int.MinValue;
+
+        foreach (int num in nums)
+            if (num >= max1)
+                (max2, max1) = (max1, num);
+            else if (num > max2)
+                max2 = num;
+
+        return (max1 - 1) * (max2 - 1);
+    }
+    #endregion
 }
