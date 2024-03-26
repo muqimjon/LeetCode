@@ -650,4 +650,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2678. Number of Senior Citizens
+    [Theory]
+    [InlineData(new string[] { "7868190130M7522", "5303914400F9211", "9273338290F4010" }, 2)]
+    [InlineData(new string[] { "1313579440F2036", "2921522980M5644" }, 0)]
+    public void CountSeniorCitizens_ShouldReturnCorrectCount(string[] details, int expected)
+    {
+        // Act
+        var result = Solution.CountSeniors(details);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

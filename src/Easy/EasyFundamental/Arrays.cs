@@ -861,4 +861,17 @@ public class Arrays
         return (max1 - 1) * (max2 - 1);
     }
     #endregion
+
+    #region 2678. Number of Senior Citizens
+    /// <summary>
+    /// Returns the number of senior citizens in an array of strings.
+    /// </summary>
+    /// <param name="details">The array of strings.</param>
+    /// <returns>The number of senior citizens in the array.</returns>
+    /// <link>https://leetcode.com/problems/number-of-senior-citizens/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int CountSeniors(string[] details)
+        => details.Count(d => int.Parse(d[11..13]) > 60);
+    #endregion
 }
