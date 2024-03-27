@@ -164,4 +164,20 @@ public class MathsTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1154. Day of the Year
+    [Theory]
+    [InlineData("2019-01-09", 9)]
+    [InlineData("2019-02-10", 41)]
+    [InlineData("2022-12-31", 365)]
+    [InlineData("2020-02-29", 60)]
+    public void TestDayOfYear(string date, int expected)
+    {
+        // Act
+        int result = Solution.DayOfYear(date);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

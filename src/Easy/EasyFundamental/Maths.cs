@@ -195,4 +195,28 @@ public class Maths
         return [0, 0];
     }
     #endregion
+
+    #region 1154. Day of the Year
+    /// <summary>
+    /// Returns the day of the year corresponding to the given date.
+    /// </summary>
+    /// <param name="date">The date in the format "YYYY-MM-DD".</param>
+    /// <returns>The day of the year.</returns>
+    /// <link>https://leetcode.com/problems/day-of-the-year/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int DayOfYear(string date)
+    {
+        string[] parts = date.Split('-');
+        int year = int.Parse(parts[0]);
+        int month = int.Parse(parts[1]);
+        int day = int.Parse(parts[2]);
+        int[] daysOfMonth = [day, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+            daysOfMonth[2] = 29;
+
+        return daysOfMonth[..month].Sum();
+    }
+    #endregion
 }
