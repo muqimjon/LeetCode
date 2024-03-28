@@ -38,4 +38,25 @@ public class TwoPointers
             (s[l], s[r]) = (s[r--], s[l++]);
     }
     #endregion
+
+    #region 541. Reverse String II
+    /// <summary>
+    /// Reverses a string in place.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <param name="k">The number of characters to reverse.</param>
+    /// <returns>A string with the characters in reverse order.</returns>
+    /// <link>https://leetcode.com/problems/reverse-string-ii/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public string ReverseStr(string s, int k)
+    {
+        var c = s.ToCharArray();
+
+        for (int i = 0; i < s.Length; i += 2 * k)
+            Array.Reverse(c, i, Math.Min(k, s.Length - i));
+
+        return new string(c);
+    }
+    #endregion
 }

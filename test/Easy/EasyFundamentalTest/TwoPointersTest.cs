@@ -37,4 +37,20 @@ public class TwoPointersTest
         Assert.Equal(expected, input);
     }
     #endregion
+
+    #region 541. Reverse String II
+    [Theory]
+    [InlineData("abcdefg", 2, "bacdfeg")]
+    [InlineData("abcd", 2, "bacd")]
+    [InlineData("abcdefgh", 3, "cbadefhg")]
+    [InlineData("abcde", 3, "cbade")]
+    public void TestReverseStr(string s, int k, string expected)
+    {
+        // Act
+        string result = Solution.ReverseStr(s, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
