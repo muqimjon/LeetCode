@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using System.Text.RegularExpressions;
 
 namespace EasyFundamental;
 
@@ -346,5 +345,26 @@ public class Strings
     /// <space>Space Complexity: O(n)</space>
     public bool RotateString(string s, string goal)
         => s.Length == goal.Length && (s + s).Contains(goal);
+    #endregion
+
+    #region 2124. Check if All A's Appears Before All B's
+    /// <summary>
+    /// Checks if all A's appear before all B's
+    /// </summary>
+    /// <param name="s">The input string</param>
+    /// <returns>True if all A's appear before all B's</returns>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool CheckString(string s)
+    {
+        bool foundB = false;
+        foreach (char c in s)
+            if (c == 'b')
+                foundB = true;
+            else if (c == 'a' && foundB)
+                return false;
+
+        return true;
+    }
     #endregion
 }

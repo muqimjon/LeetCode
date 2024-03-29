@@ -252,4 +252,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2124. Check if All A's Appears Before All B's
+    [Theory]
+    [InlineData("aaabbb", true)]
+    [InlineData("abab", false)]
+    [InlineData("bbb", true)]
+    public void TestCheckAllAsBeforeBs(string s, bool expected)
+    {
+        // Act
+        bool result = Solution.CheckString(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
