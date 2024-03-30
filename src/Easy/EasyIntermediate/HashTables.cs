@@ -112,4 +112,24 @@ public class HashTables
     public int NumJewelsInStones(string jewels, string stones)
         => stones.Count(jewels.Contains);
     #endregion
+
+    #region 1876. Substrings of Size Three with Distinct Characters
+    /// <summary>
+    /// Returns the number of good substrings.
+    /// </summary>
+    /// <param name="s">The string to check.</param>
+    /// <returns>The number of good substrings.</returns>
+    /// <link>https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int CountGoodSubstrings(string s)
+    {
+        int count = 0;
+        for (int i = 0; i < s.Length - 2; i++)
+            if (s.Substring(i, 3).Distinct().Count() == 3)
+                count++;
+
+        return count;
+    }
+    #endregion
 }

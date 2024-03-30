@@ -81,4 +81,20 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1876. Substrings of Size Three with Distinct Characters
+    [Theory]
+    [InlineData("xyzzaz", 1)]
+    [InlineData("aababcabc", 4)]
+    [InlineData("abababab", 0)]
+    [InlineData("x", 0)] // FAIL
+    public void TestCountGoodSubstrings(string s, int expected)
+    {
+        // Act
+        int result = Solution.CountGoodSubstrings(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
