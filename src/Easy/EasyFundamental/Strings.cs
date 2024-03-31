@@ -367,4 +367,36 @@ public class Strings
         return true;
     }
     #endregion
+
+    #region 1507. Reformat Date
+    /// <summary>
+    /// Reformats the given date in the format "MM/DD/YYYY".
+    /// </summary>
+    /// <param name="date">The date in the format "MM/DD/YYYY".</param>
+    /// <returns>The reformatted date in the format "YYYY-MM-DD".</returns>
+    /// <link>https://leetcode.com/problems/reformat-date/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public string ReformatDate(string date)
+    {
+        string[] parts = date.Split();
+        string month = parts[1] switch
+        {
+            "Jan" => "01",
+            "Feb" => "02",
+            "Mar" => "03",
+            "Apr" => "04",
+            "May" => "05",
+            "Jun" => "06",
+            "Jul" => "07",
+            "Aug" => "08",
+            "Sep" => "09",
+            "Oct" => "10",
+            "Nov" => "11",
+            _ => "12"
+        };
+
+        return $"{parts[2]}-{month}-{int.Parse(parts[0][..^2]):D2}";
+    }
+    #endregion
 }

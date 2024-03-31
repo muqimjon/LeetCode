@@ -267,4 +267,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1507. Reformat Date
+    [Theory]
+    [InlineData("20th Oct 2052", "2052-10-20")]
+    [InlineData("6th Jun 1933", "1933-06-06")]
+    [InlineData("26th May 1960", "1960-05-26")]
+    public void TestReformatDate(string input, string expected)
+    {
+        // Act
+        string result = Solution.ReformatDate(input);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
