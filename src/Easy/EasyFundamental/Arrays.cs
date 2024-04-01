@@ -874,4 +874,22 @@ public class Arrays
     public int CountSeniors(string[] details)
         => details.Count(d => int.Parse(d[11..13]) > 60);
     #endregion
+
+    #region 1337. The K Weakest Rows in a Matrix
+    /// <summary>
+    /// Returns the indices of the k weakest rows in a matrix.
+    /// </summary>
+    /// <param name="mat">The matrix of integers.</param>
+    /// <param name="k">The number of rows to return.</param>
+    /// <returns>The indices of the k weakest rows in the matrix.</returns>
+    /// <link>https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/</link>
+    /// <time>Time Complexity:  O(m log(m) + k)</time>
+    /// <space>Space Complexity: O(m)</space>
+    public int[] KWeakestRows(int[][] mat, int k)
+        => mat.Select((arr, index) => (arr, index))
+            .OrderBy(x => x.arr.Sum())
+            .Take(k)
+            .Select(x => x.index)
+            .ToArray();
+    #endregion
 }

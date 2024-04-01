@@ -664,4 +664,28 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1337. The K Weakest Rows in a Matrix
+    [Theory]
+    [InlineData(3, new int[] { 2, 0, 3 },
+        new int[] { 1, 1, 0, 0, 0 },
+        new int[] { 1, 1, 1, 1, 0 },
+        new int[] { 1, 0, 0, 0, 0 },
+        new int[] { 1, 1, 0, 0, 0 },
+        new int[] { 1, 1, 1, 1, 1 })]
+    [InlineData(2, new int[] { 0, 2 },
+        new int[] { 1, 0, 0, 0 },
+        new int[] { 1, 1, 1, 1 },
+        new int[] { 1, 0, 0, 0 },
+        new int[] { 1, 0, 0, 0 }
+    )]
+    public void KWeakestRows_WithValidInput_ReturnsExpectedResult(int k, int[] expected, params int[][] mat)
+    {
+        // Act
+        var result = Solution.KWeakestRows(mat, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
