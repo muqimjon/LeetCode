@@ -892,4 +892,33 @@ public class Arrays
             .Select(x => x.index)
             .ToArray();
     #endregion
+
+    #region 205. Isomorphic Strings
+    /// <summary>
+    /// Determines if two strings are isomorphic.
+    /// </summary>
+    /// <param name="s">The first string.</param>
+    /// <param name="t">The second string.</param>
+    /// <returns>True if the strings are isomorphic; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/isomorphic-strings/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool IsIsomorphic(string s, string t)
+    {
+        if (s.Length != t.Length) return false;
+
+        var mapS = new int[256];
+        var mapT = new int[256];
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (mapS[s[i]] != mapT[t[i]]) return false;
+
+            mapS[s[i]] = i + 1;
+            mapT[t[i]] = i + 1;
+        }
+
+        return true;
+    }
+    #endregion
 }

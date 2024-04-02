@@ -688,4 +688,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 205. Isomorphic Strings
+    [Theory]
+    [InlineData("egg", "add", true)]
+    [InlineData("foo", "bar", false)]
+    [InlineData("paper", "title", true)]
+    [InlineData("ab", "aa", false)]
+    public void IsIsomorphic_ReturnsExpectedResult(string s, string t, bool expected)
+    {
+        // Act
+        bool actual = Solution.IsIsomorphic(s, t);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
