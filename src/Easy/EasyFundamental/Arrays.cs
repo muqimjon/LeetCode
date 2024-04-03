@@ -921,4 +921,18 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 2255. Count Prefixes of a Given String
+    /// <summary>
+    /// Returns the number of prefixes of a given string in an array of strings.
+    /// </summary>
+    /// <param name="words">The array of strings.</param>
+    /// <param name="s">The given string.</param>
+    /// <returns>The number of prefixes of the given string in the array.</returns>
+    /// <link>https://leetcode.com/problems/count-prefixes-of-a-given-string/</link>
+    /// <time>Time Complexity: O(n * m)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int CountPrefixes(string[] words, string s)
+        => words.Count(word => s.StartsWith(word));
+    #endregion
 }

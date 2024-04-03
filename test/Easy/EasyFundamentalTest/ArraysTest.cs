@@ -704,4 +704,19 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 2255. Count Prefixes of a Given String
+    [Theory]
+    [InlineData(new string[] { "a", "b", "c", "ab", "bc", "abc" }, "abc", 3)]
+    [InlineData(new string[] { "a", "a" }, "aa", 2)]
+    [InlineData(new string[] { "hello", "world", "hey" }, "hi", 0)]
+    public void CountPrefixes_ShouldReturnCorrectCount(string[] words, string s, int expected)
+    {
+        // Act
+        int actual = Solution.CountPrefixes(words, s);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
