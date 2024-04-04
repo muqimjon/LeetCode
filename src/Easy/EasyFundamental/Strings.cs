@@ -399,4 +399,24 @@ public class Strings
         return $"{parts[2]}-{month}-{int.Parse(parts[0][..^2]):D2}";
     }
     #endregion
+
+    #region 1614. Maximum Nesting Depth of the Parentheses
+    /// <summary>
+    /// Returns the maximum nesting depth of the parentheses in the given string.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The maximum nesting depth of the parentheses.</returns>
+    /// <link>https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MaxDepth(string s)
+    {
+        int max = 0, current = 0;
+        foreach (char c in s)
+            if (c == '(') max = Math.Max(max, ++current);
+            else if (c == ')') current--;
+
+        return max;
+    }
+    #endregion
 }

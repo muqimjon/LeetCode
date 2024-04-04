@@ -282,4 +282,21 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1614. Maximum Nesting Depth of the Parentheses
+    [Theory]
+    [InlineData("(1+(2*3)+((8)/4))+1", 3)]
+    [InlineData("(1)+((2))+(((3)))", 3)]
+    [InlineData("", 0)]
+    [InlineData("()", 1)]
+    [InlineData("((()))", 3)]
+    public void MaxDepth_ShouldReturnCorrectDepth(string s, int expected)
+    {
+        // Act
+        int actual = Solution.MaxDepth(s);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
