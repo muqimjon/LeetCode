@@ -419,4 +419,21 @@ public class Strings
         return max;
     }
     #endregion
+
+    #region 1221. Split a String in Balanced Strings
+    public int BalancedStringSplit(string s)
+    {
+        int count = 0, balance = 0;
+
+        foreach (char c in s)
+        {
+            if (c == 'L') balance++;
+            else balance--;
+
+            if (balance == 0) count++;
+        }
+
+        return count;
+    }
+    #endregion
 }

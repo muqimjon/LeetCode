@@ -299,4 +299,18 @@ public class StringsTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1221. Split a String in Balanced Strings
+    [Theory]
+    [InlineData("RLRRLLRLRL", 4)]
+    [InlineData("LLLLRRRR", 1)]
+    public void TestBalancedStringSplit(string input, int expected)
+    {
+        // Act
+        var result = Solution.BalancedStringSplit(input);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
