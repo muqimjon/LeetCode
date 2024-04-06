@@ -737,4 +737,24 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1436. Destination City
+    [Theory]
+    [InlineData("Sao Paulo", new string[] { "London", "New York" }, new string[] { "New York", "Lima" }, new string[] { "Lima", "Sao Paulo" })]
+    [InlineData("A", new string[] { "B", "C" }, new string[] { "D", "B" }, new string[] { "C", "A" })]
+    [InlineData("Z", new string[] { "A", "Z" })]
+    public void DestCity_ValidInput_ReturnsCorrectDestination(string expectedDestination, params string[][] paths)
+    {
+        // Arrange
+        IList<IList<string>> pathList = [];
+        foreach (var path in paths)
+            pathList.Add(new List<string>(path));
+
+        // Act
+        string actualDestination = Solution.DestCity(pathList);
+
+        // Assert
+        Assert.Equal(expectedDestination, actualDestination);
+    }
+    #endregion
 }

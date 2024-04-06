@@ -954,4 +954,32 @@ public class Arrays
         return false;
     }
     #endregion
+
+    #region 1436. Destination City
+    /// <summary>
+    /// Returns the destination city of a list of paths.
+    /// </summary>
+    /// <param name="paths">The list of paths.</param>
+    /// <returns>The destination city of the list of paths.</returns>
+    /// <link>https://leetcode.com/problems/destination-city/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public string DestCity(IList<IList<string>> paths)
+    {
+        HashSet<string> outgoingCities = [];
+        HashSet<string> incomingCities = [];
+
+        foreach (var path in paths)
+        {
+            outgoingCities.Add(path[0]);
+            incomingCities.Add(path[1]);
+        }
+
+        foreach (var city in incomingCities)
+            if (!outgoingCities.Contains(city))
+                return city;
+
+        return "";
+    }
+    #endregion
 }
