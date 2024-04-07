@@ -982,4 +982,33 @@ public class Arrays
         return "";
     }
     #endregion
+
+    #region 1710. Maximum Units on a Truck
+    /// <summary>
+    /// Finds max units on truck (sort by units, greedy selection).
+    /// </summary>
+    /// <param name="boxTypes">Box types (count, units per box).</param>
+    /// <param name="truckSize">Truck capacity.</param>
+    /// <returns></returns>
+    /// <link>https://leetcode.com/problems/maximum-units-on-a-truck</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MaximumUnits(int[][] boxTypes, int truckSize)
+    {
+        Array.Sort(boxTypes, (a, b) => b[1] - a[1]);
+
+        int totalUnits = 0;
+        for (int i = 0; i < boxTypes.Length && truckSize > 0; i++)
+        {
+            int boxCount = boxTypes[i][0];
+            int unitsPerBox = boxTypes[i][1];
+
+            int boxesToAdd = Math.Min(boxCount, truckSize);
+            totalUnits += boxesToAdd * unitsPerBox;
+            truckSize -= boxesToAdd;
+        }
+
+        return totalUnits;
+    }
+    #endregion
 }

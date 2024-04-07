@@ -757,4 +757,18 @@ public class ArraysTest
         Assert.Equal(expectedDestination, actualDestination);
     }
     #endregion
+
+    #region 1710. Maximum Units on a Truck
+    [Theory]
+    [InlineData(4, 8, new[] { 1, 3 }, new[] { 2, 2 }, new[] { 3, 1 })]
+    [InlineData(10, 91, new[] { 5, 10 }, new[] { 2, 5 }, new[] { 4, 7 }, new[] { 3, 9 })]
+    public void MaximumUnits_ShouldReturnMaximumTotalUnits(int truckSize, int expected, params int[][] boxTypes)
+    {
+        // Act
+        int actual = Solution.MaximumUnits(boxTypes, truckSize);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
