@@ -180,4 +180,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 504. Base 7
+    [Theory]
+    [InlineData(100, "202")]
+    [InlineData(-7, "-10")]
+    [InlineData(0, "0")]
+    public void ConvertToBase7_ShouldReturnCorrectBase7Representation(int num, string expected)
+    {
+        // Act
+        string base7String = Solution.ConvertToBase7(num);
+
+        // Assert
+        Assert.Equal(expected, base7String);
+    }
+    #endregion
 }

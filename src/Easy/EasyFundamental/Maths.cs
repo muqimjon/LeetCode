@@ -219,4 +219,30 @@ public class Maths
         return daysOfMonth[..month].Sum();
     }
     #endregion
+
+    #region 504. Base 7
+    /// <summary>
+    /// Converts an integer to its base 7 representation.
+    /// </summary>
+    /// <param name="num">The integer to convert.</param>
+    /// <returns>The base 7 representation of the integer.</returns>
+    /// <link>https://leetcode.com/problems/base-7/</link>
+    /// <time>Time Complexity: O(log(n))</time>
+    /// <space>Space Complexity: O(log(n))</space>
+    public string ConvertToBase7(int num)
+    {
+        if (num == 0) return "0";
+
+        StringBuilder result = new();
+        int absNum = Math.Abs(num);
+
+        while (absNum > 0)
+        {
+            result.Insert(0, absNum % 7);
+            absNum /= 7;
+        }
+
+        return (num < 0 ? "-" : "") + result;
+    }
+    #endregion
 }
