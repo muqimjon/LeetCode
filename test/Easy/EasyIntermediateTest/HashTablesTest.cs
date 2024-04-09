@@ -97,4 +97,21 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 409. Longest Palindrome
+    [Theory]
+    [InlineData("abccccdd", 7)]
+    [InlineData("a", 1)]
+    [InlineData("abcde", 1)]
+    [InlineData("aab", 3)]
+    [InlineData("aabbc", 5)]
+    public void TestLongestPalindrome(string input, int expectedLength)
+    {
+        // Act
+        int actualLength = Solution.LongestPalindrome(input);
+
+        // Assert
+        Assert.Equal(expectedLength, actualLength);
+    }
+    #endregion
 }

@@ -132,4 +132,31 @@ public class HashTables
         return count;
     }
     #endregion
+
+    #region 409. Longest Palindrome
+    /// <summary>
+    /// Returns the length of the longest palindromic substring in s.
+    /// </summary>
+    /// <param name="s">The string to check.</param>
+    /// <returns>The length of the longest palindromic substring in s.</returns>
+    /// <link>https://leetcode.com/problems/longest-palindrome/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int LongestPalindrome(string s)
+    {
+        int[] charCounts = new int[128];
+        int length = 0, odd = 0;
+
+        foreach (char c in s)
+            charCounts[c]++;
+
+        foreach (int count in charCounts)
+        {
+            length += count / 2 * 2;
+            if (count % 2 == 1) odd = 1;
+        }
+
+        return odd + length;
+    }
+    #endregion
 }
