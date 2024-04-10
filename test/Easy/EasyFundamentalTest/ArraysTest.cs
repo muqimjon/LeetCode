@@ -771,4 +771,19 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1893. Check if All the Integers in a Range Are Covered
+    [Theory]
+    [InlineData(2, 5, true, new int[] { 1, 2 }, new int[] { 3, 4 }, new int[] { 5, 6 })]
+    [InlineData(21, 21, false, new int[] { 1, 10 }, new int[] { 10, 20 })]
+    [InlineData(11, 14, false, new int[] { 1, 10 }, new int[] { 15, 20 })]
+    public void TestIsCovered(int left, int right, bool expectedResult, params int[][] ranges)
+    {
+        // Act
+        bool result = Solution.IsCovered(ranges, left, right);
+
+        // Assert
+        Assert.Equal(expectedResult, result);
+    }
+    #endregion
 }

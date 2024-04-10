@@ -1011,4 +1011,27 @@ public class Arrays
         return totalUnits;
     }
     #endregion
+
+    #region 1893. Check if All the Integers in a Range Are Covered
+    /// <summary>
+    /// Checks if all the integers in a range are covered in an array of ranges.
+    /// </summary>
+    /// <param name="ranges">The array of ranges.</param>
+    /// <param name="left">The left boundary of the range.</param>
+    /// <param name="right">The right boundary of the range.</param>
+    /// <returns>True if all the integers in the range are covered in the array; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/</link>
+    /// <time>Time Complexity: O(n + m)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool IsCovered(int[][] ranges, int left, int right)
+    {
+        bool[] covered = new bool[51];
+
+        foreach (var range in ranges)
+            for (int i = range[0]; i <= range[1]; i++)
+                covered[i] = true;
+
+        return covered[left..(right + 1)].All(x => x);
+    }
+    #endregion
 }
