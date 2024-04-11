@@ -245,4 +245,28 @@ public class Maths
         return (num < 0 ? "-" : "") + result;
     }
     #endregion
+
+    #region 1323. Maximum 69 Number
+    /// <summary>
+    /// Returns the maximum number after replacing all 6's with 9's.
+    /// </summary>
+    /// <param name="num">The number to replace 6's with 9's.</param>
+    /// <returns>The maximum number after replacing all 6's with 9's.</returns>
+    /// <link>https://leetcode.com/problems/maximum-69-number/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int Maximum69Number(int num)
+    {
+        char[] digits = num.ToString().ToCharArray();
+
+        for (int i = 0; i < digits.Length; i++)
+            if (digits[i] == '6')
+            {
+                digits[i] = '9';
+                break;
+            }
+
+        return int.Parse(new string(digits));
+    }
+    #endregion
 }

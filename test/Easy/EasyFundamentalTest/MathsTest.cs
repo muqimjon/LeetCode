@@ -195,4 +195,21 @@ public class MathsTest
         Assert.Equal(expected, base7String);
     }
     #endregion
+
+    #region 1323. Maximum 69 Number
+    [Theory]
+    [InlineData(9669, 9969)] // Changing the second digit from 6 to 9
+    [InlineData(9996, 9999)] // Changing the last digit from 6 to 9
+    [InlineData(9999, 9999)] // No change needed
+    [InlineData(6666, 9666)] // Changing the first digit from 6 to 9
+    [InlineData(6699, 9699)] // Changing the second digit from 6 to 9
+    public void TestMaximum69Number(int num, int expected)
+    {
+        // Act
+        int result = Solution.Maximum69Number(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
