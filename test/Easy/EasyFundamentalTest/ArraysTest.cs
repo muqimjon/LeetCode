@@ -786,4 +786,18 @@ public class ArraysTest
         Assert.Equal(expectedResult, result);
     }
     #endregion
+
+    #region 1351. Count Negative Numbers in a Sorted Matrix
+    [Theory]
+    [InlineData(8, new int[] { 4, 3, 2, -1 }, new int[] { 3, 2, 1, -1 }, new int[] { 1, 1, -1, -2 }, new int[] { -1, -1, -2, -3 })]
+    [InlineData(0, new int[] { 3, 2 }, new int[] { 1, 0 })]
+    public void TestCountNegatives(int expected, params int[][] grid)
+    {
+        // Act
+        int result = Solution.CountNegatives(grid);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

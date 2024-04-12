@@ -1034,4 +1034,30 @@ public class Arrays
         return covered[left..(right + 1)].All(x => x);
     }
     #endregion
+
+    #region 1351. Count Negative Numbers in a Sorted Matrix
+    /// <summary>
+    /// Counts the number of negative numbers in a sorted matrix.
+    /// </summary>
+    /// <param name="grid">The sorted matrix.</param>
+    /// <returns>The count of negative numbers in the matrix.</returns>
+    /// <link>https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/</link>
+    /// <time>Time Complexity: O(n + m)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int CountNegatives(int[][] grid)
+    {
+        int m = grid.Length, n = grid[0].Length, count = 0;
+
+        for (int row = 0, col = n - 1; row < m && col >= 0;)
+            if (grid[row][col] < 0)
+            {
+                count += m - row;
+                col--;
+            }
+            else
+                row++;
+
+        return count;
+    }
+    #endregion
 }
