@@ -73,4 +73,25 @@ LEFT JOIN Employees r ON e.employee_id = r.reports_to
 GROUP BY e.employee_id, e.name
 HAVING COUNT(r.employee_id) >= 1
 ORDER BY e.employee_id;
+
+-- SELECT
+--     e.employee_id,
+--     e.name,
+--     (
+--         SELECT COUNT(*)
+--         FROM Employees r
+--         WHERE r.reports_to = e.employee_id
+--     ) AS reports_count,
+--     (
+--         SELECT ROUND(AVG(r.age), 0)
+--         FROM Employees r
+--         WHERE r.reports_to = e.employee_id
+--     ) AS average_age
+-- FROM Employees e
+-- WHERE EXISTS (
+--     SELECT 1
+--     FROM Employees r
+--     WHERE r.reports_to = e.employee_id
+-- )
+-- ORDER BY e.employee_id;
 --------------------------------------------------------------------------------------------
