@@ -212,4 +212,20 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1523. Count Odd Numbers in an Interval Range
+    [Theory]
+    [InlineData(3, 7, 3)]
+    [InlineData(2, 8, 3)]
+    [InlineData(1, 10, 5)]
+    [InlineData(0, 6, 3)]
+    public void CountOdds_Returns_CorrectCount(int low, int high, int expected)
+    {
+        // Act
+        int actual = Solution.CountOdds(low, high);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }

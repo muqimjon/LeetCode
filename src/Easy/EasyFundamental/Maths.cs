@@ -269,4 +269,18 @@ public class Maths
         return int.Parse(new string(digits));
     }
     #endregion
+
+    #region 1523. Count Odd Numbers in an Interval Range
+    /// <summary>
+    /// Counts the number of odd integers in the inclusive interval range [low, high].
+    /// </summary>
+    /// <param name="low">The lower bound of the interval.</param>
+    /// <param name="high">The upper bound of the interval.</param>
+    /// <returns>The count of odd integers in the interval range.</returns>
+    /// <link>https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/description/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int CountOdds(int low, int high)
+        => (high + 1) / 2 - low / 2;
+    #endregion
 }
