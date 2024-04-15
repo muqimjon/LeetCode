@@ -228,4 +228,19 @@ public class MathsTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1716. Calculate Money in Leetcode Bank
+    [Theory]
+    [InlineData(4, 10)]
+    [InlineData(10, 37)]
+    [InlineData(20, 96)]
+    public void TestCalculateMoneyInLeetCodeBank(int n, int expected)
+    {
+        // Act
+        int result = Solution.TotalMoney(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

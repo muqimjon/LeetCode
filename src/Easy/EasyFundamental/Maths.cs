@@ -283,4 +283,27 @@ public class Maths
     public int CountOdds(int low, int high)
         => (high + 1) / 2 - low / 2;
     #endregion
+
+    #region 1716. Calculate Money in Leetcode Bank
+    /// <summary>
+    /// Calculates the total amount of money Hercy will have in the Leetcode bank at the end of the nth day.
+    /// </summary>
+    /// <param name="day">The nth day.</param>
+    /// <returns>The total amount of money at the end of the nth day.</returns>
+    /// <link>https://leetcode.com/problems/calculate-money-in-leetcode-bank/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int TotalMoney(int day)
+    {
+        int countWeeks = day / 7;
+        int money = countWeeks * 28, i = 0;
+
+        for (; i < countWeeks; ++i)
+            money += i * 7;
+
+        int residue = day % 7;
+
+        return money + residue * (residue + 1) / 2 + i * residue;
+    }
+    #endregion
 }
