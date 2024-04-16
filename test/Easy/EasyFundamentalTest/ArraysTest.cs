@@ -800,4 +800,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2706. Buy Two Chocolates
+    [Theory]
+    [InlineData(new int[] { 1, 2, 2 }, 3, 0)]
+    [InlineData(new int[] { 3, 2, 3 }, 3, 3)]
+    public void TestBuyChoco(int[] prices, int money, int expected)
+    {
+        // Act
+        int result = Solution.BuyChoco(prices, money);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

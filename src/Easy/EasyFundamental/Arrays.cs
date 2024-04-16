@@ -1060,4 +1060,29 @@ public class Arrays
         return count;
     }
     #endregion
+
+    #region 2706. Buy Two Chocolates
+    /// <summary>
+    /// Calculates the leftover money after buying two chocolates with minimum prices.
+    /// </summary>
+    /// <param name="prices">The array of chocolate prices.</param>
+    /// <param name="money">The initial amount of money.</param>
+    /// <returns>The leftover money after buying two chocolates.</returns>
+    /// <link>https://leetcode.com/problems/buy-two-chocolates/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int BuyChoco(int[] prices, int money)
+    {
+        int min1 = int.MaxValue, min2 = int.MaxValue;
+
+        foreach (int price in prices)
+            if (price < min1)
+                (min2, min1) = (min1, price);
+            else if (price < min2)
+                min2 = price;
+
+        int leftover = money - (min1 + min2);
+        return leftover >= 0 ? leftover : money;
+    }
+    #endregion
 }
