@@ -243,4 +243,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2769. Find the Maximum Achievable Number
+    [Theory]
+    [InlineData(4, 1, 6)]
+    [InlineData(3, 2, 7)]
+    public void TestMaximumAchievableNumber(int num, int t, int expected)
+    {
+        // Act
+        int result = Solution.TheMaximumAchievableX(num, t);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

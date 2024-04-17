@@ -306,4 +306,18 @@ public class Maths
         return money + residue * (residue + 1) / 2 + i * residue;
     }
     #endregion
+
+    #region 2769. Find the Maximum Achievable Number
+    /// <summary>
+    /// Returns the maximum achievable number based on the given input values.
+    /// </summary>
+    /// <param name="num">The target number to achieve.</param>
+    /// <param name="t">The maximum number of times the operation can be applied.</param>
+    /// <returns>The maximum achievable number.</returns>
+    /// <link>https://leetcode.com/problems/find-the-maximum-achievable-number/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int TheMaximumAchievableX(int num, int t)
+        => 2 * t + num;
+    #endregion
 }
