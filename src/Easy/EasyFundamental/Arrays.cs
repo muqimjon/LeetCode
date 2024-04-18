@@ -1085,4 +1085,17 @@ public class Arrays
         return leftover >= 0 ? leftover : money;
     }
     #endregion
+
+    #region 2011. Final Value of Variable After Performing Operations
+    /// <summary>
+    /// Calculates final variable value after operations.
+    /// </summary>
+    /// <param name="operations">Array of increment and decrement operations.</param>
+    /// <returns>Final variable value after all operations.</returns>
+    /// <link>https://leetcode.com/problems/final-value-of-variable-after-performing-operations/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int FinalValueAfterOperations(string[] operations)
+        => operations.Sum(op => op.Contains('+') ? 1 : -1);
+    #endregion
 }

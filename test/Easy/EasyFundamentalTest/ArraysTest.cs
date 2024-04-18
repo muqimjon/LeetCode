@@ -814,4 +814,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2011. Final Value of Variable After Performing Operations
+    [Theory]
+    [InlineData(new string[] { "--X", "X++", "X++" }, 1)]
+    [InlineData(new string[] { "++X", "++X", "X++" }, 3)]
+    [InlineData(new string[] { "X++", "++X", "--X", "X--" }, 0)]
+    public void FinalValueAfterOperations_ShouldReturnCorrectValue(string[] operations, int expected)
+    {
+        // Act
+        int result = Solution.FinalValueAfterOperations(operations);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
