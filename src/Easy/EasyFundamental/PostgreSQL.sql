@@ -1,4 +1,4 @@
--- 1677. Fix Names in a Table
+﻿-- 1677. Fix Names in a Table
 -- https://leetcode.com/problems/fix-names-in-a-table/
 
 -- Converts the first character of each name to uppercase and the rest to lowercase
@@ -94,4 +94,16 @@ ORDER BY e.employee_id;
 --     WHERE r.reports_to = e.employee_id
 -- )
 -- ORDER BY e.employee_id;
+--------------------------------------------------------------------------------------------
+
+-- 1729. Find Followers Count
+-- https://leetcode.com/problems/find-followers-count
+
+-- Time complexity: O(n∗logn)
+-- Space complexity: O(n)
+
+SELECT user_id, count(*) followers_count 
+FROM followers
+GROUP BY user_id
+ORDER BY user_id;
 --------------------------------------------------------------------------------------------
