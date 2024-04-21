@@ -829,4 +829,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2465. Number of Distinct Averages
+    [Theory]
+    [InlineData(new int[] { 4, 1, 4, 0, 3, 5 }, 2)]
+    [InlineData(new int[] { 1, 100 }, 1)]
+    [InlineData(new int[] { 5, 5, 5, 5 }, 1)]
+    public void DistinctAverages_ValidInput_ReturnsCorrectCount(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.DistinctAverages(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

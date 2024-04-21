@@ -1098,4 +1098,26 @@ public class Arrays
     public int FinalValueAfterOperations(string[] operations)
         => operations.Sum(op => op.Contains('+') ? 1 : -1);
     #endregion
+
+    #region 2465. Number of Distinct Averages
+    /// <summary>
+    /// Counts the number of distinct averages calculated from the input array of integers.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The count of distinct averages.</returns>
+    /// <link>https://leetcode.com/problems/number-of-distinct-averages/</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int DistinctAverages(int[] nums)
+    {
+        HashSet<double> averages = [];
+
+        Array.Sort(nums);
+
+        for (int left = 0, right = nums.Length - 1; left < right; left++, right--)
+            averages.Add((nums[left] + nums[right]) / 2.0);
+
+        return averages.Count;
+    }
+    #endregion
 }
