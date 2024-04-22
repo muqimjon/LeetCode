@@ -313,4 +313,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3019. Number of Changing Keys
+    [Theory]
+    [InlineData("aAbBcC", 2)]
+    [InlineData("AaAaAaaA", 0)]
+    public void CountKeyChanges_ValidInput_ReturnsExpectedCount(string input, int expected)
+    {
+        // Act
+        int actual = Solution.CountKeyChanges(input);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }

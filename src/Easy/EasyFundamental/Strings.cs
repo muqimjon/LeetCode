@@ -436,4 +436,17 @@ public class Strings
         return count;
     }
     #endregion
+
+    #region 3019. Number of Changing Keys
+    /// <summary>
+    /// Counts the number of key changes in a given string.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The number of key changes.</returns>
+    /// <link>https://leetcode.com/problems/number-of-changing-keys/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int CountKeyChanges(string s)
+        => s.Zip(s.Skip(1), (a, b) => char.ToLower(a) != char.ToLower(b)).Count(change => change);
+    #endregion
 }
