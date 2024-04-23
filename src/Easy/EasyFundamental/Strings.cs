@@ -449,4 +449,19 @@ public class Strings
     public int CountKeyChanges(string s)
         => s.Zip(s.Skip(1), (a, b) => char.ToLower(a) != char.ToLower(b)).Count(change => change);
     #endregion
+
+    #region 2315. Count Asterisks
+    /// <summary>
+    /// Counts the number of asterisks in a string, excluding those between pairs of vertical bars '|'.
+    /// </summary>
+    /// <param name="s">The input string containing asterisks and vertical bars.</param>
+    /// <returns>The number of asterisks not between '|' pairs.</returns>
+    /// <link>https://leetcode.com/problems/count-asterisks/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int CountAsterisks(string s)
+        => s.Split('|')
+                .Where((_, ind) => ind % 2 != 1)
+                .Sum(sub => sub.Count(c => c == '*'));
+    #endregion
 }

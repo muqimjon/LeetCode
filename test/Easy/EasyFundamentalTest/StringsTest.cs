@@ -327,4 +327,19 @@ public class StringsTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 2315. Count Asterisks
+    [Theory]
+    [InlineData("l|*e*et|c**o|*de|", 2)]
+    [InlineData("iamprogrammer", 0)]
+    [InlineData("yo|uar|e**|b|e***au|tifu|l", 5)]
+    public void TestCountAsterisks(string s, int expected)
+    {
+        // Act
+        int result = Solution.CountAsterisks(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
