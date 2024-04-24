@@ -1,4 +1,6 @@
-﻿namespace EasyFundamental;
+﻿using System.Security.Cryptography;
+
+namespace EasyFundamental;
 
 public class Arrays
 {
@@ -1118,6 +1120,26 @@ public class Arrays
             averages.Add((nums[left] + nums[right]) / 2.0);
 
         return averages.Count;
+    }
+    #endregion
+
+    #region 2974. Minimum Number Game
+    /// <summary>
+    /// Rearranges array for odd indexes to exceed preceding evens.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The rearranged array.</returns>
+    /// <link>Link: Not specified</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int[] NumberGame(int[] nums)
+    {
+        Array.Sort(nums);
+
+        for (int i = 1; i < nums.Length; i += 2)
+            (nums[i], nums[i - 1]) = (nums[i - 1], nums[i]);
+
+        return nums;
     }
     #endregion
 }

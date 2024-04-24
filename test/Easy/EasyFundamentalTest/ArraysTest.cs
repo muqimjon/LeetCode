@@ -844,4 +844,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2974. Minimum Number Game
+    [Theory]
+    [InlineData(new int[] { 5, 4, 2, 3 }, new int[] { 3, 2, 5, 4 })]
+    [InlineData(new int[] { 2, 5 }, new int[] { 5, 2 })]
+    public void TestNumberGame(int[] nums, int[] expected)
+    {
+        // Act
+        var result = Solution.NumberGame(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
