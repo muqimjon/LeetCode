@@ -159,4 +159,28 @@ public class HashTables
         return odd + length;
     }
     #endregion
+
+    #region 1624. Largest Substring Between Two Equal Characters
+    /// <summary>
+    /// Calculates the maximum length of substring between two equal characters.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The maximum length between two equal characters.</returns>
+    /// <link>https://leetcode.com/problems/largest-substring-between-two-equal-characters/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int MaxLengthBetweenEqualCharacters(string s)
+    {
+        int maxLength = -1;
+        Dictionary<char, int> lastIndexMap = [];
+
+        for (int i = 0; i < s.Length; i++)
+            if (lastIndexMap.TryGetValue(s[i], out int value))
+                maxLength = Math.Max(maxLength, i - value - 1);
+            else
+                lastIndexMap[s[i]] = i;
+
+        return maxLength;
+    }
+    #endregion
 }

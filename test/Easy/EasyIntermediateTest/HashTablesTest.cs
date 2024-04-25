@@ -114,4 +114,19 @@ public class HashTablesTest
         Assert.Equal(expectedLength, actualLength);
     }
     #endregion
+
+    #region 1624. Largest Substring Between Two Equal Characters
+    [Theory]
+    [InlineData("aa", 0)]
+    [InlineData("abca", 2)]
+    [InlineData("cbzxy", -1)]
+    public void TestLargestSubstring(string s, int expected)
+    {
+        // Act
+        var result = Solution.MaxLengthBetweenEqualCharacters(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
