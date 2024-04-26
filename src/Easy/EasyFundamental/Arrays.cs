@@ -1142,4 +1142,33 @@ public class Arrays
         return nums;
     }
     #endregion
+
+    #region 2341. Maximum Number of Pairs in Array
+    /// <summary>
+    /// Counts pairs and leftover integers in an array.
+    /// </summary>
+    /// <param name="nums">Input array of integers.</param>
+    /// <returns>Number of pairs formed and leftover integers.</returns>
+    /// <link>Link: Not specified</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public int[] NumberOfPairs(int[] nums)
+    {
+        Dictionary<int, int> counts = [];
+        int pairs = 0;
+
+        foreach (var num in nums)
+        {
+            if (counts.ContainsKey(num))
+            {
+                pairs++;
+                counts.Remove(num);
+            }
+            else
+                counts[num] = 1;
+        }
+
+        return [pairs, counts.Count];
+    }
+    #endregion
 }

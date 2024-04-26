@@ -858,4 +858,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2341. Maximum Number of Pairs in Array
+    [Theory]
+    [InlineData(new int[] { 1, 3, 2, 1, 3, 2, 2 }, new int[] { 3, 1 })]
+    [InlineData(new int[] { 1, 1 }, new int[] { 1, 0 })]
+    [InlineData(new int[] { 0 }, new int[] { 0, 1 })]
+    public void TestNumberOfPairs(int[] nums, int[] expected)
+    {
+        // Act
+        var result = Solution.NumberOfPairs(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
