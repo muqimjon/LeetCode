@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.ComponentModel;
+using System.Text;
 
 namespace EasyFundamental;
 
@@ -463,5 +464,26 @@ public class Strings
         => s.Split('|')
                 .Where((_, ind) => ind % 2 != 1)
                 .Sum(sub => sub.Count(c => c == '*'));
+    #endregion
+
+    #region 482. License Key Formatting
+    /// <summary>
+    /// Reformats a license key string by grouping characters and adding dashes.
+    /// </summary>
+    /// <param name="s">The original license key string.</param>
+    /// <param name="k">The desired group size.</param>
+    /// <returns>The reformatted license key string.</returns>
+    /// <link>https://leetcode.com/problems/license-key-formatting/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public string LicenseKeyFormatting(string s, int k)
+    {
+        var ls = s.Replace("-", "").ToUpper().ToList();
+
+        for (int i = ls.Count - k; i > 0; i -= k)
+            ls.Insert(i, '-');
+
+        return string.Join("", ls);
+    }
     #endregion
 }
