@@ -53,4 +53,18 @@ public class TwoPointersTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 345. Reverse Vowels of a String
+    [Theory]
+    [InlineData("hello", "holle")]
+    [InlineData("leetcode", "leotcede")]
+    public void TestReverseVowels(string input, string expected)
+    {
+        // Act
+        string result = Solution.ReverseVowels(input);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

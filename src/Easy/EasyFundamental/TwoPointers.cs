@@ -59,4 +59,31 @@ public class TwoPointers
         return new string(c);
     }
     #endregion
+
+    #region 345. Reverse Vowels of a String
+    /// <summary>
+    /// Reverses only the vowels in a string.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The string with reversed vowels.</returns>
+    /// <link>https://leetcode.com/problems/reverse-vowels-of-a-string/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public string ReverseVowels(string s)
+    {
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+        char[] chars = s.ToCharArray();
+        int left = 0, right = chars.Length - 1;
+
+        while (left < right)
+            if (Array.IndexOf(vowels, chars[left]) == -1)
+                left++;
+            else if (Array.IndexOf(vowels, chars[right]) == -1)
+                right--;
+            else
+                (chars[right], chars[left]) = (chars[left++], chars[right--]);
+
+        return new string(chars);
+    }
+    #endregion
 }
