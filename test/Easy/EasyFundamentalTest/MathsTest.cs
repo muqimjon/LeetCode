@@ -257,4 +257,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1688. Count of Matches in Tournament
+    [Theory]
+    [InlineData(7, 6)]
+    [InlineData(14, 13)]
+    public void TestCountMatches(int n, int expected)
+    {
+        // Act
+        int result = Solution.NumberOfMatches(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

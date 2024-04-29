@@ -320,4 +320,17 @@ public class Maths
     public int TheMaximumAchievableX(int num, int t)
         => 2 * t + num;
     #endregion
+
+    #region 1688. Count of Matches in Tournament
+    /// <summary>
+    /// Calculates the number of matches played in a tournament.
+    /// </summary>
+    /// <param name="n">The number of teams in the tournament.</param>
+    /// <returns>The number of matches played until a winner is decided.</returns>
+    /// <link>https://leetcode.com/problems/count-of-matches-in-tournament/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int NumberOfMatches(int n)
+        => --n;
+    #endregion
 }
