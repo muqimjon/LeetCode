@@ -333,4 +333,18 @@ public class Maths
     public int NumberOfMatches(int n)
         => --n;
     #endregion
+
+    #region 2427. Number of Common Factors
+    /// <summary>
+    /// Counts the number of common factors between two integers.
+    /// </summary>
+    /// <param name="a">The first integer.</param>
+    /// <param name="b">The second integer.</param>
+    /// <returns>The number of common factors.</returns>
+    /// <link>https://leetcode.com/problems/number-of-common-factors/</link>
+    /// <time>Time Complexity: O(min(a, b))</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int CommonFactors(int a, int b)
+        => Enumerable.Range(1, Math.Min(a, b)).Count(i => a % i == 0 && b % i == 0);
+    #endregion
 }

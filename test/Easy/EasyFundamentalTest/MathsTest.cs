@@ -271,4 +271,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2427. Number of Common Factors
+    [Theory]
+    [InlineData(12, 6, 4)]
+    [InlineData(25, 30, 2)]
+    [InlineData(17, 23, 1)]
+    public void TestCommonFactors(int a, int b, int expected)
+    {
+        // Act
+        int result = Solution.CommonFactors(a, b);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
