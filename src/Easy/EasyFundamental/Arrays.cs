@@ -1171,4 +1171,31 @@ public class Arrays
         return [pairs, counts.Count];
     }
     #endregion
+
+    #region 941. Valid Mountain Array
+    /// <summary>
+    /// Checks if the given array is a valid mountain array.
+    /// </summary>
+    /// <param name="arr">The input array of integers.</param>
+    /// <returns>True if the array is a valid mountain array, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/valid-mountain-array/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool ValidMountainArray(int[] arr)
+    {
+        int n = arr.Length;
+        int i = 0;
+
+        while (i + 1 < n && arr[i] < arr[i + 1])
+            i++;
+
+        if (i == 0 || i == n - 1)
+            return false;
+
+        while (i + 1 < n && arr[i] > arr[i + 1])
+            i++;
+
+        return i + 1 == n;
+    }
+    #endregion
 }

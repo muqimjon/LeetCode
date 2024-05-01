@@ -873,4 +873,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 941. Valid Mountain Array
+    [Theory]
+    [InlineData(new int[] { 2, 1 }, false)]
+    [InlineData(new int[] { 3, 5, 5 }, false)]
+    [InlineData(new int[] { 0, 3, 2, 1 }, true)]
+    [InlineData(new int[] { 1, 2, 3, 2, 1 }, true)]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, false)]
+    public void TestIsValidMountainArray(int[] arr, bool expected)
+    {
+        // Act
+        bool result = Solution.ValidMountainArray(arr);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
