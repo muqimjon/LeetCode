@@ -1198,4 +1198,24 @@ public class Arrays
         return i + 1 == n;
     }
     #endregion
+
+    #region 1408. String Matching in an Array
+    /// <summary>
+    /// Finds substrings in an array of words that are substrings of other words.
+    /// </summary>
+    /// <param name="words">The array of words to search through.</param>
+    /// <returns>A list of strings that are substrings of other words.</returns>
+    /// <link>https://leetcode.com/problems/string-matching-in-an-array/</link>
+    /// <time>Time Complexity: O(n^2 * m)</time>
+    /// <space>Space Complexity: O(m)</space>
+    public IList<string> StringMatching(string[] words)
+    {
+        HashSet<string> set = [];
+        foreach (var item in words)
+            if (words.Count(w => w.Contains(item)) > 1)
+                set.Add(item);
+
+        return [.. set];
+    }
+    #endregion
 }

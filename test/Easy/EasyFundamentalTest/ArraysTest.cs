@@ -890,4 +890,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1408. String Matching in an Array
+    [Theory]
+    [InlineData(new string[] { "mass", "as", "hero", "superhero" }, new string[] { "as", "hero" })]
+    [InlineData(new string[] { "leetcode", "et", "code" }, new string[] { "et", "code" })]
+    [InlineData(new string[] { "blue", "green", "bu" }, new string[] { })]
+    public void TestStringMatching(string[] words, string[] expected)
+    {
+        // Act
+        IList<string> result = Solution.StringMatching(words);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
