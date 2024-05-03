@@ -183,4 +183,26 @@ public class HashTables
         return maxLength;
     }
     #endregion
+
+    #region 884. Uncommon Words from Two Sentences
+    /// <summary>
+    /// Finds uncommon words between two sentences.
+    /// </summary>
+    /// <param name="s1">The first sentence.</param>
+    /// <param name="s2">The second sentence.</param>
+    /// <returns>An array of uncommon words.</returns>
+    /// <link>https://leetcode.com/problems/uncommon-words-from-two-sentences/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(n)</space>
+    public string[] UncommonFromSentences(string s1, string s2)
+    {
+        var wordCounts = (s1 + " " + s2).Split(' ')
+            .GroupBy(word => word)
+            .ToDictionary(group => group.Key, group => group.Count());
+
+        return wordCounts.Where(pair => pair.Value == 1)
+            .Select(pair => pair.Key)
+            .ToArray();
+    }
+    #endregion
 }

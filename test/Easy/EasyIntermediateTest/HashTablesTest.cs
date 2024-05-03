@@ -129,4 +129,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 884. Uncommon Words from Two Sentences
+    [Theory]
+    [InlineData("this apple is sweet", "this apple is sour", new string[] { "sweet", "sour" })]
+    [InlineData("apple apple", "banana", new string[] { "banana" })]
+    [InlineData("coding is fun", "coding is awesome", new string[] { "fun", "awesome" })]
+    public void TestUncommonFromSentences(string s1, string s2, string[] expected)
+    {
+        // Act
+        string[] result = Solution.UncommonFromSentences(s1, s2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
