@@ -905,4 +905,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2073. Time Needed to Buy Tickets
+    [Theory]
+    [InlineData(new int[] { 2, 3, 2 }, 2, 6)]
+    [InlineData(new int[] { 5, 1, 1, 1 }, 0, 8)]
+    [InlineData(new int[] { 84, 49, 5, 24, 70, 77, 87, 8 }, 3, 154)] //FAILED
+    public void TestTimeToBuyTickets(int[] tickets, int k, int expected)
+    {
+        // Act
+        int result = Solution.TimeRequiredToBuy(tickets, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

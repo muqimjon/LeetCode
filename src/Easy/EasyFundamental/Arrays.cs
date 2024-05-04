@@ -1218,4 +1218,25 @@ public class Arrays
         return [.. set];
     }
     #endregion
+
+    #region 2073. Time Needed to Buy Tickets
+    /// <summary>
+    /// Calculates the time needed for a person to buy tickets at a specific position in a line.
+    /// </summary>
+    /// <param name="tickets">An array representing the number of tickets each person wants to buy.</param>
+    /// <param name="k">The position of the person in the line (0-indexed).</param>
+    /// <returns>The time taken for the person at position k to finish buying tickets.</returns>
+    /// <link>Link: Not specified</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int TimeRequiredToBuy(int[] tickets, int k)
+    {
+        int ans = 0;
+
+        for (int i = 0; i < tickets.Length; i++)
+            ans += Math.Min(tickets[i], i <= k ? tickets[k] : tickets[k] - 1);
+
+        return ans;
+    }
+    #endregion
 }
