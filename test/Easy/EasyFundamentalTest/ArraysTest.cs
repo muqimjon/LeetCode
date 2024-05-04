@@ -719,4 +719,22 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1550. Three Consecutive Odds
+
+    [Theory]
+    [InlineData(new int[] { 2, 6, 4, 1 }, false)]
+    [InlineData(new int[] { 1, 2, 34, 3, 4, 5, 7, 23, 12 }, true)]
+    [InlineData(new int[] { 1, 3, 5 }, true)] // Three consecutive odds at the end
+    [InlineData(new int[] { 1, 2, 4 }, false)] // No consecutive odds
+    [InlineData(new int[] { 1 }, false)] // Not enough elements
+    public void HasThreeConsecutiveOdds_ShouldReturnExpected(int[] arr, bool expected)
+    {
+        // Arrange and Act
+        bool result = Solution.ThreeConsecutiveOdds(arr);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

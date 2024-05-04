@@ -935,4 +935,23 @@ public class Arrays
     public int CountPrefixes(string[] words, string s)
         => words.Count(word => s.StartsWith(word));
     #endregion
+
+    #region 1550. Three Consecutive Odds
+    /// <summary>
+    /// Determines if there are three consecutive odds in an array.
+    /// </summary>
+    /// <param name="arr">The array of integers.</param>
+    /// <returns>True if there are three consecutive odds in the array; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/three-consecutive-odds/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool ThreeConsecutiveOdds(int[] arr)
+    {
+        for (int i = 0; i < arr.Length - 2; i++)
+            if (arr[i] % 2 != 0 && arr[i + 1] % 2 != 0 && arr[i + 2] % 2 != 0)
+                return true;
+
+        return false;
+    }
+    #endregion
 }
