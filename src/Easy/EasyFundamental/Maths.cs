@@ -347,4 +347,20 @@ public class Maths
     public int CommonFactors(int a, int b)
         => Enumerable.Range(1, Math.Min(a, b)).Count(i => a % i == 0 && b % i == 0);
     #endregion
+
+    #region 2600. K Items With the Maximum Sum
+    /// <summary>
+    /// Calculates max sum of picked items from a bag.
+    /// </summary>
+    /// <param name="Ones">Number of items with 1 written on them.</param>
+    /// <param name="Zeros">Number of items with 0 written on them.</param>
+    /// <param name="NegOnes">Number of items with -1 written on them.</param>
+    /// <param name="k">Number of items to pick from the bag.</param>
+    /// <returns>The maximum possible sum of numbers written on the picked items.</returns>
+    /// <link>https://leetcode.com/problems/k-items-with-the-maximum-sum/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int KItemsWithMaximumSum(int Ones, int Zeros, int NegOnes, int k)
+        => Ones > k ? k : (Ones + Zeros) > k ? Ones : Ones - Math.Min(NegOnes, k - Ones - Zeros);
+    #endregion
 }

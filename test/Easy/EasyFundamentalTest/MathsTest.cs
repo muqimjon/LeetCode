@@ -286,4 +286,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2600. K Items With the Maximum Sum
+    [Theory]
+    [InlineData(3, 2, 0, 2, 2)]
+    [InlineData(3, 2, 0, 4, 3)]
+    [InlineData(6, 6, 6, 13, 5)] //FAILED
+    public void TestMaxSumWithKItems(int numOnes, int numZeros, int numNegOnes, int k, int expected)
+    {
+        // Act
+        int result = Solution.KItemsWithMaximumSum(numOnes, numZeros, numNegOnes, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
