@@ -1239,4 +1239,25 @@ public class Arrays
         return ans;
     }
     #endregion
+
+    #region 1512. Number of Good Pairs
+    /// <summary>
+    /// Calculates the number of good pairs in an array.
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>The number of good pairs in the array.</returns>
+    /// <link>https://leetcode.com/problems/number-of-good-pairs/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int NumIdenticalPairs(int[] nums)
+    {
+        int goodPairs = 0;
+        int[] freq = new int[101];
+
+        foreach (int num in nums)
+            goodPairs += freq[num]++;
+
+        return goodPairs;
+    }
+    #endregion
 }

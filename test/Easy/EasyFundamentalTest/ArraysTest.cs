@@ -920,4 +920,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1512. Number of Good Pairs
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 1, 1, 3 }, 4)]
+    [InlineData(new int[] { 1, 1, 1, 1 }, 6)]
+    [InlineData(new int[] { 1, 2, 3 }, 0)]
+    public void TestNumIdenticalPairs(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.NumIdenticalPairs(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
