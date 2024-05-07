@@ -935,4 +935,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2824. Count Pairs Whose Sum is Less than Target
+    [Theory]
+    [InlineData(new int[] { -1, 1, 2, 3, 1 }, 2, 3)]
+    [InlineData(new int[] { -6, 2, 5, -2, -7, -1, 3 }, -2, 10)]
+    public void TestCountPairs(int[] nums, int target, int expected)
+    {
+        // Act
+        int result = Solution.CountPairs(nums, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

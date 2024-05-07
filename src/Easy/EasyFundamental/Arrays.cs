@@ -99,7 +99,7 @@ public class Arrays
     /// <space>Memory: O(1)</space>
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
-        int k = m -- + n -- - 1;
+        int k = m-- + n-- - 1;
 
         while (m >= 0 && n >= 0)
             nums1[k--] = (nums1[m] >= nums2[n]) ? nums1[m--] : nums2[n--];
@@ -456,7 +456,7 @@ public class Arrays
             IList<int> row = new List<int>();
 
             for (int j = 0; j <= i; j++)
-                row.Add(j == 0 || j == i ? 1 : triangle[i-1][j-1] + triangle[i-1][j]);
+                row.Add(j == 0 || j == i ? 1 : triangle[i - 1][j - 1] + triangle[i - 1][j]);
             triangle.Add(row);
         }
 
@@ -1259,5 +1259,19 @@ public class Arrays
 
         return goodPairs;
     }
+    #endregion
+
+    #region 2824. Count Pairs Whose Sum is Less than Target
+    /// <summary>
+    /// Counts pairs whose sum is less than the target in an array.
+    /// </summary>
+    /// <param name="nums">A list of integers.</param>
+    /// <param name="target">The target sum.</param>
+    /// <returns>The number of pairs whose sum is less than the target.</returns>
+    /// <link>https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(1)</space>
+    public int CountPairs(IList<int> nums, int target)
+        => nums.SelectMany((x, i) => nums.Skip(i + 1).Select(y => x + y < target ? 1 : 0)).Sum();
     #endregion
 }
