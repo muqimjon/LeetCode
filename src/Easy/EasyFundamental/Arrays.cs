@@ -1274,4 +1274,18 @@ public class Arrays
     public int CountPairs(IList<int> nums, int target)
         => nums.SelectMany((x, i) => nums.Skip(i + 1).Select(y => x + y < target ? 1 : 0)).Sum();
     #endregion
+
+    #region 2446. Determine if Two Events Have Conflict
+    /// <summary>
+    /// Determines if there is a conflict between two events based on their start and end times.
+    /// </summary>
+    /// <param name="event1">An array representing the start and end times of the first event in HH:MM format.</param>
+    /// <param name="event2">An array representing the start and end times of the second event in HH:MM format.</param>
+    /// <returns>True if there is a conflict, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/determine-if-two-events-have-conflict/</link>
+    /// <time>Time Complexity: O(1)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool HaveConflict(string[] event1, string[] event2)
+        => !(event1[1].CompareTo(event2[0]) < 0 || event2[1].CompareTo(event1[0]) < 0);
+    #endregion
 }

@@ -949,4 +949,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2446. Determine if Two Events Have Conflict
+    [Theory]
+    [InlineData(new string[] { "01:15", "02:00" }, new string[] { "02:00", "03:00" }, true)]
+    [InlineData(new string[] { "01:00", "02:00" }, new string[] { "01:20", "03:00" }, true)]
+    [InlineData(new string[] { "10:00", "11:00" }, new string[] { "14:00", "15:00" }, false)]
+    public void TestDetermineIfTwoEventsHaveConflict(string[] event1, string[] event2, bool expected)
+    {
+        // Act
+        bool result = Solution.HaveConflict(event1, event2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
