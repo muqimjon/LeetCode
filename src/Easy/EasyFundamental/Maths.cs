@@ -363,4 +363,18 @@ public class Maths
     public int KItemsWithMaximumSum(int Ones, int Zeros, int NegOnes, int k)
         => Ones > k ? k : (Ones + Zeros) > k ? Ones : Ones - Math.Min(NegOnes, k - Ones - Zeros);
     #endregion
+
+    #region 2894. Divisible and Non-divisible Sums Difference
+    /// <summary>
+    /// Calculates the difference between the sum of non-divisible and divisible integers in a range.
+    /// </summary>
+    /// <param name="n">The upper limit of the range.</param>
+    /// <param name="m">The divisor for checking divisibility.</param>
+    /// <returns>The difference between the sum of non-divisible and divisible integers.</returns>
+    /// <link>https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int DifferenceOfSums(int n, int m)
+        => Enumerable.Range(1, n).Sum(i => i % m != 0 ? i : -i);
+    #endregion
 }

@@ -301,4 +301,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2894. Divisible and Non-divisible Sums Difference
+    [Theory]
+    [InlineData(10, 3, 19)]
+    [InlineData(5, 6, 15)]
+    [InlineData(5, 1, -15)]
+    public void TestDivisibleAndNonDivisibleSumsDifference(int n, int m, int expected)
+    {
+        // Act
+        int result = Solution.DifferenceOfSums(n, m);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
