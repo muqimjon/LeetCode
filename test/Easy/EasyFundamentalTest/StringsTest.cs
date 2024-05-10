@@ -356,4 +356,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1967. Number of Strings That Appear as Substrings in Word
+    [Theory]
+    [InlineData(new string[] { "a", "abc", "bc", "d" }, "abc", 3)]
+    [InlineData(new string[] { "a", "b", "c" }, "aaaaabbbbb", 2)]
+    [InlineData(new string[] { "a", "a", "a" }, "ab", 3)]
+    public void TestNumberOfSubstrings(string[] patterns, string word, int expected)
+    {
+        // Act
+        int result = Solution.NumOfStrings(patterns, word);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

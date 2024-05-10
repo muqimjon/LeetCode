@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Text;
+﻿using System.Text;
 
 namespace EasyFundamental;
 
@@ -485,5 +484,19 @@ public class Strings
 
         return string.Join("", ls);
     }
+    #endregion
+
+    #region 1967. Number of Strings That Appear as Substrings in Word
+    /// <summary>
+    /// Calculates the number of strings in an array that appear as substrings in a given word.
+    /// </summary>
+    /// <param name="patterns">An array of strings to search for.</param>
+    /// <param name="word">The word in which to search for substrings.</param>
+    /// <returns>The number of strings from patterns that are substrings of word.</returns>
+    /// <link>https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/</link>
+    /// <time>O(n*m)</time>
+    /// <space>O(1)</space>
+    public int NumOfStrings(string[] patterns, string word)
+        => patterns.Count(word.Contains);
     #endregion
 }
