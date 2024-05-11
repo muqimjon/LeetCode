@@ -316,4 +316,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 273. Number of Steps to Reduce a Number to Zero
+    [Theory]
+    [InlineData(14, 6)]
+    [InlineData(8, 4)]
+    [InlineData(123, 12)]
+    public void TestReduceNumberToZero(int num, int expected)
+    {
+        // Act
+        int result = Solution.NumberOfSteps(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

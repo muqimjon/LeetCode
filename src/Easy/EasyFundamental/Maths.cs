@@ -377,4 +377,17 @@ public class Maths
     public int DifferenceOfSums(int n, int m)
         => Enumerable.Range(1, n).Sum(i => i % m != 0 ? i : -i);
     #endregion
+
+    #region 273. Number of Steps to Reduce a Number to Zero
+    /// <summary>
+    /// Calculates the number of steps to reduce a number to zero.
+    /// </summary>
+    /// <param name="num">The number to be reduced.</param>
+    /// <returns>The number of steps required to reduce the number to zero.</returns>
+    /// <link>https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/</link>
+    /// <time>O(log n)</time>
+    /// <space>O(1)</space>
+    public int NumberOfSteps(int num)
+            => num == 0 ? 0 : 1 + NumberOfSteps(num % 2 == 0 ? num / 2 : num - 1);
+    #endregion
 }
