@@ -331,4 +331,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Count Integers With Even Digit Sum
+    [Theory]
+    [InlineData(4, 2)]
+    [InlineData(30, 14)]
+    public void TestCountIntegersWithEvenDigitSum(int num, int expected)
+    {
+        // Act
+        int result = Solution.CountEven(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

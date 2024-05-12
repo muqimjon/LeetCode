@@ -390,4 +390,17 @@ public class Maths
     public int NumberOfSteps(int num)
             => num == 0 ? 0 : 1 + NumberOfSteps(num % 2 == 0 ? num / 2 : num - 1);
     #endregion
+
+    #region 2180. Count Integers With Even Digit Sum
+    /// <summary>
+    /// Calculates the number of positive integers less than or equal to num whose digit sums are even.
+    /// </summary>
+    /// <param name="num">The positive integer upper limit.</param>
+    /// <returns>The number of positive integers with even digit sums less than or equal to num.</returns>
+    /// <link>Link: Not specified</link>
+    /// <time>Time Complexity: O(n log n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int CountEven(int num) =>
+        Enumerable.Range(1, num).Count(n => n.ToString().Sum(c => c - '0') % 2 == 0);
+    #endregion
 }
