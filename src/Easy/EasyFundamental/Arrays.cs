@@ -1288,4 +1288,18 @@ public class Arrays
     public bool HaveConflict(string[] event1, string[] event2)
         => !(event1[1].CompareTo(event2[0]) < 0 || event2[1].CompareTo(event1[0]) < 0);
     #endregion
+
+    #region 2605. Form Smallest Number From Two Digit Arrays
+    /// <summary>
+    /// Finds the smallest number that contains at least one digit from each array.
+    /// </summary>
+    /// <param name="nums1">Array of unique digits.</param>
+    /// <param name="nums2">Array of unique digits.</param>
+    /// <returns>The smallest number containing at least one digit from each array.</returns>
+    /// <link>Link: Not specified</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MinNumber(int[] nums1, int[] nums2)
+        => nums1.Intersect(nums2).DefaultIfEmpty(Math.Min(nums1.Min(), nums2.Min()) * 10 + Math.Max(nums1.Min(), nums2.Min())).Min();
+    #endregion
 }

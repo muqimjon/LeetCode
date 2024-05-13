@@ -964,4 +964,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Form Smallest Number From Two Digit Arrays
+    [Theory]
+    [InlineData(new int[] { 4, 1, 3 }, new int[] { 5, 7 }, 15)]
+    [InlineData(new int[] { 3, 5, 2, 6 }, new int[] { 3, 1, 7 }, 3)]
+    public void TestFormSmallestNumber(int[] nums1, int[] nums2, int expected)
+    {
+        // Act
+        int result = Solution.MinNumber(nums1, nums2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
