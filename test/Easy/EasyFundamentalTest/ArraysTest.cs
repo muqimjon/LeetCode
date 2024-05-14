@@ -978,4 +978,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Check if a String Is an Acronym of Words
+    [Theory]
+    [InlineData(new string[] { "alice", "bob", "charlie" }, "abc", true)]
+    [InlineData(new string[] { "an", "apple" }, "a", false)]
+    [InlineData(new string[] { "never", "gonna", "give", "up", "on", "you" }, "ngguoy", true)]
+    public void TestIsAcronym(string[] words, string s, bool expected)
+    {
+        // Act
+        bool result = Solution.IsAcronym(words, s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

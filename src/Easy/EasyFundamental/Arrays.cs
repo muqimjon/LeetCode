@@ -1302,4 +1302,18 @@ public class Arrays
     public int MinNumber(int[] nums1, int[] nums2)
         => nums1.Intersect(nums2).DefaultIfEmpty(Math.Min(nums1.Min(), nums2.Min()) * 10 + Math.Max(nums1.Min(), nums2.Min())).Min();
     #endregion
+
+    #region 2828. Check if a String Is an Acronym of Words
+    /// <summary>
+    /// Checks if a string is an acronym of words.
+    /// </summary>
+    /// <param name="words">Array of strings.</param>
+    /// <param name="s">String to check.</param>
+    /// <returns>True if s is an acronym of words, false otherwise.</returns>
+    /// <link>Link: Not specified</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public bool IsAcronym(IList<string> words, string s)
+        => string.Concat(words.Select(word => word[0])) == s;
+    #endregion
 }
