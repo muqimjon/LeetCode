@@ -1316,4 +1316,17 @@ public class Arrays
     public bool IsAcronym(IList<string> words, string s)
         => string.Concat(words.Select(word => word[0])) == s;
     #endregion
+
+    #region 2643. Row With Maximum Ones
+    /// <summary>
+    /// Finds the row with the maximum count of ones in a binary matrix.
+    /// </summary>
+    /// <param name="mat">Binary matrix.</param>
+    /// <returns>An array containing the index of the row and the number of ones in it.</returns>
+    /// <link>https://leetcode.com/problems/row-with-maximum-ones/</link>
+    /// <time>Time Complexity: O(m*n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int[] RowAndMaximumOnes(int[][] mat)
+        => mat.Select((row, i) => new[] { i, row.Sum() }).MaxBy(a => a[1])!;
+    #endregion
 }

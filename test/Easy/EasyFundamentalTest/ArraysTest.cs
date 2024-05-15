@@ -993,4 +993,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Row With Maximum Ones
+    [Theory]
+    [InlineData(new int[] { 0, 1 }, new int[] { 0, 1 }, new int[] { 1, 0 })]
+    [InlineData(new int[] { 1, 2 }, new int[] { 0, 0, 0 }, new int[] { 0, 1, 1 })]
+    [InlineData(new int[] { 1, 2 }, new int[] { 0, 0 }, new int[] { 1, 1 }, new int[] { 0, 0 })]
+    [InlineData(new int[] { 0, 0 }, new int[] { 0, 0 })] //FAILED
+    public void TestMaxOnesRow(int[] expected, params int[][] mat)
+    {
+        // Act
+        int[] result = Solution.RowAndMaximumOnes(mat);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
 }
