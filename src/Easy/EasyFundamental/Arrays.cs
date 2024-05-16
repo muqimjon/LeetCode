@@ -1329,4 +1329,17 @@ public class Arrays
     public int[] RowAndMaximumOnes(int[][] mat)
         => mat.Select((row, i) => new[] { i, row.Sum() }).MaxBy(a => a[1])!;
     #endregion
+
+    #region 2848. Points That Intersect With Cars
+    /// <summary>
+    /// Counts the number of integer points on the line covered by cars.
+    /// </summary>
+    /// <param name="nums">2D array representing the coordinates of cars.</param>
+    /// <returns>The number of points covered by cars.</returns>
+    /// <link>https://leetcode.com/problems/points-that-intersect-with-cars/</link>
+    /// <time>Time Complexity: O(n*m)</time>
+    /// <space>Space Complexity: O(n*m)</space>
+    public int NumberOfPoints(IList<IList<int>> nums)
+        => nums.SelectMany(car => Enumerable.Range(car[0], car[1] - car[0] + 1)).Distinct().Count();
+    #endregion
 }
