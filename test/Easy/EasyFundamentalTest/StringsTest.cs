@@ -371,4 +371,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1422. Maximum Score After Splitting a String
+    [Theory]
+    [InlineData("011101", 5)]
+    [InlineData("00111", 5)]
+    [InlineData("1111", 3)]
+    public void TestMaxScore(string s, int expected)
+    {
+        // Act
+        int result = Solution.MaxScore(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

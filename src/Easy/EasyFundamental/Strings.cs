@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace EasyFundamental;
 
@@ -498,5 +499,19 @@ public class Strings
     /// <space>O(1)</space>
     public int NumOfStrings(string[] patterns, string word)
         => patterns.Count(word.Contains);
+    #endregion
+
+    #region 1422. Maximum Score After Splitting a String
+    /// <summary>
+    /// Calculates maximum score by splitting string.
+    /// </summary>
+    /// <param name="s">The input string of zeros and ones.</param>
+    /// <returns>The maximum score after splitting the string.</returns>
+    /// <link>https://leetcode.com/problems/maximum-score-after-splitting-a-string/</link>
+    /// <time>Time Complexity: O(n)</time>
+    /// <space>Space Complexity: O(1)</space>
+    public int MaxScore(string s)
+        => Enumerable.Range(1, s.Length - 1)
+            .Max(i => s.Take(i).Count(c => c == '0') + s.Skip(i).Count(c => c == '1'));
     #endregion
 }
