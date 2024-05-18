@@ -205,4 +205,18 @@ public class HashTables
             .ToArray();
     }
     #endregion
+
+    #region 389. Find the Difference
+    /// <summary>
+    /// Finds the extra character added to string t compared to string s.
+    /// </summary>
+    /// <param name="s">The original string.</param>
+    /// <param name="t">The string with one additional character.</param>
+    /// <returns>The character that was added to t.</returns>
+    /// <link>https://leetcode.com/problems/find-the-difference/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public char FindTheDifference(string s, string t)
+        => (char)(t.Sum(c => c) - s.Sum(c => c));
+    #endregion
 }

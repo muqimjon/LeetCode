@@ -144,4 +144,20 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 389. Find the Difference
+    [Theory]
+    [InlineData("abcd", "abcde", 'e')]
+    [InlineData("", "y", 'y')]
+    [InlineData("a", "aa", 'a')]
+    [InlineData("ae", "aea", 'a')]
+    public void FindTheDifferenceTests(string s, string t, char expected)
+    {
+        // Act
+        char result = Solution.FindTheDifference(s, t);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
