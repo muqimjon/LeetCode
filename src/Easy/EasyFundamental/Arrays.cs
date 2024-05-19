@@ -1342,4 +1342,20 @@ public class Arrays
     public int NumberOfPoints(IList<IList<int>> nums)
         => nums.SelectMany(car => Enumerable.Range(car[0], car[1] - car[0] + 1)).Distinct().Count();
     #endregion
+
+    #region 628. Maximum Product of Three Numbers
+    /// <summary>
+    /// Finds the maximum product of three numbers in an integer array.
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>The maximum product of any three numbers.</returns>
+    /// <link>https://leetcode.com/problems/maximum-product-of-three-numbers/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(1)</space>
+    public int MaximumProduct(int[] nums)
+    {
+        Array.Sort(nums);
+        return Math.Max(nums[^1] * nums[^2] * nums[^3], nums[0] * nums[1] * nums[^1]);
+    }
+    #endregion
 }

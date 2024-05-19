@@ -1023,4 +1023,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 628. Maximum Product of Three Numbers
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3 }, 6)]
+    [InlineData(new int[] { 1, 2, 3, 4 }, 24)]
+    [InlineData(new int[] { -1, -2, -3 }, -6)]
+    [InlineData(new int[] { -10, -10, 5, 2 }, 500)]
+    public void MaximumProductTests(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.MaximumProduct(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
