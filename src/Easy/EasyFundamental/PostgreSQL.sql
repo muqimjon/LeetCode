@@ -99,11 +99,24 @@ ORDER BY e.employee_id;
 -- 1729. Find Followers Count
 -- https://leetcode.com/problems/find-followers-count
 
--- Time complexity: O(n∗logn)
+-- Time complexity: O(n*log n)
 -- Space complexity: O(n)
 
 SELECT user_id, count(*) followers_count 
 FROM followers
 GROUP BY user_id
 ORDER BY user_id;
+--------------------------------------------------------------------------------------------
+
+-- 1587. Bank Account Summary II
+-- https://leetcode.com/problems/bank-account-summary-ii/
+
+-- Time complexity: O(n*log n)
+-- Space complexity: O(n)
+
+SELECT u.name, SUM(t.amount) AS balance
+FROM Users u
+JOIN Transactions t ON u.account = t.account
+GROUP BY u.name
+HAVING SUM(t.amount) > 10000;
 --------------------------------------------------------------------------------------------
