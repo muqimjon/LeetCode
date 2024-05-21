@@ -1358,4 +1358,21 @@ public class Arrays
         return Math.Max(nums[^1] * nums[^2] * nums[^3], nums[0] * nums[1] * nums[^1]);
     }
     #endregion
+
+    #region 2057. Smallest Index With Equal Value
+    /// <summary>
+    /// Finds the smallest index in an array where i mod 10 equals nums[i].
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>The smallest index i such that i mod 10 == nums[i], or -1 if no such index exists.</returns>
+    /// <link>https://leetcode.com/problems/smallest-index-with-equal-value/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int SmallestEqual(int[] nums)
+        => nums.Select((num, i) => new { num, i })
+           .Where(x => x.i % 10 == x.num)
+           .Select(x => x.i)
+           .DefaultIfEmpty(-1)
+           .First();
+    #endregion
 }

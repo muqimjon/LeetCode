@@ -1039,4 +1039,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2057. Smallest Index With Equal Value
+    [Theory]
+    [InlineData(new int[] { 0, 1, 2 }, 0)]
+    [InlineData(new int[] { 4, 3, 2, 1 }, 2)]
+    [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }, -1)]
+    [InlineData(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0)]
+    [InlineData(new int[] { 10, 1, 20, 3, 30, 5, 40, 7, 50, 9 }, 1)]
+    public void SmallestEqualTests(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.SmallestEqual(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
