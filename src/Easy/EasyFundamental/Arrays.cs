@@ -1375,4 +1375,24 @@ public class Arrays
            .DefaultIfEmpty(-1)
            .First();
     #endregion
+
+    #region 1089. Duplicate Zeros
+    /// <summary>
+    /// Duplicates each occurrence of zero in the array, shifting the remaining elements to the right in place.
+    /// </summary>
+    /// <param name="arr">A fixed-length integer array.</param>
+    /// <link>https://leetcode.com/problems/duplicate-zeros/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public void DuplicateZeros(int[] arr)
+    {
+        int zeros = arr.Count(x => x == 0);
+        int n = arr.Length;
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (i + zeros < n) arr[i + zeros] = arr[i];
+            if (arr[i] == 0 && --zeros + i < n) arr[i + zeros] = 0;
+        }
+    }
+    #endregion
 }

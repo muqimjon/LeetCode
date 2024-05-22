@@ -1056,4 +1056,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1089. Duplicate Zeros
+    [Theory]
+    [InlineData(new int[] { 1, 0, 2, 3, 0, 4, 5, 0 }, new int[] { 1, 0, 0, 2, 3, 0, 0, 4 })]
+    [InlineData(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 })]
+    [InlineData(new int[] { 0, 0, 0, 0, 0, 0 }, new int[] { 0, 0, 0, 0, 0, 0 })]
+    [InlineData(new int[] { 8, 4, 5, 0, 0, 0, 0, 7 }, new int[] { 8, 4, 5, 0, 0, 0, 0, 0 })]
+    public void DuplicateZerosTests(int[] arr, int[] expected)
+    {
+        // Act
+        Solution.DuplicateZeros(arr);
+
+        // Assert
+        Assert.Equal(expected, arr);
+    }
+    #endregion
 }
