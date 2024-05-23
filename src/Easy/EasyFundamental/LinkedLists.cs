@@ -116,6 +116,29 @@ public class LinkedLists
         return prev;
     }
     #endregion
+
+    #region 1290. Convert Binary Number in a Linked List to Integer
+    /// <summary>
+    /// Converts a binary number represented by a singly-linked list to an integer.
+    /// </summary>
+    /// <param name="head">The head node of the singly-linked list.</param>
+    /// <returns>The decimal value of the binary number.</returns>
+    /// <link>https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int GetDecimalValue(ListNode head)
+    {
+        int result = 0;
+
+        while (head != null)
+        {
+            result = (result << 1) | head.val;
+            head = head.next;
+        }
+
+        return result;
+    }
+    #endregion
 }
 
 #region ListNode Model <<

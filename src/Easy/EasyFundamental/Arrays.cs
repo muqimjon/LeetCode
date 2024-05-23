@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace EasyFundamental;
+﻿namespace EasyFundamental;
 
 public class Arrays
 {

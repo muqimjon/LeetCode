@@ -111,4 +111,24 @@ public class LinkedListsTest
         Assert.Equal(expectedValues, ConvertLinkedListToArray(result));
     }
     #endregion
+
+    #region 1290. Convert Binary Number in a Linked List to Integer
+    [Theory]
+    [InlineData(new int[] { 1, 0, 1 }, 5)]
+    [InlineData(new int[] { 0 }, 0)]
+    [InlineData(new int[] { 1 }, 1)]
+    [InlineData(new int[] { 1, 1, 1 }, 7)]
+    [InlineData(new int[] { 1, 0, 0, 1, 1 }, 19)]
+    public void GetDecimalValueTests(int[] list, int expected)
+    {
+        // Arrange
+        ListNode head = CreateLinkedList(list);
+
+        // Act
+        int result = Solution.GetDecimalValue(head);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
