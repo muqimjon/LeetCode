@@ -386,4 +386,21 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3114. Latest Time You Can Obtain After Replacing Characters
+    [Theory]
+    [InlineData("1?:?4", "11:54")]
+    [InlineData("0?:5?", "09:59")]
+    [InlineData("?0:40", "10:40")] //FAILED
+    [InlineData("??:1?", "11:19")] //FAILED
+    [InlineData("?3:12", "03:12")] //FAILED
+    public void TestMaximumTime(string s, string expected)
+    {
+        // Act
+        string result = Solution.FindLatestTime(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

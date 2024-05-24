@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace EasyFundamental;
 
@@ -513,5 +512,27 @@ public class Strings
     public int MaxScore(string s)
         => Enumerable.Range(1, s.Length - 1)
             .Max(i => s.Take(i).Count(c => c == '0') + s.Skip(i).Count(c => c == '1'));
+    #endregion
+
+    #region 3114. Latest Time You Can Obtain After Replacing Characters
+    /// <summary>
+    /// Finds the latest possible 12-hour format time by replacing "?" characters in the input string.
+    /// </summary>
+    /// <param name="s">The input string representing a 12-hour format time with "?" characters.</param>
+    /// <returns>The latest possible 12-hour format time as a string.</returns>
+    /// <link>https://leetcode.com/problems/latest-time-you-can-obtain-after-replacing-characters/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public string FindLatestTime(string s)
+    {
+        char[] time = s.ToCharArray();
+
+        time[0] = time[0] is '?' ? "1?0".Contains(time[1]) ? '1' : '0' : time[0];
+        time[1] = time[1] is '?' ? time[0] == '1' ? '1' : '9' : time[1];
+        time[3] = time[3] is '?' ? '5' : time[3];
+        time[4] = time[4] is '?' ? '9' : time[4];
+
+        return new string(time);
+    }
     #endregion
 }
