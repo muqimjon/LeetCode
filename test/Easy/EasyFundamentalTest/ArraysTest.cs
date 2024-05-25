@@ -1072,4 +1072,18 @@ public class ArraysTest
         Assert.Equal(expected, arr);
     }
     #endregion
+
+    #region 2549. Count Distinct Numbers on Board
+    [Theory]
+    [InlineData(5, 4)]
+    [InlineData(3, 2)]
+    public void TestDistinctNumbers(int n, int expected)
+    {
+        // Act
+        int result = Solution.DistinctIntegers(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

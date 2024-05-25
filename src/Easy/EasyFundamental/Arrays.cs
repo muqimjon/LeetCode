@@ -1393,4 +1393,16 @@ public class Arrays
         }
     }
     #endregion
+
+    #region 2549. Count Distinct Numbers on Board
+    /// <summary>
+    /// Returns the number of distinct integers present on the board after a large number of days.
+    /// </summary>
+    /// <param name="n">The initial positive integer placed on the board.</param>
+    /// <returns>The number of distinct integers present on the board.</returns>
+    /// <link>https://leetcode.com/problems/count-distinct-numbers-on-board/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int DistinctIntegers(int n) => n == 1 ? 1 : n - 1;
+    #endregion
 }
