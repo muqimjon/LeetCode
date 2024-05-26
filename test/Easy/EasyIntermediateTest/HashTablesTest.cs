@@ -160,4 +160,21 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 859. Buddy Strings
+    [Theory]
+    [InlineData("ab", "ba", true)]
+    [InlineData("ab", "ab", false)]
+    [InlineData("aa", "aa", true)]
+    [InlineData("aaaaaaabc", "aaaaaaacb", true)]
+    [InlineData("abcd", "badc", false)]
+    public void TestBuddyStrings(string s, string goal, bool expected)
+    {
+        // Act
+        bool result = Solution.BuddyStrings(s, goal);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

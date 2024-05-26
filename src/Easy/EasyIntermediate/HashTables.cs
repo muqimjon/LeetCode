@@ -219,4 +219,27 @@ public class HashTables
     public char FindTheDifference(string s, string t)
         => (char)(t.Sum(c => c) - s.Sum(c => c));
     #endregion
+
+    #region 859. Buddy Strings
+    /// <summary>
+    /// Checks if two strings can be made equal by swapping exactly one pair of characters in one of the strings.
+    /// </summary>
+    /// <param name="s">The first input string.</param>
+    /// <param name="goal">The second input string to compare with.</param>
+    /// <returns>True if the strings can be made equal by one swap, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/buddy-strings/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool BuddyStrings(string s, string goal)
+    {
+        if (s.Length != goal.Length) return false;
+        if (s == goal) return s.Length > new HashSet<char>(s).Count;
+
+        var diffs = new List<int>();
+        for (int i = 0; i < s.Length; i++)
+            if (s[i] != goal[i]) diffs.Add(i);
+
+        return diffs.Count == 2 && s[diffs[0]] == goal[diffs[1]] && s[diffs[1]] == goal[diffs[0]];
+    }
+    #endregion
 }

@@ -1077,6 +1077,7 @@ public class ArraysTest
     [Theory]
     [InlineData(5, 4)]
     [InlineData(3, 2)]
+    [InlineData(1, 1)] //FAILED
     public void TestDistinctNumbers(int n, int expected)
     {
         // Act
