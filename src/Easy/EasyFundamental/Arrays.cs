@@ -1405,4 +1405,17 @@ public class Arrays
     /// <space>O(1)</space>
     public int DistinctIntegers(int n) => n == 1 ? 1 : n - 1;
     #endregion
+
+    #region 1365. How Many Numbers Are Smaller Than the Current Number
+    /// <summary>
+    /// Finds how many numbers in the array are smaller than the current number for each element in the array.
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>An array where each element is the count of numbers smaller than the corresponding element in the input array.</returns>
+    /// <link>https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(n)</space>
+    public int[] SmallerNumbersThanCurrent(int[] nums)
+        => nums.Select(i => nums.Count(c => c < i)).ToArray();
+    #endregion
 }

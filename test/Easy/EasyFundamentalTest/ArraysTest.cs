@@ -1087,4 +1087,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1365. How Many Numbers Are Smaller Than the Current Number
+    [Theory]
+    [InlineData(new int[] { 8, 1, 2, 2, 3 }, new int[] { 4, 0, 1, 1, 3 })]
+    [InlineData(new int[] { 6, 5, 4, 8 }, new int[] { 2, 1, 0, 3 })]
+    [InlineData(new int[] { 7, 7, 7, 7 }, new int[] { 0, 0, 0, 0 })]
+    public void TestSmallerNumbersThanCurrent(int[] nums, int[] expected)
+    {
+        // Act
+        int[] result = Solution.SmallerNumbersThanCurrent(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
