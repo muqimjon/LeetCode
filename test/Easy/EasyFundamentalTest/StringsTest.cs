@@ -403,4 +403,21 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2278. Percentage of Letter in String
+    [Theory]
+    [InlineData("foobar", 'o', 33)]
+    [InlineData("jjjj", 'k', 0)]
+    [InlineData("aaaaa", 'a', 100)]
+    [InlineData("abcdabcd", 'a', 25)]
+    [InlineData("abcdefghij", 'z', 0)]
+    public void TestPercentageLetter(string s, char letter, int expected)
+    {
+        // Act
+        int result = Solution.PercentageLetter(s, letter);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

@@ -535,4 +535,18 @@ public class Strings
         return new string(time);
     }
     #endregion
+
+    #region 2278. Percentage of Letter in String
+    /// <summary>
+    /// Calculates the percentage of characters in a string that equal the given letter, rounded down to the nearest whole percent.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <param name="letter">The character to count.</param>
+    /// <returns>The percentage of the character in the string.</returns>
+    /// <link>https://leetcode.com/problems/percentage-of-letter-in-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int PercentageLetter(string s, char letter)
+        => 100 * s.Count(c => c == letter) / s.Length;
+    #endregion
 }
