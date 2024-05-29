@@ -1102,4 +1102,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1913. Maximum Product Difference Between Two Pairs
+    [Theory]
+    [InlineData(new int[] { 5, 6, 2, 7, 4 }, 34)]
+    [InlineData(new int[] { 4, 2, 5, 9, 7, 4, 8 }, 64)]
+    [InlineData(new int[] { 1, 1, 1, 1 }, 0)]
+    public void TestMaxProductDifference(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.MaxProductDifference(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

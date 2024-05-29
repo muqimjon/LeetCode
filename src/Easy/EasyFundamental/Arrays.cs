@@ -1418,4 +1418,17 @@ public class Arrays
     public int[] SmallerNumbersThanCurrent(int[] nums)
         => nums.Select(i => nums.Count(c => c < i)).ToArray();
     #endregion
+
+    #region 1913. Maximum Product Difference Between Two Pairs
+    /// <summary>
+    /// Calculates the maximum product difference between two pairs of elements in an integer array.
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>The maximum product difference between any two pairs of elements.</returns>
+    /// <link>https://leetcode.com/problems/maximum-product-difference-between-two-pairs/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public int MaxProductDifference(int[] nums)
+        => nums.OrderBy(n => n).ToArray() switch { var sorted => sorted[^1] * sorted[^2] - sorted[0] * sorted[1] };
+    #endregion
 }
