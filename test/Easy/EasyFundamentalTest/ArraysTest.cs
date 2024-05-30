@@ -1117,4 +1117,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 961. N-Repeated Element in Size 2N Array
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 3 }, 3)]
+    [InlineData(new int[] { 2, 1, 2, 5, 3, 2 }, 2)]
+    [InlineData(new int[] { 5, 1, 5, 2, 5, 3, 5, 4 }, 5)]
+    public void TestRepeatedNTimes(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.RepeatedNTimes(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

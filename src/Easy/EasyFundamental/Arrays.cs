@@ -1431,4 +1431,17 @@ public class Arrays
     public int MaxProductDifference(int[] nums)
         => nums.OrderBy(n => n).ToArray() switch { var sorted => sorted[^1] * sorted[^2] - sorted[0] * sorted[1] };
     #endregion
+
+    #region 961. N-Repeated Element in Size 2N Array
+    /// <summary>
+    /// Finds the element in an array that is repeated exactly n times.
+    /// </summary>
+    /// <param name="nums">An array of integers where one element is repeated n times.</param>
+    /// <returns>The element that is repeated n times.</returns>
+    /// <link>https://leetcode.com/problems/n-repeated-element-in-size-2n-array/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int RepeatedNTimes(int[] nums)
+        => nums.GroupBy(x => x).First(g => g.Count() > 1).Key;
+    #endregion
 }
