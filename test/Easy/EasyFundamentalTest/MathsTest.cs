@@ -345,4 +345,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 728. Self Dividing Numbers
+    [Theory]
+    [InlineData(1, 22, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22 })]
+    [InlineData(47, 85, new int[] { 48, 55, 66, 77 })]
+    public void TestSelfDividingNumbers(int left, int right, int[] expected)
+    {
+        // Act
+        IList<int> result = Solution.SelfDividingNumbers(left, right);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

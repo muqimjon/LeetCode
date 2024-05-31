@@ -403,4 +403,20 @@ public class Maths
     public int CountEven(int num) =>
         Enumerable.Range(1, num).Count(n => n.ToString().Sum(c => c - '0') % 2 == 0);
     #endregion
+
+    #region 728. Self Dividing Numbers
+    /// <summary>
+    /// Finds self-dividing numbers in a range.
+    /// </summary>
+    /// <param name="left">The lower bound of the range.</param>
+    /// <param name="right">The upper bound of the range.</param>
+    /// <returns>A list of self-dividing numbers.</returns>
+    /// <link>https://leetcode.com/problems/self-dividing-numbers/</link>
+    /// <time>O(n * d)</time>
+    /// <space>O(1)</space>
+    public IList<int> SelfDividingNumbers(int left, int right)
+        => Enumerable.Range(left, right - left + 1)
+                     .Where(num => num.ToString().All(c => c != '0' && num % (c - '0') == 0))
+                     .ToList();
+    #endregion
 }
