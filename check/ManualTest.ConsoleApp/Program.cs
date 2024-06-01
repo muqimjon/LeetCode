@@ -2,25 +2,40 @@
 
 
 using EasyFundamental;
-using EasyIntermediate;
 
 //recursive(5);
 
-static void recursive(int n)
-{
-    if (n > 0)
-    {
-        Console.Write(n);
-        recursive(n - 1);
-    }
-}
+//static void recursive(int n)
+//{
+//    if (n > 0)
+//    {
+//        Console.Write(n);
+//        recursive(n - 1);
+//    }
+//}
 
 
 
-Arrays arrays = new();
-arrays.SortedSquares([]);
+//Arrays arrays = new();
+//arrays.SortedSquares([]);
 
+var n = ~5;
+Console.WriteLine(n);
 
+var ns = Math.ILogB(5);
+Console.WriteLine(ns);
+
+var num = 2 + 1;
+Console.WriteLine(num);
+
+var s = 1 << num;
+Console.WriteLine(s);
+
+s -= 1;
+Console.WriteLine(s);
+
+var d = n & s;
+Console.WriteLine(d);
 
 
 

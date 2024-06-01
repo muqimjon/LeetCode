@@ -419,4 +419,16 @@ public class Maths
                      .Where(num => num.ToString().All(c => c != '0' && num % (c - '0') == 0))
                      .ToList();
     #endregion
+
+    #region 509. Fibonacci Number
+    /// <summary>
+    /// Calculates the nth Fibonacci number.
+    /// </summary>
+    /// <param name="n">The position in the Fibonacci sequence.</param>
+    /// <returns>The nth Fibonacci number.</returns>
+    /// <time>O(2^n)</time>
+    /// <space>O(n)</space>
+    public int Fib(int n)
+        => n <= 1 ? n : Fib(n - 1) + Fib(n - 2);
+    #endregion
 }

@@ -359,4 +359,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 509. Fibonacci Number
+    [Theory]
+    [InlineData(2, 1)]
+    [InlineData(3, 2)]
+    [InlineData(4, 3)]
+    public void TestFib(int n, int expected)
+    {
+        // Act
+        int result = Solution.Fib(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
