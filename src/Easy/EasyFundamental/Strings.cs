@@ -549,4 +549,22 @@ public class Strings
     public int PercentageLetter(string s, char letter)
         => 100 * s.Count(c => c == letter) / s.Length;
     #endregion
+
+    #region 1880. Check if Word Equals Summation of Two Words
+    /// <summary>
+    /// Checks if the sum of the numerical values of two words equals the numerical value of a target word.
+    /// </summary>
+    /// <param name="firstWord">The first word.</param>
+    /// <param name="secondWord">The second word.</param>
+    /// <param name="targetWord">The target word.</param>
+    /// <returns>True if the sum equals the target, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/check-if-word-equals-summation-of-two-words/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool IsSumEqual(string firstWord, string secondWord, string targetWord)
+        => ToNum(firstWord) + ToNum(secondWord) == ToNum(targetWord);
+
+    private int ToNum(string word)
+        => int.Parse(string.Concat(word.Select(c => c - 97)));
+    #endregion
 }

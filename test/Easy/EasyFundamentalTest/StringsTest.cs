@@ -420,4 +420,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1880. Check if Word Equals Summation of Two Words
+    [Theory]
+    [InlineData("acb", "cba", "cdb", true)]
+    [InlineData("aaa", "a", "aab", false)]
+    [InlineData("aaa", "a", "aaaa", true)]
+    public void TestIsSumEqual(string firstWord, string secondWord, string targetWord, bool expected)
+    {
+        // Act
+        bool result = Solution.IsSumEqual(firstWord, secondWord, targetWord);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

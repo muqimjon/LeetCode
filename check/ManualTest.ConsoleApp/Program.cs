@@ -19,26 +19,26 @@ using EasyFundamental;
 //Arrays arrays = new();
 //arrays.SortedSquares([]);
 
-var n = ~5;
-Console.WriteLine(n);
+//var n = ~5;
+//Console.WriteLine(n);
 
-var ns = Math.ILogB(5);
-Console.WriteLine(ns);
+//var ns = Math.ILogB(5);
+//Console.WriteLine(ns);
 
-var num = 2 + 1;
-Console.WriteLine(num);
+//var num = 2 + 1;
+//Console.WriteLine(num);
 
-var s = 1 << num;
-Console.WriteLine(s);
+//var s = 1 << num;
+//Console.WriteLine(s);
 
-s -= 1;
-Console.WriteLine(s);
+//s -= 1;
+//Console.WriteLine(s);
 
-var d = n & s;
-Console.WriteLine(d);
+//var d = n & s;
+//Console.WriteLine(d);
 
 
-
+Console.WriteLine((int)'a');
 
 
 
