@@ -1132,4 +1132,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3005. Count Elements With Maximum Frequency
+    [Theory]
+    [InlineData(new int[] { 1, 2, 2, 3, 1, 4 }, 4)]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, 5)]
+    public void TestCountMaxFrequency(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.MaxFrequencyElements(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

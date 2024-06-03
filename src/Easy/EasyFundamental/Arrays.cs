@@ -1444,4 +1444,22 @@ public class Arrays
     public int RepeatedNTimes(int[] nums)
         => nums.GroupBy(x => x).First(g => g.Count() > 1).Key;
     #endregion
+
+    #region 3005. Count Elements With Maximum Frequency
+    /// <summary>
+    /// Counts elements with the maximum frequency in an array.
+    /// </summary>
+    /// <param name="nums">The array of positive integers.</param>
+    /// <returns>The total count of elements with maximum frequency.</returns>
+    /// <link>https://leetcode.com/problems/count-elements-with-maximum-frequency/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int MaxFrequencyElements(int[] nums)
+        => nums.GroupBy(x => x)
+                .Select(g => g.Count())
+                .Max() * nums.GroupBy(x => x)
+                    .Count(g => g.Count() == nums.GroupBy(x => x)
+                        .Select(g => g.Count())
+                        .Max());
+    #endregion
 }
