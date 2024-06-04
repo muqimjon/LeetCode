@@ -567,4 +567,18 @@ public class Strings
     private int ToNum(string word)
         => int.Parse(string.Concat(word.Select(c => c - 97)));
     #endregion
+
+    #region 1974. Minimum Time to Type Word Using Special Typewriter
+    /// <summary>
+    /// Calculates the minimum number of seconds required to type out a given word using a special typewriter.
+    /// </summary>
+    /// <param name="word">The word to be typed.</param>
+    /// <returns>The minimum number of seconds to type out the characters in the word.</returns>
+    /// <link>https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter/</link>
+    /// <time>O(n)</time> // where n is the length of the input word
+    /// <space>O(1)</space> // constant space is used
+    public int MinTimeToType(string word)
+        => word.Length + word.Select((c, i) 
+            => Math.Min(Math.Abs(c - (i == 0 ? 'a' : word[i - 1])), 26 - Math.Abs(c - (i == 0 ? 'a' : word[i - 1])))).Sum();
+    #endregion
 }

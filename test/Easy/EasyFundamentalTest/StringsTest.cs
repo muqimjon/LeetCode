@@ -435,4 +435,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1974. Minimum Time to Type Word Using Special Typewriter
+    [Theory]
+    [InlineData("abc", 5)]
+    [InlineData("bza", 7)]
+    [InlineData("zjpc", 34)]
+    public void TestMinTimeToType(string word, int expected)
+    {
+        // Act
+        int result = Solution.MinTimeToType(word);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
