@@ -581,4 +581,17 @@ public class Strings
         => word.Length + word.Select((c, i) 
             => Math.Min(Math.Abs(c - (i == 0 ? 'a' : word[i - 1])), 26 - Math.Abs(c - (i == 0 ? 'a' : word[i - 1])))).Sum();
     #endregion
+
+    #region 1374. Generate a String With Characters That Have Odd Counts
+    /// <summary>
+    /// Generates a string of length n with characters having odd counts.
+    /// </summary>
+    /// <param name="n">The length of the string to generate.</param>
+    /// <returns>A string with n characters, each occurring an odd number of times.</returns>
+    /// <link>https://leetcode.com/problems/generate-a-string-with-characters-that-have-odd-counts/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public string GenerateTheString(int n)
+        => n % 2 == 0 ? new string('a', n - 1) + 'b' : new string('a', n);
+    #endregion
 }

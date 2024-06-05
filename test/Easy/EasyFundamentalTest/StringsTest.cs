@@ -450,4 +450,21 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1374. Generate a String With Characters That Have Odd Counts
+    [Theory]
+    [InlineData(4, "aaab")]
+    [InlineData(2, "ab")]
+    [InlineData(7, "aaaaaaa")]
+    [InlineData(1, "a")]
+    [InlineData(5, "aaaaa")]
+    public void TestGenerateTheString(int n, string expectedPattern)
+    {
+        // Act
+        string result = Solution.GenerateTheString(n);
+
+        // Assert
+        Assert.Matches(expectedPattern, result);
+    }
+    #endregion
 }
