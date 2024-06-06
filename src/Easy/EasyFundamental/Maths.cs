@@ -431,4 +431,18 @@ public class Maths
     public int Fib(int n)
         => n <= 1 ? n : Fib(n - 1) + Fib(n - 2);
     #endregion
+
+    #region 2582. Pass the Pillow
+    /// <summary>
+    /// Finds the index of the person holding the pillow after a given time.
+    /// </summary>
+    /// <param name="n">The number of people in the line.</param>
+    /// <param name="time">The time in seconds.</param>
+    /// <returns>The index of the person holding the pillow.</returns>
+    /// <link>https://leetcode.com/problems/pass-the-pillow/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int PassThePillow(int n, int time)
+        => n - Math.Abs(n - 1 - time % (2 * (n - 1)));
+    #endregion
 }

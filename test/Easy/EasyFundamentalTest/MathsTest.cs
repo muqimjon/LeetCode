@@ -374,4 +374,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2582. Pass the Pillow
+    [Theory]
+    [InlineData(4, 5, 2)]
+    [InlineData(3, 2, 3)]
+    public void TestPassThePillow(int n, int time, int expected)
+    {
+        // Act
+        int result = Solution.PassThePillow(n, time);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
