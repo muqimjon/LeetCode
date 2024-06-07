@@ -445,4 +445,17 @@ public class Maths
     public int PassThePillow(int n, int time)
         => n - Math.Abs(n - 1 - time % (2 * (n - 1)));
     #endregion
+
+    #region 2469. Convert the Temperature
+    /// <summary>
+    /// Converts Celsius temperature to Kelvin and Fahrenheit.
+    /// </summary>
+    /// <param name="celsius">Temperature in Celsius.</param>
+    /// <returns>Array with temperatures in Kelvin and Fahrenheit.</returns>
+    /// <link>https://leetcode.com/problems/convert-the-temperature/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public double[] ConvertTemperature(double celsius)
+        => new[] { celsius + 273.15, celsius * 1.8 + 32 };
+    #endregion
 }

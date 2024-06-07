@@ -388,4 +388,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2469. Convert the Temperature
+    [Theory]
+    [InlineData(36.50, 309.65000, 97.70000)]
+    [InlineData(122.11, 395.26000, 251.79800)]
+    public void TestConvertTemperature(double celsius, double expectedKelvin, double expectedFahrenheit)
+    {
+        // Act
+        double[] result = Solution.ConvertTemperature(celsius);
+
+        // Assert
+        Assert.Equal(expectedKelvin, result[0], 5);
+        Assert.Equal(expectedFahrenheit, result[1], 5);
+    }
+    #endregion
 }
