@@ -594,4 +594,17 @@ public class Strings
     public string GenerateTheString(int n)
         => n % 2 == 0 ? new string('a', n - 1) + 'b' : new string('a', n);
     #endregion
+
+    #region 1844. Replace All Digits with Characters
+    /// <summary>
+    /// Replaces digits in a string with characters shifted from preceding characters.
+    /// </summary>
+    /// <param name="s">Input string with letters at even indices and digits at odd indices.</param>
+    /// <returns>String after replacing all digits with shifted characters.</returns>
+    /// <link>https://leetcode.com/problems/replace-all-digits-with-characters/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string ReplaceDigits(string s)
+        => new(s.Select((c, i) => i % 2 == 0 ? c : (char)(s[i - 1] + (c - '0'))).ToArray());
+    #endregion
 }

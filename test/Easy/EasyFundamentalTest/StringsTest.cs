@@ -467,4 +467,21 @@ public class StringsTest
         Assert.Matches(expectedPattern, result);
     }
     #endregion
+
+    #region 1844. Replace All Digits with Characters
+    [Theory]
+    [InlineData("a1c1e1", "abcdef")]
+    [InlineData("a1b2c3d4e", "abbdcfdhe")]
+    [InlineData("x2y3z4", "xzzyzz")]
+    [InlineData("a0", "aa")]
+    [InlineData("a1b0", "abb")]
+    public void TestReplaceDigits(string input, string expected)
+    {
+        // Act
+        string result = Solution.ReplaceDigits(input);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
