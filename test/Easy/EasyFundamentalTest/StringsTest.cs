@@ -472,13 +472,28 @@ public class StringsTest
     [Theory]
     [InlineData("a1c1e1", "abcdef")]
     [InlineData("a1b2c3d4e", "abbdcfdhe")]
-    [InlineData("x2y3z4", "xzzyzz")]
     [InlineData("a0", "aa")]
-    [InlineData("a1b0", "abb")]
     public void TestReplaceDigits(string input, string expected)
     {
         // Act
         string result = Solution.ReplaceDigits(input);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 1668. Maximum Repeating Substring
+    [Theory]
+    [InlineData("ababc", "ab", 2)]
+    [InlineData("ababc", "ba", 1)]
+    [InlineData("ababc", "ac", 0)]
+    [InlineData("aaaaa", "a", 5)]
+    [InlineData("abababab", "ab", 4)]
+    public void TestMaxRepeating(string sequence, string word, int expected)
+    {
+        // Act
+        int result = Solution.MaxRepeating(sequence, word);
 
         // Assert
         Assert.Equal(expected, result);

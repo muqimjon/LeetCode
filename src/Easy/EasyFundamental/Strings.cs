@@ -607,4 +607,18 @@ public class Strings
     public string ReplaceDigits(string s)
         => new(s.Select((c, i) => i % 2 == 0 ? c : (char)(s[i - 1] + (c - '0'))).ToArray());
     #endregion
+
+    #region 1668. Maximum Repeating Substring
+    /// <summary>
+    /// Finds the maximum k-repeating value of a word in a given sequence.
+    /// </summary>
+    /// <param name="sequence">The sequence string to search within.</param>
+    /// <param name="word">The word to find the maximum k-repeating value for.</param>
+    /// <returns>The highest value k where word concatenated k times is a substring of sequence.</returns>
+    /// <link>https://leetcode.com/problems/maximum-repeating-substring/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(1)</space>
+    public int MaxRepeating(string sequence, string word)
+        => Enumerable.Range(1, sequence.Length / word.Length + 1).Reverse().FirstOrDefault(k => sequence.Contains(string.Concat(Enumerable.Repeat(word, k))));
+    #endregion
 }
