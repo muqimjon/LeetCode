@@ -1462,4 +1462,17 @@ public class Arrays
                         .Select(g => g.Count())
                         .Max());
     #endregion
+
+    #region 2806. Account Balance After Rounded Purchase
+    /// <summary>
+    /// Calculates the account balance after rounding the purchase amount to the nearest multiple of 10 and subtracting it from the initial balance of 100.
+    /// </summary>
+    /// <param name="purchaseAmount">The amount of the purchase.</param>
+    /// <returns>The remaining account balance after the rounded purchase.</returns>
+    /// <link>https://leetcode.com/problems/account-balance-after-rounded-purchase/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int AccountBalanceAfterPurchase(int purchaseAmount)
+        => 100 - ((purchaseAmount + 5) / 10) * 10;
+    #endregion
 }

@@ -1146,4 +1146,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2806. Account Balance After Rounded Purchase
+    [Theory]
+    [InlineData(9, 90)]
+    [InlineData(15, 80)]
+    [InlineData(11, 90)] //FAILED
+    public void TestAccountBalanceAfterPurchase(int purchaseAmount, int expectedBalance)
+    {
+        // Act
+        int result = Solution.AccountBalanceAfterPurchase(purchaseAmount);
+
+        // Assert
+        Assert.Equal(expectedBalance, result);
+    }
+    #endregion
 }
