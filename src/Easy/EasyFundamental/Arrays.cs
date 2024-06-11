@@ -1475,4 +1475,17 @@ public class Arrays
     public int AccountBalanceAfterPurchase(int purchaseAmount)
         => 100 - ((purchaseAmount + 5) / 10) * 10;
     #endregion
+
+    #region 905. Sort Array By Parity
+    /// <summary>
+    /// Sorts an array by moving all even integers to the beginning followed by all odd integers.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>A new array with all even integers at the beginning and odd integers at the end.</returns>
+    /// <link>https://leetcode.com/problems/sort-array-by-parity/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public int[] SortArrayByParity(int[] nums)
+        => nums.OrderBy(x => x % 2).ToArray();
+    #endregion
 }

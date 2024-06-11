@@ -1161,4 +1161,18 @@ public class ArraysTest
         Assert.Equal(expectedBalance, result);
     }
     #endregion
+
+    #region 905. Sort Array By Parity
+    [Theory]
+    [InlineData(new int[] { 3, 1, 2, 4 }, new int[] { 2, 4, 3, 1 })]
+    [InlineData(new int[] { 0 }, new int[] { 0 })]
+    public void TestSortArrayByParity(int[] nums, int[] expected)
+    {
+        // Act
+        int[] result = Solution.SortArrayByParity(nums);
+
+        // Assert
+        Assert.Equal(expected.OrderBy(x => x % 2).ThenBy(x => x).ToArray(), result.OrderBy(x => x % 2).ThenBy(x => x).ToArray());
+    }
+    #endregion
 }
