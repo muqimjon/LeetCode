@@ -1175,18 +1175,4 @@ public class ArraysTest
         Assert.Equal(expected.OrderBy(x => x % 2).ThenBy(x => x).ToArray(), result.OrderBy(x => x % 2).ThenBy(x => x).ToArray());
     }
     #endregion
-
-    #region 2778. Sum of Squares of Special Elements
-    [Theory]
-    [InlineData(new int[] { 1, 2, 3, 4 }, 21)]
-    [InlineData(new int[] { 2, 7, 1, 19, 18, 3 }, 63)]
-    public void TestSumOfSquares(int[] nums, int expected)
-    {
-        // Act
-        int result = Solution.SumOfSquares(nums);
-
-        // Assert
-        Assert.Equal(expected, result);
-    }
-    #endregion
 }

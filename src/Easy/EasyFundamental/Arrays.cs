@@ -1488,17 +1488,4 @@ public class Arrays
     public int[] SortArrayByParity(int[] nums)
         => nums.OrderBy(x => x % 2).ToArray();
     #endregion
-
-    #region 2778. Sum of Squares of Special Elements
-    /// <summary>
-    /// Returns the sum of the squares of all special elements in the given array.
-    /// </summary>
-    /// <param name="nums">The input array of integers.</param>
-    /// <returns>The sum of the squares of all special elements.</returns>
-    /// <link>https://leetcode.com/problems/sum-of-squares-of-special-elements/</link>
-    /// <time>O(n)</time>
-    /// <space>O(1)</space>
-    public int SumOfSquares(int[] nums)
-        => Enumerable.Range(1, nums.Length).Where(i => nums.Length % i == 0).Sum(i => nums[i - 1] * nums[i - 1]);
-    #endregion
 }
