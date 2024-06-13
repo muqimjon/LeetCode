@@ -458,4 +458,20 @@ public class Maths
     public double[] ConvertTemperature(double celsius)
         => new[] { celsius + 273.15, celsius * 1.8 + 32 };
     #endregion
+
+    #region 2160. Minimum Sum of Four Digit Number After Splitting Digits
+    /// <summary>
+    /// Minimum sum after split.
+    /// </summary>
+    /// <param name="num">A four-digit integer.</param>
+    /// <returns>Minimum sum of splits.</returns>
+    /// <link>https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public int MinimumSum(int num)
+    {
+        var digits = num.ToString().Select(c => c - '0').Order().ToArray();
+        return digits[0] * 10 + digits[2] + digits[1] * 10 + digits[3];
+    }
+    #endregion
 }

@@ -403,4 +403,18 @@ public class MathsTest
         Assert.Equal(expectedFahrenheit, result[1], 5);
     }
     #endregion
+
+    #region 2160. Minimum Sum of Four Digit Number After Splitting Digits
+    [Theory]
+    [InlineData(2932, 52)]
+    [InlineData(4009, 13)]
+    public void TestMinimumSum(int num, int expected)
+    {
+        // Act
+        int result = Solution.MinimumSum(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
