@@ -474,4 +474,17 @@ public class Maths
         return digits[0] * 10 + digits[2] + digits[1] * 10 + digits[3];
     }
     #endregion
+
+    #region 342. Power of Four
+    /// <summary>
+    /// Checks if an integer is a power of four.
+    /// </summary>
+    /// <param name="n">Integer to check.</param>
+    /// <returns>True if it's a power of four, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/power-of-four/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public bool IsPowerOfFour(int n)
+        => n > 0 && (n & (n - 1)) == 0 && (n - 1) % 3 == 0;
+    #endregion
 }

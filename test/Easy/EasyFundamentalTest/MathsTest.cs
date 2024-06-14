@@ -417,4 +417,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 342. Power of Four
+    [Theory]
+    [InlineData(16, true)]
+    [InlineData(5, false)]
+    [InlineData(1, true)]
+    public void TestIsPowerOfFour(int n, bool expected)
+    {
+        // Act
+        bool result = Solution.IsPowerOfFour(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
