@@ -1189,4 +1189,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2148. Count Elements With Strictly Smaller and Greater Elements
+    [Theory]
+    [InlineData(new int[] { 11, 7, 2, 15 }, 2)]
+    [InlineData(new int[] { -3, 3, 3, 90 }, 2)]
+    public void TestCountElements(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.CountElements(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

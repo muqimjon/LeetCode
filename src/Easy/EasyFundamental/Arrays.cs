@@ -1501,4 +1501,20 @@ public class Arrays
     public int SumOfSquares(int[] nums)
         => Enumerable.Range(1, nums.Length).Where(i => nums.Length % i == 0).Sum(i => nums[i - 1] * nums[i - 1]);
     #endregion
+
+    #region 2148. Count Elements With Strictly Smaller and Greater Elements
+    /// <summary>
+    /// Counts elements with both a strictly smaller and a strictly greater element.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The count of such elements.</returns>
+    /// <link>https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int CountElements(int[] nums)
+    {
+        int min = nums.Min(), max = nums.Max();
+        return nums.Count(num => num > min && num < max);
+    }
+    #endregion
 }
