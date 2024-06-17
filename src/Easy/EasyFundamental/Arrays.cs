@@ -1517,4 +1517,18 @@ public class Arrays
         return nums.Count(num => num > min && num < max);
     }
     #endregion
+
+    #region 1720. Decode XORed Array
+    /// <summary>
+    /// Decodes the XORed array to find the original array.
+    /// </summary>
+    /// <param name="encoded">The encoded array of integers.</param>
+    /// <param name="first">The first element of the original array.</param>
+    /// <returns>The original array.</returns>
+    /// <link>https://leetcode.com/problems/decode-xored-array/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int[] Decode(int[] encoded, int first)
+        => Enumerable.Range(0, encoded.Length + 1).Select(i => i == 0 ? first : first ^= encoded[i - 1]).ToArray();
+    #endregion
 }

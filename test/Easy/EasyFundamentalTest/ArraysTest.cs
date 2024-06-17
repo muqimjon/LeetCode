@@ -1203,4 +1203,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1720. Decode XORed Array
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3 }, 1, new int[] { 1, 0, 2, 1 })]
+    [InlineData(new int[] { 6, 2, 7, 3 }, 4, new int[] { 4, 2, 0, 7, 4 })]
+    public void TestDecode(int[] encoded, int first, int[] expected)
+    {
+        // Act
+        int[] result = Solution.Decode(encoded, first);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
