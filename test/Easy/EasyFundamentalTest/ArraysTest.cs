@@ -1217,4 +1217,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2815. Max Pair Sum in an Array
+    [Theory]
+    [InlineData(new int[] { 112, 131, 411 }, -1)]
+    [InlineData(new int[] { 2536, 1613, 3366, 162 }, 5902)]
+    [InlineData(new int[] { 51, 71, 17, 24, 42 }, 88)]
+    public void TestMaxPairSum(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.MaxSum(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

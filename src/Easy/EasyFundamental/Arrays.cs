@@ -1531,4 +1531,19 @@ public class Arrays
     public int[] Decode(int[] encoded, int first)
         => Enumerable.Range(0, encoded.Length + 1).Select(i => i == 0 ? first : first ^= encoded[i - 1]).ToArray();
     #endregion
+
+    #region 2815. Max Pair Sum in an Array
+    /// <summary>
+    /// Returns the maximum sum of pairs of numbers in the array where the largest digit in each pair is the same.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The maximum sum of pairs with the same largest digit, or -1 if no such pair exists.</returns>
+    /// <link>https://leetcode.com/problems/maximum-sum-of-pairs-with-equal-digit-sum/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int MaxSum(int[] nums)
+        => nums.GroupBy(num => num.ToString().Max())
+               .Select(g => g.Count() > 1 ? g.OrderByDescending(x => x).Take(2).Sum() : -1)
+               .Max();
+    #endregion
 }
