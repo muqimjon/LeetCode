@@ -487,4 +487,18 @@ public class Maths
     public bool IsPowerOfFour(int n)
         => n > 0 && (n & (n - 1)) == 0 && (n - 1) % 3 == 0;
     #endregion
+
+    #region 1281. Subtract the Product and Sum of Digits of an Integer
+    /// <summary>
+    /// Returns the difference between the product and sum of the digits of an integer.
+    /// </summary>
+    /// <param name="n">The input integer.</param>
+    /// <returns>The difference between the product and sum of its digits.</returns>
+    /// <link>https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int SubtractProductAndSum(int n)
+        => n.ToString().Aggregate(1, (p, c)
+            => p * (c - 48)) - n.ToString().Sum(c => c - 48);
+    #endregion
 }

@@ -432,4 +432,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1281. Subtract the Product and Sum of Digits of an Integer
+    [Theory]
+    [InlineData(234, 15)]
+    [InlineData(4421, 21)]
+    public void TestSubtractProductAndSum(int n, int expected)
+    {
+        // Act
+        int result = Solution.SubtractProductAndSum(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
