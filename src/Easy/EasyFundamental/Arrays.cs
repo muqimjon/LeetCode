@@ -1546,4 +1546,17 @@ public class Arrays
                .Select(g => g.Count() > 1 ? g.OrderByDescending(x => x).Take(2).Sum() : -1)
                .Max();
     #endregion
+
+    #region 1304. Find N Unique Integers Sum up to Zero
+    /// <summary>
+    /// Returns an array containing n unique integers that sum up to zero.
+    /// </summary>
+    /// <param name="n">The number of unique integers.</param>
+    /// <returns>An array of n unique integers that sum up to zero.</returns>
+    /// <link>https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int[] SumZero(int n)
+        => Enumerable.Range(1, n - 1).Concat(new[] { -(n * (n - 1) / 2) }).ToArray();
+    #endregion
 }

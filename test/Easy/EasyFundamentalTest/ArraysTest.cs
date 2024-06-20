@@ -1232,4 +1232,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1304. Find N Unique Integers Sum up to Zero
+    [Theory]
+    [InlineData(5)]
+    [InlineData(3)]
+    [InlineData(1)]
+    public void TestSumZero(int n)
+    {
+        // Act
+        int[] result = Solution.SumZero(n);
+
+        // Assert
+        Assert.Equal(n, result.Length);
+        Assert.Equal(0, result.Sum());
+        Assert.Equal(result.Distinct().Count(), result.Length);
+    }
+    #endregion
 }
