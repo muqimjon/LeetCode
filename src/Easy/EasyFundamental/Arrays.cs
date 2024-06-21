@@ -1557,6 +1557,22 @@ public class Arrays
     /// <time>O(n)</time>
     /// <space>O(n)</space>
     public int[] SumZero(int n)
-        => Enumerable.Range(1, n - 1).Concat(new[] { -(n * (n - 1) / 2) }).ToArray();
+        => [..Enumerable.Range(1, n - 1), -(n * (n - 1) / 2)];
+    #endregion
+
+    #region 1587. Count the Number of Vowel Strings in Range
+    /// <summary>
+    /// Returns the number of vowel strings in the specified range of words.
+    /// </summary>
+    /// <param name="words">An array of strings.</param>
+    /// <param name="left">The left index of the range.</param>
+    /// <param name="right">The right index of the range.</param>
+    /// <returns>The count of vowel strings within the range [left, right].</returns>
+    /// <link>https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range/</link>
+    /// <time>O(n)</time> where n is the number of words and m is the average length of words.
+    /// <space>O(1)</space>
+    public int CountVowelStringsInRange(string[] words, int left, int right)
+        => words.Skip(left).Take(right - left + 1)
+                .Count(word => "aeiou".Contains(word[0]) && "aeiou".Contains(word[^1]));
     #endregion
 }

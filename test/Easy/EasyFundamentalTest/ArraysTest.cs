@@ -1249,4 +1249,18 @@ public class ArraysTest
         Assert.Equal(result.Distinct().Count(), result.Length);
     }
     #endregion
+
+    #region Count the Number of Vowel Strings in Range
+    [Theory]
+    [InlineData(new string[] { "are", "amy", "u" }, 0, 2, 2)]
+    [InlineData(new string[] { "hey", "aeo", "mu", "ooo", "artro" }, 1, 4, 3)]
+    public void TestCountVowelStrings(string[] words, int left, int right, int expected)
+    {
+        // Act
+        int actual = Solution.CountVowelStringsInRange(words, left, right);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
