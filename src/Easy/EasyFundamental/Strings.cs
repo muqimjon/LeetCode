@@ -621,4 +621,18 @@ public class Strings
     public int MaxRepeating(string sequence, string word)
         => Enumerable.Range(1, sequence.Length / word.Length + 1).Reverse().FirstOrDefault(k => sequence.Contains(string.Concat(Enumerable.Repeat(word, k))));
     #endregion
+
+    #region 1704. Determine if String Halves Are Alike
+    /// <summary>
+    /// Determines if the two halves of the given string are alike by comparing the number of vowels in each half.
+    /// </summary>
+    /// <param name="s">The input string of even length.</param>
+    /// <returns>True if both halves have the same number of vowels, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/determine-if-string-halves-are-alike/</link>
+    /// <time>O(n)</time> where n is the length of the string.
+    /// <space>O(1)</space>
+    public bool HalvesAreAlike(string s)
+        => s.Take(s.Length / 2).Count(c => "aeiouAEIOU".Contains(c))
+        == s.Skip(s.Length / 2).Count(c => "aeiouAEIOU".Contains(c));
+    #endregion
 }

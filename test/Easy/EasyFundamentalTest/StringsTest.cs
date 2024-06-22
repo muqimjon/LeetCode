@@ -499,4 +499,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1704. Determine if String Halves Are Alike
+    [Theory]
+    [InlineData("book", true)]
+    [InlineData("textbook", false)]
+    public void TestHalvesAreAlike(string s, bool expected)
+    {
+        // Act
+        bool actual = Solution.HalvesAreAlike(s);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }
