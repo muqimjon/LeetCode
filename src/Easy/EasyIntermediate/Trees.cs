@@ -1,4 +1,4 @@
-﻿namespace EasyFundamental;
+﻿namespace EasyIntermediate;
 
 public class Trees
 {
@@ -26,6 +26,19 @@ public class Trees
 
         return SumLeaf(node.left, currentSum) + SumLeaf(node.right, currentSum);
     }
+    #endregion
+
+    #region 2236. Root Equals Sum of Children
+    /// <summary>
+    /// Determines if the value of the root node is equal to the sum of the values of its two children.
+    /// </summary>
+    /// <param name="root">The root of the binary tree.</param>
+    /// <returns>True if the root's value equals the sum of its children's values, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/root-equals-sum-of-children/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public bool CheckTree(TreeNode root)
+        => root.val == root.left.val + root.right.val;
     #endregion
 
     #region Build TreeNode >>
