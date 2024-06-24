@@ -19,7 +19,7 @@ public class Trees
         if (node == null)
             return 0;
 
-        currentSum = (currentSum << 1) | node.val;
+        currentSum = (currentSum << 1) | node.val ?? 0;
 
         if (node.left == null && node.right == null)
             return currentSum;
@@ -41,6 +41,22 @@ public class Trees
         => root.val == root.left.val + root.right.val;
     #endregion
 
+    #region 100. Same Tree
+    /// <summary>
+    /// Checks if two binary trees are structurally identical with the same node values.
+    /// </summary>
+    /// <param name="p">Root of the first tree.</param>
+    /// <param name="q">Root of the second tree.</param>
+    /// <returns>True if the trees are the same, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/same-tree/</link>
+    /// <time>O(n)</time>
+    /// <space>O(h)</space>
+    public bool IsSameTree(TreeNode p, TreeNode q)
+        => p == null && q == null ? true :
+            p == null || q == null || p.val != q.val ? false :
+            IsSameTree(p.left, q.left) && IsSameTree(p.right, q.right);
+    #endregion
+
     #region Build TreeNode >>
     public static TreeNode BuildBinaryTree(int[] values)
     {
@@ -56,7 +72,7 @@ public class Trees
             current.left = new TreeNode(values[i]);
             nodes.Enqueue(current.left);
 
-            if (i + 1 < values.Length && values[i + 1] != null)
+            if (i + 1 < values.Length)
             {
                 current.right = new TreeNode(values[i + 1]);
                 nodes.Enqueue(current.right);
@@ -69,9 +85,9 @@ public class Trees
 }
 
 #region TreeNode Model >>
-public class TreeNode(int val = 0, TreeNode left = null!, TreeNode right = null!)
+public class TreeNode(int? val = 0, TreeNode left = null!, TreeNode right = null!)
 {
-    public int val = val;
+    public int? val = val;
     public TreeNode left = left;
     public TreeNode right = right;
 }
