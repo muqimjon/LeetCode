@@ -501,4 +501,17 @@ public class Maths
         => n.ToString().Aggregate(1, (p, c)
             => p * (c - 48)) - n.ToString().Sum(c => c - 48);
     #endregion
+
+    #region 2481. Minimum Cuts to Divide a Circle
+    /// <summary>
+    /// Returns the minimum number of cuts needed to divide a circle into n equal slices.
+    /// </summary>
+    /// <param name="n">The number of equal slices.</param>
+    /// <returns>The minimum number of cuts needed.</returns>
+    /// <link>https://leetcode.com/problems/minimum-cuts-to-divide-a-circle/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int NumberOfCuts(int n)
+        => n < 2 ? 0 : (n % 2 == 0 ? n / 2 : n);
+    #endregion
 }

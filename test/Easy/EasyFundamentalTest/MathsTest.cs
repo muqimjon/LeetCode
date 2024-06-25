@@ -446,4 +446,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2481. Minimum Cuts to Divide a Circle
+    [Theory]
+    [InlineData(4, 2)]
+    [InlineData(3, 3)]
+    public void TestMinimumCutsToDivideCircle(int n, int expected)
+    {
+        // Act
+        int result = Solution.NumberOfCuts(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
