@@ -23,4 +23,18 @@ public class BitManipulationTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 2220. Minimum Bit Flips to Convert Number
+    [Theory]
+    [InlineData(10, 7, 3)]
+    [InlineData(3, 4, 3)]
+    public void TestMinimumBitFlipsToConvertNumber(int start, int goal, int expected)
+    {
+        // Act
+        int result = Solution.MinBitFlips(start, goal);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
