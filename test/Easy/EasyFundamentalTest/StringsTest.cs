@@ -513,4 +513,18 @@ public class StringsTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1047. Remove All Adjacent Duplicates In String
+    [Theory]
+    [InlineData("abbaca", "ca")]
+    [InlineData("azxxzy", "ay")]
+    public void TestRemoveDuplicates(string s, string expected)
+    {
+        // Act
+        string result = Solution.RemoveDuplicates(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

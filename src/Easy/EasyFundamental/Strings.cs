@@ -635,4 +635,27 @@ public class Strings
         => s.Take(s.Length / 2).Count(c => "aeiouAEIOU".Contains(c))
         == s.Skip(s.Length / 2).Count(c => "aeiouAEIOU".Contains(c));
     #endregion
+
+    #region 1047. Remove All Adjacent Duplicates In String
+    /// <summary>
+    /// Removes all adjacent duplicate characters from the string.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The final string after all adjacent duplicates have been removed.</returns>
+    /// <link>https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string RemoveDuplicates(string s)
+    {
+        Stack<char> stack = [];
+        foreach (var c in s)
+        {
+            if (stack.Count > 0 && stack.Peek() == c)
+                stack.Pop();
+            else
+                stack.Push(c);
+        }
+        return new string(stack.Reverse().ToArray());
+    }
+    #endregion
 }
