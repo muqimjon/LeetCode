@@ -460,4 +460,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1137. N-th Tribonacci Number
+    [Theory]
+    [InlineData(4, 4)]
+    [InlineData(25, 1389537)]
+    public void TestNthTribonacciNumber(int n, int expected)
+    {
+        // Act
+        int result = Solution.Tribonacci(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

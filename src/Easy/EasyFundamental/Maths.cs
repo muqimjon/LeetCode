@@ -514,4 +514,22 @@ public class Maths
     public int NumberOfCuts(int n)
         => n < 2 ? 0 : (n % 2 == 0 ? n / 2 : n);
     #endregion
+
+    #region 1137. N-th Tribonacci Number
+    /// <summary>
+    /// Computes the n-th Tribonacci number.
+    /// </summary>
+    /// <param name="n">The index of the Tribonacci number to compute.</param>
+    /// <returns>The n-th Tribonacci number.</returns>
+    /// <link>https://leetcode.com/problems/n-th-tribonacci-number/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int Tribonacci(int n)
+    {
+        int[] t = { 0, 1, 1 };
+        for (int i = 3; i <= n; i++)
+            t[i % 3] = t[0] + t[1] + t[2];
+        return t[n % 3];
+    }
+    #endregion
 }
