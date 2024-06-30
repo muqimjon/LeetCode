@@ -122,4 +122,27 @@ public class Arrays
         return maxLength;
     }
     #endregion
+
+    #region 189. Rotate Array
+    /// <summary>
+    /// Rotates the array to the right by k steps.
+    /// </summary>
+    /// <param name="nums">The input array.</param>
+    /// <param name="k">The number of steps to rotate the array.</param>
+    /// <link>https://leetcode.com/problems/rotate-array/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public void Rotate(int[] nums, int k)
+    {
+        int n = nums.Length;
+        k %= n;
+        int[] temp = new int[n];
+
+        for (int i = 0; i < n; i++)
+            temp[(i + k) % n] = nums[i];
+
+        for (int i = 0; i < n; i++)
+            nums[i] = temp[i];
+    }
+    #endregion
 }

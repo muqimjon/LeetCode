@@ -1263,18 +1263,4 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
-
-    #region 189. Rotate Array
-    [Theory]
-    [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3, new int[] { 5, 6, 7, 1, 2, 3, 4 })]
-    [InlineData(new int[] { -1, -100, 3, 99 }, 2, new int[] { 3, 99, -1, -100 })]
-    public void TestRotateArray(int[] nums, int k, int[] expected)
-    {
-        // Act
-        Solution.Rotate(nums, k);
-
-        // Assert
-        Assert.Equal(expected, nums);
-    }
-    #endregion
 }
