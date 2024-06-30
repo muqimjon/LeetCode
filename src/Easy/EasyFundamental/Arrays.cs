@@ -1575,4 +1575,24 @@ public class Arrays
         => words.Skip(left).Take(right - left + 1)
                 .Count(word => "aeiou".Contains(word[0]) && "aeiou".Contains(word[^1]));
     #endregion
+
+    #region 3069. Distribute Elements Into Two Arrays I
+    /// <summary>
+    /// Distributes elements of nums into two arrays arr1 and arr2 and returns the concatenated result.
+    /// </summary>
+    /// <param name="nums">The input array of distinct integers.</param>
+    /// <returns>The concatenated result array.</returns>
+    /// <link>https://leetcode.com/problems/distribute-elements-into-two-arrays-i/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int[] ResultArray(int[] nums)
+    {
+        List<int> arr1 = [nums[0]], arr2 = [nums[1]];
+
+        for (int i = 2; i < nums.Length; i++)
+            (arr1.Last() > arr2.Last() ? arr1 : arr2).Add(nums[i]);
+
+        return [.. arr1, .. arr2];
+    }
+    #endregion
 }

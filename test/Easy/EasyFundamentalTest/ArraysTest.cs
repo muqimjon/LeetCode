@@ -1263,4 +1263,18 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 3069. Distribute Elements Into Two Arrays I
+    [Theory]
+    [InlineData(new int[] { 2, 1, 3 }, new int[] { 2, 3, 1 })]
+    [InlineData(new int[] { 5, 4, 3, 8 }, new int[] { 5, 3, 4, 8 })]
+    public void TestDistributeElements(int[] nums, int[] expected)
+    {
+        // Act
+        int[] result = Solution.ResultArray(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
