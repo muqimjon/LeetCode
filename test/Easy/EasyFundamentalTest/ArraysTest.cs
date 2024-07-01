@@ -1277,4 +1277,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 575. Distribute Candies
+    [Theory]
+    [InlineData(new int[] { 1, 1, 2, 2, 3, 3 }, 3)]
+    [InlineData(new int[] { 1, 1, 2, 3 }, 2)]
+    [InlineData(new int[] { 6, 6, 6, 6 }, 1)]
+    public void TestDistributeCandies(int[] candyType, int expected)
+    {
+        // Act
+        int result = Solution.DistributeCandies(candyType);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

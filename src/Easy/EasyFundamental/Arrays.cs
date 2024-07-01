@@ -1595,4 +1595,17 @@ public class Arrays
         return [.. arr1, .. arr2];
     }
     #endregion
+
+    #region 575. Distribute Candies
+    /// <summary>
+    /// Returns the maximum number of different types of candies Alice can eat if she only eats n / 2 of them.
+    /// </summary>
+    /// <param name="candyType">The array of candy types.</param>
+    /// <returns>The maximum number of different types of candies Alice can eat.</returns>
+    /// <link>https://leetcode.com/problems/distribute-candies/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int DistributeCandies(int[] candyType)
+        => Math.Min(candyType.Length / 2, candyType.Distinct().Count());
+    #endregion
 }
