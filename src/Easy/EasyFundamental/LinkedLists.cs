@@ -139,6 +139,25 @@ public class LinkedLists
         return result;
     }
     #endregion
+
+    #region 876. Middle of the Linked List
+    /// <summary>
+    /// Returns the middle node of the list; if two middle nodes, returns the second.
+    /// </summary>
+    /// <param name="head">The head of the singly linked list.</param>
+    /// <returns>The middle node of the list.</returns>
+    /// <link>https://leetcode.com/problems/middle-of-the-linked-list/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public ListNode MiddleNode(ListNode head)
+    {
+        var slow = head;
+
+        for (var fast = head; fast?.next != null; slow = slow.next, fast = fast.next.next) ;
+
+        return slow;
+    }
+    #endregion
 }
 
 #region ListNode Model <<

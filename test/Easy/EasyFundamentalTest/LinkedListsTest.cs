@@ -8,7 +8,7 @@ public class LinkedListsTest
     public readonly LinkedLists Solution = new();
 
     #region Create LinkedList <<
-    private static ListNode CreateLinkedList(int[] arr)
+    private static ListNode BuildLinkedList(int[] arr)
     {
         ListNode dummy = new(0);
         ListNode current = dummy;
@@ -22,7 +22,7 @@ public class LinkedListsTest
     #endregion
 
     #region Convert LinkedList To Array <<
-    private int[] ConvertLinkedListToArray(ListNode head)
+    private int[] LinkedListToArray(ListNode head)
     {
         List<int> result = [];
         while (head != null)
@@ -43,14 +43,14 @@ public class LinkedListsTest
     public void MergeTwoLists_ShouldReturnMergedSortedLinkedList(int[] arr1, int[] arr2, int[] expectedArr)
     {
         // Arrange
-        ListNode list1 = CreateLinkedList(arr1);
-        ListNode list2 = CreateLinkedList(arr2);
+        ListNode list1 = BuildLinkedList(arr1);
+        ListNode list2 = BuildLinkedList(arr2);
 
         // Act
         ListNode result = Solution.MergeTwoLists(list1, list2);
 
         // Assert
-        Assert.Equal(expectedArr, ConvertLinkedListToArray(result));
+        Assert.Equal(expectedArr, LinkedListToArray(result));
     }
     #endregion
 
@@ -64,13 +64,13 @@ public class LinkedListsTest
     public void DeleteDuplicates_ShouldReturnCorrectList(int[] inputArray, int[] expectedArray)
     {
         // Arrange
-        ListNode head = CreateLinkedList(inputArray);
+        ListNode head = BuildLinkedList(inputArray);
 
         // Act
         ListNode result = Solution.DeleteDuplicates(head);
 
         // Assert
-        Assert.Equal(expectedArray, ConvertLinkedListToArray(result));
+        Assert.Equal(expectedArray, LinkedListToArray(result));
     }
     #endregion
 
@@ -84,7 +84,7 @@ public class LinkedListsTest
     public void TestIsPalindrome(bool expected, int[] values)
     {
         // Arrange
-        ListNode head = CreateLinkedList(values);
+        ListNode head = BuildLinkedList(values);
 
         // Act
         bool result = Solution.IsPalindrome(head);
@@ -102,13 +102,13 @@ public class LinkedListsTest
     public void TestReverseList(int[] inputValues, int[] expectedValues)
     {
         // Arrange
-        ListNode head = CreateLinkedList(inputValues);
+        ListNode head = BuildLinkedList(inputValues);
 
         // Act
         ListNode result = Solution.ReverseList(head);
 
         // Assert
-        Assert.Equal(expectedValues, ConvertLinkedListToArray(result));
+        Assert.Equal(expectedValues, LinkedListToArray(result));
     }
     #endregion
 
@@ -122,13 +122,33 @@ public class LinkedListsTest
     public void GetDecimalValueTests(int[] list, int expected)
     {
         // Arrange
-        ListNode head = CreateLinkedList(list);
+        ListNode head = BuildLinkedList(list);
 
         // Act
         int result = Solution.GetDecimalValue(head);
 
         // Assert
         Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 876. Middle of the Linked List
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 3, 4, 5 })]
+    [InlineData(new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 4, 5, 6 })]
+    public void TestMiddleNode(int[] head, int[] expected)
+    {
+        // Arrange
+        ListNode headNode = BuildLinkedList(head);
+
+        // Act
+        ListNode resultNode = Solution.MiddleNode(headNode);
+
+        // Convert the resulting linked list to an array for easy comparison
+        int[] resultArray = LinkedListToArray(resultNode);
+
+        // Assert
+        Assert.Equal(expected, resultArray);
     }
     #endregion
 }
