@@ -1609,3 +1609,35 @@ public class Arrays
         => Math.Min(candyType.Length / 2, candyType.Distinct().Count());
     #endregion
 }
+
+#region 705. Design HashSet
+/// <summary>
+/// Implements a HashSet without using any built-in hash table libraries.
+/// </summary>
+/// <link>https://leetcode.com/problems/design-hashset/</link>
+/// <time>O(n) for add, remove, and contains operations.</time>
+/// <space>O(n)</space>
+public class MyHashSet
+{
+    private readonly List<int> elements;
+
+    public MyHashSet()
+    {
+        elements = [];
+    }
+
+    public void Add(int key)
+    {
+        if (!elements.Contains(key))
+            elements.Add(key);
+    }
+
+    public void Remove(int key)
+    {
+        elements.Remove(key);
+    }
+
+    public bool Contains(int key)
+        => elements.Contains(key);
+}
+#endregion
