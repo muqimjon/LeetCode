@@ -158,6 +158,30 @@ public class LinkedLists
         return slow;
     }
     #endregion
+
+    #region 203. Remove Linked List Elements
+    /// <summary>
+    /// Removes all nodes with the given value from the linked list.
+    /// </summary>
+    /// <param name="head">The head of the linked list.</param>
+    /// <param name="val">The value to remove from the linked list.</param>
+    /// <returns>The head of the modified linked list.</returns>
+    /// <link>https://leetcode.com/problems/remove-linked-list-elements/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public ListNode RemoveElements(ListNode head, int val)
+    {
+        ListNode dummy = new(0, head);
+
+        for (var current = dummy; current.next is not null;)
+            if (current.next.val.Equals(val))
+                current.next = current.next.next;
+            else
+                current = current.next;
+
+        return dummy.next;
+    }
+    #endregion
 }
 
 #region ListNode Model <<

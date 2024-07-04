@@ -151,4 +151,26 @@ public class LinkedListsTest
         Assert.Equal(expected, resultArray);
     }
     #endregion
+
+    #region Tests for Remove Linked List Elements
+    [Theory]
+    [InlineData(new int[] { 1, 2, 6, 3, 4, 5, 6 }, 6, new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { }, 1, new int[] { })]
+    [InlineData(new int[] { 7, 7, 7, 7 }, 7, new int[] { })]
+    public void TestRemoveElements(int[] headValues, int val, int[] expectedValues)
+    {
+        // Arrange
+        ListNode head = BuildLinkedList(headValues);
+        ListNode expected = BuildLinkedList(expectedValues);
+
+        // Act
+        ListNode result = Solution.RemoveElements(head, val);
+
+        int[] resultArray = LinkedListToArray(result);
+        int[] expectedArray = LinkedListToArray(expected);
+
+        // Assert
+        Assert.Equal(expectedArray, resultArray);
+    }
+    #endregion
 }
