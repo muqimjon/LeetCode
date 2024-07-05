@@ -658,4 +658,17 @@ public class Strings
         return new string(stack.Reverse().ToArray());
     }
     #endregion
+
+    #region 1784. Check if Binary String Has at Most One Segment of Ones
+    /// <summary>
+    /// Checks if a binary string contains at most one contiguous segment of ones.
+    /// </summary>
+    /// <param name="s">The binary string without leading zeros.</param>
+    /// <returns>True if the string contains at most one contiguous segment of ones, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool CheckOnesSegment(string s)
+        => !s.Contains("01");
+    #endregion
 }

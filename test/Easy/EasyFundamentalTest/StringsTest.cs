@@ -527,4 +527,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1784. Check if Binary String Has at Most One Segment of Ones
+    [Theory]
+    [InlineData("1001", false)]
+    [InlineData("110", true)]
+    public void TestCheckOnesSegment(string s, bool expected)
+    {
+        // Act
+        bool result = Solution.CheckOnesSegment(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
