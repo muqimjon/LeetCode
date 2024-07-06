@@ -474,4 +474,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 292. Nim Game
+    [Theory]
+    [InlineData(4, false)]
+    [InlineData(1, true)]
+    [InlineData(2, true)]
+    public void TestNimGame(int n, bool expected)
+    {
+        // Act
+        bool result = Solution.CanWinNim(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

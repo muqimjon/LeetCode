@@ -532,4 +532,17 @@ public class Maths
         return t[n % 3];
     }
     #endregion
+
+    #region 292. Nim Game
+    /// <summary>
+    /// Determines if you can win the Nim Game given a number of stones.
+    /// </summary>
+    /// <param name="n">The number of stones in the heap.</param>
+    /// <returns>True if you can win the game assuming optimal play, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/nim-game/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public bool CanWinNim(int n)
+        => n % 4 != 0;
+    #endregion
 }
