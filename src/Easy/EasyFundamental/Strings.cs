@@ -671,4 +671,17 @@ public class Strings
     public bool CheckOnesSegment(string s)
         => !s.Contains("01");
     #endregion
+
+    #region 2833. Furthest Point From Origin
+    /// <summary>
+    /// Returns the furthest distance from the origin after a series of moves.
+    /// </summary>
+    /// <param name="moves">A string representing movements 'L', 'R', or '_' on a number line.</param>
+    /// <returns>The furthest distance from the origin reachable after the moves.</returns>
+    /// <link>https://leetcode.com/problems/furthest-point-from-origin/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int FurthestDistanceFromOrigin(string moves)
+        => Math.Abs(moves.Count(c => c == 'R') - moves.Count(c => c == 'L')) + moves.Count(c => c == '_');
+    #endregion
 }

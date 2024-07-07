@@ -541,4 +541,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2833. Furthest Point From Origin
+    [Theory]
+    [InlineData("L_RL__R", 3)]
+    [InlineData("_R__LL_", 5)]
+    [InlineData("_______", 7)]
+    public void TestFurthestPointFromOrigin(string moves, int expected)
+    {
+        // Act
+        int result = Solution.FurthestDistanceFromOrigin(moves);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
