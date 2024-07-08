@@ -1293,6 +1293,7 @@ public class ArraysTest
     }
     #endregion
 
+    #region 705. Design HashSet
     [Fact]
     public void TestMyHashSet()
     {
@@ -1307,4 +1308,19 @@ public class ArraysTest
         myHashSet.Remove(2);
         Assert.False(myHashSet.Contains(2));
     }
+    #endregion
+
+    #region 2185. Counting Words With a Given Prefix
+    [Theory]
+    [InlineData(new string[] { "pay", "attention", "practice", "attend" }, "at", 2)]
+    [InlineData(new string[] { "leetcode", "win", "loops", "success" }, "code", 0)]
+    public void TestCountWordsWithPrefix(string[] words, string pref, int expected)
+    {
+        // Act
+        int actual = Solution.PrefixCount(words, pref);
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+    #endregion
 }

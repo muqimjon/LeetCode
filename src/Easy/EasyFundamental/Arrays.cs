@@ -1608,6 +1608,20 @@ public class Arrays
     public int DistributeCandies(int[] candyType)
         => Math.Min(candyType.Length / 2, candyType.Distinct().Count());
     #endregion
+
+    #region 2185. Counting Words With a Given Prefix
+    /// <summary>
+    /// Counts the number of strings in the array that contain the specified prefix.
+    /// </summary>
+    /// <param name="words">Array of strings to search through.</param>
+    /// <param name="pref">Prefix string to search for.</param>
+    /// <returns>The number of strings in words that contain pref as a prefix.</returns>
+    /// <link>https://leetcode.com/problems/count-words-with-a-given-prefix/</link>
+    /// <time>O(n)</time> where n is the number of words and m is the average length of words.
+    /// <space>O(1)</space> additional space.
+    public int PrefixCount(string[] words, string pref)
+        => words.Count(word => word.StartsWith(pref));
+    #endregion
 }
 
 #region 705. Design HashSet
