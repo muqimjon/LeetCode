@@ -684,4 +684,29 @@ public class Strings
     public int FurthestDistanceFromOrigin(string moves)
         => Math.Abs(moves.Count(c => c == 'R') - moves.Count(c => c == 'L')) + moves.Count(c => c == '_');
     #endregion
+
+    #region 2264. Largest 3-Same-Digit Number in String
+    /// <summary>
+    /// Finds the largest "good" integer of length 3 in the given string.
+    /// </summary>
+    /// <param name="num">String representing a large integer.</param>
+    /// <returns>The largest "good" integer as a string, or an empty string if none exists.</returns>
+    /// <link>https://leetcode.com/problems/largest-3-same-digit-number-in-string/</link>
+    /// <time>O(n)</time> where n is the length of num.
+    /// <space>O(1)</space> additional space.
+    public string LargestGoodInteger(string num)
+    {
+        string maxGood = "";
+
+        for (int i = 0; i < num.Length - 2; i++)
+        {
+            string substr = num.Substring(i, 3);
+
+            if (substr[0] == substr[1] && substr[1] == substr[2])
+                maxGood = substr.CompareTo(maxGood) > 0 ? substr : maxGood;
+        }
+
+        return maxGood;
+    }
+    #endregion
 }

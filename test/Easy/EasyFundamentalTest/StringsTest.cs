@@ -556,4 +556,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2264. Largest 3-Same-Digit Number in String
+    [Theory]
+    [InlineData("6777133339", "777")]
+    [InlineData("2300019", "000")]
+    [InlineData("42352338", "")]
+    public void TestLargestThreeSameDigitNumber(string num, string expected)
+    {
+        // Act
+        string result = Solution.LargestGoodInteger(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
