@@ -242,4 +242,19 @@ public class HashTables
         return diffs.Count == 2 && s[diffs[0]] == goal[diffs[1]] && s[diffs[1]] == goal[diffs[0]];
     }
     #endregion
+
+    #region 3083. Existence of a Substring in a String and Its Reverse
+    /// <summary>
+    /// Checks if any substring of length 2 in the string s is also present in the reverse of s.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>True if such a substring exists, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(n)</space>
+    public bool IsSubstringPresent(string s)
+        => s.Where((c, i) => i < s.Length - 1 && new string(s.Reverse().ToArray())
+            .Contains(s.Substring(i, 2)))
+            .Any();
+    #endregion
 }

@@ -177,4 +177,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3083. Existence of a Substring in a String and Its Reverse
+    [Theory]
+    [InlineData("leetcode", true)]
+    [InlineData("abcba", true)]
+    [InlineData("abcd", false)]
+    public void TestExistenceOfSubstring(string s, bool expected)
+    {
+        // Act
+        bool result = Solution.IsSubstringPresent(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
