@@ -1622,6 +1622,20 @@ public class Arrays
     public int PrefixCount(string[] words, string pref)
         => words.Count(word => word.StartsWith(pref));
     #endregion
+
+    #region Kids With the Greatest Number of Candies
+    /// <summary>
+    /// Determines if each kid, after receiving extra candies, will have the greatest number of candies.
+    /// </summary>
+    /// <param name="candies">The array representing the number of candies each kid has.</param>
+    /// <param name="extraCandies">The number of extra candies to be given to each kid.</param>
+    /// <returns>A list of booleans indicating whether each kid will have the greatest number of candies.</returns>
+    /// <link>https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/</link>
+    /// <time>O(n)</time> for a single scan to find the max and another scan to determine the result.
+    /// <space>O(n)</space> for the result list.
+    public IList<bool> KidsWithCandies(int[] candies, int extraCandies)
+        => candies.Select(c => c + extraCandies >= candies.Max()).ToList();
+    #endregion
 }
 
 #region 705. Design HashSet

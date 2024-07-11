@@ -1323,4 +1323,19 @@ public class ArraysTest
         Assert.Equal(expected, actual);
     }
     #endregion
+
+    #region 1431. Kids With the Greatest Number of Candies
+    [Theory]
+    [InlineData(new int[] { 2, 3, 5, 1, 3 }, 3, new bool[] { true, true, true, false, true })]
+    [InlineData(new int[] { 4, 2, 1, 1, 2 }, 1, new bool[] { true, false, false, false, false })]
+    [InlineData(new int[] { 12, 1, 12 }, 10, new bool[] { true, false, true })]
+    public void TestKidsWithCandies(int[] Candies, int ExtraCandies, bool[] Expected)
+    {
+        // Act
+        IList<bool> result = Solution.KidsWithCandies(Candies, ExtraCandies);
+
+        // Assert
+        Assert.Equal(Expected, result);
+    }
+    #endregion
 }
