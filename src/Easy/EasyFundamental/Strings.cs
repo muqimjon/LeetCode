@@ -709,4 +709,26 @@ public class Strings
         return maxGood;
     }
     #endregion
+
+    #region Faulty Keyboard
+    /// <summary>
+    /// Simulates typing on a faulty keyboard where typing 'i' reverses the string.
+    /// </summary>
+    /// <param name="s">The string to be typed on the faulty keyboard.</param>
+    /// <returns>The final string after simulating the faulty keyboard typing.</returns>
+    /// <link>https://leetcode.com/problems/faulty-keyboard/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string FinalString(string s)
+    {
+        var result = new List<char>();
+
+        s.ToList().ForEach(c => {
+            if (c == 'i') result.Reverse();
+            else result.Add(c);
+        });
+
+        return new string(result.ToArray());
+    }
+    #endregion
 }

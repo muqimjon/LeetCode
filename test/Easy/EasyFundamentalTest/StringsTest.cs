@@ -571,4 +571,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2810. Faulty Keyboard
+    [Theory]
+    [InlineData("string", "rtsng")]
+    [InlineData("poiinter", "ponter")]
+    public void TestFinalString(string s, string expected)
+    {
+        // Act
+        string result = Solution.FinalString(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
