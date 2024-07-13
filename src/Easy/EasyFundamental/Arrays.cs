@@ -1636,6 +1636,19 @@ public class Arrays
     public IList<bool> KidsWithCandies(int[] candies, int extraCandies)
         => candies.Select(c => c + extraCandies >= candies.Max()).ToList();
     #endregion
+
+    #region Find Closest Number to Zero
+    /// <summary>
+    /// Finds the number in the array that is closest to zero. If there are multiple answers, returns the largest number.
+    /// </summary>
+    /// <param name="nums">The integer array to search.</param>
+    /// <returns>The number closest to zero in the array.</returns>
+    /// <link>https://leetcode.com/problems/find-closest-number-to-zero/</link>
+    /// <time>O(n log n)</time> for sorting the array.
+    /// <space>O(n)</space> for constant space usage.
+    public int FindClosestNumber(int[] nums)
+        => nums.OrderBy(n => (Math.Abs(n), -n)).First();
+    #endregion
 }
 
 #region 705. Design HashSet

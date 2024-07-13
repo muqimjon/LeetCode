@@ -1338,4 +1338,19 @@ public class ArraysTest
         Assert.Equal(Expected, result);
     }
     #endregion
+
+    #region 2239. Find Closest Number to Zero
+    [Theory]
+    [InlineData(new int[] { -4, -2, 1, 4, 8 }, 1)]
+    [InlineData(new int[] { 2, -1, 1 }, 1)]
+    [InlineData(new int[] { -100000, -100000 }, -100000)] // FAILED
+    public void TestFindClosestNumber(int[] Nums, int Expected)
+    {
+        // Act
+        int result = Solution.FindClosestNumber(Nums);
+
+        // Assert
+        Assert.Equal(Expected, result);
+    }
+    #endregion
 }
