@@ -585,4 +585,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 434. Number of Segments in a String
+    [Theory]
+    [InlineData("Hello, my name is John", 5)]
+    [InlineData("Hello", 1)]
+    public void TestCountSegments(string S, int Expected)
+    {
+        // Act
+        int result = Solution.CountSegments(S);
+
+        // Assert
+        Assert.Equal(Expected, result);
+    }
+    #endregion
 }

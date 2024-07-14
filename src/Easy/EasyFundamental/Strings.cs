@@ -731,4 +731,17 @@ public class Strings
         return new string(result.ToArray());
     }
     #endregion
+
+    #region Number of Segments in a String
+    /// <summary>
+    /// Returns the number of segments in the string.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The number of segments in the string.</returns>
+    /// <link>https://leetcode.com/problems/number-of-segments-in-a-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int CountSegments(string s)
+        => s.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
+    #endregion
 }
