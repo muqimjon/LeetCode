@@ -1644,10 +1644,23 @@ public class Arrays
     /// <param name="nums">The integer array to search.</param>
     /// <returns>The number closest to zero in the array.</returns>
     /// <link>https://leetcode.com/problems/find-closest-number-to-zero/</link>
-    /// <time>O(n log n)</time> for sorting the array.
-    /// <space>O(n)</space> for constant space usage.
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
     public int FindClosestNumber(int[] nums)
         => nums.OrderBy(n => (Math.Abs(n), -n)).First();
+    #endregion
+
+    #region Make Array Zero by Subtracting Equal Amounts
+    /// <summary>
+    /// Returns the minimum number of operations to make every element in the array equal to 0.
+    /// </summary>
+    /// <param name="nums">The input array of non-negative integers.</param>
+    /// <returns>The minimum number of operations.</returns>
+    /// <link>https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int MinimumOperations(int[] nums)
+        => nums.Where(n => n > 0).Distinct().Count();
     #endregion
 }
 

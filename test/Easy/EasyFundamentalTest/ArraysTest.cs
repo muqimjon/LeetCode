@@ -1353,4 +1353,18 @@ public class ArraysTest
         Assert.Equal(Expected, result);
     }
     #endregion
+
+    #region 2357. Make Array Zero by Subtracting Equal Amounts
+    [Theory]
+    [InlineData(new int[] { 1, 5, 0, 3, 5 }, 3)]
+    [InlineData(new int[] { 0 }, 0)]
+    public void TestMakeArrayZero(int[] Nums, int Expected)
+    {
+        // Act
+        int result = Solution.MinimumOperations(Nums);
+
+        // Assert
+        Assert.Equal(Expected, result);
+    }
+    #endregion
 }
