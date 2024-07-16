@@ -1367,4 +1367,18 @@ public class ArraysTest
         Assert.Equal(Expected, result);
     }
     #endregion
+
+    #region 2923. Find Champion I
+    [Theory]
+    [InlineData(0, new int[] { 0, 1 }, new int[] { 0, 0 })]
+    [InlineData(1, new int[] { 0, 0, 1 }, new int[] { 1, 0, 1 }, new int[] { 0, 0, 0 })]
+    public void TestFindChampion(int Expected, params int[][] Grid)
+    {
+        // Act
+        int result = Solution.FindChampion(Grid);
+
+        // Assert
+        Assert.Equal(Expected, result);
+    }
+    #endregion
 }

@@ -1662,6 +1662,19 @@ public class Arrays
     public int MinimumOperations(int[] nums)
         => nums.Where(n => n > 0).Distinct().Count();
     #endregion
+
+    #region Find Champion I
+    /// <summary>
+    /// Returns the team that will be the champion of the tournament.
+    /// </summary>
+    /// <param name="grid">A 2D boolean matrix representing the strength relationships between teams.</param>
+    /// <returns>The team number that will be the champion.</returns>
+    /// <link>https://leetcode.com/problems/find-champion-i/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(1)</space>
+    public int FindChampion(int[][] grid)
+        => Enumerable.Range(0, grid.Length).First(i => grid.All(row => row[i] == 0));
+    #endregion
 }
 
 #region 705. Design HashSet
