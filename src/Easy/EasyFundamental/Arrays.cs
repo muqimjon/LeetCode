@@ -1675,6 +1675,19 @@ public class Arrays
     public int FindChampion(int[][] grid)
         => Enumerable.Range(0, grid.Length).First(i => grid.All(row => row[i] == 0));
     #endregion
+
+    #region Final Prices With a Special Discount in a Shop
+    /// <summary>
+    /// Returns final prices after applying special discounts.
+    /// </summary>
+    /// <param name="prices">An array where prices[i] is the price of the ith item.</param>
+    /// <returns>An array where answer[i] is the final price after discounts for the ith item.</returns>
+    /// <link>https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(n)</space>
+    public int[] FinalPrices(int[] prices)
+        => prices.Select((p, i) => p - prices.Skip(i + 1).FirstOrDefault(d => d <= p)).ToArray();
+    #endregion
 }
 
 #region 705. Design HashSet

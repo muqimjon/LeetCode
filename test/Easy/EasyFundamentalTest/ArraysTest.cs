@@ -1381,4 +1381,19 @@ public class ArraysTest
         Assert.Equal(Expected, result);
     }
     #endregion
+
+    #region 1475. Final Prices With a Special Discount in a Shop
+    [Theory]
+    [InlineData(new int[] { 8, 4, 6, 2, 3 }, new int[] { 4, 2, 4, 2, 3 })]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(new int[] { 10, 1, 1, 6 }, new int[] { 9, 0, 1, 6 })]
+    public void TestFinalPrices(int[] prices, int[] expected)
+    {
+        // Act
+        int[] result = Solution.FinalPrices(prices);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
