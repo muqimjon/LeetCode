@@ -1688,6 +1688,19 @@ public class Arrays
     public int[] FinalPrices(int[] prices)
         => prices.Select((p, i) => p - prices.Skip(i + 1).FirstOrDefault(d => d <= p)).ToArray();
     #endregion
+
+    #region Height Checker
+    /// <summary>
+    /// Returns the number of indices where heights[i] != expected[i].
+    /// </summary>
+    /// <param name="heights">An array representing the current order of students' heights.</param>
+    /// <returns>The number of indices where the heights do not match the expected order.</returns>
+    /// <link>https://leetcode.com/problems/height-checker/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public int HeightChecker(int[] heights)
+        => heights.OrderBy(h => h).Where((h, i) => h != heights[i]).Count();
+    #endregion
 }
 
 #region 705. Design HashSet

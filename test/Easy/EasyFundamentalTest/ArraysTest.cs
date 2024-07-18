@@ -1396,4 +1396,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1051. Height Checker
+    [Theory]
+    [InlineData(new int[] { 1, 1, 4, 2, 1, 3 }, 3)]
+    [InlineData(new int[] { 5, 1, 2, 3, 4 }, 5)]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, 0)]
+    public void TestHeightChecker(int[] heights, int expected)
+    {
+        // Act
+        int result = Solution.HeightChecker(heights);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
