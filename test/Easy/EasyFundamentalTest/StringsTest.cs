@@ -599,4 +599,18 @@ public class StringsTest
         Assert.Equal(Expected, result);
     }
     #endregion
+
+    #region 1078. Occurrences After Bigram
+    [Theory]
+    [InlineData("alice is a good girl she is a good student", "a", "good", new string[] { "girl", "student" })]
+    [InlineData("we will we will rock you", "we", "will", new string[] { "we", "rock" })]
+    public void TestOccurrencesAfterBigram(string text, string first, string second, string[] expected)
+    {
+        // Act
+        string[] result = Solution.FindOcurrences(text, first, second);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

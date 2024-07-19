@@ -744,4 +744,24 @@ public class Strings
     public int CountSegments(string s)
         => s.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
     #endregion
+
+    #region 1078. Occurrences After Bigram
+    /// <summary>
+    /// Returns an array of all the words that follow the occurrences of "first second" in the given text.
+    /// </summary>
+    /// <param name="text">The input text.</param>
+    /// <param name="first">The first word of the bigram.</param>
+    /// <param name="second">The second word of the bigram.</param>
+    /// <returns>An array of words that follow the occurrences of "first second".</returns>
+    /// <link>https://leetcode.com/problems/occurrences-after-bigram/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string[] FindOcurrences(string text, string first, string second)
+    {
+        var words = text.Split();
+        return words.Skip(2)
+                    .Where((w, i) => words[i] == first && words[i + 1] == second)
+                    .ToArray();
+    }
+    #endregion
 }
