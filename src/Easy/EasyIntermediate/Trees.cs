@@ -1,4 +1,6 @@
-﻿namespace EasyIntermediate;
+﻿using System.Xml.Linq;
+
+namespace EasyIntermediate;
 
 public class Trees
 {
@@ -57,6 +59,19 @@ public class Trees
             IsSameTree(p.left, q.left) && IsSameTree(p.right, q.right);
     #endregion
 
+    #region 559. Maximum Depth of N-ary Tree
+    /// <summary>
+    /// Returns the maximum depth of the n-ary tree.
+    /// </summary>
+    /// <param name="root">The root node of the n-ary tree.</param>
+    /// <returns>The maximum depth of the n-ary tree.</returns>
+    /// <link>https://leetcode.com/problems/maximum-depth-of-n-ary-tree/</link>
+    /// <time>O(n)</time>
+    /// <space>O(h)</space>
+    public int MaxDepth(Node root)
+        => root == null ? 0 : 1 + root.children.Select(MaxDepth).DefaultIfEmpty(0).Max();
+    #endregion
+
     #region Build TreeNode >>
     public static TreeNode BuildBinaryTree(int[] values)
     {
@@ -90,5 +105,26 @@ public class TreeNode(int? val = 0, TreeNode left = null!, TreeNode right = null
     public int? val = val;
     public TreeNode left = left;
     public TreeNode right = right;
+}
+#endregion
+
+#region Node >>
+public class Node
+{
+    public int val;
+    public IList<Node> children;
+
+    public Node() { }
+
+    public Node(int _val)
+    {
+        val = _val;
+    }
+
+    public Node(int _val, IList<Node> _children)
+    {
+        val = _val;
+        children = _children;
+    }
 }
 #endregion
