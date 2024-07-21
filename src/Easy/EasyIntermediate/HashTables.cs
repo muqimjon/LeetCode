@@ -257,4 +257,17 @@ public class HashTables
             .Contains(s.Substring(i, 2)))
             .Any();
     #endregion
+
+    #region 1832. Check if the Sentence Is Pangram
+    /// <summary>
+    /// Returns true if the sentence is a pangram.
+    /// </summary>
+    /// <param name="sentence">Input sentence of lowercase English letters.</param>
+    /// <returns>True if the sentence is a pangram, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-the-sentence-is-pangram/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool CheckIfPangram(string sentence)
+        => sentence.Distinct().Count() == 26;
+    #endregion
 }

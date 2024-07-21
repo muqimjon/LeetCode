@@ -192,4 +192,18 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1832. Check if the Sentence Is Pangram
+    [Theory]
+    [InlineData("thequickbrownfoxjumpsoverthelazydog", true)]
+    [InlineData("leetcode", false)]
+    public void TestCheckIfPangram(string sentence, bool expected)
+    {
+        // Act
+        bool result = Solution.CheckIfPangram(sentence);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
