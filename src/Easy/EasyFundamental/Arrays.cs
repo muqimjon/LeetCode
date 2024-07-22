@@ -1701,6 +1701,19 @@ public class Arrays
     public int HeightChecker(int[] heights)
         => heights.OrderBy(h => h).Where((h, i) => h != heights[i]).Count();
     #endregion
+
+    #region 561. Array Partition
+    /// <summary>
+    /// Returns the maximized sum of min(ai, bi) for all pairs.
+    /// </summary>
+    /// <param name="nums">Input array of 2n integers.</param>
+    /// <returns>Maximized sum of min values for the optimal pairs.</returns>
+    /// <link>https://leetcode.com/problems/array-partition/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(1)</space>
+    public int ArrayPairSum(int[] nums)
+        => nums.OrderBy(x => x).Where((_, i) => i % 2 == 0).Sum();
+    #endregion
 }
 
 #region 705. Design HashSet

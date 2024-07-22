@@ -1411,4 +1411,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 561. Array Partition
+    [Theory]
+    [InlineData(new int[] { 1, 4, 3, 2 }, 4)]
+    [InlineData(new int[] { 6, 2, 6, 5, 1, 2 }, 9)]
+    public void TestArrayPartition(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.ArrayPairSum(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
