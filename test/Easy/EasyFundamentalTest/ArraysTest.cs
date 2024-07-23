@@ -1425,4 +1425,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1385. Find the Distance Value Between Two Arrays
+    [Theory]
+    [InlineData(new int[] { 4, 5, 8 }, new int[] { 10, 9, 1, 8 }, 2, 2)]
+    [InlineData(new int[] { 1, 4, 2, 3 }, new int[] { -4, -3, 6, 10, 20, 30 }, 3, 2)]
+    [InlineData(new int[] { 2 }, new int[] { 1, 3, 5, 7, 9 }, 1, 0)]
+    public void TestFindTheDistanceValue(int[] arr1, int[] arr2, int d, int expected)
+    {
+        // Act
+        int result = Solution.FindTheDistanceValue(arr1, arr2, d);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

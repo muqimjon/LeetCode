@@ -1714,6 +1714,21 @@ public class Arrays
     public int ArrayPairSum(int[] nums)
         => nums.OrderBy(x => x).Where((_, i) => i % 2 == 0).Sum();
     #endregion
+
+    #region 1385. Find the Distance Value Between Two Arrays
+    /// <summary>
+    /// Returns the distance value between two arrays.
+    /// </summary>
+    /// <param name="arr1">First input array.</param>
+    /// <param name="arr2">Second input array.</param>
+    /// <param name="d">The distance threshold.</param>
+    /// <returns>The distance value.</returns>
+    /// <link>https://leetcode.com/problems/find-the-distance-value-between-two-arrays/</link>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public int FindTheDistanceValue(int[] arr1, int[] arr2, int d)
+        => arr1.Count(a => arr2.All(b => Math.Abs(a - b) > d));
+    #endregion
 }
 
 #region 705. Design HashSet
