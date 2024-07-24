@@ -489,4 +489,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 263. Ugly Number
+    [Theory]
+    [InlineData(6, true)]
+    [InlineData(1, true)]
+    [InlineData(14, false)]
+    public void TestIsUgly(int n, bool expected)
+    {
+        // Act
+        bool result = Solution.IsUgly(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

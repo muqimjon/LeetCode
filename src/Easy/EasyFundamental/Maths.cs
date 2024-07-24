@@ -545,4 +545,26 @@ public class Maths
     public bool CanWinNim(int n)
         => n % 4 != 0;
     #endregion
+
+    #region 263. Ugly Number
+    /// <summary>
+    /// Returns true if n is an ugly number.
+    /// </summary>
+    /// <param name="n">The input integer.</param>
+    /// <returns>Boolean indicating if n is an ugly number.</returns>
+    /// <link>https://leetcode.com/problems/ugly-number/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(1)</space>
+    public bool IsUgly(int n)
+    {
+        if (n <= 0)
+            return false;
+
+        foreach (int prime in new int[] { 2, 3, 5 })
+            while (n % prime == 0)
+                n /= prime;
+
+        return n == 1;
+    }
+    #endregion
 }
