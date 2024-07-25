@@ -1440,4 +1440,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3065. Minimum Operations to Exceed Threshold Value I
+    [Theory]
+    [InlineData(new int[] { 2, 11, 10, 1, 3 }, 10, 3)]
+    [InlineData(new int[] { 1, 1, 2, 4, 9 }, 1, 0)]
+    [InlineData(new int[] { 1, 1, 2, 4, 9 }, 9, 4)]
+    public void TestMinOperations(int[] nums, int k, int expected)
+    {
+        // Act
+        int result = Solution.MinOperations(nums, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

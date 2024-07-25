@@ -1729,6 +1729,20 @@ public class Arrays
     public int FindTheDistanceValue(int[] arr1, int[] arr2, int d)
         => arr1.Count(a => arr2.All(b => Math.Abs(a - b) > d));
     #endregion
+
+    #region 3065. Minimum Operations to Exceed Threshold Value I
+    /// <summary>
+    /// Returns the minimum number of operations needed so that all elements are greater than or equal to k.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <param name="k">The threshold value.</param>
+    /// <returns>The minimum number of operations.</returns>
+    /// <link>https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinOperations(int[] nums, int k)
+        => nums.Count(x => x < k);
+    #endregion
 }
 
 #region 705. Design HashSet
