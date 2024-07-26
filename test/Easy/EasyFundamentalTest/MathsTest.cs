@@ -504,4 +504,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2651. Calculate Delayed Arrival Time
+    [Theory]
+    [InlineData(15, 5, 20)]
+    [InlineData(13, 11, 0)]
+    public void TestCalculateDelayedArrivalTime(int arrivalTime, int delayedTime, int expected)
+    {
+        // Act
+        int result = Solution.FindDelayedArrivalTime(arrivalTime, delayedTime);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

@@ -567,4 +567,18 @@ public class Maths
         return n == 1;
     }
     #endregion
+
+    #region 2651. Calculate Delayed Arrival Time
+    /// <summary>
+    /// Returns the time when the train will arrive at the station after the delay.
+    /// </summary>
+    /// <param name="arrivalTime">The initial arrival time in hours (0-23).</param>
+    /// <param name="delayedTime">The delay time in hours.</param>
+    /// <returns>The adjusted arrival time in hours (0-23).</returns>
+    /// <link>https://leetcode.com/problems/calculate-delayed-arrival-time/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int FindDelayedArrivalTime(int arrivalTime, int delayedTime)
+        => (arrivalTime + delayedTime) % 24;
+    #endregion
 }
