@@ -1012,7 +1012,7 @@ public class ArraysTest
 
     #region Points That Intersect With Cars
     [Theory]
-    [InlineData(7,  new int[] { 3, 6 }, new int[] { 1, 5 }, new int[] { 4, 7 })]
+    [InlineData(7, new int[] { 3, 6 }, new int[] { 1, 5 }, new int[] { 4, 7 })]
     [InlineData(7, new int[] { 1, 3 }, new int[] { 5, 8 })]
     public void TestIntersectingPoints(int expected, params int[][] nums)
     {

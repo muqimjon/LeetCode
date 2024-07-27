@@ -1,9 +1,4 @@
-﻿
-
-
-using EasyFundamental;
-
-//recursive(5);
+﻿//recursive(5);
 
 //static void recursive(int n)
 //{
@@ -36,7 +31,6 @@ using EasyFundamental;
 
 //var d = n & s;
 //Console.WriteLine(d);
-
 
 Console.WriteLine((int)'a');
 

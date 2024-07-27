@@ -154,7 +154,7 @@ public class Strings
     /// <time>Runtime: O(n) - Linear time complexity</time>
     /// <space>Memory: O(n) - Linear space complexity</space>
     public string ToLowerCase(string s)
-        => new(s.Select(c 
+        => new(s.Select(c
             => char.IsUpper(c) ? (char)(c + 32) : c)
             .ToArray());
     #endregion
@@ -578,7 +578,7 @@ public class Strings
     /// <time>O(n)</time> // where n is the length of the input word
     /// <space>O(1)</space> // constant space is used
     public int MinTimeToType(string word)
-        => word.Length + word.Select((c, i) 
+        => word.Length + word.Select((c, i)
             => Math.Min(Math.Abs(c - (i == 0 ? 'a' : word[i - 1])), 26 - Math.Abs(c - (i == 0 ? 'a' : word[i - 1])))).Sum();
     #endregion
 
@@ -723,7 +723,8 @@ public class Strings
     {
         var result = new List<char>();
 
-        s.ToList().ForEach(c => {
+        s.ToList().ForEach(c =>
+        {
             if (c == 'i') result.Reverse();
             else result.Add(c);
         });

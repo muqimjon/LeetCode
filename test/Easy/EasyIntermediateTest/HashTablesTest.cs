@@ -206,4 +206,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2287. Rearrange Characters to Make Target String
+    [Theory]
+    [InlineData("ilovecodingonleetcode", "code", 2)]
+    [InlineData("abcba", "abc", 1)]
+    [InlineData("abbaccaddaeea", "aaaaa", 1)]
+    public void TestRearrangeCharacters(string s, string target, int expected)
+    {
+        // Act
+        int result = Solution.RearrangeCharacters(s, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

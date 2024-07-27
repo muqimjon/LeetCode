@@ -270,4 +270,19 @@ public class HashTables
     public bool CheckIfPangram(string sentence)
         => sentence.Distinct().Count() == 26;
     #endregion
+
+    #region 2287. Rearrange Characters to Make Target String
+    /// <summary>
+    /// Returns the maximum number of copies of target that can be formed by rearranging letters from s.
+    /// </summary>
+    /// <param name="s">The source string.</param>
+    /// <param name="target">The target string.</param>
+    /// <returns>The maximum number of copies of target that can be formed.</returns>
+    /// <link>https://leetcode.com/problems/rearrange-characters-to-make-target-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int RearrangeCharacters(string s, string target)
+        => target.GroupBy(c => c)
+                 .Min(g => s.Count(ch => ch == g.Key) / g.Count());
+    #endregion
 }

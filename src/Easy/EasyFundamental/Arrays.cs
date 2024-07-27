@@ -1557,7 +1557,7 @@ public class Arrays
     /// <time>O(n)</time>
     /// <space>O(n)</space>
     public int[] SumZero(int n)
-        => [..Enumerable.Range(1, n - 1), -(n * (n - 1) / 2)];
+        => [.. Enumerable.Range(1, n - 1), -(n * (n - 1) / 2)];
     #endregion
 
     #region 1587. Count the Number of Vowel Strings in Range

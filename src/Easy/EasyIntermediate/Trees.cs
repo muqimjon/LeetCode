@@ -1,6 +1,4 @@
-﻿using System.Xml.Linq;
-
-namespace EasyIntermediate;
+﻿namespace EasyIntermediate;
 
 public class Trees
 {
