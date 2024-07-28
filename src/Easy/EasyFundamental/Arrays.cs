@@ -1743,6 +1743,21 @@ public class Arrays
     public int MinOperations(int[] nums, int k)
         => nums.Count(x => x < k);
     #endregion
+
+    #region 1748. Sum of Unique Elements
+    /// <summary>
+    /// Returns the sum of all unique elements in the array.
+    /// </summary>
+    /// <param name="nums">The input integer array.</param>
+    /// <returns>The sum of unique elements.</returns>
+    /// <link>https://leetcode.com/problems/sum-of-unique-elements/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int SumOfUnique(int[] nums)
+        => nums.GroupBy(n => n)
+               .Where(g => g.Count() == 1)
+               .Sum(g => g.Key);
+    #endregion
 }
 
 #region 705. Design HashSet

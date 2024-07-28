@@ -1455,4 +1455,19 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1748. Sum of Unique Elements
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 2 }, 4)]
+    [InlineData(new int[] { 1, 1, 1, 1, 1 }, 0)]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, 15)]
+    public void TestSumOfUnique(int[] nums, int expected)
+    {
+        // Act
+        int result = Solution.SumOfUnique(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
