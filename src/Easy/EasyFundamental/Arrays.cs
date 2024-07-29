@@ -1758,6 +1758,19 @@ public class Arrays
                .Where(g => g.Count() == 1)
                .Sum(g => g.Key);
     #endregion
+
+    #region 1346. Check If N and Its Double Exist
+    /// <summary>
+    /// Checks if there exist two indices i and j such that arr[i] == 2 * arr[j].
+    /// </summary>
+    /// <param name="arr">The input integer array.</param>
+    /// <returns>True if such indices exist, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-n-and-its-double-exist/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool CheckIfExist(int[] arr)
+        => arr.ToHashSet().Any(x => x != 0 && arr.Contains(2 * x) || x == 0 && arr.Count(v => v == 0) > 1);
+    #endregion
 }
 
 #region 705. Design HashSet

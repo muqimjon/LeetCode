@@ -1470,4 +1470,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1346. Check If N and Its Double Exist
+    [Theory]
+    [InlineData(new int[] { 10, 2, 5, 3 }, true)]
+    [InlineData(new int[] { 3, 1, 7, 11 }, false)]
+    public void TestCheckIfNAndItsDoubleExist(int[] arr, bool expected)
+    {
+        // Act
+        bool result = Solution.CheckIfExist(arr);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
