@@ -518,4 +518,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2864. Maximum Odd Binary Number
+    [Theory]
+    [InlineData("010", "001")]
+    [InlineData("0101", "1001")]
+    public void TestMaximumOddBinaryNumber(string s, string expected)
+    {
+        // Act
+        string result = Solution.MaximumOddBinaryNumber(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

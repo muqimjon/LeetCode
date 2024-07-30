@@ -581,4 +581,17 @@ public class Maths
     public int FindDelayedArrivalTime(int arrivalTime, int delayedTime)
         => (arrivalTime + delayedTime) % 24;
     #endregion
+
+    #region 2864. Maximum Odd Binary Number
+    /// <summary>
+    /// Rearranges the binary string to form the maximum odd binary number.
+    /// </summary>
+    /// <param name="s">The input binary string.</param>
+    /// <returns>The maximum odd binary number as a string.</returns>
+    /// <link>https://leetcode.com/problems/maximum-odd-binary-number/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public string MaximumOddBinaryNumber(string s)
+        => new string('1', s.Count(c => c == '1') - 1) + new string('0', s.Count(c => c == '0')) + '1';
+    #endregion
 }
