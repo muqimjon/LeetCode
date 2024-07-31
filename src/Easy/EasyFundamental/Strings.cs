@@ -765,4 +765,17 @@ public class Strings
                     .ToArray();
     }
     #endregion
+
+    #region 3110. Score of a String
+    /// <summary>
+    /// Calculates the score of a string based on the absolute differences between ASCII values of adjacent characters.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The score of the string.</returns>
+    /// <link>https://leetcode.com/problems/score-of-a-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int ScoreOfString(string s)
+        => s.Zip(s.Skip(1), (a, b) => Math.Abs(a - b)).Sum();
+    #endregion
 }

@@ -613,4 +613,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3110. Score of a String
+    [Theory]
+    [InlineData("hello", 13)]
+    [InlineData("zaz", 50)]
+    public void TestScoreOfString(string s, int expected)
+    {
+        // Act
+        int result = Solution.ScoreOfString(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
