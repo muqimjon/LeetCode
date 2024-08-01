@@ -1484,4 +1484,18 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1732. Find the Highest Altitude
+    [Theory]
+    [InlineData(new int[] { -5, 1, 5, 0, -7 }, 1)]
+    [InlineData(new int[] { -4, -3, -2, -1, 4, 3, 2 }, 0)]
+    public void TestFindTheHighestAltitude(int[] gain, int expected)
+    {
+        // Act
+        int result = Solution.LargestAltitude(gain);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

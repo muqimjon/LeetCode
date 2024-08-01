@@ -1771,6 +1771,20 @@ public class Arrays
     public bool CheckIfExist(int[] arr)
         => arr.ToHashSet().Any(x => x != 0 && arr.Contains(2 * x) || x == 0 && arr.Count(v => v == 0) > 1);
     #endregion
+
+    #region 1732. Find the Highest Altitude
+    /// <summary>
+    /// Finds the highest altitude achieved given the altitude gains between points.
+    /// </summary>
+    /// <param name="gain">Array of altitude gains between points.</param>
+    /// <returns>The highest altitude achieved.</returns>
+    /// <link>https://leetcode.com/problems/find-the-highest-altitude/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int LargestAltitude(int[] gain)
+        => gain.Aggregate(new { max = 0, current = 0 }, (acc, g)
+            => new { max = Math.Max(acc.max, acc.current + g), current = acc.current + g }).max;
+    #endregion
 }
 
 #region 705. Design HashSet
