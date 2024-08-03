@@ -627,4 +627,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3168. Minimum Number of Chairs in a Waiting Room
+    [Theory]
+    [InlineData("EEEEEEE", 7)]
+    [InlineData("ELELEEL", 2)]
+    [InlineData("ELEELEELLL", 3)]
+    public void TestMinimumNumberOfChairs(string s, int expected)
+    {
+        // Act
+        int result = Solution.MinimumChairs(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

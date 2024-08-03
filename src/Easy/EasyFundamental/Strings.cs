@@ -778,4 +778,19 @@ public class Strings
     public int ScoreOfString(string s)
         => s.Zip(s.Skip(1), (a, b) => Math.Abs(a - b)).Sum();
     #endregion
+
+    #region 3168. Minimum Number of Chairs in a Waiting Room
+    /// <summary>
+    /// Finds the minimum number of chairs needed in a waiting room given the sequence of entries and exits.
+    /// </summary>
+    /// <param name="s">String representing the sequence of entries ('E') and exits ('L').</param>
+    /// <returns>The minimum number of chairs needed.</returns>
+    /// <link>https://leetcode.com/problems/minimum-number-of-chairs-in-a-waiting-room/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinimumChairs(string s)
+        => s.Aggregate((current: 0, max: 0), (acc, c)
+            => c == 'E' ? (acc.current + 1, Math.Max(acc.max, acc.current + 1))
+            : (acc.current - 1, acc.max)).max;
+    #endregion
 }
