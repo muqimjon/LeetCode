@@ -642,4 +642,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1957. Delete Characters to Make Fancy String
+    [Theory]
+    [InlineData("leeetcode", "leetcode")]
+    [InlineData("aaabaaaa", "aabaa")]
+    [InlineData("aab", "aab")]
+    public void TestDeleteCharactersToMakeFancyString(string s, string expected)
+    {
+        // Act
+        string result = Solution.MakeFancyString(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

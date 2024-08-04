@@ -793,4 +793,17 @@ public class Strings
             => c == 'E' ? (acc.current + 1, Math.Max(acc.max, acc.current + 1))
             : (acc.current - 1, acc.max)).max;
     #endregion
+
+    #region 1957. Delete Characters to Make Fancy String
+    /// <summary>
+    /// Deletes the minimum number of characters to ensure no three consecutive characters are the same.
+    /// </summary>
+    /// <param name="s">Input string consisting only of lowercase English letters.</param>
+    /// <returns>The modified string where no three consecutive characters are equal.</returns>
+    /// <link>https://leetcode.com/problems/delete-characters-to-make-fancy-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string MakeFancyString(string s)
+        => new(s.Where((c, i) => i < 2 || !(s[i] == s[i - 1] && s[i] == s[i - 2])).ToArray());
+    #endregion
 }
