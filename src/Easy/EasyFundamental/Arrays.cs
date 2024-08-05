@@ -1785,6 +1785,19 @@ public class Arrays
         => gain.Aggregate(new { max = 0, current = 0 }, (acc, g)
             => new { max = Math.Max(acc.max, acc.current + g), current = acc.current + g }).max;
     #endregion
+
+    #region 832. Flipping an Image
+    /// <summary>
+    /// Flips the image horizontally, then inverts it, and returns the resulting image.
+    /// </summary>
+    /// <param name="image">An n x n binary matrix where each element is 0 or 1.</param>
+    /// <returns>The transformed image after flipping and inverting.</returns>
+    /// <link>https://leetcode.com/problems/flipping-an-image/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(1)</space>
+    public int[][] FlipAndInvertImage(int[][] image)
+        => image.Select(row => row.Reverse().Select(b => b ^ 1).ToArray()).ToArray();
+    #endregion
 }
 
 #region 705. Design HashSet

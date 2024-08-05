@@ -1,4 +1,5 @@
 ﻿using EasyFundamental;
+using System.Collections;
 
 namespace EasyFundamentalTest;
 
@@ -1498,4 +1499,38 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 832. Flipping an Image >>
+    [Theory]
+    [ClassData(typeof(ImageTestData))]
+    public void TestFlipAndInvertImage(int[][] image, int[][] expected)
+    {
+        // Act
+        var result = Solution.FlipAndInvertImage(image);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
+
+#region 832. Flipping an Image <<
+public class ImageTestData : IEnumerable<object[]>
+{
+    public IEnumerator<object[]> GetEnumerator()
+    {
+        yield return new object[]
+        {
+            new int[][] { [1, 1, 0], [1, 0, 1], [0, 0, 0] },
+            new int[][] { [1, 0, 0], [0, 1, 0], [1, 1, 1] }
+        };
+        yield return new object[]
+        {
+            new int[][] { [1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0] },
+            new int[][] { [1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 0, 1], [1, 0, 1, 0] }
+        };
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}
+#endregion
