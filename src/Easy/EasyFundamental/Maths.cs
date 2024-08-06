@@ -594,4 +594,18 @@ public class Maths
     public string MaximumOddBinaryNumber(string s)
         => new string('1', s.Count(c => c == '1') - 1) + new string('0', s.Count(c => c == '0')) + '1';
     #endregion
+
+    #region 1837. Sum of Digits in Base K
+    /// <summary>
+    /// Converts the number n from base 10 to base k and returns the sum of its digits.
+    /// </summary>
+    /// <param name="n">The number in base 10.</param>
+    /// <param name="k">The base to convert the number to.</param>
+    /// <returns>The sum of the digits of n in base k.</returns>
+    /// <link>https://leetcode.com/problems/sum-of-digits-in-base-k/</link>
+    /// <time>O(n log (n))</time>
+    /// <space>O(n log (n))</space>
+    public int SumBase(int n, int k)
+        => n == 0 ? 0 : n % k + SumBase(n / k, k);
+    #endregion
 }

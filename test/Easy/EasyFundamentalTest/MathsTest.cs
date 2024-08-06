@@ -532,4 +532,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1837. Sum of Digits in Base K Tests
+    [Theory]
+    [InlineData(34, 6, 9)]
+    [InlineData(10, 10, 1)]
+    public void TestSumBase(int n, int k, int expected)
+    {
+        // Act
+        int result = Solution.SumBase(n, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
