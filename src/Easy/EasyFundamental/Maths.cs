@@ -608,4 +608,17 @@ public class Maths
     public int SumBase(int n, int k)
         => n == 0 ? 0 : n % k + SumBase(n / k, k);
     #endregion
+
+    #region 2413. Smallest Even Multiple
+    /// <summary>
+    /// Returns the smallest positive integer that is a multiple of both 2 and n.
+    /// </summary>
+    /// <param name="n">The given positive integer.</param>
+    /// <returns>The smallest even multiple of n.</returns>
+    /// <link>https://leetcode.com/problems/smallest-even-multiple/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int SmallestEvenMultiple(int n)
+        => n % 2 is 0 ? n : n * 2;
+    #endregion
 }

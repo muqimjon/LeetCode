@@ -546,4 +546,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2413 Smallest Even Multiple
+    [Theory]
+    [InlineData(5, 10)]
+    [InlineData(6, 6)]
+    public void TestSmallestEvenMultiple(int n, int expected)
+    {
+        // Act
+        var result = Solution.SmallestEvenMultiple(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
