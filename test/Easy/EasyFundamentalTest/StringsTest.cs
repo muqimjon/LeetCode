@@ -657,4 +657,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 459 Repeated Substring Pattern
+    [Theory]
+    [InlineData("abab", true)]
+    [InlineData("aba", false)]
+    [InlineData("abcabcabcabc", true)]
+    public void TestRepeatedSubstringPattern(string s, bool expected)
+    {
+        // Act
+        var result = Solution.RepeatedSubstringPattern(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

@@ -806,4 +806,17 @@ public class Strings
     public string MakeFancyString(string s)
         => new(s.Where((c, i) => i < 2 || !(s[i] == s[i - 1] && s[i] == s[i - 2])).ToArray());
     #endregion
+
+    #region 459. Repeated Substring Pattern
+    /// <summary>
+    /// Checks if the string can be constructed by taking a substring and appending multiple copies of it.
+    /// </summary>
+    /// <param name="s">The input string to check.</param>
+    /// <returns>True if the string can be constructed by repeating a substring, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/repeated-substring-pattern/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool RepeatedSubstringPattern(string s)
+        => (s + s).Substring(1, s.Length * 2 - 2).Contains(s);
+    #endregion
 }
