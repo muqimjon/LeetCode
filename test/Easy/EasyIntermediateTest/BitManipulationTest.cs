@@ -37,4 +37,19 @@ public class BitManipulationTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3226 Number of Bit Changes to Make Two Integers Equal
+    [Theory]
+    [InlineData(13, 4, 2)]
+    [InlineData(21, 21, 0)]
+    [InlineData(14, 13, -1)]
+    public void TestNumberOfBitChanges(int n, int k, int expected)
+    {
+        // Act
+        var result = Solution.MinChanges(n, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

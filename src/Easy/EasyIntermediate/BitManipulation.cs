@@ -29,4 +29,18 @@ public class BitManipulation
     public int MinBitFlips(int start, int goal)
         => (start ^ goal).ToString("b").Count(c => c == '1');
     #endregion
+
+    #region 3226. Number of Bit Changes to Make Two Integers Equal
+    /// <summary>
+    /// Returns the minimum number of changes needed to make n equal to k by changing bits from 1 to 0.
+    /// </summary>
+    /// <param name="n">The initial integer.</param>
+    /// <param name="k">The target integer.</param>
+    /// <returns>The number of changes needed, or -1 if impossible.</returns>
+    /// <link>https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-equal/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int MinChanges(int n, int k)
+        => (k & n) == k ? Convert.ToString(n ^ k, 2).Count(c => c == '1') : -1;
+    #endregion
 }
