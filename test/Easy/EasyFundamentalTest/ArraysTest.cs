@@ -1512,6 +1512,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1684 Count the Number of Consistent Strings
+    [Theory]
+    [InlineData("ab", new[] { "ad", "bd", "aaab", "baa", "badab" }, 2)]
+    [InlineData("abc", new[] { "a", "b", "c", "ab", "ac", "bc", "abc" }, 7)]
+    [InlineData("cad", new[] { "cc", "acd", "b", "ba", "bac", "bad", "ac", "d" }, 4)]
+    public void TestCountConsistentStrings(string allowed, string[] words, int expected)
+    {
+        // Act
+        var result = Solution.CountConsistentStrings(allowed, words);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

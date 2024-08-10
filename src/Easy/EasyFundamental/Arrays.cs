@@ -1798,6 +1798,23 @@ public class Arrays
     public int[][] FlipAndInvertImage(int[][] image)
         => image.Select(row => row.Reverse().Select(b => b ^ 1).ToArray()).ToArray();
     #endregion
+
+    #region 1684. Count the Number of Consistent Strings
+    /// <summary>
+    /// Returns the count of strings from 'words' that only contain characters from 'allowed'.
+    /// </summary>
+    /// <param name="allowed">Distinct allowed characters.</param>
+    /// <param name="words">Array of words to check.</param>
+    /// <returns>Number of consistent strings.</returns>
+    /// <link>https://leetcode.com/problems/count-the-number-of-consistent-strings/</link>
+    /// <time>O(n * m)</time>
+    /// <space>O(a)</space>
+    public int CountConsistentStrings(string allowed, string[] words)
+    {
+        var allowedSet = allowed.ToHashSet();
+        return words.Count(word => word.All(allowedSet.Contains));
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
