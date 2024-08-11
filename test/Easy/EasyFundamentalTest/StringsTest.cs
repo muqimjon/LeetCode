@@ -672,4 +672,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1859 Sorting the Sentence
+    [Theory]
+    [InlineData("is2 sentence4 This1 a3", "This is a sentence")]
+    [InlineData("Myself2 Me1 I4 and3", "Me Myself and I")]
+    public void TestSortingTheSentence(string s, string expected)
+    {
+        // Act
+        var result = Solution.SortSentence(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

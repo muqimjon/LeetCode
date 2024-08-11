@@ -819,4 +819,17 @@ public class Strings
     public bool RepeatedSubstringPattern(string s)
         => (s + s).Substring(1, s.Length * 2 - 2).Contains(s);
     #endregion
+
+    #region 1859. Sorting the Sentence
+    /// <summary>
+    /// Reconstructs the original sentence from a shuffled sentence with numbered words.
+    /// </summary>
+    /// <param name="s">Shuffled sentence with appended word positions.</param>
+    /// <returns>Original sentence with correct word order.</returns>
+    /// <link>https://leetcode.com/problems/sorting-the-sentence/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public string SortSentence(string s)
+        => string.Join(" ", s.Split().OrderBy(w => w[^1]).Select(w => w[..^1]));
+    #endregion
 }
