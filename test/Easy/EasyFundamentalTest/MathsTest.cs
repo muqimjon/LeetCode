@@ -560,4 +560,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1025 Divisor Game
+    [Theory]
+    [InlineData(2, true)]
+    [InlineData(3, false)]
+    public void TestDivisorGame(int n, bool expected)
+    {
+        // Act
+        var result = Solution.DivisorGame(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

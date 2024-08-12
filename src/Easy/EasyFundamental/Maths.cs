@@ -621,4 +621,17 @@ public class Maths
     public int SmallestEvenMultiple(int n)
         => n % 2 is 0 ? n : n * 2;
     #endregion
+
+    #region 1025. Divisor Game
+    /// <summary>
+    /// Returns true if Alice wins(n is even), otherwise false.
+    /// </summary>
+    /// <param name="n">The starting number on the chalkboard.</param>
+    /// <returns>True if Alice wins, false otherwise.</returns>
+    /// <link>https://leetcode.com/problems/divisor-game/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public bool DivisorGame(int n)
+        => n % 2 == 0;
+    #endregion
 }
