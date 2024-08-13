@@ -1527,6 +1527,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2798 Number of Employees Who Met the Target
+    [Theory]
+    [InlineData(new[] { 0, 1, 2, 3, 4 }, 2, 3)]
+    [InlineData(new[] { 5, 1, 4, 2, 2 }, 6, 0)]
+    public void TestNumberOfEmployeesWhoMetTheTarget(int[] hours, int target, int expected)
+    {
+        // Act
+        var result = Solution.NumberOfEmployeesWhoMetTarget(hours, target);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

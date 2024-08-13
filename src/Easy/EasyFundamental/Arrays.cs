@@ -1815,6 +1815,20 @@ public class Arrays
         return words.Count(word => word.All(allowedSet.Contains));
     }
     #endregion
+
+    #region 2798. Number of Employees Who Met the Target
+    /// <summary>
+    /// Counts the number of employees who worked at least `target` hours.
+    /// </summary>
+    /// <param name="hours">An array of integers representing the hours worked by each employee.</param>
+    /// <param name="target">The minimum number of hours required to meet the target.</param>
+    /// <returns>The number of employees who worked at least `target` hours.</returns>
+    /// <link>https://leetcode.com/problems/number-of-employees-who-met-the-target/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int NumberOfEmployeesWhoMetTarget(int[] hours, int target)
+        => hours.Count(h => h >= target);
+    #endregion
 }
 
 #region 705. Design HashSet
