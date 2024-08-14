@@ -1829,6 +1829,19 @@ public class Arrays
     public int NumberOfEmployeesWhoMetTarget(int[] hours, int target)
         => hours.Count(h => h >= target);
     #endregion
+
+    #region 2335. Minimum Amount of Time to Fill Cups
+    /// <summary>
+    /// Calculates the minimum seconds to fill all cold, warm, and hot water cups.
+    /// </summary>
+    /// <param name="amount">An array of three integers for cold, warm, and hot water cups needed.</param>
+    /// <returns>The minimum number of seconds required to fill all the cups.</returns>
+    /// <link>https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int FillCups(int[] amount)
+        => Math.Max(amount.Max(), (amount.Sum() + 1) / 2);
+    #endregion
 }
 
 #region 705. Design HashSet

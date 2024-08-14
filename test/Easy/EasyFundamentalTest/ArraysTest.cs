@@ -1541,6 +1541,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2335 Minimum Amount of Time to Fill Cups
+    [Theory]
+    [InlineData(new[] { 1, 4, 2 }, 4)]
+    [InlineData(new[] { 5, 4, 4 }, 7)]
+    [InlineData(new[] { 5, 0, 0 }, 5)]
+    public void TestMinimumAmountOfTimeToFillCups(int[] amount, int expected)
+    {
+        // Act
+        var result = Solution.FillCups(amount);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
