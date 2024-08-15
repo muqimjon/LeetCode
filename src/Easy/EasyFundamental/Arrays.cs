@@ -1842,6 +1842,25 @@ public class Arrays
     public int FillCups(int[] amount)
         => Math.Max(amount.Max(), (amount.Sum() + 1) / 2);
     #endregion
+
+    #region 2154. Keep Multiplying Found Values by Two
+    /// <summary>
+    /// Multiplies original by two if it is found in nums, and repeats until original is no longer in nums.
+    /// </summary>
+    /// <param name="nums">An array of integers where each value can be checked for the presence of original.</param>
+    /// <param name="original">The initial value to be multiplied by two if found in the array.</param>
+    /// <returns>The final value of original after the process.</returns>
+    /// <link>https://leetcode.com/problems/keep-multiplying-found-values-by-two/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int FindFinalValue(int[] nums, int original)
+    {
+        while (nums.Contains(original))
+            original *= 2;
+
+        return original;
+    }
+    #endregion
 }
 
 #region 705. Design HashSet

@@ -1556,6 +1556,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2154 Keep Multiplying Found Values by Two
+    [Theory]
+    [InlineData(new[] { 5, 3, 6, 1, 12 }, 3, 24)]
+    [InlineData(new[] { 2, 7, 9 }, 4, 4)]
+    public void TestKeepMultiplyingFoundValuesByTwo(int[] nums, int original, int expected)
+    {
+        // Act
+        var result = Solution.FindFinalValue(nums, original);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
