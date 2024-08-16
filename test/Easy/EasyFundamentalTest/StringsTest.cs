@@ -686,4 +686,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2138 Divide a String Into Groups of Size k
+    [Theory]
+    [InlineData("abcdefghi", 3, 'x', new[] { "abc", "def", "ghi" })]
+    [InlineData("abcdefghij", 3, 'x', new[] { "abc", "def", "ghi", "jxx" })]
+    public void TestDivideAStringIntoGroupsOfSizeK(string s, int k, char fill, string[] expected)
+    {
+        // Act
+        var result = Solution.DivideString(s, k, fill);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

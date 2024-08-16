@@ -832,4 +832,22 @@ public class Strings
     public string SortSentence(string s)
         => string.Join(" ", s.Split().OrderBy(w => w[^1]).Select(w => w[..^1]));
     #endregion
+
+    #region 2138. Divide a String Into Groups of Size k
+    /// <summary>
+    /// Divides the string `s` into groups of size `k`, padding the last group with `fill` if necessary.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <param name="k">The size of each group.</param>
+    /// <param name="fill">The character used to fill the last group if it's incomplete.</param>
+    /// <returns>Array of strings representing the groups.</returns>
+    /// <link>https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string[] DivideString(string s, int k, char fill)
+        => s.PadRight((s.Length + k - 1) / k * k, fill)
+            .Chunk(k)
+            .Select(chunk => new string(chunk))
+            .ToArray();
+    #endregion
 }
