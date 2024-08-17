@@ -1570,6 +1570,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1413 Minimum Value to Get Positive Step by Step Sum
+    [Theory]
+    [InlineData(new[] { -3, 2, -3, 4, 2 }, 5)]
+    [InlineData(new[] { 1, 2 }, 1)]
+    [InlineData(new[] { 1, -2, -3 }, 5)]
+    public void TestMinimumValueToGetPositiveStepByStepSum(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.MinStartValue(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

@@ -1861,6 +1861,26 @@ public class Arrays
         return original;
     }
     #endregion
+
+    #region 1413. Minimum Value to Get Positive Step by Step Sum
+    /// <summary>
+    /// Computes the minimum start value to ensure the step-by-step sum of `nums` never falls below 1.
+    /// </summary>
+    /// <param name="nums">Array of integers representing the steps.</param>
+    /// <returns>The minimum positive start value.</returns>
+    /// <link>https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinStartValue(int[] nums)
+    {
+        int minSum = 0, sum = 0;
+
+        foreach (int num in nums)
+            minSum = Math.Min(minSum, sum += num);
+
+        return 1 - minSum;
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
