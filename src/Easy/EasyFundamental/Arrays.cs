@@ -1881,6 +1881,20 @@ public class Arrays
         return 1 - minSum;
     }
     #endregion
+
+    #region 2956. Find Common Elements Between Two Arrays
+    /// <summary>
+    /// Finds the number of elements in nums1 that exist in nums2, and vice versa.
+    /// </summary>
+    /// <param name="nums1">First integer array.</param>
+    /// <param name="nums2">Second integer array.</param>
+    /// <returns>An array containing two integers: the number of common elements from nums1 to nums2, and from nums2 to nums1.</returns>
+    /// <link>https://leetcode.com/problems/find-common-elements-between-two-arrays/</link>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public int[] FindIntersectionValues(int[] nums1, int[] nums2)
+        => new int[] { nums1.Count(nums2.Contains), nums2.Count(nums1.Contains) };
+    #endregion
 }
 
 #region 705. Design HashSet

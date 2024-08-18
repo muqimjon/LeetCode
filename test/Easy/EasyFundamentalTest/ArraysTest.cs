@@ -1585,6 +1585,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2956 Find Common Elements Between Two Arrays
+    [Theory]
+    [InlineData(new[] { 2, 3, 2 }, new[] { 1, 2 }, new[] { 2, 1 })]
+    [InlineData(new[] { 4, 3, 2, 3, 1 }, new[] { 2, 2, 5, 2, 3, 6 }, new[] { 3, 4 })]
+    [InlineData(new[] { 3, 4, 2, 3 }, new[] { 1, 5 }, new[] { 0, 0 })]
+    public void TestFindCommonElementsBetweenTwoArrays(int[] nums1, int[] nums2, int[] expected)
+    {
+        // Act
+        var result = Solution.FindIntersectionValues(nums1, nums2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
