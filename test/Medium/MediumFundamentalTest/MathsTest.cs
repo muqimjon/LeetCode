@@ -21,4 +21,19 @@ public class MathsTest
         Assert.Equal(expected, result, 5); // using 5 digits precision for comparison
     }
     #endregion
+
+    #region 650 2 Keys Keyboard
+    [Theory]
+    [InlineData(3, 3)]
+    [InlineData(1, 0)]
+    [InlineData(4, 4)]
+    public void TestMinSteps(int n, int expected)
+    {
+        // Act
+        var result = Solution.MinSteps(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
