@@ -221,4 +221,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2716 Minimize String Length
+    [Theory]
+    [InlineData("aaabc", 3)]
+    [InlineData("cbbd", 3)]
+    [InlineData("baadccab", 4)]
+    public void TestMinimizeStringLength(string s, int expected)
+    {
+        // Act
+        var result = Solution.MinimizedStringLength(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

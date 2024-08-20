@@ -285,4 +285,17 @@ public class HashTables
         => target.GroupBy(c => c)
                  .Min(g => s.Count(ch => ch == g.Key) / g.Count());
     #endregion
+
+    #region 2716. Minimize String Length
+    /// <summary>
+    /// Returns the length of the minimized string after removing all duplicate characters.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>The length of the string with all distinct characters.</returns>
+    /// <link>https://leetcode.com/problems/minimize-string-length/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int MinimizedStringLength(string s)
+        => s.Distinct().Count();
+    #endregion
 }
