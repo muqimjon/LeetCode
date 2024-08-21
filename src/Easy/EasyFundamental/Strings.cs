@@ -850,4 +850,24 @@ public class Strings
             .Select(chunk => new string(chunk))
             .ToArray();
     #endregion
+
+    #region 1758. Minimum Changes To Make Alternating Binary String
+    /// <summary>
+    /// Calculates the minimum number of operations needed to make the binary string alternating.
+    /// </summary>
+    /// <param name="s">The input binary string.</param>
+    /// <returns>The minimum number of changes required.</returns>
+    /// <link>https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinOperations(string s)
+    {
+        int changes = 0;
+
+        for (int i = 0; i < s.Length; i++)
+            changes += s[i] == (i % 2 == 0 ? '0' : '1') ? 0 : 1;
+
+        return Math.Min(changes, s.Length - changes);
+    }
+    #endregion
 }

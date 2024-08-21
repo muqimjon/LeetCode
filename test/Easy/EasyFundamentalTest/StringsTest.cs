@@ -700,4 +700,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1758 Minimum Changes To Make Alternating Binary String
+    [Theory]
+    [InlineData("0100", 1)]
+    [InlineData("10", 0)]
+    [InlineData("1111", 2)]
+    public void TestMinimumChangesToMakeAlternatingBinaryString(string s, int expected)
+    {
+        // Act
+        var result = Solution.MinOperations(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
