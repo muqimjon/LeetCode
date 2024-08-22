@@ -86,4 +86,28 @@ public class TwoPointers
         return new string(chars);
     }
     #endregion
+
+    #region 925. Long Pressed Name
+    /// <summary>
+    /// Checks if the typed string can be obtained from the name string by possibly long pressing some characters.
+    /// </summary>
+    /// <param name="name">The actual name string.</param>
+    /// <param name="typed">The string typed on the keyboard.</param>
+    /// <returns>Returns true if the typed string is a long-pressed version of the name string; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/long-pressed-name/</link>
+    /// <time>O(n + m)</time>
+    /// <space>O(1)</space>
+    public bool IsLongPressedName(string name, string typed)
+    {
+        int i = 0;
+
+        foreach (char c in typed)
+            if (i < name.Length && name[i] == c)
+                i++;
+            else if (i == 0 || name[i - 1] != c)
+                return false;
+
+        return i == name.Length;
+    }
+    #endregion
 }

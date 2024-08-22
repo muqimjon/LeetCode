@@ -67,4 +67,18 @@ public class TwoPointersTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 925 Long Pressed Name
+    [Theory]
+    [InlineData("alex", "aaleex", true)]
+    [InlineData("saeed", "ssaaedd", false)]
+    public void TestLongPressedName(string name, string typed, bool expected)
+    {
+        // Act
+        var result = Solution.IsLongPressedName(name, typed);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
