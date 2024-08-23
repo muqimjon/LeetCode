@@ -1895,6 +1895,22 @@ public class Arrays
     public int[] FindIntersectionValues(int[] nums1, int[] nums2)
         => new int[] { nums1.Count(nums2.Contains), nums2.Count(nums1.Contains) };
     #endregion
+
+    #region 1725. Number Of Rectangles That Can Form The Largest Square
+    /// <summary>
+    /// Counts the number of rectangles that can form the largest possible square.
+    /// </summary>
+    /// <param name="rectangles">An array of rectangles represented by their lengths and widths.</param>
+    /// <returns>Returns the number of rectangles that can form a square with the largest possible side length.</returns>
+    /// <link>https://leetcode.com/problems/number-of-rectangles-that-can-form-the-largest-square/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int CountGoodRectangles(int[][] rectangles)
+    {
+        int maxLen = rectangles.Max(r => Math.Min(r[0], r[1]));
+        return rectangles.Count(r => Math.Min(r[0], r[1]) == maxLen);
+    }
+    #endregion
 }
 
 #region 705. Design HashSet

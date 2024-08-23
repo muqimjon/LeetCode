@@ -1600,6 +1600,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1725 Number Of Rectangles That Can Form The Largest Square
+    [Theory]
+    [InlineData(3, new[] { 5, 8 }, new[] { 3, 9 }, new[] { 5, 12 }, new[] { 16, 5 })]
+    [InlineData(3, new[] { 2, 3 }, new[] { 3, 7 }, new[] { 4, 3 }, new[] { 3, 7 })]
+    public void TestNumberOfRectanglesThatCanFormTheLargestSquare(int expected, params int[][] rectangles)
+    {
+        // Act
+        var result = Solution.CountGoodRectangles(rectangles);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
