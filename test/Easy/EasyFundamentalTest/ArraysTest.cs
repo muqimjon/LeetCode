@@ -1614,6 +1614,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 914. X of a Kind in a Deck of Cards
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 4, 3, 2, 1 }, true)]
+    [InlineData(new int[] { 1, 1, 1, 2, 2, 2, 3, 3 }, false)]
+    public void TestHasGroupsSizeX(int[] deck, bool expected)
+    {
+        // Act
+        var result = Solution.HasGroupsSizeX(deck);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

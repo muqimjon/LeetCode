@@ -1911,6 +1911,25 @@ public class Arrays
         return rectangles.Count(r => Math.Min(r[0], r[1]) == maxLen);
     }
     #endregion
+
+    #region 914. X of a Kind in a Deck of Cards
+    /// <summary>
+    /// Checks if the deck can be partitioned into groups of size > 1 with identical cards.
+    /// </summary>
+    /// <param name="deck">An array where deck[i] represents the number on the ith card.</param>
+    /// <returns>Returns true if the deck can be partitioned as described; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public bool HasGroupsSizeX(int[] deck)
+    {
+        static int GCD(int a, int b) => b == 0 ? a : GCD(b, a % b);
+
+        return deck.GroupBy(x => x)
+                   .Select(g => g.Count())
+                   .Aggregate(GCD) > 1;
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
