@@ -236,4 +236,18 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3146 Permutation Difference between Two Strings
+    [Theory]
+    [InlineData("abc", "bac", 2)]
+    [InlineData("abcde", "edbac", 12)]
+    public void TestPermutationDifference(string s, string t, int expected)
+    {
+        // Act
+        var result = Solution.FindPermutationDifference(s, t);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

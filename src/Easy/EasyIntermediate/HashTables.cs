@@ -298,4 +298,18 @@ public class HashTables
     public int MinimizedStringLength(string s)
         => s.Distinct().Count();
     #endregion
+
+    #region 3146. Permutation Difference between Two Strings
+    /// <summary>
+    /// Computes the sum of index differences between two permutation strings s and t.
+    /// </summary>
+    /// <param name="s">The original string.</param>
+    /// <param name="t">The permutation of string s.</param>
+    /// <returns>The permutation difference between strings s and t.</returns>
+    /// <link>https://leetcode.com/problems/permutation-difference-between-two-strings/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int FindPermutationDifference(string s, string t)
+        => s.Select((c, i) => Math.Abs(i - t.IndexOf(c))).Sum();
+    #endregion
 }
