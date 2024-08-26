@@ -1930,6 +1930,24 @@ public class Arrays
                    .Aggregate(GCD) > 1;
     }
     #endregion
+
+    #region 1629. Slowest Key
+    /// <summary>
+    /// Finds the key with the longest duration pressed.
+    /// </summary>
+    /// <param name="releaseTimes">The times at which each key was released.</param>
+    /// <param name="keysPressed">The sequence of keys pressed.</param>
+    /// <returns>The key with the longest duration pressed, or the largest key in case of a tie.</returns>
+    /// <link>https://leetcode.com/problems/slowest-key/</link>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public char SlowestKey(int[] releaseTimes, string keysPressed)
+        => keysPressed.Select((c, i)
+            => new { Key = c, Duration = i == 0 ? releaseTimes[i] : releaseTimes[i] - releaseTimes[i - 1] })
+            .OrderByDescending(x => x.Duration)
+            .ThenByDescending(x => x.Key)
+            .First().Key;
+    #endregion
 }
 
 #region 705. Design HashSet

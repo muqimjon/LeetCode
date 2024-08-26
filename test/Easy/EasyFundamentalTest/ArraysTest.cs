@@ -1628,6 +1628,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1629 Slowest Key
+    [Theory]
+    [InlineData(new int[] { 9, 29, 49, 50 }, "cbcd", "c")]
+    [InlineData(new int[] { 12, 23, 36, 46, 62 }, "spuda", "a")]
+    public void TestSlowestKey(int[] releaseTimes, string keysPressed, string expected)
+    {
+        // Act
+        var result = Solution.SlowestKey(releaseTimes, keysPressed).ToString();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
