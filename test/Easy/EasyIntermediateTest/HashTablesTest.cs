@@ -250,4 +250,18 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1941 Check if All Characters Have Equal Number of Occurrences
+    [Theory]
+    [InlineData("abacbc", true)]
+    [InlineData("aaabb", false)]
+    public void TestAllCharactersEqualOccurrences(string s, bool expected)
+    {
+        // Act
+        var result = Solution.AreOccurrencesEqual(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

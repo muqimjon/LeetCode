@@ -312,4 +312,17 @@ public class HashTables
     public int FindPermutationDifference(string s, string t)
         => s.Select((c, i) => Math.Abs(i - t.IndexOf(c))).Sum();
     #endregion
+
+    #region 1941. Check if All Characters Have Equal Number of Occurrences
+    /// <summary>
+    /// Determines if all characters in the string occur the same number of times.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <returns>True if all characters have equal occurrences; otherwise, false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool AreOccurrencesEqual(string s)
+        => s.GroupBy(c => c).Select(g => g.Count()).Distinct().Count() == 1;
+    #endregion
 }
