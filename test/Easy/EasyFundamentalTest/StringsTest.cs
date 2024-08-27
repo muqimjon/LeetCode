@@ -715,4 +715,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1736 Latest Time by Replacing Hidden Digits
+    [Theory]
+    [InlineData("2?:?0", "23:50")]
+    [InlineData("0?:3?", "09:39")]
+    [InlineData("1?:22", "19:22")]
+    public void TestLatestTime(string time, string expected)
+    {
+        // Act
+        var result = Solution.MaximumTime(time);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

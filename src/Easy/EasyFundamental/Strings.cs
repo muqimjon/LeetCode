@@ -870,4 +870,24 @@ public class Strings
         return Math.Min(changes, s.Length - changes);
     }
     #endregion
+
+    #region 1736. Latest Time by Replacing Hidden Digits
+    /// <summary>
+    /// Replaces hidden digits in the time string to get the latest possible valid time.
+    /// </summary>
+    /// <param name="time">The input time string with hidden digits represented by '?'.</param>
+    /// <returns>The latest valid time in the format hh:mm.</returns>
+    /// <link>https://leetcode.com/problems/latest-time-by-replacing-hidden-digits/</link>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public string MaximumTime(string time)
+    {
+        char[] t = time.ToCharArray();
+        t[0] = t[0] == '?' ? (t[1] == '?' || t[1] <= '3' ? '2' : '1') : t[0];
+        t[1] = t[1] == '?' ? (t[0] == '2' ? '3' : '9') : t[1];
+        t[3] = t[3] == '?' ? '5' : t[3];
+        t[4] = t[4] == '?' ? '9' : t[4];
+        return new string(t);
+    }
+    #endregion
 }
