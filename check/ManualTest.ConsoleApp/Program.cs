@@ -32,7 +32,18 @@
 //var d = n & s;
 //Console.WriteLine(d);
 
-Console.WriteLine((int)'a');
+
+
+"1, 2, 3, 4, 6, 5, S7, 8, 9, 10".ToInts().ToList().ForEach(Console.WriteLine);
+
+public static class MillyExtensions
+{
+    public static IEnumerable<int> ToInts(this string str, char delimiter = ',')
+        => str
+          .Split(delimiter, StringSplitOptions.RemoveEmptyEntries)
+          .Where(i => int.TryParse(i, out _))
+          .Select(int.Parse);
+}
 
 
 

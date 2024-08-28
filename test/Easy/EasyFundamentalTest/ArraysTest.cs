@@ -1642,6 +1642,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3079 Find the Sum of Encrypted Integers
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3 }, 6)]
+    [InlineData(new int[] { 10, 21, 31 }, 66)]
+    public void TestFindSumOfEncryptedIntegers(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.SumOfEncryptedInt(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

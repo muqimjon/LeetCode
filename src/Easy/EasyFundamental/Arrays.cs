@@ -1948,6 +1948,19 @@ public class Arrays
             .ThenByDescending(x => x.Key)
             .First().Key;
     #endregion
+
+    #region 3079. Find the Sum of Encrypted Integers
+    /// <summary>
+    /// Calculates the sum of integers after encrypting each integer in the array.
+    /// </summary>
+    /// <param name="nums">An array of positive integers.</param>
+    /// <returns>The sum of the encrypted integers.</returns>
+    /// <link>https://leetcode.com/problems/find-the-sum-of-encrypted-integers/</link>
+    /// <time>O(n * d)</time>
+    /// <space>O(1)</space>
+    public int SumOfEncryptedInt(int[] nums)
+        => nums.Sum(n => int.Parse(new string(n.ToString().Max(), n.ToString().Length)));
+    #endregion
 }
 
 #region 705. Design HashSet
