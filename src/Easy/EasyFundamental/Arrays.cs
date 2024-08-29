@@ -1961,6 +1961,21 @@ public class Arrays
     public int SumOfEncryptedInt(int[] nums)
         => nums.Sum(n => int.Parse(new string(n.ToString().Max(), n.ToString().Length)));
     #endregion
+
+    #region 1450. Number of Students Doing Homework at a Given Time
+    /// <summary>
+    /// Counts the number of students who are doing their homework at a specific query time.
+    /// </summary>
+    /// <param name="startTime">Array representing the start time of homework for each student.</param>
+    /// <param name="endTime">Array representing the end time of homework for each student.</param>
+    /// <param name="queryTime">The specific time to check for students doing their homework.</param>
+    /// <returns>The number of students doing homework at the given query time.</returns>
+    /// <link>https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/</link>
+    /// <time>O(n)</time> <!-- where n is the length of startTime and endTime -->
+    /// <space>O(1)</space>
+    public int BusyStudent(int[] startTime, int[] endTime, int queryTime)
+        => startTime.Where((t, i) => t <= queryTime && endTime[i] >= queryTime).Count();
+    #endregion
 }
 
 #region 705. Design HashSet

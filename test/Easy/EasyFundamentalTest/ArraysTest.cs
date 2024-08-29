@@ -1656,6 +1656,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1450 Number of Students Doing Homework at a Given Time
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3 }, new int[] { 3, 2, 7 }, 4, 1)]
+    [InlineData(new int[] { 4 }, new int[] { 4 }, 4, 1)]
+    public void TestBusyStudent(int[] startTime, int[] endTime, int queryTime, int expected)
+    {
+        // Act
+        var result = Solution.BusyStudent(startTime, endTime, queryTime);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
