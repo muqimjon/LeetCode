@@ -1670,6 +1670,26 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1773 Count Items Matching a Rule
+    [Theory]
+    [InlineData("color", "silver", 1, 
+        new string[] { "phone", "blue", "pixel" },
+        new string[] { "computer", "silver", "lenovo" },
+        new string[] { "phone", "gold", "iphone" })]
+    [InlineData("type", "phone", 2,
+        new string[] { "phone", "blue", "pixel" },
+        new string[] { "computer", "silver", "phone" },
+        new string[] { "phone", "gold", "iphone" })]
+    public void TestCountMatches(string ruleKey, string ruleValue, int expected, params string[][] items)
+    {
+        // Act
+        var result = Solution.CountMatches(items, ruleKey, ruleValue);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

@@ -1976,6 +1976,28 @@ public class Arrays
     public int BusyStudent(int[] startTime, int[] endTime, int queryTime)
         => startTime.Where((t, i) => t <= queryTime && endTime[i] >= queryTime).Count();
     #endregion
+
+    #region 1773. Count Items Matching a Rule
+    /// <summary>
+    /// Counts the number of items that match a given rule based on the ruleKey and ruleValue.
+    /// </summary>
+    /// <param name="items">List of items, where each item is a list containing [type, color, name].</param>
+    /// <param name="ruleKey">The key of the rule to apply, which can be "type", "color", or "name".</param>
+    /// <param name="ruleValue">The value of the rule to match against the items.</param>
+    /// <returns>The number of items that match the given rule.</returns>
+    /// <link>https://leetcode.com/problems/count-items-matching-a-rule/</link>
+    /// <time>O(n)</time> <!-- where n is the number of items in the list -->
+    /// <space>O(1)</space>
+    public int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue)
+        => items.Count(item
+            => item[ruleKey switch
+            {
+                "type" => 0,
+                "color" => 1,
+                "name" => 2,
+                _ => -1
+            }] == ruleValue);
+    #endregion
 }
 
 #region 705. Design HashSet
