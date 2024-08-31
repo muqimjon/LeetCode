@@ -1998,6 +1998,19 @@ public class Arrays
                 _ => -1
             }] == ruleValue);
     #endregion
+
+    #region 2733. Neither Minimum nor Maximum
+    /// <summary>
+    /// Finds and returns any number from the array that is neither the minimum nor the maximum value.
+    /// </summary>
+    /// <param name="nums">Array of distinct positive integers.</param>
+    /// <returns>A number that is neither the minimum nor the maximum value, or -1 if there is no such number.</returns>
+    /// <link>https://leetcode.com/problems/neither-minimum-nor-maximum/</link>
+    /// <time>O(n log n)</time> <!-- Sorting takes O(n log n) time -->
+    /// <space>O(1)</space>
+    public int FindNonMinOrMax(int[] nums)
+        => nums.Length > 2 ? nums.OrderBy(n => n).ElementAt(1) : -1;
+    #endregion
 }
 
 #region 705. Design HashSet

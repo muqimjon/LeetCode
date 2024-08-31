@@ -1690,6 +1690,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2733 Neither Minimum nor Maximum
+    [Theory]
+    [InlineData(new int[] { 3, 2, 1, 4 }, 2)]
+    [InlineData(new int[] { 1, 2 }, -1)]
+    [InlineData(new int[] { 2, 1, 3 }, 2)]
+    public void TestNeitherMinNorMax(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.FindNonMinOrMax(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
