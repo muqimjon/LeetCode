@@ -1705,6 +1705,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 747 Largest Number At Least Twice of Others
+    [Theory]
+    [InlineData(new int[] { 3, 6, 1, 0 }, 1)]
+    [InlineData(new int[] { 1, 2, 3, 4 }, -1)]
+    public void TestLargestNumberAtLeastTwice(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.DominantIndex(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

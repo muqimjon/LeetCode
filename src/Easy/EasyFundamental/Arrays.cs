@@ -2011,6 +2011,23 @@ public class Arrays
     public int FindNonMinOrMax(int[] nums)
         => nums.Length > 2 ? nums.OrderBy(n => n).ElementAt(1) : -1;
     #endregion
+
+    #region 747. Largest Number At Least Twice of Others
+    /// <summary>
+    /// Determines whether the largest element in the array is at least twice as much as every other number in the array.
+    /// </summary>
+    /// <param name="nums">Array of integers where the largest integer is unique.</param>
+    /// <returns>The index of the largest element if it is at least twice as much as every other number, otherwise -1.</returns>
+    /// <link>https://leetcode.com/problems/largest-number-at-least-twice-of-others/</link>
+    /// <time>O(n)</time> <!-- Two passes over the array -->
+    /// <space>O(1)</space>
+    public int DominantIndex(int[] nums)
+    {
+        int max = nums.Max();
+        int index = Array.IndexOf(nums, max);
+        return nums.All(x => max >= 2 * x || x == max) ? index : -1;
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
