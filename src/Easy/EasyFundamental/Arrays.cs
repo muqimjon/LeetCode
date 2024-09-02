@@ -2028,6 +2028,24 @@ public class Arrays
         return nums.All(x => max >= 2 * x || x == max) ? index : -1;
     }
     #endregion
+
+    #region 2460. Apply Operations to an Array
+    /// <summary>
+    /// Doubles matching elements, zeroes the next, then moves all zeros to the end
+    /// </summary>
+    /// <param name="nums">A 0-indexed array of non-negative integers.</param>
+    /// <returns>The modified array with all zeros shifted to the end.</returns>
+    /// <link>https://leetcode.com/problems/apply-operations-to-an-array/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int[] ApplyOperations(int[] nums)
+    {
+        for (int i = 0; i < nums.Length - 1; i++)
+            if (nums[i] == nums[i + 1]) { nums[i] *= 2; nums[i + 1] = 0; }
+
+        return nums.Where(x => x != 0).Concat(nums.Where(x => x == 0)).ToArray();
+    }
+    #endregion
 }
 
 #region 705. Design HashSet

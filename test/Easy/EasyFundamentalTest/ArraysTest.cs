@@ -1719,6 +1719,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2460 Apply Operations to an Array
+    [Theory]
+    [InlineData(new int[] { 1, 2, 2, 1, 1, 0 }, new int[] { 1, 4, 2, 0, 0, 0 })]
+    [InlineData(new int[] { 0, 1 }, new int[] { 1, 0 })]
+    public void TestApplyOperationsToArray(int[] nums, int[] expected)
+    {
+        // Act
+        var result = Solution.ApplyOperations(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
