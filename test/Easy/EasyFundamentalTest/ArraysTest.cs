@@ -1733,6 +1733,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1217 Minimum Cost to Move Chips to The Same Position
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3 }, 1)]
+    [InlineData(new int[] { 2, 2, 2, 3, 3 }, 2)]
+    [InlineData(new int[] { 1, 1000000000 }, 1)]
+    public void TestMinimumCostToMoveChips(int[] position, int expected)
+    {
+        // Act
+        var result = Solution.MinCostToMoveChips(position);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

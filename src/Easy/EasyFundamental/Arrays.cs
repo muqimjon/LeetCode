@@ -2046,6 +2046,19 @@ public class Arrays
         return nums.Where(x => x != 0).Concat(nums.Where(x => x == 0)).ToArray();
     }
     #endregion
+
+    #region 1217. Minimum Cost to Move Chips to The Same Position
+    /// <summary>
+    /// Calculates the minimum cost to move all chips to the same position
+    /// </summary>
+    /// <param name="position">An array of integers representing the positions of the chips.</param>
+    /// <returns>The minimum cost to move all chips to the same position.</returns>
+    /// <link>https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinCostToMoveChips(int[] position)
+        => Math.Min(position.Count(p => p % 2 == 0), position.Count(p => p % 2 != 0));
+    #endregion
 }
 
 #region 705. Design HashSet
