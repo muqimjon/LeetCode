@@ -2059,6 +2059,22 @@ public class Arrays
     public int MinCostToMoveChips(int[] position)
         => Math.Min(position.Count(p => p % 2 == 0), position.Count(p => p % 2 != 0));
     #endregion
+
+    #region 3158. Find the XOR of Numbers Which Appear Twice
+    /// <summary>
+    /// Returns the XOR of all numbers that appear exactly twice in the array.
+    /// </summary>
+    /// <param name="nums">An array where each number appears either once or twice.</param>
+    /// <returns>The bitwise XOR of numbers that appear twice, or 0 if none.</returns>
+    /// <link>https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/</link>
+    /// <time>O(n)</time> 
+    /// <space>O(n)</space> 
+    public int DuplicateNumbersXOR(int[] nums)
+        => nums.GroupBy(x => x)
+               .Where(g => g.Count() == 2)
+               .Select(g => g.Key)
+               .Aggregate(0, (acc, x) => acc ^ x);
+    #endregion
 }
 
 #region 705. Design HashSet

@@ -1748,6 +1748,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3158 Find the XOR of Numbers Which Appear Twice
+    [Theory]
+    [InlineData(new int[] { 1, 2, 1, 3 }, 1)]
+    [InlineData(new int[] { 1, 2, 3 }, 0)]
+    [InlineData(new int[] { 1, 2, 2, 1 }, 3)]
+    public void TestFindXOROfNumbersWhichAppearTwice(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.DuplicateNumbersXOR(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
