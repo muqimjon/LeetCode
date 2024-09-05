@@ -2075,6 +2075,24 @@ public class Arrays
                .Select(g => g.Key)
                .Aggregate(0, (acc, x) => acc ^ x);
     #endregion
+
+    #region 2089. Find Target Indices After Sorting Array
+    /// <summary>
+    /// Finds the indices of the target element after sorting the array in non-decreasing order.
+    /// </summary>
+    /// <param name="nums">An array of integers to be sorted.</param>
+    /// <param name="target">The target integer to find after sorting.</param>
+    /// <returns>A list of indices where the target appears in the sorted array.</returns>
+    /// <link>https://leetcode.com/problems/find-target-indices-after-sorting-array/</link>
+    /// <time>O(n log n)</time> <!-- Sorting the array dominates the time complexity -->
+    /// <space>O(n)</space> <!-- Due to the sorting operation -->
+    public IList<int> TargetIndices(int[] nums, int target)
+        => nums.OrderBy(n => n)
+               .Select((n, i) => (n, i))
+               .Where(x => x.n == target)
+               .Select(x => x.i)
+               .ToList();
+    #endregion
 }
 
 #region 705. Design HashSet

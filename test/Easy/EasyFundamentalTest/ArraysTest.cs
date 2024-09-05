@@ -1673,7 +1673,7 @@ public class ArraysTest
 
     #region 1773 Count Items Matching a Rule
     [Theory]
-    [InlineData("color", "silver", 1, 
+    [InlineData("color", "silver", 1,
         new string[] { "phone", "blue", "pixel" },
         new string[] { "computer", "silver", "lenovo" },
         new string[] { "phone", "gold", "iphone" })]
@@ -1758,6 +1758,21 @@ public class ArraysTest
     {
         // Act
         var result = Solution.DuplicateNumbersXOR(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 2089 Find Target Indices After Sorting Array
+    [Theory]
+    [InlineData(new int[] { 1, 2, 5, 2, 3 }, 2, new int[] { 1, 2 })]
+    [InlineData(new int[] { 1, 2, 5, 2, 3 }, 3, new int[] { 3 })]
+    [InlineData(new int[] { 1, 2, 5, 2, 3 }, 5, new int[] { 4 })]
+    public void TestFindTargetIndicesAfterSortingArray(int[] nums, int target, int[] expected)
+    {
+        // Act
+        var result = Solution.TargetIndices(nums, target);
 
         // Assert
         Assert.Equal(expected, result);
