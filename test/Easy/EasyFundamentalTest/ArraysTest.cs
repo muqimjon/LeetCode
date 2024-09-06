@@ -1778,6 +1778,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1018 Binary Prefix Divisible By 5
+    [Theory]
+    [InlineData(new int[] { 0, 1, 1 }, new bool[] { true, false, false })]
+    [InlineData(new int[] { 1, 1, 1 }, new bool[] { false, false, false })]
+    public void TestBinaryPrefixDivisibleBy5(int[] nums, bool[] expected)
+    {
+        // Act
+        var result = Solution.PrefixesDivBy5(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

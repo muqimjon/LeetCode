@@ -2093,6 +2093,22 @@ public class Arrays
                .Select(x => x.i)
                .ToList();
     #endregion
+
+    #region 1018. Binary Prefix Divisible By 5
+    /// <summary>
+    /// Checks if each prefix of the binary number formed by the array is divisible by 5.
+    /// </summary>
+    /// <param name="nums">A binary array of 0s and 1s.</param>
+    /// <returns>A list of booleans indicating whether each binary prefix is divisible by 5.</returns>
+    /// <link>https://leetcode.com/problems/binary-prefix-divisible-by-5/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public IList<bool> PrefixesDivBy5(int[] nums)
+    {
+        int x = 0;
+        return nums.Select(num => (x = (x * 2 + num) % 5) == 0).ToList();
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
