@@ -2109,6 +2109,22 @@ public class Arrays
         return nums.Select(num => (x = (x * 2 + num) % 5) == 0).ToList();
     }
     #endregion
+
+    #region 1389. Create Target Array in the Given Order
+    /// <summary>
+    /// Creates a target array by inserting elements from nums into the target array at positions specified by index.
+    /// </summary>
+    /// <param name="nums">An array of integers to be inserted into the target array.</param>
+    /// <param name="index">An array specifying the index positions for each element in nums.</param>
+    /// <returns>The target array after all insertions.</returns>
+    /// <link>https://leetcode.com/problems/create-target-array-in-the-given-order/</link>
+    /// <time>O(n^2)</time>
+    /// <space>O(n)</space>
+    public int[] CreateTargetArray(int[] nums, int[] index)
+        => [.. index.Select((x, i) => (x, nums[i]))
+            .Aggregate(new List<int>(), (t, pair) 
+            => { t.Insert(pair.x, pair.Item2); return t; })];
+    #endregion
 }
 
 #region 705. Design HashSet

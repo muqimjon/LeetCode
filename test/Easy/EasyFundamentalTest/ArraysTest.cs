@@ -1792,6 +1792,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1389 Create Target Array in the Given Order
+    [Theory]
+    [InlineData(new int[] { 0, 1, 2, 3, 4 }, new int[] { 0, 1, 2, 2, 1 }, new int[] { 0, 4, 1, 3, 2 })]
+    [InlineData(new int[] { 1, 2, 3, 4, 0 }, new int[] { 0, 1, 2, 3, 0 }, new int[] { 0, 1, 2, 3, 4 })]
+    [InlineData(new int[] { 1 }, new int[] { 0 }, new int[] { 1 })]
+    public void TestCreateTargetArray(int[] nums, int[] index, int[] expected)
+    {
+        // Act
+        var result = Solution.CreateTargetArray(nums, index);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
