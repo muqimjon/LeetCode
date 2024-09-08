@@ -2125,6 +2125,24 @@ public class Arrays
             .Aggregate(new List<int>(), (t, pair) 
             => { t.Insert(pair.x, pair.Item2); return t; })];
     #endregion
+
+    #region 2644. Find the Maximum Divisibility Score
+    /// <summary>
+    /// Finds the divisor from the divisors array that has the highest divisibility score based on nums array.
+    /// </summary>
+    /// <param name="nums">Array of numbers to be checked for divisibility.</param>
+    /// <param name="divisors">Array of divisors to compute the divisibility score.</param>
+    /// <returns>The divisor with the maximum divisibility score.</returns>
+    /// <link>https://leetcode.com/problems/find-the-maximum-divisibility-score/</link>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public int MaxDivScore(int[] nums, int[] divisors)
+    {
+        return divisors.OrderByDescending(d => nums.Count(n => n % d == 0))
+            .ThenBy(d => d)
+            .First();
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
