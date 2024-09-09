@@ -890,4 +890,19 @@ public class Strings
         return new string(t);
     }
     #endregion
+
+    #region 2042. Check if Numbers Are Ascending in a Sentence
+    /// <summary>
+    /// Checks if all numbers in the given sentence are in strictly increasing order.
+    /// </summary>
+    /// <param name="s">The sentence string which contains numbers and words.</param>
+    /// <returns>True if numbers are strictly increasing, otherwise False.</returns>
+    /// <link>https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool AreNumbersAscending(string s)
+        => s.Split().Where(x => int.TryParse(x, out _))
+            .Select(int.Parse)
+            .Aggregate((a, b) => a < b ? b : int.MaxValue) != int.MaxValue;
+    #endregion
 }
