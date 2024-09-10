@@ -2143,6 +2143,19 @@ public class Arrays
             .First();
     }
     #endregion
+
+    #region 217. Contains Duplicate
+    /// <summary>
+    /// Checks if there are any duplicate values in the array.
+    /// </summary>
+    /// <param name="nums">Array of integers.</param>
+    /// <returns>True if any value appears at least twice, otherwise False.</returns>
+    /// <link>https://leetcode.com/problems/contains-duplicate/</link>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool ContainsDuplicate(int[] nums)
+        =>  nums.Length != nums.Distinct().Count();
+    #endregion
 }
 
 #region 705. Design HashSet
