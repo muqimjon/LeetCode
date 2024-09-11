@@ -1837,6 +1837,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1827 Minimum Operations to Make the Array Increasing
+    [Theory]
+    [InlineData(new int[] { 1, 1, 1 }, 3)]
+    [InlineData(new int[] { 1, 5, 2, 4, 1 }, 14)]
+    [InlineData(new int[] { 8 }, 0)]
+    public void TestMinOperationsToMakeIncreasing(int[] nums, int expected)
+    {
+        // Act
+        var result = Solution.MinOperations(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

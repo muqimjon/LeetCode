@@ -2156,6 +2156,29 @@ public class Arrays
     public bool ContainsDuplicate(int[] nums)
         =>  nums.Length != nums.Distinct().Count();
     #endregion
+
+    #region 1827. Minimum Operations to Make the Array Increasing
+    /// <summary>
+    /// Calculates the minimum number of operations required to make the array strictly increasing.
+    /// </summary>
+    /// <param name="nums">Array of integers.</param>
+    /// <returns>Minimum number of operations.</returns>
+    /// <link>https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinOperations(int[] nums)
+    {
+        int ops = 0;
+        for (int i = 1; i < nums.Length; i++)
+            if (nums[i] <= nums[i - 1])
+            {
+                ops += nums[i - 1] - nums[i] + 1;
+                nums[i] = nums[i - 1] + 1;
+            }
+
+        return ops;
+    }
+    #endregion
 }
 
 #region 705. Design HashSet
