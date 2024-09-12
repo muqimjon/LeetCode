@@ -1852,6 +1852,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1752 Check if Array Is Sorted and Rotated
+    [Theory]
+    [InlineData(new int[] { 3, 4, 5, 1, 2 }, true)]
+    [InlineData(new int[] { 2, 1, 3, 4 }, false)]
+    [InlineData(new int[] { 1, 2, 3 }, true)]
+    public void TestCheckIfSortedAndRotated(int[] nums, bool expected)
+    {
+        // Act
+        var result = Solution.Check(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

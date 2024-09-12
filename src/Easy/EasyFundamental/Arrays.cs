@@ -2179,6 +2179,19 @@ public class Arrays
         return ops;
     }
     #endregion
+
+    #region 1752. Check if Array Is Sorted and Rotated
+    /// <summary>
+    /// Checks if the array was originally sorted in non-decreasing order and then rotated.
+    /// </summary>
+    /// <param name="nums">Array of integers.</param>
+    /// <returns>True if the array is sorted and rotated, otherwise false.</returns>
+    /// <link>https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/</link>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool Check(int[] nums)
+        => nums.Where((n, i) => n < nums[(i + nums.Length - 1) % nums.Length]).Count() <= 1;
+    #endregion
 }
 
 #region 705. Design HashSet
@@ -2186,7 +2199,7 @@ public class Arrays
 /// Implements a HashSet without using any built-in hash table libraries.
 /// </summary>
 /// <link>https://leetcode.com/problems/design-hashset/</link>
-/// <time>O(n) for add, remove, and contains operations.</time>
+/// <time>O(n)</time>
 /// <space>O(n)</space>
 public class MyHashSet
 {
@@ -2211,4 +2224,4 @@ public class MyHashSet
     public bool Contains(int key)
         => elements.Contains(key);
 }
-#endregion
+#endregion  
