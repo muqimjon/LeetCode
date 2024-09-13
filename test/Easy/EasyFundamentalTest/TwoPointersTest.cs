@@ -81,4 +81,19 @@ public class TwoPointersTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1332 Remove Palindromic Subsequences
+    [Theory]
+    [InlineData("ababa", 1)]
+    [InlineData("abb", 2)]
+    [InlineData("baabb", 2)]
+    public void TestRemovePalindromeSub(string s, int expected)
+    {
+        // Act
+        var result = Solution.RemovePalindromeSub(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

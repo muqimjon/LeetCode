@@ -110,4 +110,18 @@ public class TwoPointers
         return i == name.Length;
     }
     #endregion
+
+    #region 1332. Remove Palindromic Subsequences
+    /// <summary>
+    /// Removes the palindromic subsequences to make the string empty in minimum steps.
+    /// </summary>
+    /// <param name="s">Input string consisting of 'a' and 'b'.</param>
+    /// <returns>The minimum number of steps to make the string empty.</returns>
+    /// <remarks>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    /// </remarks>
+    public int RemovePalindromeSub(string s)
+        => s.Equals(string.Concat(s.Reverse())) ? 1 : 2;
+    #endregion
 }
