@@ -574,4 +574,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 326 Power of Three
+    [Theory]
+    [InlineData(27, true)]
+    [InlineData(0, false)]
+    [InlineData(-1, false)]
+    public void TestIsPowerOfThree(int n, bool expected)
+    {
+        // Act
+        var result = Solution.IsPowerOfThree(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

@@ -634,4 +634,18 @@ public class Maths
     public bool DivisorGame(int n)
         => n % 2 == 0;
     #endregion
+
+    #region 326. Power of Three
+    /// <summary>
+    /// Determines if a given integer is a power of three.
+    /// </summary>
+    /// <param name="n">The integer to check.</param>
+    /// <returns>True if the number is a power of three, otherwise false.</returns>
+    /// <remarks>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    /// </remarks>
+    public bool IsPowerOfThree(int n)
+        => n > 0 && (1162261467 % n).Equals(0);
+    #endregion
 }
