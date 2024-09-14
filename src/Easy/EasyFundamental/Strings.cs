@@ -905,4 +905,18 @@ public class Strings
             .Select(int.Parse)
             .Aggregate((a, b) => a < b ? b : int.MaxValue) != int.MaxValue;
     #endregion
+
+    #region 2710. Remove Trailing Zeros From a String
+    /// <summary>
+    /// Removes trailing zeros from a given string representation of a positive integer.
+    /// </summary>
+    /// <param name="num">The string representation of the integer.</param>
+    /// <returns>The string without trailing zeros.</returns>
+    /// <remarks>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    /// </remarks>
+    public string RemoveTrailingZeros(string num)
+        => num.TrimEnd('0');
+    #endregion
 }

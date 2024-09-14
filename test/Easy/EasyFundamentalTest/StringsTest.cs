@@ -745,4 +745,18 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2710 Remove Trailing Zeros From a String
+    [Theory]
+    [InlineData("51230100", "512301")]
+    [InlineData("123", "123")]
+    public void TestRemoveTrailingZeros(string num, string expected)
+    {
+        // Act
+        var result = Solution.RemoveTrailingZeros(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
