@@ -919,4 +919,23 @@ public class Strings
     public string RemoveTrailingZeros(string num)
         => num.TrimEnd('0');
     #endregion
+
+    #region 2027. Minimum Moves to Convert String
+    /// <summary>
+    /// Calculates the minimum number of moves required to convert all 'X' characters in the string 's' to 'O'.
+    /// </summary>
+    /// <param name="s">The input string containing 'X' and 'O' characters.</param>
+    /// <returns>The minimum number of moves required.</returns>
+    /// <remarks>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    /// </remarks>
+    public int MinimumMoves(string s)
+    {
+        int moves = 0;
+        for (int i = 0; i < s.Length; i += s[i] == 'X' ? 3 : 1)
+            if (s[i] == 'X') moves++;
+        return moves;
+    }
+    #endregion
 }

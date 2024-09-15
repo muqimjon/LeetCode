@@ -34,8 +34,8 @@ public class StringsTest
     [InlineData(new[] { "apple", "apricot", "apology" }, "ap")]
     [InlineData(new[] { "hello", "hell", "helicopter" }, "hel")]
     [InlineData(new[] { "test" }, "test")]
-    [InlineData(new[] { "a" }, "a")] // Failed
-    [InlineData(new[] { "ab", "a" }, "a")] // Failed
+    [InlineData(new[] { "a" }, "a")] //FAILED
+    [InlineData(new[] { "ab", "a" }, "a")] //FAILED
     public void LongestCommonPrefix_ShouldReturnCorrectResult(string[] strs, string expected)
     {
         // Act
@@ -754,6 +754,22 @@ public class StringsTest
     {
         // Act
         var result = Solution.RemoveTrailingZeros(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region Minimum Moves to Convert String
+    [Theory]
+    [InlineData("XXX", 1)]
+    [InlineData("XXOX", 2)]
+    [InlineData("OOOO", 0)]
+    [InlineData("OXOX", 1)] //FAILED
+    public void TestMinimumMoves(string s, int expected)
+    {
+        // Act
+        var result = Solution.MinimumMoves(s);
 
         // Assert
         Assert.Equal(expected, result);
