@@ -96,4 +96,18 @@ public class TwoPointersTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Is Subsequence
+    [Theory]
+    [InlineData("abc", "ahbgdc", true)]
+    [InlineData("axc", "ahbgdc", false)]
+    public void TestIsSubsequence(string s, string t, bool expected)
+    {
+        // Act
+        var result = Solution.IsSubsequence(s, t);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

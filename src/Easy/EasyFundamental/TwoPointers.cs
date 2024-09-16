@@ -124,4 +124,25 @@ public class TwoPointers
     public int RemovePalindromeSub(string s)
         => s.Equals(string.Concat(s.Reverse())) ? 1 : 2;
     #endregion
+
+    #region 392. Is Subsequence
+    /// <summary>
+    /// Determines if string 's' is a subsequence of string 't'.
+    /// </summary>
+    /// <param name="s">The string to check if it is a subsequence.</param>
+    /// <param name="t">The string in which to check for the subsequence.</param>
+    /// <returns>True if 's' is a subsequence of 't', otherwise false.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool IsSubsequence(string s, string t)
+    {
+        int i = 0;
+
+        foreach (var c in t)
+            if (i < s.Length && s[i] == c)
+                i++;
+
+        return i.Equals(s.Length);
+    }
+    #endregion
 }
