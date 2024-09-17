@@ -2192,6 +2192,27 @@ public class Arrays
     public bool Check(int[] nums)
         => nums.Where((n, i) => n < nums[(i + nums.Length - 1) % nums.Length]).Count() <= 1;
     #endregion
+
+    #region 3074. Apple Redistribution into Boxes
+    /// <summary>
+    /// Calculates the minimum number of boxes required to redistribute the apples.
+    /// </summary>
+    /// <param name="apple">Array representing the number of apples in each pack.</param>
+    /// <param name="capacity">Array representing the capacity of each box.</param>
+    /// <returns>Minimum number of boxes required to redistribute all the apples.</returns>
+    /// <remarks>
+    /// <time>O(m log m)</time>
+    /// <space>O(1)</space>
+    /// </remarks>
+    public int MinimumBoxes(int[] apple, int[] capacity)
+    {
+        int totalApples = apple.Sum();
+
+        return capacity.OrderByDescending(c => c)
+            .TakeWhile(c => (totalApples -= c) > 0)
+            .Count() + 1;
+    }
+    #endregion
 }
 
 #region 705. Design HashSet

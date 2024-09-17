@@ -1867,6 +1867,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Apple Redistribution into Boxes
+    [Theory]
+    [InlineData(new int[] { 1, 3, 2 }, new int[] { 4, 3, 1, 5, 2 }, 2)]
+    [InlineData(new int[] { 5, 5, 5 }, new int[] { 2, 4, 2, 7 }, 4)]
+    public void TestAppleRedistribution(int[] apple, int[] capacity, int expected)
+    {
+        // Act
+        var result = Solution.MinimumBoxes(apple, capacity);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<
