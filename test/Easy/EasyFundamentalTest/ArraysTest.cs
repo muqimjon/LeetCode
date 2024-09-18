@@ -1881,6 +1881,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region Minimize Distance to Target Element
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4, 5 }, 5, 3, 1)]
+    [InlineData(new int[] { 1 }, 1, 0, 0)]
+    [InlineData(new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 1, 0, 0)]
+    public void TestMinimizeDistanceToTarget(int[] nums, int target, int start, int expected)
+    {
+        // Act
+        var result = Solution.GetMinDistance(nums, target, start);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832. Flipping an Image <<

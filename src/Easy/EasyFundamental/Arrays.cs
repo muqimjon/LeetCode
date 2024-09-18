@@ -2213,6 +2213,22 @@ public class Arrays
             .Count() + 1;
     }
     #endregion
+
+    #region GetMinDistance
+    /// <summary>
+    /// Finds the minimum distance from the start index to any index where the target value occurs in the array.
+    /// </summary>
+    /// <param name="nums">The array of integers.</param>
+    /// <param name="target">The target value to find.</param>
+    /// <param name="start">The start index.</param>
+    /// <returns>The minimum absolute distance to the target.</returns>
+    /// <remarks>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    /// </remarks>
+    public int GetMinDistance(int[] nums, int target, int start)
+        => nums.Select((num, index) => num == target ? Math.Abs(index - start) : int.MaxValue).Min();
+    #endregion
 }
 
 #region 705. Design HashSet
