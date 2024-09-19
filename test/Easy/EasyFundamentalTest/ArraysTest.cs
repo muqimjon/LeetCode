@@ -1868,7 +1868,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region Apple Redistribution into Boxes
+    #region 3074 Apple Redistribution into Boxes
     [Theory]
     [InlineData(new int[] { 1, 3, 2 }, new int[] { 4, 3, 1, 5, 2 }, 2)]
     [InlineData(new int[] { 5, 5, 5 }, new int[] { 2, 4, 2, 7 }, 4)]
@@ -1882,7 +1882,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region Minimize Distance to Target Element
+    #region 1848 Minimum Distance to the Target Element
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4, 5 }, 5, 3, 1)]
     [InlineData(new int[] { 1 }, 1, 0, 0)]
@@ -1891,6 +1891,21 @@ public class ArraysTest
     {
         // Act
         var result = Solution.GetMinDistance(nums, target, start);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 1588 Sum of All Odd Length Subarrays
+    [Theory]
+    [InlineData(new int[] { 1, 4, 2, 5, 3 }, 58)]
+    [InlineData(new int[] { 1, 2 }, 3)]
+    [InlineData(new int[] { 10, 11, 12 }, 66)]
+    public void TestSumOfAllOddLengthSubarrays(int[] arr, int expected)
+    {
+        // Act
+        var result = Solution.SumOddLengthSubarrays(arr);
 
         // Assert
         Assert.Equal(expected, result);

@@ -4,7 +4,7 @@ public class Arrays
 {
     #region 1.TwoSum
     /// <summary>
-    /// 1. Two Sum
+    /// 1 Two Sum
     /// </summary>
     /// <param name="nums"></param>
     /// <param name="target"></param>
@@ -25,7 +25,7 @@ public class Arrays
 
     #region 26.RemoveDuplicates
     /// <summary>
-    /// 26. Remove Duplicates from Sorted Array
+    /// 26 Remove Duplicates from Sorted Array
     /// </summary>
     /// <param name="nums"></param>
     /// <link>https://leetcode.com/problems/remove-duplicates-from-sorted-array/</link>
@@ -40,9 +40,9 @@ public class Arrays
     }
     #endregion
 
-    #region 27. Remove Element
+    #region 27 Remove Element
     /// <summary>
-    /// 27. Remove Element
+    /// 27 Remove Element
     /// </summary>
     /// <param name="nums">Integer array</param>
     /// <param name="val">Value to remove</param>
@@ -69,9 +69,9 @@ public class Arrays
     }
     #endregion
 
-    #region 349. Intersection of Two Arrays
+    #region 349 Intersection of Two Arrays
     /// <summary>
-    /// 349. Intersection of Two Arrays
+    /// 349 Intersection of Two Arrays
     /// </summary>
     /// <param name="nums1"></param>
     /// <param name="nums2"></param>
@@ -84,7 +84,7 @@ public class Arrays
                 .ToArray();
     #endregion
 
-    #region 88. Merge Sorted Array
+    #region 88 Merge Sorted Array
     /// <summary>
     /// Merges two sorted arrays in non-decreasing order.
     /// </summary>
@@ -107,7 +107,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1207. Unique Number of Occurrences
+    #region 1207 Unique Number of Occurrences
     /// <summary>
     /// Checks if the number of occurrences of each value in the array is unique.
     /// </summary>
@@ -138,7 +138,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1672. Richest Customer Wealth
+    #region 1672 Richest Customer Wealth
     /// <summary>
     /// Calculates the wealth of the richest customer based on the given grid of bank accounts.
     /// </summary>
@@ -151,7 +151,7 @@ public class Arrays
         => accounts.Select(e => e.Sum()).Max();
     #endregion
 
-    #region 645. Set Mismatch
+    #region 645 Set Mismatch
     /// <summary>
     /// Finds the duplicate and missing numbers in the given array after an error.
     /// </summary>
@@ -184,7 +184,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2133. Check if Every Row and Column Consist of the Same Element
+    #region 2133 Check if Every Row and Column Consist of the Same Element
     /// <summary>
     /// Checks if the given matrix is valid, where every row and column contains all integers from 1 to n.
     /// </summary>
@@ -209,7 +209,7 @@ public class Arrays
     }
     #endregion
 
-    #region 35. Search Insert Position
+    #region 35 Search Insert Position
     /// <summary>
     /// Given a sorted array of distinct integers and a target value, return the index if the target is found.
     /// </summary>
@@ -235,7 +235,7 @@ public class Arrays
     }
     #endregion
 
-    #region 455. Assign Cookies
+    #region 455 Assign Cookies
     /// <summary>
     /// Maximize content children with cookies and greed factors.
     /// </summary>
@@ -268,7 +268,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1979. Find Greatest Common Divisor of Array
+    #region 1979 Find Greatest Common Divisor of Array
     /// <summary>
     /// Find the greatest common divisor of the smallest and largest numbers in the array.
     /// </summary>
@@ -282,7 +282,7 @@ public class Arrays
     private int CalculateGCD(int a, int b) => b == 0 ? Math.Abs(a) : CalculateGCD(b, a % b);
     #endregion
 
-    #region 2855. Minimum Right Shifts to Sort the Array
+    #region 2855 Minimum Right Shifts to Sort the Array
     /// <summary>
     /// Returns the minimum number of r shifts required to sort the array, or -1 if it's not possible.
     /// </summary>
@@ -311,7 +311,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1275. Find Winner on a Tic Tac Toe Game
+    #region 1275 Find Winner on a Tic Tac Toe Game
     /// <summary>
     /// Determines the winner of a Tic Tac Toe game based on the moves made.
     /// </summary>
@@ -350,7 +350,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2917. Find the K-or of an Array
+    #region 2917 Find the K-or of an Array
     /// <summary>
     /// Returns the K-or of an integer array.
     /// </summary>
@@ -378,7 +378,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1491. Average Salary Excluding the Minimum and Maximum Salary
+    #region 1491 Average Salary Excluding the Minimum and Maximum Salary
     /// <summary>
     /// Calculates the average salary excluding the minimum and maximum salaries.
     /// </summary>
@@ -398,7 +398,7 @@ public class Arrays
     }
     #endregion
 
-    #region 169. Majority Element
+    #region 169 Majority Element
     /// <summary>
     /// Finds the majority element in an integer array.
     /// </summary>
@@ -414,7 +414,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2108. Find First Palindromic String in the Array
+    #region 2108 Find First Palindromic String in the Array
     /// <summary>
     /// Returns the first palindromic string in the array.
     /// </summary>
@@ -436,7 +436,7 @@ public class Arrays
     }
     #endregion
 
-    #region 118. Pascal's Triangle
+    #region 118 Pascal's Triangle
     /// <summary>
     /// Generates Pascal's triangle up to a specified number of rows.
     /// </summary>
@@ -462,7 +462,7 @@ public class Arrays
     }
     #endregion
 
-    #region 706. Binary Search
+    #region 706 Binary Search
     /// <summary>
     /// Performs binary search on a sorted array to find the target element.
     /// </summary>
@@ -493,7 +493,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1646. Get Maximum in Generated Array
+    #region 1646 Get Maximum in Generated Array
     /// <summary>
     /// Returns the maximum integer in the generated array based on specific rules.
     /// </summary>
@@ -520,7 +520,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2535. Difference Between Element Sum and Digit Sum of an Array
+    #region 2535 Difference Between Element Sum and Digit Sum of an Array
     /// <summary>
     /// Calculates the absolute difference between the sum of all elements in an array and the sum of their digits.
     /// </summary>
@@ -533,7 +533,7 @@ public class Arrays
         => Math.Abs(nums.Sum() - nums.Sum(num => num.ToString().Select(c => c - '0').Sum()));
     #endregion
 
-    #region 2788. Split Strings by Separator
+    #region 2788 Split Strings by Separator
     /// <summary>
     /// Splits a list of strings into individual words by a specified separator character, removing any empty entries.
     /// </summary>
@@ -547,7 +547,7 @@ public class Arrays
         => words.SelectMany(word => word.Split(separator, StringSplitOptions.RemoveEmptyEntries)).ToList();
     #endregion
 
-    #region 231. Power of Two
+    #region 231 Power of Two
     /// <summary>
     /// Determines whether the given integer is a power of two.
     /// </summary>
@@ -560,7 +560,7 @@ public class Arrays
         => n > 0 && (n & (n - 1)) == 0;
     #endregion
 
-    #region 268. Missing Number
+    #region 268 Missing Number
     /// <summary>
     /// Finds the missing number in a sequence of integers from 0 to n, where each integer appears exactly once, except for one missing number.
     /// </summary>
@@ -573,7 +573,7 @@ public class Arrays
         => Enumerable.Range(0, nums.Length + 1).Except(nums).First();
     #endregion
 
-    #region 1502. Can Make Arithmetic Progression From Sequence
+    #region 1502 Can Make Arithmetic Progression From Sequence
     /// <summary>
     /// Determines whether the given array can be rearranged to form an arithmetic progression.
     /// </summary>
@@ -595,7 +595,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2248. Intersection of Multiple Arrays
+    #region 2248 Intersection of Multiple Arrays
     /// <summary>
     /// Finds the intersection of multiple arrays.
     /// </summary>
@@ -615,7 +615,7 @@ public class Arrays
     }
     #endregion
 
-    #region 977. Squares of a Sorted Array
+    #region 977 Squares of a Sorted Array
     /// <summary>
     /// Calculates the squares of the numbers in the input array and returns them in sorted order.
     /// </summary>
@@ -641,7 +641,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1929. Concatenation of Array
+    #region 1929 Concatenation of Array
     /// <summary>
     /// Concatenates the given array with itself.
     /// </summary>
@@ -654,13 +654,13 @@ public class Arrays
         => [.. nums, .. nums];
     #endregion
 
-    #region 744. Find Smallest Letter Greater Than Target
+    #region 744 Find Smallest Letter Greater Than Target
     /// <summary>
     /// Finds the smallest letter greater than the target letter in the given array of letters.
     /// </summary>
     /// <param name="letters"> The array of letters.</param>
-    /// <param name="target"> The target letter. </param>
-    /// <returns> The smallest letter greater than the target letter in the given array of letters. </returns>
+    /// <param name="target"> The target letter </param>
+    /// <returns> The smallest letter greater than the target letter in the given array of letters </returns>
     /// <link>https://leetcode.com/problems/find-smallest-letter-greater-than-target/</link>
     /// <time>Time Complexity: O(n)</time>
     /// <space>Space Complexity: O(1)</space>
@@ -674,7 +674,7 @@ public class Arrays
     }
     #endregion
 
-    #region 3000. Minimum Area Rectangle
+    #region 3000 Minimum Area Rectangle
     /// <summary>
     /// Calculates the area of the rectangle with the longest diagonal.
     /// </summary>
@@ -701,7 +701,7 @@ public class Arrays
     }
     #endregion
 
-    #region 3024. Type of Triangle
+    #region 3024 Type of Triangle
     /// <summary>
     /// Determines the type of triangle based on the given side lengths.
     /// </summary>
@@ -720,7 +720,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1816. Truncate Sentence
+    #region 1816 Truncate Sentence
     /// <summary>
     /// Truncates the given sentence to contain only the first k words.
     /// </summary>
@@ -734,7 +734,7 @@ public class Arrays
         => string.Join(' ', s.Split(' ').Take(k));
     #endregion
 
-    #region 1636. Sort Array by Increasing Frequency
+    #region 1636 Sort Array by Increasing Frequency
     /// <summary>
     /// Sorts the array in ascending order based on the frequency of the numbers in the array.
     /// </summary>
@@ -760,7 +760,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1480. Running Sum of 1d Array
+    #region 1480 Running Sum of 1d Array
     /// <summary>
     /// Calculates the running sum of an array.
     /// </summary>
@@ -773,7 +773,7 @@ public class Arrays
         => nums.Select((x, i) => nums.Take(i + 1).Sum()).ToArray();
     #endregion
 
-    #region 1662. Check If Two String Arrays are Equivalent
+    #region 1662 Check If Two String Arrays are Equivalent
     /// <summary>
     /// Checks if two string arrays are equivalent.
     /// </summary>
@@ -787,7 +787,7 @@ public class Arrays
         => string.Concat(word1) == string.Concat(word2);
     #endregion
 
-    #region 1460. Make Two Arrays Equal
+    #region 1460 Make Two Arrays Equal
     /// <summary>
     /// Determines if two arrays are equal by comparing their elements in the same order.
     /// </summary>
@@ -801,7 +801,7 @@ public class Arrays
         => target.OrderBy(x => x).SequenceEqual(arr.OrderBy(x => x));
     #endregion
 
-    #region 1437. Check If All 1's Are at Least Length K Places Away
+    #region 1437 Check If All 1's Are at Least Length K Places Away
     /// <summary>
     /// Determines if all 1's are at least k places away from each other.
     /// </summary>
@@ -826,7 +826,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1920. Build Array from Permutation
+    #region 1920 Build Array from Permutation
     /// <summary>
     /// Builds an array from its permutation.
     /// </summary>
@@ -839,7 +839,7 @@ public class Arrays
         => nums.Select(i => nums[i]).ToArray();
     #endregion
 
-    #region 1464. Maximum Product of Two Elements in an Array
+    #region 1464 Maximum Product of Two Elements in an Array
     /// <summary>
     /// Returns the maximum product of two integers in an array.
     /// </summary>
@@ -862,7 +862,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2678. Number of Senior Citizens
+    #region 2678 Number of Senior Citizens
     /// <summary>
     /// Returns the number of senior citizens in an array of strings.
     /// </summary>
@@ -875,7 +875,7 @@ public class Arrays
         => details.Count(d => int.Parse(d[11..13]) > 60);
     #endregion
 
-    #region 1337. The K Weakest Rows in a Matrix
+    #region 1337 The K Weakest Rows in a Matrix
     /// <summary>
     /// Returns the indices of the k weakest rows in a matrix.
     /// </summary>
@@ -893,7 +893,7 @@ public class Arrays
             .ToArray();
     #endregion
 
-    #region 205. Isomorphic Strings
+    #region 205 Isomorphic Strings
     /// <summary>
     /// Determines if two strings are isomorphic.
     /// </summary>
@@ -922,7 +922,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2255. Count Prefixes of a Given String
+    #region 2255 Count Prefixes of a Given String
     /// <summary>
     /// Returns the number of prefixes of a given string in an array of strings.
     /// </summary>
@@ -936,7 +936,7 @@ public class Arrays
         => words.Count(word => s.StartsWith(word));
     #endregion
 
-    #region 1550. Three Consecutive Odds
+    #region 1550 Three Consecutive Odds
     /// <summary>
     /// Determines if there are three consecutive odds in an array.
     /// </summary>
@@ -955,7 +955,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1436. Destination City
+    #region 1436 Destination City
     /// <summary>
     /// Returns the destination city of a list of paths.
     /// </summary>
@@ -983,7 +983,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1710. Maximum Units on a Truck
+    #region 1710 Maximum Units on a Truck
     /// <summary>
     /// Finds max units on truck (sort by units, greedy selection).
     /// </summary>
@@ -1012,7 +1012,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1893. Check if All the Integers in a Range Are Covered
+    #region 1893 Check if All the Integers in a Range Are Covered
     /// <summary>
     /// Checks if all the integers in a range are covered in an array of ranges.
     /// </summary>
@@ -1035,7 +1035,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1351. Count Negative Numbers in a Sorted Matrix
+    #region 1351 Count Negative Numbers in a Sorted Matrix
     /// <summary>
     /// Counts the number of negative numbers in a sorted matrix.
     /// </summary>
@@ -1061,7 +1061,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2706. Buy Two Chocolates
+    #region 2706 Buy Two Chocolates
     /// <summary>
     /// Calculates the leftover money after buying two chocolates with minimum prices.
     /// </summary>
@@ -1086,7 +1086,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2011. Final Value of Variable After Performing Operations
+    #region 2011 Final Value of Variable After Performing Operations
     /// <summary>
     /// Calculates final variable value after operations.
     /// </summary>
@@ -1099,7 +1099,7 @@ public class Arrays
         => operations.Sum(op => op.Contains('+') ? 1 : -1);
     #endregion
 
-    #region 2465. Number of Distinct Averages
+    #region 2465 Number of Distinct Averages
     /// <summary>
     /// Counts the number of distinct averages calculated from the input array of integers.
     /// </summary>
@@ -1121,7 +1121,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2974. Minimum Number Game
+    #region 2974 Minimum Number Game
     /// <summary>
     /// Rearranges array for odd indexes to exceed preceding evens.
     /// </summary>
@@ -1141,7 +1141,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2341. Maximum Number of Pairs in Array
+    #region 2341 Maximum Number of Pairs in Array
     /// <summary>
     /// Counts pairs and leftover integers in an array.
     /// </summary>
@@ -1170,7 +1170,7 @@ public class Arrays
     }
     #endregion
 
-    #region 941. Valid Mountain Array
+    #region 941 Valid Mountain Array
     /// <summary>
     /// Checks if the given array is a valid mountain array.
     /// </summary>
@@ -1197,7 +1197,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1408. String Matching in an Array
+    #region 1408 String Matching in an Array
     /// <summary>
     /// Finds substrings in an array of words that are substrings of other words.
     /// </summary>
@@ -1217,7 +1217,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2073. Time Needed to Buy Tickets
+    #region 2073 Time Needed to Buy Tickets
     /// <summary>
     /// Calculates the time needed for a person to buy tickets at a specific position in a line.
     /// </summary>
@@ -1238,7 +1238,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1512. Number of Good Pairs
+    #region 1512 Number of Good Pairs
     /// <summary>
     /// Calculates the number of good pairs in an array.
     /// </summary>
@@ -1259,7 +1259,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2824. Count Pairs Whose Sum is Less than Target
+    #region 2824 Count Pairs Whose Sum is Less than Target
     /// <summary>
     /// Counts pairs whose sum is less than the target in an array.
     /// </summary>
@@ -1273,7 +1273,7 @@ public class Arrays
         => nums.SelectMany((x, i) => nums.Skip(i + 1).Select(y => x + y < target ? 1 : 0)).Sum();
     #endregion
 
-    #region 2446. Determine if Two Events Have Conflict
+    #region 2446 Determine if Two Events Have Conflict
     /// <summary>
     /// Determines if there is a conflict between two events based on their start and end times.
     /// </summary>
@@ -1287,7 +1287,7 @@ public class Arrays
         => !(event1[1].CompareTo(event2[0]) < 0 || event2[1].CompareTo(event1[0]) < 0);
     #endregion
 
-    #region 2605. Form Smallest Number From Two Digit Arrays
+    #region 2605 Form Smallest Number From Two Digit Arrays
     /// <summary>
     /// Finds the smallest number that contains at least one digit from each array.
     /// </summary>
@@ -1301,7 +1301,7 @@ public class Arrays
         => nums1.Intersect(nums2).DefaultIfEmpty(Math.Min(nums1.Min(), nums2.Min()) * 10 + Math.Max(nums1.Min(), nums2.Min())).Min();
     #endregion
 
-    #region 2828. Check if a String Is an Acronym of Words
+    #region 2828 Check if a String Is an Acronym of Words
     /// <summary>
     /// Checks if a string is an acronym of words.
     /// </summary>
@@ -1315,7 +1315,7 @@ public class Arrays
         => string.Concat(words.Select(word => word[0])) == s;
     #endregion
 
-    #region 2643. Row With Maximum Ones
+    #region 2643 Row With Maximum Ones
     /// <summary>
     /// Finds the row with the maximum count of ones in a binary matrix.
     /// </summary>
@@ -1328,7 +1328,7 @@ public class Arrays
         => mat.Select((row, i) => new[] { i, row.Sum() }).MaxBy(a => a[1])!;
     #endregion
 
-    #region 2848. Points That Intersect With Cars
+    #region 2848 Points That Intersect With Cars
     /// <summary>
     /// Counts the number of integer points on the line covered by cars.
     /// </summary>
@@ -1341,7 +1341,7 @@ public class Arrays
         => nums.SelectMany(car => Enumerable.Range(car[0], car[1] - car[0] + 1)).Distinct().Count();
     #endregion
 
-    #region 628. Maximum Product of Three Numbers
+    #region 628 Maximum Product of Three Numbers
     /// <summary>
     /// Finds the maximum product of three numbers in an integer array.
     /// </summary>
@@ -1357,7 +1357,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2057. Smallest Index With Equal Value
+    #region 2057 Smallest Index With Equal Value
     /// <summary>
     /// Finds the smallest index in an array where i mod 10 equals nums[i].
     /// </summary>
@@ -1374,7 +1374,7 @@ public class Arrays
            .First();
     #endregion
 
-    #region 1089. Duplicate Zeros
+    #region 1089 Duplicate Zeros
     /// <summary>
     /// Duplicates each occurrence of zero in the array, shifting the remaining elements to the right in place.
     /// </summary>
@@ -1394,7 +1394,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2549. Count Distinct Numbers on Board
+    #region 2549 Count Distinct Numbers on Board
     /// <summary>
     /// Returns the number of distinct integers present on the board after a large number of days.
     /// </summary>
@@ -1406,7 +1406,7 @@ public class Arrays
     public int DistinctIntegers(int n) => n == 1 ? 1 : n - 1;
     #endregion
 
-    #region 1365. How Many Numbers Are Smaller Than the Current Number
+    #region 1365 How Many Numbers Are Smaller Than the Current Number
     /// <summary>
     /// Finds how many numbers in the array are smaller than the current number for each element in the array.
     /// </summary>
@@ -1419,7 +1419,7 @@ public class Arrays
         => nums.Select(i => nums.Count(c => c < i)).ToArray();
     #endregion
 
-    #region 1913. Maximum Product Difference Between Two Pairs
+    #region 1913 Maximum Product Difference Between Two Pairs
     /// <summary>
     /// Calculates the maximum product difference between two pairs of elements in an integer array.
     /// </summary>
@@ -1432,7 +1432,7 @@ public class Arrays
         => nums.OrderBy(n => n).ToArray() switch { var sorted => sorted[^1] * sorted[^2] - sorted[0] * sorted[1] };
     #endregion
 
-    #region 961. N-Repeated Element in Size 2N Array
+    #region 961 N-Repeated Element in Size 2N Array
     /// <summary>
     /// Finds the element in an array that is repeated exactly n times.
     /// </summary>
@@ -1445,7 +1445,7 @@ public class Arrays
         => nums.GroupBy(x => x).First(g => g.Count() > 1).Key;
     #endregion
 
-    #region 3005. Count Elements With Maximum Frequency
+    #region 3005 Count Elements With Maximum Frequency
     /// <summary>
     /// Counts elements with the maximum frequency in an array.
     /// </summary>
@@ -1463,7 +1463,7 @@ public class Arrays
                         .Max());
     #endregion
 
-    #region 2806. Account Balance After Rounded Purchase
+    #region 2806 Account Balance After Rounded Purchase
     /// <summary>
     /// Calculates the account balance after rounding the purchase amount to the nearest multiple of 10 and subtracting it from the initial balance of 100.
     /// </summary>
@@ -1476,7 +1476,7 @@ public class Arrays
         => 100 - ((purchaseAmount + 5) / 10) * 10;
     #endregion
 
-    #region 905. Sort Array By Parity
+    #region 905 Sort Array By Parity
     /// <summary>
     /// Sorts an array by moving all even integers to the beginning followed by all odd integers.
     /// </summary>
@@ -1489,7 +1489,7 @@ public class Arrays
         => nums.OrderBy(x => x % 2).ToArray();
     #endregion
 
-    #region 2778. Sum of Squares of Special Elements
+    #region 2778 Sum of Squares of Special Elements
     /// <summary>
     /// Returns the sum of the squares of all special elements in the given array.
     /// </summary>
@@ -1502,7 +1502,7 @@ public class Arrays
         => Enumerable.Range(1, nums.Length).Where(i => nums.Length % i == 0).Sum(i => nums[i - 1] * nums[i - 1]);
     #endregion
 
-    #region 2148. Count Elements With Strictly Smaller and Greater Elements
+    #region 2148 Count Elements With Strictly Smaller and Greater Elements
     /// <summary>
     /// Counts elements with both a strictly smaller and a strictly greater element.
     /// </summary>
@@ -1518,7 +1518,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1720. Decode XORed Array
+    #region 1720 Decode XORed Array
     /// <summary>
     /// Decodes the XORed array to find the original array.
     /// </summary>
@@ -1532,7 +1532,7 @@ public class Arrays
         => Enumerable.Range(0, encoded.Length + 1).Select(i => i == 0 ? first : first ^= encoded[i - 1]).ToArray();
     #endregion
 
-    #region 2815. Max Pair Sum in an Array
+    #region 2815 Max Pair Sum in an Array
     /// <summary>
     /// Returns the maximum sum of pairs of numbers in the array where the largest digit in each pair is the same.
     /// </summary>
@@ -1547,7 +1547,7 @@ public class Arrays
                .Max();
     #endregion
 
-    #region 1304. Find N Unique Integers Sum up to Zero
+    #region 1304 Find N Unique Integers Sum up to Zero
     /// <summary>
     /// Returns an array containing n unique integers that sum up to zero.
     /// </summary>
@@ -1560,7 +1560,7 @@ public class Arrays
         => [.. Enumerable.Range(1, n - 1), -(n * (n - 1) / 2)];
     #endregion
 
-    #region 1587. Count the Number of Vowel Strings in Range
+    #region 1587 Count the Number of Vowel Strings in Range
     /// <summary>
     /// Returns the number of vowel strings in the specified range of words.
     /// </summary>
@@ -1576,7 +1576,7 @@ public class Arrays
                 .Count(word => "aeiou".Contains(word[0]) && "aeiou".Contains(word[^1]));
     #endregion
 
-    #region 3069. Distribute Elements Into Two Arrays I
+    #region 3069 Distribute Elements Into Two Arrays I
     /// <summary>
     /// Distributes elements of nums into two arrays arr1 and arr2 and returns the concatenated result.
     /// </summary>
@@ -1596,7 +1596,7 @@ public class Arrays
     }
     #endregion
 
-    #region 575. Distribute Candies
+    #region 575 Distribute Candies
     /// <summary>
     /// Returns the maximum number of different types of candies Alice can eat if she only eats n / 2 of them.
     /// </summary>
@@ -1609,7 +1609,7 @@ public class Arrays
         => Math.Min(candyType.Length / 2, candyType.Distinct().Count());
     #endregion
 
-    #region 2185. Counting Words With a Given Prefix
+    #region 2185 Counting Words With a Given Prefix
     /// <summary>
     /// Counts the number of strings in the array that contain the specified prefix.
     /// </summary>
@@ -1639,7 +1639,7 @@ public class Arrays
 
     #region Find Closest Number to Zero
     /// <summary>
-    /// Finds the number in the array that is closest to zero. If there are multiple answers, returns the largest number.
+    /// Finds the number in the array that is closest to zero If there are multiple answers, returns the largest number.
     /// </summary>
     /// <param name="nums">The integer array to search.</param>
     /// <returns>The number closest to zero in the array.</returns>
@@ -1702,7 +1702,7 @@ public class Arrays
         => heights.OrderBy(h => h).Where((h, i) => h != heights[i]).Count();
     #endregion
 
-    #region 561. Array Partition
+    #region 561 Array Partition
     /// <summary>
     /// Returns the maximized sum of min(ai, bi) for all pairs.
     /// </summary>
@@ -1715,7 +1715,7 @@ public class Arrays
         => nums.OrderBy(x => x).Where((_, i) => i % 2 == 0).Sum();
     #endregion
 
-    #region 1385. Find the Distance Value Between Two Arrays
+    #region 1385 Find the Distance Value Between Two Arrays
     /// <summary>
     /// Returns the distance value between two arrays.
     /// </summary>
@@ -1730,7 +1730,7 @@ public class Arrays
         => arr1.Count(a => arr2.All(b => Math.Abs(a - b) > d));
     #endregion
 
-    #region 3065. Minimum Operations to Exceed Threshold Value I
+    #region 3065 Minimum Operations to Exceed Threshold Value I
     /// <summary>
     /// Returns the minimum number of operations needed so that all elements are greater than or equal to k.
     /// </summary>
@@ -1744,7 +1744,7 @@ public class Arrays
         => nums.Count(x => x < k);
     #endregion
 
-    #region 1748. Sum of Unique Elements
+    #region 1748 Sum of Unique Elements
     /// <summary>
     /// Returns the sum of all unique elements in the array.
     /// </summary>
@@ -1759,7 +1759,7 @@ public class Arrays
                .Sum(g => g.Key);
     #endregion
 
-    #region 1346. Check If N and Its Double Exist
+    #region 1346 Check If N and Its Double Exist
     /// <summary>
     /// Checks if there exist two indices i and j such that arr[i] == 2 * arr[j].
     /// </summary>
@@ -1772,7 +1772,7 @@ public class Arrays
         => arr.ToHashSet().Any(x => x != 0 && arr.Contains(2 * x) || x == 0 && arr.Count(v => v == 0) > 1);
     #endregion
 
-    #region 1732. Find the Highest Altitude
+    #region 1732 Find the Highest Altitude
     /// <summary>
     /// Finds the highest altitude achieved given the altitude gains between points.
     /// </summary>
@@ -1786,7 +1786,7 @@ public class Arrays
             => new { max = Math.Max(acc.max, acc.current + g), current = acc.current + g }).max;
     #endregion
 
-    #region 832. Flipping an Image
+    #region 832 Flipping an Image
     /// <summary>
     /// Flips the image horizontally, then inverts it, and returns the resulting image.
     /// </summary>
@@ -1799,7 +1799,7 @@ public class Arrays
         => image.Select(row => row.Reverse().Select(b => b ^ 1).ToArray()).ToArray();
     #endregion
 
-    #region 1684. Count the Number of Consistent Strings
+    #region 1684 Count the Number of Consistent Strings
     /// <summary>
     /// Returns the count of strings from 'words' that only contain characters from 'allowed'.
     /// </summary>
@@ -1816,7 +1816,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2798. Number of Employees Who Met the Target
+    #region 2798 Number of Employees Who Met the Target
     /// <summary>
     /// Counts the number of employees who worked at least `target` hours.
     /// </summary>
@@ -1830,7 +1830,7 @@ public class Arrays
         => hours.Count(h => h >= target);
     #endregion
 
-    #region 2335. Minimum Amount of Time to Fill Cups
+    #region 2335 Minimum Amount of Time to Fill Cups
     /// <summary>
     /// Calculates the minimum seconds to fill all cold, warm, and hot water cups.
     /// </summary>
@@ -1843,7 +1843,7 @@ public class Arrays
         => Math.Max(amount.Max(), (amount.Sum() + 1) / 2);
     #endregion
 
-    #region 2154. Keep Multiplying Found Values by Two
+    #region 2154 Keep Multiplying Found Values by Two
     /// <summary>
     /// Multiplies original by two if it is found in nums, and repeats until original is no longer in nums.
     /// </summary>
@@ -1862,7 +1862,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1413. Minimum Value to Get Positive Step by Step Sum
+    #region 1413 Minimum Value to Get Positive Step by Step Sum
     /// <summary>
     /// Computes the minimum start value to ensure the step-by-step sum of `nums` never falls below 1.
     /// </summary>
@@ -1882,7 +1882,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2956. Find Common Elements Between Two Arrays
+    #region 2956 Find Common Elements Between Two Arrays
     /// <summary>
     /// Finds the number of elements in nums1 that exist in nums2, and vice versa.
     /// </summary>
@@ -1896,7 +1896,7 @@ public class Arrays
         => new int[] { nums1.Count(nums2.Contains), nums2.Count(nums1.Contains) };
     #endregion
 
-    #region 1725. Number Of Rectangles That Can Form The Largest Square
+    #region 1725 Number Of Rectangles That Can Form The Largest Square
     /// <summary>
     /// Counts the number of rectangles that can form the largest possible square.
     /// </summary>
@@ -1912,7 +1912,7 @@ public class Arrays
     }
     #endregion
 
-    #region 914. X of a Kind in a Deck of Cards
+    #region 914 X of a Kind in a Deck of Cards
     /// <summary>
     /// Checks if the deck can be partitioned into groups of size > 1 with identical cards.
     /// </summary>
@@ -1931,7 +1931,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1629. Slowest Key
+    #region 1629 Slowest Key
     /// <summary>
     /// Finds the key with the longest duration pressed.
     /// </summary>
@@ -1949,7 +1949,7 @@ public class Arrays
             .First().Key;
     #endregion
 
-    #region 3079. Find the Sum of Encrypted Integers
+    #region 3079 Find the Sum of Encrypted Integers
     /// <summary>
     /// Calculates the sum of integers after encrypting each integer in the array.
     /// </summary>
@@ -1962,7 +1962,7 @@ public class Arrays
         => nums.Sum(n => int.Parse(new string(n.ToString().Max(), n.ToString().Length)));
     #endregion
 
-    #region 1450. Number of Students Doing Homework at a Given Time
+    #region 1450 Number of Students Doing Homework at a Given Time
     /// <summary>
     /// Counts the number of students who are doing their homework at a specific query time.
     /// </summary>
@@ -1977,7 +1977,7 @@ public class Arrays
         => startTime.Where((t, i) => t <= queryTime && endTime[i] >= queryTime).Count();
     #endregion
 
-    #region 1773. Count Items Matching a Rule
+    #region 1773 Count Items Matching a Rule
     /// <summary>
     /// Counts the number of items that match a given rule based on the ruleKey and ruleValue.
     /// </summary>
@@ -1999,7 +1999,7 @@ public class Arrays
             }] == ruleValue);
     #endregion
 
-    #region 2733. Neither Minimum nor Maximum
+    #region 2733 Neither Minimum nor Maximum
     /// <summary>
     /// Finds and returns any number from the array that is neither the minimum nor the maximum value.
     /// </summary>
@@ -2012,7 +2012,7 @@ public class Arrays
         => nums.Length > 2 ? nums.OrderBy(n => n).ElementAt(1) : -1;
     #endregion
 
-    #region 747. Largest Number At Least Twice of Others
+    #region 747 Largest Number At Least Twice of Others
     /// <summary>
     /// Determines whether the largest element in the array is at least twice as much as every other number in the array.
     /// </summary>
@@ -2029,7 +2029,7 @@ public class Arrays
     }
     #endregion
 
-    #region 2460. Apply Operations to an Array
+    #region 2460 Apply Operations to an Array
     /// <summary>
     /// Doubles matching elements, zeroes the next, then moves all zeros to the end
     /// </summary>
@@ -2047,7 +2047,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1217. Minimum Cost to Move Chips to The Same Position
+    #region 1217 Minimum Cost to Move Chips to The Same Position
     /// <summary>
     /// Calculates the minimum cost to move all chips to the same position
     /// </summary>
@@ -2060,7 +2060,7 @@ public class Arrays
         => Math.Min(position.Count(p => p % 2 == 0), position.Count(p => p % 2 != 0));
     #endregion
 
-    #region 3158. Find the XOR of Numbers Which Appear Twice
+    #region 3158 Find the XOR of Numbers Which Appear Twice
     /// <summary>
     /// Returns the XOR of all numbers that appear exactly twice in the array.
     /// </summary>
@@ -2076,7 +2076,7 @@ public class Arrays
                .Aggregate(0, (acc, x) => acc ^ x);
     #endregion
 
-    #region 2089. Find Target Indices After Sorting Array
+    #region 2089 Find Target Indices After Sorting Array
     /// <summary>
     /// Finds the indices of the target element after sorting the array in non-decreasing order.
     /// </summary>
@@ -2094,7 +2094,7 @@ public class Arrays
                .ToList();
     #endregion
 
-    #region 1018. Binary Prefix Divisible By 5
+    #region 1018 Binary Prefix Divisible By 5
     /// <summary>
     /// Checks if each prefix of the binary number formed by the array is divisible by 5.
     /// </summary>
@@ -2110,7 +2110,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1389. Create Target Array in the Given Order
+    #region 1389 Create Target Array in the Given Order
     /// <summary>
     /// Creates a target array by inserting elements from nums into the target array at positions specified by index.
     /// </summary>
@@ -2126,7 +2126,7 @@ public class Arrays
             => { t.Insert(pair.x, pair.Item2); return t; })];
     #endregion
 
-    #region 2644. Find the Maximum Divisibility Score
+    #region 2644 Find the Maximum Divisibility Score
     /// <summary>
     /// Finds the divisor from the divisors array that has the highest divisibility score based on nums array.
     /// </summary>
@@ -2144,7 +2144,7 @@ public class Arrays
     }
     #endregion
 
-    #region 217. Contains Duplicate
+    #region 217 Contains Duplicate
     /// <summary>
     /// Checks if there are any duplicate values in the array.
     /// </summary>
@@ -2157,7 +2157,7 @@ public class Arrays
         =>  nums.Length != nums.Distinct().Count();
     #endregion
 
-    #region 1827. Minimum Operations to Make the Array Increasing
+    #region 1827 Minimum Operations to Make the Array Increasing
     /// <summary>
     /// Calculates the minimum number of operations required to make the array strictly increasing.
     /// </summary>
@@ -2180,7 +2180,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1752. Check if Array Is Sorted and Rotated
+    #region 1752 Check if Array Is Sorted and Rotated
     /// <summary>
     /// Checks if the array was originally sorted in non-decreasing order and then rotated.
     /// </summary>
@@ -2193,7 +2193,7 @@ public class Arrays
         => nums.Where((n, i) => n < nums[(i + nums.Length - 1) % nums.Length]).Count() <= 1;
     #endregion
 
-    #region 3074. Apple Redistribution into Boxes
+    #region 3074 Apple Redistribution into Boxes
     /// <summary>
     /// Calculates the minimum number of boxes required to redistribute the apples.
     /// </summary>
@@ -2214,7 +2214,7 @@ public class Arrays
     }
     #endregion
 
-    #region GetMinDistance
+    #region 1848 Minimum Distance to the Target Element
     /// <summary>
     /// Finds the minimum distance from the start index to any index where the target value occurs in the array.
     /// </summary>
@@ -2222,16 +2222,33 @@ public class Arrays
     /// <param name="target">The target value to find.</param>
     /// <param name="start">The start index.</param>
     /// <returns>The minimum absolute distance to the target.</returns>
-    /// <remarks>
     /// <time>O(n)</time>
     /// <space>O(1)</space>
-    /// </remarks>
     public int GetMinDistance(int[] nums, int target, int start)
         => nums.Select((num, index) => num == target ? Math.Abs(index - start) : int.MaxValue).Min();
     #endregion
+
+    #region 1588 Sum of All Odd Length Subarrays
+    /// <summary>
+    /// Calculates the sum of all odd-length subarrays.
+    /// </summary>
+    /// <param name="arr">The input array of positive integers.</param>
+    /// <returns>The sum of all odd-length subarrays.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int SumOddLengthSubarrays(int[] arr)
+    {
+        int sum = 0, n = arr.Length;
+
+        for (int i = 0; i < n; i++)
+            sum += ((i + 1) * (n - i) + 1) / 2 * arr[i];
+
+        return sum;
+    }
+    #endregion
 }
 
-#region 705. Design HashSet
+#region 705 Design HashSet
 /// <summary>
 /// Implements a HashSet without using any built-in hash table libraries.
 /// </summary>
