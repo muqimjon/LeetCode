@@ -7,7 +7,7 @@ public class StringsTest
     // Arrange
     private readonly Strings Solution = new();
 
-    #region 13. Roman to Integer
+    #region 13 Roman to Integer
     [Theory]
     [InlineData("III", 3)]
     [InlineData("LVIII", 58)]
@@ -27,7 +27,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 14. Longest Common Prefix
+    #region 14 Longest Common Prefix
     [Theory]
     [InlineData(new[] { "flower", "flow", "flight" }, "fl")]
     [InlineData(new[] { "dog", "racecar", "car" }, "")]
@@ -46,7 +46,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 28. Find the Index of the First Occurrence in a String Tests
+    #region 28 Find the Index of the First Occurrence in a String Tests
     [Theory]
     [InlineData("sadbutsad", "sad", 0)]
     [InlineData("leetcode", "leeto", -1)]
@@ -80,7 +80,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 709. To Lower Case Tests
+    #region 709 To Lower Case Tests
     [Theory]
     [InlineData("Hello", "hello")]
     [InlineData("here", "here")]
@@ -99,7 +99,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 58. Length of Last Word
+    #region 58 Length of Last Word
     [Theory]
     [InlineData("Hello World", 5)]
     [InlineData("   fly me   to   the moon  ", 4)]
@@ -115,7 +115,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1768. Merge Strings Alternately
+    #region 1768 Merge Strings Alternately
     [Theory]
     [InlineData("abc", "", "abc")]
     [InlineData("ab", "pqrs", "apbqrs")]
@@ -132,7 +132,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 125. Valid Palindrome
+    #region 125 Valid Palindrome
     [Theory]
     [InlineData("A man, a plan, a canal: Panama", true)]
     [InlineData("race a car", false)]
@@ -148,7 +148,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1470. Shuffle the Array
+    #region 1470 Shuffle the Array
     [Theory]
     [InlineData(new[] { 2, 3, 5, 4, 1, 7 }, new[] { 2, 5, 1, 3, 4, 7 }, 3)]
     [InlineData(new[] { 1, 4, 2, 3, 3, 2, 4, 1 }, new[] { 1, 2, 3, 4, 4, 3, 2, 1 }, 4)]
@@ -163,7 +163,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2379. Minimum Recolors to Get K Consecutive Black Blocks
+    #region 2379 Minimum Recolors to Get K Consecutive Black Blocks
     [Theory]
     [InlineData("WBBWWBBWBW", 7, 3)]
     [InlineData("WBWBBBW", 2, 0)]
@@ -179,7 +179,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1446. Consecutive Characters
+    #region 1446 Consecutive Characters
     [Theory]
     [InlineData("leetcode", 2)]
     [InlineData("abbcccddddeeeeedcba", 5)]
@@ -199,7 +199,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 520. Detect Capital
+    #region 520 Detect Capital
     [Theory]
     [InlineData("USA", true)]
     [InlineData("leetcode", true)]
@@ -217,7 +217,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1108. Defanging an IP Address
+    #region 1108 Defanging an IP Address
     [Theory]
     [InlineData("1.1.1.1", "1[.]1[.]1[.]1")]
     [InlineData("255.100.50.0", "255[.]100[.]50[.]0")]
@@ -233,7 +233,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 151. 796. Rotate String
+    #region 151 796 Rotate String
     [Theory]
     [InlineData("abcde", "cdeab", true)]
     [InlineData("abcde", "abced", false)]
@@ -253,7 +253,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2124. Check if All A's Appears Before All B's
+    #region 2124 Check if All A's Appears Before All B's
     [Theory]
     [InlineData("aaabbb", true)]
     [InlineData("abab", false)]
@@ -268,7 +268,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1507. Reformat Date
+    #region 1507 Reformat Date
     [Theory]
     [InlineData("20th Oct 2052", "2052-10-20")]
     [InlineData("6th Jun 1933", "1933-06-06")]
@@ -283,7 +283,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1614. Maximum Nesting Depth of the Parentheses
+    #region 1614 Maximum Nesting Depth of the Parentheses
     [Theory]
     [InlineData("(1+(2*3)+((8)/4))+1", 3)]
     [InlineData("(1)+((2))+(((3)))", 3)]
@@ -300,7 +300,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1221. Split a String in Balanced Strings
+    #region 1221 Split a String in Balanced Strings
     [Theory]
     [InlineData("RLRRLLRLRL", 4)]
     [InlineData("LLLLRRRR", 1)]
@@ -314,7 +314,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 3019. Number of Changing Keys
+    #region 3019 Number of Changing Keys
     [Theory]
     [InlineData("aAbBcC", 2)]
     [InlineData("AaAaAaaA", 0)]
@@ -328,7 +328,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2315. Count Asterisks
+    #region 2315 Count Asterisks
     [Theory]
     [InlineData("l|*e*et|c**o|*de|", 2)]
     [InlineData("iamprogrammer", 0)]
@@ -343,7 +343,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 482. License Key Formatting
+    #region 482 License Key Formatting
     [Theory]
     [InlineData("5F3Z-2e-9-w", 4, "5F3Z-2E9W")]
     [InlineData("2-5g-3-J", 2, "2-5G-3J")]
@@ -357,7 +357,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1967. Number of Strings That Appear as Substrings in Word
+    #region 1967 Number of Strings That Appear as Substrings in Word
     [Theory]
     [InlineData(new string[] { "a", "abc", "bc", "d" }, "abc", 3)]
     [InlineData(new string[] { "a", "b", "c" }, "aaaaabbbbb", 2)]
@@ -372,7 +372,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1422. Maximum Score After Splitting a String
+    #region 1422 Maximum Score After Splitting a String
     [Theory]
     [InlineData("011101", 5)]
     [InlineData("00111", 5)]
@@ -387,7 +387,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 3114. Latest Time You Can Obtain After Replacing Characters
+    #region 3114 Latest Time You Can Obtain After Replacing Characters
     [Theory]
     [InlineData("1?:?4", "11:54")]
     [InlineData("0?:5?", "09:59")]
@@ -404,7 +404,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2278. Percentage of Letter in String
+    #region 2278 Percentage of Letter in String
     [Theory]
     [InlineData("foobar", 'o', 33)]
     [InlineData("jjjj", 'k', 0)]
@@ -421,7 +421,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1880. Check if Word Equals Summation of Two Words
+    #region 1880 Check if Word Equals Summation of Two Words
     [Theory]
     [InlineData("acb", "cba", "cdb", true)]
     [InlineData("aaa", "a", "aab", false)]
@@ -436,7 +436,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1974. Minimum Time to Type Word Using Special Typewriter
+    #region 1974 Minimum Time to Type Word Using Special Typewriter
     [Theory]
     [InlineData("abc", 5)]
     [InlineData("bza", 7)]
@@ -451,7 +451,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1374. Generate a String With Characters That Have Odd Counts
+    #region 1374 Generate a String With Characters That Have Odd Counts
     [Theory]
     [InlineData(4, "aaab")]
     [InlineData(2, "ab")]
@@ -468,7 +468,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1844. Replace All Digits with Characters
+    #region 1844 Replace All Digits with Characters
     [Theory]
     [InlineData("a1c1e1", "abcdef")]
     [InlineData("a1b2c3d4e", "abbdcfdhe")]
@@ -483,7 +483,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1668. Maximum Repeating Substring
+    #region 1668 Maximum Repeating Substring
     [Theory]
     [InlineData("ababc", "ab", 2)]
     [InlineData("ababc", "ba", 1)]
@@ -500,7 +500,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1704. Determine if String Halves Are Alike
+    #region 1704 Determine if String Halves Are Alike
     [Theory]
     [InlineData("book", true)]
     [InlineData("textbook", false)]
@@ -514,7 +514,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1047. Remove All Adjacent Duplicates In String
+    #region 1047 Remove All Adjacent Duplicates In String
     [Theory]
     [InlineData("abbaca", "ca")]
     [InlineData("azxxzy", "ay")]
@@ -528,7 +528,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1784. Check if Binary String Has at Most One Segment of Ones
+    #region 1784 Check if Binary String Has at Most One Segment of Ones
     [Theory]
     [InlineData("1001", false)]
     [InlineData("110", true)]
@@ -542,7 +542,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2833. Furthest Point From Origin
+    #region 2833 Furthest Point From Origin
     [Theory]
     [InlineData("L_RL__R", 3)]
     [InlineData("_R__LL_", 5)]
@@ -557,7 +557,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2264. Largest 3-Same-Digit Number in String
+    #region 2264 Largest 3-Same-Digit Number in String
     [Theory]
     [InlineData("6777133339", "777")]
     [InlineData("2300019", "000")]
@@ -572,7 +572,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 2810. Faulty Keyboard
+    #region 2810 Faulty Keyboard
     [Theory]
     [InlineData("string", "rtsng")]
     [InlineData("poiinter", "ponter")]
@@ -586,7 +586,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 434. Number of Segments in a String
+    #region 434 Number of Segments in a String
     [Theory]
     [InlineData("Hello, my name is John", 5)]
     [InlineData("Hello", 1)]
@@ -600,7 +600,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1078. Occurrences After Bigram
+    #region 1078 Occurrences After Bigram
     [Theory]
     [InlineData("alice is a good girl she is a good student", "a", "good", new string[] { "girl", "student" })]
     [InlineData("we will we will rock you", "we", "will", new string[] { "we", "rock" })]
@@ -614,7 +614,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 3110. Score of a String
+    #region 3110 Score of a String
     [Theory]
     [InlineData("hello", 13)]
     [InlineData("zaz", 50)]
@@ -628,7 +628,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 3168. Minimum Number of Chairs in a Waiting Room
+    #region 3168 Minimum Number of Chairs in a Waiting Room
     [Theory]
     [InlineData("EEEEEEE", 7)]
     [InlineData("ELELEEL", 2)]
@@ -643,7 +643,7 @@ public class StringsTest
     }
     #endregion
 
-    #region 1957. Delete Characters to Make Fancy String
+    #region 1957 Delete Characters to Make Fancy String
     [Theory]
     [InlineData("leeetcode", "leetcode")]
     [InlineData("aaabaaaa", "aabaa")]
@@ -760,7 +760,7 @@ public class StringsTest
     }
     #endregion
 
-    #region Minimum Moves to Convert String
+    #region 2027 Minimum Moves to Convert String
     [Theory]
     [InlineData("XXX", 1)]
     [InlineData("XXOX", 2)]
@@ -770,6 +770,20 @@ public class StringsTest
     {
         // Act
         var result = Solution.MinimumMoves(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 2224 Minimum Number of Operations to Convert Time
+    [Theory]
+    [InlineData("02:30", "04:35", 3)]
+    [InlineData("11:00", "11:01", 1)]
+    public void TestMinimumOperationsToConvertTime(string current, string correct, int expected)
+    {
+        // Act
+        var result = Solution.ConvertTime(current, correct);
 
         // Assert
         Assert.Equal(expected, result);

@@ -4,9 +4,9 @@ namespace EasyFundamental;
 
 public class Strings
 {
-    #region 13. Roman to Integer
+    #region 13 Roman to Integer
     /// <summary>
-    /// 13. Roman to Integer
+    /// 13 Roman to Integer
     /// </summary>
     /// <param name="s">Roman numeral string</param>
     /// <returns>Integer representation of the Roman numeral</returns>
@@ -46,9 +46,9 @@ public class Strings
     }
     #endregion
 
-    #region 14. Longest Common Prefix
+    #region 14 Longest Common Prefix
     /// <summary>
-    /// 14. Longest Common Prefix
+    /// 14 Longest Common Prefix
     /// </summary>
     /// <param name="words">Array of strings</param>
     /// <returns>Longest common prefix as a string</returns>
@@ -78,9 +78,9 @@ public class Strings
     }
     #endregion
 
-    #region 28. Find the Index of the First Occurrence in a String
+    #region 28 Find the Index of the First Occurrence in a String
     /// <summary>
-    /// 28. Find the Index of the First Occurrence in a String
+    /// 28 Find the Index of the First Occurrence in a String
     /// </summary>
     /// <param name="haystack">The input string</param>
     /// <param name="needle">The substring to search for</param>
@@ -144,9 +144,9 @@ public class Strings
     }
     #endregion
 
-    #region 709. To Lower Case
+    #region 709 To Lower Case
     /// <summary>
-    /// 709. To Lower Case
+    /// 709 To Lower Case
     /// Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
     /// </summary>
     /// <param name="s">The input string.</param>
@@ -159,9 +159,9 @@ public class Strings
             .ToArray());
     #endregion
 
-    #region 58. Length of Last Word
+    #region 58 Length of Last Word
     /// <summary>
-    /// 58. Length of Last Word
+    /// 58 Length of Last Word
     /// Returns the length of the last word in the given string, where a word is a substring of non-space characters.
     /// </summary>
     /// <param name="s">The input string.</param>
@@ -172,7 +172,7 @@ public class Strings
         => s.Split().Last(p => p.Length > 0).Length;
     #endregion
 
-    #region 1768. Merge Strings Alternately
+    #region 1768 Merge Strings Alternately
     /// <summary>
     /// Merges strings by alternating letters, starting with word1, and appends extra letters from the longer string.
     /// </summary>
@@ -200,7 +200,7 @@ public class Strings
     }
     #endregion
 
-    #region 125. Validating Polindrome
+    #region 125 Validating Polindrome
     /// <summary>
     /// Determines if a given string is a palindrome after removing non-alphanumeric characters and converting to lowercase.
     /// </summary>
@@ -216,7 +216,7 @@ public class Strings
 
     #endregion
 
-    #region 1941. Check if All Characters Have Equal Number of Occurrences
+    #region 1941 Check if All Characters Have Equal Number of Occurrences
     /// <summary>
     /// Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
     /// Return the array in the form [x1,y1,x2,y2,...,xn,yn].
@@ -238,7 +238,7 @@ public class Strings
 
     #endregion
 
-    #region 2379. Minimum Recolors to Get K Consecutive Black Blocks
+    #region 2379 Minimum Recolors to Get K Consecutive Black Blocks
     /// <summary>
     /// Finds the minimum number of recolors needed to obtain K consecutive black blocks.
     /// </summary>
@@ -274,7 +274,7 @@ public class Strings
     }
     #endregion
 
-    #region 1446. Consecutive Characters
+    #region 1446 Consecutive Characters
     /// <summary>
     /// Finds the maximum power of consecutive characters in the given string.
     /// </summary>
@@ -298,7 +298,7 @@ public class Strings
     }
     #endregion
 
-    #region 520. Detect Capital
+    #region 520 Detect Capital
     /// <summary>
     /// Determines if the usage of capitals in a word is correct.
     /// </summary>
@@ -320,7 +320,7 @@ public class Strings
     }
     #endregion
 
-    #region 1108. Defanging an IP Address
+    #region 1108 Defanging an IP Address
     /// <summary>
     /// Returns the defanged version of the given IP address.
     /// </summary>
@@ -333,7 +333,7 @@ public class Strings
         => address.Replace(".", "[.]");
     #endregion
 
-    #region 796. Rotate String
+    #region 796 Rotate String
     /// <summary>
     /// Checks if s can become goal after some number of shifts.
     /// </summary>
@@ -347,7 +347,7 @@ public class Strings
         => s.Length == goal.Length && (s + s).Contains(goal);
     #endregion
 
-    #region 2124. Check if All A's Appears Before All B's
+    #region 2124 Check if All A's Appears Before All B's
     /// <summary>
     /// Checks if all A's appear before all B's
     /// </summary>
@@ -368,7 +368,7 @@ public class Strings
     }
     #endregion
 
-    #region 1507. Reformat Date
+    #region 1507 Reformat Date
     /// <summary>
     /// Reformats the given date in the format "MM/DD/YYYY".
     /// </summary>
@@ -400,7 +400,7 @@ public class Strings
     }
     #endregion
 
-    #region 1614. Maximum Nesting Depth of the Parentheses
+    #region 1614 Maximum Nesting Depth of the Parentheses
     /// <summary>
     /// Returns the maximum nesting depth of the parentheses in the given string.
     /// </summary>
@@ -420,7 +420,7 @@ public class Strings
     }
     #endregion
 
-    #region 1221. Split a String in Balanced Strings
+    #region 1221 Split a String in Balanced Strings
     public int BalancedStringSplit(string s)
     {
         int count = 0, balance = 0;
@@ -437,7 +437,7 @@ public class Strings
     }
     #endregion
 
-    #region 3019. Number of Changing Keys
+    #region 3019 Number of Changing Keys
     /// <summary>
     /// Counts the number of key changes in a given string.
     /// </summary>
@@ -450,7 +450,7 @@ public class Strings
         => s.Zip(s.Skip(1), (a, b) => char.ToLower(a) != char.ToLower(b)).Count(change => change);
     #endregion
 
-    #region 2315. Count Asterisks
+    #region 2315 Count Asterisks
     /// <summary>
     /// Counts the number of asterisks in a string, excluding those between pairs of vertical bars '|'.
     /// </summary>
@@ -465,7 +465,7 @@ public class Strings
                 .Sum(sub => sub.Count(c => c == '*'));
     #endregion
 
-    #region 482. License Key Formatting
+    #region 482 License Key Formatting
     /// <summary>
     /// Reformats a license key string by grouping characters and adding dashes.
     /// </summary>
@@ -486,7 +486,7 @@ public class Strings
     }
     #endregion
 
-    #region 1967. Number of Strings That Appear as Substrings in Word
+    #region 1967 Number of Strings That Appear as Substrings in Word
     /// <summary>
     /// Calculates the number of strings in an array that appear as substrings in a given word.
     /// </summary>
@@ -500,7 +500,7 @@ public class Strings
         => patterns.Count(word.Contains);
     #endregion
 
-    #region 1422. Maximum Score After Splitting a String
+    #region 1422 Maximum Score After Splitting a String
     /// <summary>
     /// Calculates maximum score by splitting string.
     /// </summary>
@@ -514,7 +514,7 @@ public class Strings
             .Max(i => s.Take(i).Count(c => c == '0') + s.Skip(i).Count(c => c == '1'));
     #endregion
 
-    #region 3114. Latest Time You Can Obtain After Replacing Characters
+    #region 3114 Latest Time You Can Obtain After Replacing Characters
     /// <summary>
     /// Finds the latest possible 12-hour format time by replacing "?" characters in the input string.
     /// </summary>
@@ -536,7 +536,7 @@ public class Strings
     }
     #endregion
 
-    #region 2278. Percentage of Letter in String
+    #region 2278 Percentage of Letter in String
     /// <summary>
     /// Calculates the percentage of characters in a string that equal the given letter, rounded down to the nearest whole percent.
     /// </summary>
@@ -550,7 +550,7 @@ public class Strings
         => 100 * s.Count(c => c == letter) / s.Length;
     #endregion
 
-    #region 1880. Check if Word Equals Summation of Two Words
+    #region 1880 Check if Word Equals Summation of Two Words
     /// <summary>
     /// Checks if the sum of the numerical values of two words equals the numerical value of a target word.
     /// </summary>
@@ -568,7 +568,7 @@ public class Strings
         => int.Parse(string.Concat(word.Select(c => c - 97)));
     #endregion
 
-    #region 1974. Minimum Time to Type Word Using Special Typewriter
+    #region 1974 Minimum Time to Type Word Using Special Typewriter
     /// <summary>
     /// Calculates the minimum number of seconds required to type out a given word using a special typewriter.
     /// </summary>
@@ -582,7 +582,7 @@ public class Strings
             => Math.Min(Math.Abs(c - (i == 0 ? 'a' : word[i - 1])), 26 - Math.Abs(c - (i == 0 ? 'a' : word[i - 1])))).Sum();
     #endregion
 
-    #region 1374. Generate a String With Characters That Have Odd Counts
+    #region 1374 Generate a String With Characters That Have Odd Counts
     /// <summary>
     /// Generates a string of length n with characters having odd counts.
     /// </summary>
@@ -595,7 +595,7 @@ public class Strings
         => n % 2 == 0 ? new string('a', n - 1) + 'b' : new string('a', n);
     #endregion
 
-    #region 1844. Replace All Digits with Characters
+    #region 1844 Replace All Digits with Characters
     /// <summary>
     /// Replaces digits in a string with characters shifted from preceding characters.
     /// </summary>
@@ -608,7 +608,7 @@ public class Strings
         => new(s.Select((c, i) => i % 2 == 0 ? c : (char)(s[i - 1] + (c - '0'))).ToArray());
     #endregion
 
-    #region 1668. Maximum Repeating Substring
+    #region 1668 Maximum Repeating Substring
     /// <summary>
     /// Finds the maximum k-repeating value of a word in a given sequence.
     /// </summary>
@@ -622,7 +622,7 @@ public class Strings
         => Enumerable.Range(1, sequence.Length / word.Length + 1).Reverse().FirstOrDefault(k => sequence.Contains(string.Concat(Enumerable.Repeat(word, k))));
     #endregion
 
-    #region 1704. Determine if String Halves Are Alike
+    #region 1704 Determine if String Halves Are Alike
     /// <summary>
     /// Determines if the two halves of the given string are alike by comparing the number of vowels in each half.
     /// </summary>
@@ -636,7 +636,7 @@ public class Strings
         == s.Skip(s.Length / 2).Count(c => "aeiouAEIOU".Contains(c));
     #endregion
 
-    #region 1047. Remove All Adjacent Duplicates In String
+    #region 1047 Remove All Adjacent Duplicates In String
     /// <summary>
     /// Removes all adjacent duplicate characters from the string.
     /// </summary>
@@ -659,7 +659,7 @@ public class Strings
     }
     #endregion
 
-    #region 1784. Check if Binary String Has at Most One Segment of Ones
+    #region 1784 Check if Binary String Has at Most One Segment of Ones
     /// <summary>
     /// Checks if a binary string contains at most one contiguous segment of ones.
     /// </summary>
@@ -672,7 +672,7 @@ public class Strings
         => !s.Contains("01");
     #endregion
 
-    #region 2833. Furthest Point From Origin
+    #region 2833 Furthest Point From Origin
     /// <summary>
     /// Returns the furthest distance from the origin after a series of moves.
     /// </summary>
@@ -685,7 +685,7 @@ public class Strings
         => Math.Abs(moves.Count(c => c == 'R') - moves.Count(c => c == 'L')) + moves.Count(c => c == '_');
     #endregion
 
-    #region 2264. Largest 3-Same-Digit Number in String
+    #region 2264 Largest 3-Same-Digit Number in String
     /// <summary>
     /// Finds the largest "good" integer of length 3 in the given string.
     /// </summary>
@@ -746,7 +746,7 @@ public class Strings
         => s.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
     #endregion
 
-    #region 1078. Occurrences After Bigram
+    #region 1078 Occurrences After Bigram
     /// <summary>
     /// Returns an array of all the words that follow the occurrences of "first second" in the given text.
     /// </summary>
@@ -766,7 +766,7 @@ public class Strings
     }
     #endregion
 
-    #region 3110. Score of a String
+    #region 3110 Score of a String
     /// <summary>
     /// Calculates the score of a string based on the absolute differences between ASCII values of adjacent characters.
     /// </summary>
@@ -779,7 +779,7 @@ public class Strings
         => s.Zip(s.Skip(1), (a, b) => Math.Abs(a - b)).Sum();
     #endregion
 
-    #region 3168. Minimum Number of Chairs in a Waiting Room
+    #region 3168 Minimum Number of Chairs in a Waiting Room
     /// <summary>
     /// Finds the minimum number of chairs needed in a waiting room given the sequence of entries and exits.
     /// </summary>
@@ -794,7 +794,7 @@ public class Strings
             : (acc.current - 1, acc.max)).max;
     #endregion
 
-    #region 1957. Delete Characters to Make Fancy String
+    #region 1957 Delete Characters to Make Fancy String
     /// <summary>
     /// Deletes the minimum number of characters to ensure no three consecutive characters are the same.
     /// </summary>
@@ -807,7 +807,7 @@ public class Strings
         => new(s.Where((c, i) => i < 2 || !(s[i] == s[i - 1] && s[i] == s[i - 2])).ToArray());
     #endregion
 
-    #region 459. Repeated Substring Pattern
+    #region 459 Repeated Substring Pattern
     /// <summary>
     /// Checks if the string can be constructed by taking a substring and appending multiple copies of it.
     /// </summary>
@@ -820,7 +820,7 @@ public class Strings
         => (s + s).Substring(1, s.Length * 2 - 2).Contains(s);
     #endregion
 
-    #region 1859. Sorting the Sentence
+    #region 1859 Sorting the Sentence
     /// <summary>
     /// Reconstructs the original sentence from a shuffled sentence with numbered words.
     /// </summary>
@@ -833,7 +833,7 @@ public class Strings
         => string.Join(" ", s.Split().OrderBy(w => w[^1]).Select(w => w[..^1]));
     #endregion
 
-    #region 2138. Divide a String Into Groups of Size k
+    #region 2138 Divide a String Into Groups of Size k
     /// <summary>
     /// Divides the string `s` into groups of size `k`, padding the last group with `fill` if necessary.
     /// </summary>
@@ -851,7 +851,7 @@ public class Strings
             .ToArray();
     #endregion
 
-    #region 1758. Minimum Changes To Make Alternating Binary String
+    #region 1758 Minimum Changes To Make Alternating Binary String
     /// <summary>
     /// Calculates the minimum number of operations needed to make the binary string alternating.
     /// </summary>
@@ -871,7 +871,7 @@ public class Strings
     }
     #endregion
 
-    #region 1736. Latest Time by Replacing Hidden Digits
+    #region 1736 Latest Time by Replacing Hidden Digits
     /// <summary>
     /// Replaces hidden digits in the time string to get the latest possible valid time.
     /// </summary>
@@ -891,7 +891,7 @@ public class Strings
     }
     #endregion
 
-    #region 2042. Check if Numbers Are Ascending in a Sentence
+    #region 2042 Check if Numbers Are Ascending in a Sentence
     /// <summary>
     /// Checks if all numbers in the given sentence are in strictly increasing order.
     /// </summary>
@@ -906,7 +906,7 @@ public class Strings
             .Aggregate((a, b) => a < b ? b : int.MaxValue) != int.MaxValue;
     #endregion
 
-    #region 2710. Remove Trailing Zeros From a String
+    #region 2710 Remove Trailing Zeros From a String
     /// <summary>
     /// Removes trailing zeros from a given string representation of a positive integer.
     /// </summary>
@@ -920,7 +920,7 @@ public class Strings
         => num.TrimEnd('0');
     #endregion
 
-    #region 2027. Minimum Moves to Convert String
+    #region 2027 Minimum Moves to Convert String
     /// <summary>
     /// Calculates the minimum number of moves required to convert all 'X' characters in the string 's' to 'O'.
     /// </summary>
@@ -936,6 +936,25 @@ public class Strings
         for (int i = 0; i < s.Length; i += s[i] == 'X' ? 3 : 1)
             if (s[i] == 'X') moves++;
         return moves;
+    }
+    #endregion
+
+    #region 2224 Minimum Number of Operations to Convert Time
+    /// <summary>
+    /// Calculates the minimum number of operations to convert the current time to the correct time.
+    /// </summary>
+    /// <param name="current">The current time in "HH:MM" format.</param>
+    /// <param name="correct">The correct time in "HH:MM" format.</param>
+    /// <returns>The minimum number of operations needed.</returns>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int ConvertTime(string current, string correct)
+    {
+        var toMin = (string str) => int.Parse(str.Substring(0, 2)) * 60 + int.Parse(str.Substring(3));
+
+        int diff = toMin(correct) - toMin(current);
+
+        return diff / 60 + (diff % 60) / 15 + (diff % 15) / 5 + diff % 5;
     }
     #endregion
 }
