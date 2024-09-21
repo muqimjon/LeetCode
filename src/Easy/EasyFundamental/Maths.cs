@@ -4,9 +4,9 @@ namespace EasyFundamental;
 
 public class Maths
 {
-    #region 9. Palindrome Number
+    #region 9 Palindrome Number
     /// <summary>
-    /// 9. Palindrome Number
+    /// 9 Palindrome Number
     /// </summary>
     /// <param name="x">Integer to check for palindrome</param>
     /// <returns>True if the integer is a palindrome, otherwise false</returns>
@@ -32,7 +32,7 @@ public class Maths
     }
     #endregion
 
-    #region 70. Climbing Stairs
+    #region 70 Climbing Stairs
     /// <summary>
     /// Calculates the number of distinct ways to climb a staircase with n steps using dynamic programming.
     /// </summary>
@@ -56,7 +56,7 @@ public class Maths
     }
     #endregion
 
-    #region 171. Excel Sheet Column Title
+    #region 171 Excel Sheet Column Title
     /// <summary>
     /// Converts an Excel column number to its corresponding title.
     /// </summary>
@@ -76,7 +76,7 @@ public class Maths
     }
     #endregion
 
-    #region 190. Reverse Bits
+    #region 190 Reverse Bits
     /// <summary>
     /// Reverses the bits of a 32-bit unsigned integer.
     /// </summary>
@@ -96,7 +96,7 @@ public class Maths
     }
     #endregion
 
-    #region 1185. Day of the Week
+    #region 1185 Day of the Week
     /// <summary>
     /// Returns the day of the week corresponding to the given date.
     /// </summary>
@@ -111,7 +111,7 @@ public class Maths
         => Enum.GetName(new DateTime(year, month, day).DayOfWeek)!;
     #endregion
 
-    #region 1360. Number of Days Between Two Dates
+    #region 1360 Number of Days Between Two Dates
     /// <summary>
     /// Calculates the number of days between two given dates.
     /// </summary>
@@ -125,7 +125,7 @@ public class Maths
         => Math.Abs((DateTime.Parse(date1) - DateTime.Parse(date2)).Days);
     #endregion
 
-    #region 2520. Count the Digits That Divide a Number
+    #region 2520 Count the Digits That Divide a Number
     /// <summary>
     /// Counts the number of digits in the given number that divide the number itself.
     /// </summary>
@@ -138,7 +138,7 @@ public class Maths
             => num.ToString().Count(d => d % 48 > 0 && num % (d % 48) < 1);
     #endregion
 
-    #region 507. Perfect Number
+    #region 507 Perfect Number
     /// <summary>
     /// Checks if the given number is a perfect number.
     /// </summary>
@@ -162,7 +162,7 @@ public class Maths
     }
     #endregion
 
-    #region 412. Fizz Buzz
+    #region 412 Fizz Buzz
     /// <summary>
     /// Returns a list of strings that represent the numbers from 1 to n.
     /// </summary>
@@ -177,7 +177,7 @@ public class Maths
             .ToList();
     #endregion
 
-    #region 492. Construct the Rectangle
+    #region 492 Construct the Rectangle
     /// <summary>
     /// Returns the smallest possible rectangle that can be formed with the given area.
     /// </summary>
@@ -196,7 +196,7 @@ public class Maths
     }
     #endregion
 
-    #region 1154. Day of the Year
+    #region 1154 Day of the Year
     /// <summary>
     /// Returns the day of the year corresponding to the given date.
     /// </summary>
@@ -220,7 +220,7 @@ public class Maths
     }
     #endregion
 
-    #region 504. Base 7
+    #region 504 Base 7
     /// <summary>
     /// Converts an integer to its base 7 representation.
     /// </summary>
@@ -246,7 +246,7 @@ public class Maths
     }
     #endregion
 
-    #region 1323. Maximum 69 Number
+    #region 1323 Maximum 69 Number
     /// <summary>
     /// Returns the maximum number after replacing all 6's with 9's.
     /// </summary>
@@ -270,7 +270,7 @@ public class Maths
     }
     #endregion
 
-    #region 1523. Count Odd Numbers in an Interval Range
+    #region 1523 Count Odd Numbers in an Interval Range
     /// <summary>
     /// Counts the number of odd integers in the inclusive interval range [low, high].
     /// </summary>
@@ -284,7 +284,7 @@ public class Maths
         => (high + 1) / 2 - low / 2;
     #endregion
 
-    #region 1716. Calculate Money in Leetcode Bank
+    #region 1716 Calculate Money in Leetcode Bank
     /// <summary>
     /// Calculates the total amount of money Hercy will have in the Leetcode bank at the end of the nth day.
     /// </summary>
@@ -307,7 +307,7 @@ public class Maths
     }
     #endregion
 
-    #region 2769. Find the Maximum Achievable Number
+    #region 2769 Find the Maximum Achievable Number
     /// <summary>
     /// Returns the maximum achievable number based on the given input values.
     /// </summary>
@@ -321,7 +321,7 @@ public class Maths
         => 2 * t + num;
     #endregion
 
-    #region 1688. Count of Matches in Tournament
+    #region 1688 Count of Matches in Tournament
     /// <summary>
     /// Calculates the number of matches played in a tournament.
     /// </summary>
@@ -334,7 +334,7 @@ public class Maths
         => --n;
     #endregion
 
-    #region 2427. Number of Common Factors
+    #region 2427 Number of Common Factors
     /// <summary>
     /// Counts the number of common factors between two integers.
     /// </summary>
@@ -348,7 +348,7 @@ public class Maths
         => Enumerable.Range(1, Math.Min(a, b)).Count(i => a % i == 0 && b % i == 0);
     #endregion
 
-    #region 2600. K Items With the Maximum Sum
+    #region 2600 K Items With the Maximum Sum
     /// <summary>
     /// Calculates max sum of picked items from a bag.
     /// </summary>
@@ -364,7 +364,7 @@ public class Maths
         => Ones > k ? k : (Ones + Zeros) > k ? Ones : Ones - Math.Min(NegOnes, k - Ones - Zeros);
     #endregion
 
-    #region 2894. Divisible and Non-divisible Sums Difference
+    #region 2894 Divisible and Non-divisible Sums Difference
     /// <summary>
     /// Calculates the difference between the sum of non-divisible and divisible integers in a range.
     /// </summary>
@@ -378,7 +378,7 @@ public class Maths
         => Enumerable.Range(1, n).Sum(i => i % m != 0 ? i : -i);
     #endregion
 
-    #region 273. Number of Steps to Reduce a Number to Zero
+    #region 273 Number of Steps to Reduce a Number to Zero
     /// <summary>
     /// Calculates the number of steps to reduce a number to zero.
     /// </summary>
@@ -391,7 +391,7 @@ public class Maths
             => num == 0 ? 0 : 1 + NumberOfSteps(num % 2 == 0 ? num / 2 : num - 1);
     #endregion
 
-    #region 2180. Count Integers With Even Digit Sum
+    #region 2180 Count Integers With Even Digit Sum
     /// <summary>
     /// Calculates the number of positive integers less than or equal to num whose digit sums are even.
     /// </summary>
@@ -404,7 +404,7 @@ public class Maths
         Enumerable.Range(1, num).Count(n => n.ToString().Sum(c => c - '0') % 2 == 0);
     #endregion
 
-    #region 728. Self Dividing Numbers
+    #region 728 Self Dividing Numbers
     /// <summary>
     /// Finds self-dividing numbers in a range.
     /// </summary>
@@ -420,7 +420,7 @@ public class Maths
                      .ToList();
     #endregion
 
-    #region 509. Fibonacci Number
+    #region 509 Fibonacci Number
     /// <summary>
     /// Calculates the nth Fibonacci number.
     /// </summary>
@@ -432,7 +432,7 @@ public class Maths
         => n <= 1 ? n : Fib(n - 1) + Fib(n - 2);
     #endregion
 
-    #region 2582. Pass the Pillow
+    #region 2582 Pass the Pillow
     /// <summary>
     /// Finds the index of the person holding the pillow after a given time.
     /// </summary>
@@ -446,7 +446,7 @@ public class Maths
         => n - Math.Abs(n - 1 - time % (2 * (n - 1)));
     #endregion
 
-    #region 2469. Convert the Temperature
+    #region 2469 Convert the Temperature
     /// <summary>
     /// Converts Celsius temperature to Kelvin and Fahrenheit.
     /// </summary>
@@ -459,7 +459,7 @@ public class Maths
         => new[] { celsius + 273.15, celsius * 1.8 + 32 };
     #endregion
 
-    #region 2160. Minimum Sum of Four Digit Number After Splitting Digits
+    #region 2160 Minimum Sum of Four Digit Number After Splitting Digits
     /// <summary>
     /// Minimum sum after split.
     /// </summary>
@@ -475,7 +475,7 @@ public class Maths
     }
     #endregion
 
-    #region 342. Power of Four
+    #region 342 Power of Four
     /// <summary>
     /// Checks if an integer is a power of four.
     /// </summary>
@@ -488,7 +488,7 @@ public class Maths
         => n > 0 && (n & (n - 1)) == 0 && (n - 1) % 3 == 0;
     #endregion
 
-    #region 1281. Subtract the Product and Sum of Digits of an Integer
+    #region 1281 Subtract the Product and Sum of Digits of an Integer
     /// <summary>
     /// Returns the difference between the product and sum of the digits of an integer.
     /// </summary>
@@ -502,7 +502,7 @@ public class Maths
             => p * (c - 48)) - n.ToString().Sum(c => c - 48);
     #endregion
 
-    #region 2481. Minimum Cuts to Divide a Circle
+    #region 2481 Minimum Cuts to Divide a Circle
     /// <summary>
     /// Returns the minimum number of cuts needed to divide a circle into n equal slices.
     /// </summary>
@@ -515,7 +515,7 @@ public class Maths
         => n < 2 ? 0 : (n % 2 == 0 ? n / 2 : n);
     #endregion
 
-    #region 1137. N-th Tribonacci Number
+    #region 1137 N-th Tribonacci Number
     /// <summary>
     /// Computes the n-th Tribonacci number.
     /// </summary>
@@ -533,7 +533,7 @@ public class Maths
     }
     #endregion
 
-    #region 292. Nim Game
+    #region 292 Nim Game
     /// <summary>
     /// Determines if you can win the Nim Game given a number of stones.
     /// </summary>
@@ -546,7 +546,7 @@ public class Maths
         => n % 4 != 0;
     #endregion
 
-    #region 263. Ugly Number
+    #region 263 Ugly Number
     /// <summary>
     /// Returns true if n is an ugly number.
     /// </summary>
@@ -568,7 +568,7 @@ public class Maths
     }
     #endregion
 
-    #region 2651. Calculate Delayed Arrival Time
+    #region 2651 Calculate Delayed Arrival Time
     /// <summary>
     /// Returns the time when the train will arrive at the station after the delay.
     /// </summary>
@@ -582,7 +582,7 @@ public class Maths
         => (arrivalTime + delayedTime) % 24;
     #endregion
 
-    #region 2864. Maximum Odd Binary Number
+    #region 2864 Maximum Odd Binary Number
     /// <summary>
     /// Rearranges the binary string to form the maximum odd binary number.
     /// </summary>
@@ -595,7 +595,7 @@ public class Maths
         => new string('1', s.Count(c => c == '1') - 1) + new string('0', s.Count(c => c == '0')) + '1';
     #endregion
 
-    #region 1837. Sum of Digits in Base K
+    #region 1837 Sum of Digits in Base K
     /// <summary>
     /// Converts the number n from base 10 to base k and returns the sum of its digits.
     /// </summary>
@@ -609,7 +609,7 @@ public class Maths
         => n == 0 ? 0 : n % k + SumBase(n / k, k);
     #endregion
 
-    #region 2413. Smallest Even Multiple
+    #region 2413 Smallest Even Multiple
     /// <summary>
     /// Returns the smallest positive integer that is a multiple of both 2 and n.
     /// </summary>
@@ -622,7 +622,7 @@ public class Maths
         => n % 2 is 0 ? n : n * 2;
     #endregion
 
-    #region 1025. Divisor Game
+    #region 1025 Divisor Game
     /// <summary>
     /// Returns true if Alice wins(n is even), otherwise false.
     /// </summary>
@@ -635,7 +635,7 @@ public class Maths
         => n % 2 == 0;
     #endregion
 
-    #region 326. Power of Three
+    #region 326 Power of Three
     /// <summary>
     /// Determines if a given integer is a power of three.
     /// </summary>
@@ -647,5 +647,17 @@ public class Maths
     /// </remarks>
     public bool IsPowerOfThree(int n)
         => n > 0 && (1162261467 % n).Equals(0);
+    #endregion
+
+    #region 2544 Alternating Digit Sum
+    /// <summary>
+    /// Calculates the alternating digit sum of a given positive integer.
+    /// </summary>
+    /// <param name="n">The input integer.</param>
+    /// <returns>The alternating sum of the digits of n.</returns>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int AlternateDigitSum(int n)
+        => $"{n}".Select((c, i) => (i % 2 == 0 ? 1 : -1) * (c - 48)).Sum();
     #endregion
 }

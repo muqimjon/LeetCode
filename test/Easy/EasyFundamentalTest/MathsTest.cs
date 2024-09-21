@@ -7,7 +7,7 @@ public class MathsTest
     // Arrange
     private readonly Maths Solution = new();
 
-    #region 9. Palindrome Number
+    #region 9 Palindrome Number
     [Theory]
     [InlineData(121, true)]
     [InlineData(-121, false)]
@@ -24,7 +24,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 70. Climbing Stairs
+    #region 70 Climbing Stairs
     [Theory]
     [InlineData(2, 2)]
     [InlineData(3, 3)]
@@ -43,7 +43,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 168. Excel Sheet Column Title
+    #region 168 Excel Sheet Column Title
     [Theory]
     [InlineData(1, "A")]
     [InlineData(28, "AB")]
@@ -58,7 +58,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 190. Reverse Bits
+    #region 190 Reverse Bits
     [Theory]
     [InlineData(0b00000010100101000001111010011100U, 964176192U)]
     [InlineData(0b11111111111111111111111111111101U, 3221225471U)]
@@ -72,7 +72,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1185. Day of the Week
+    #region 1185 Day of the Week
     [Theory]
     [InlineData(31, 8, 2019, "Saturday")]
     [InlineData(18, 7, 1999, "Sunday")]
@@ -87,7 +87,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1360. Number of Days Between Two Dates
+    #region 1360 Number of Days Between Two Dates
     [Theory]
     [InlineData("2019-06-29", "2019-06-30", 1)]
     [InlineData("2020-01-15", "2019-12-31", 15)]
@@ -101,7 +101,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2520. Count the Digits That Divide a Number
+    #region 2520 Count the Digits That Divide a Number
     [Theory]
     [InlineData(7, 1)]
     [InlineData(121, 2)]
@@ -116,7 +116,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 507. Perfect Number
+    #region 507 Perfect Number
     [Theory]
     [InlineData(28, true)]
     [InlineData(7, false)]
@@ -134,7 +134,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 412. Fizz Buzz
+    #region 412 Fizz Buzz
     [Theory]
     [InlineData(1, new string[] { "1" })]
     [InlineData(3, new string[] { "1", "2", "Fizz" })]
@@ -150,7 +150,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 492. Construct the Rectangle
+    #region 492 Construct the Rectangle
     [Theory]
     [InlineData(4, new int[] { 2, 2 })]
     [InlineData(37, new int[] { 37, 1 })]
@@ -165,7 +165,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1154. Day of the Year
+    #region 1154 Day of the Year
     [Theory]
     [InlineData("2019-01-09", 9)]
     [InlineData("2019-02-10", 41)]
@@ -181,7 +181,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 504. Base 7
+    #region 504 Base 7
     [Theory]
     [InlineData(100, "202")]
     [InlineData(-7, "-10")]
@@ -196,7 +196,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1323. Maximum 69 Number
+    #region 1323 Maximum 69 Number
     [Theory]
     [InlineData(9669, 9969)] // Changing the second digit from 6 to 9
     [InlineData(9996, 9999)] // Changing the last digit from 6 to 9
@@ -213,7 +213,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1523. Count Odd Numbers in an Interval Range
+    #region 1523 Count Odd Numbers in an Interval Range
     [Theory]
     [InlineData(3, 7, 3)]
     [InlineData(2, 8, 3)]
@@ -229,7 +229,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1716. Calculate Money in Leetcode Bank
+    #region 1716 Calculate Money in Leetcode Bank
     [Theory]
     [InlineData(4, 10)]
     [InlineData(10, 37)]
@@ -244,7 +244,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2769. Find the Maximum Achievable Number
+    #region 2769 Find the Maximum Achievable Number
     [Theory]
     [InlineData(4, 1, 6)]
     [InlineData(3, 2, 7)]
@@ -258,7 +258,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1688. Count of Matches in Tournament
+    #region 1688 Count of Matches in Tournament
     [Theory]
     [InlineData(7, 6)]
     [InlineData(14, 13)]
@@ -272,7 +272,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2427. Number of Common Factors
+    #region 2427 Number of Common Factors
     [Theory]
     [InlineData(12, 6, 4)]
     [InlineData(25, 30, 2)]
@@ -287,7 +287,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2600. K Items With the Maximum Sum
+    #region 2600 K Items With the Maximum Sum
     [Theory]
     [InlineData(3, 2, 0, 2, 2)]
     [InlineData(3, 2, 0, 4, 3)]
@@ -302,7 +302,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2894. Divisible and Non-divisible Sums Difference
+    #region 2894 Divisible and Non-divisible Sums Difference
     [Theory]
     [InlineData(10, 3, 19)]
     [InlineData(5, 6, 15)]
@@ -317,7 +317,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 273. Number of Steps to Reduce a Number to Zero
+    #region 273 Number of Steps to Reduce a Number to Zero
     [Theory]
     [InlineData(14, 6)]
     [InlineData(8, 4)]
@@ -346,7 +346,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 728. Self Dividing Numbers
+    #region 728 Self Dividing Numbers
     [Theory]
     [InlineData(1, 22, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22 })]
     [InlineData(47, 85, new int[] { 48, 55, 66, 77 })]
@@ -360,7 +360,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 509. Fibonacci Number
+    #region 509 Fibonacci Number
     [Theory]
     [InlineData(2, 1)]
     [InlineData(3, 2)]
@@ -375,7 +375,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2582. Pass the Pillow
+    #region 2582 Pass the Pillow
     [Theory]
     [InlineData(4, 5, 2)]
     [InlineData(3, 2, 3)]
@@ -389,7 +389,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2469. Convert the Temperature
+    #region 2469 Convert the Temperature
     [Theory]
     [InlineData(36.50, 309.65000, 97.70000)]
     [InlineData(122.11, 395.26000, 251.79800)]
@@ -404,7 +404,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2160. Minimum Sum of Four Digit Number After Splitting Digits
+    #region 2160 Minimum Sum of Four Digit Number After Splitting Digits
     [Theory]
     [InlineData(2932, 52)]
     [InlineData(4009, 13)]
@@ -418,7 +418,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 342. Power of Four
+    #region 342 Power of Four
     [Theory]
     [InlineData(16, true)]
     [InlineData(5, false)]
@@ -433,7 +433,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1281. Subtract the Product and Sum of Digits of an Integer
+    #region 1281 Subtract the Product and Sum of Digits of an Integer
     [Theory]
     [InlineData(234, 15)]
     [InlineData(4421, 21)]
@@ -447,7 +447,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2481. Minimum Cuts to Divide a Circle
+    #region 2481 Minimum Cuts to Divide a Circle
     [Theory]
     [InlineData(4, 2)]
     [InlineData(3, 3)]
@@ -461,7 +461,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1137. N-th Tribonacci Number
+    #region 1137 N-th Tribonacci Number
     [Theory]
     [InlineData(4, 4)]
     [InlineData(25, 1389537)]
@@ -475,7 +475,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 292. Nim Game
+    #region 292 Nim Game
     [Theory]
     [InlineData(4, false)]
     [InlineData(1, true)]
@@ -490,7 +490,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 263. Ugly Number
+    #region 263 Ugly Number
     [Theory]
     [InlineData(6, true)]
     [InlineData(1, true)]
@@ -505,7 +505,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2651. Calculate Delayed Arrival Time
+    #region 2651 Calculate Delayed Arrival Time
     [Theory]
     [InlineData(15, 5, 20)]
     [InlineData(13, 11, 0)]
@@ -519,7 +519,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 2864. Maximum Odd Binary Number
+    #region 2864 Maximum Odd Binary Number
     [Theory]
     [InlineData("010", "001")]
     [InlineData("0101", "1001")]
@@ -533,7 +533,7 @@ public class MathsTest
     }
     #endregion
 
-    #region 1837. Sum of Digits in Base K Tests
+    #region 1837 Sum of Digits in Base K Tests
     [Theory]
     [InlineData(34, 6, 9)]
     [InlineData(10, 10, 1)]
@@ -584,6 +584,21 @@ public class MathsTest
     {
         // Act
         var result = Solution.IsPowerOfThree(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 2544 Alternating Digit Sum
+    [Theory]
+    [InlineData(521, 4)]
+    [InlineData(111, 1)]
+    [InlineData(886996, 0)]
+    public void TestAlternatingDigitSum(int n, int expected)
+    {
+        // Act
+        var result = Solution.AlternateDigitSum(n);
 
         // Assert
         Assert.Equal(expected, result);
