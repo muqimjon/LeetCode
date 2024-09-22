@@ -957,4 +957,16 @@ public class Strings
         return diff / 60 + (diff % 60) / 15 + (diff % 15) / 5 + diff % 5;
     }
     #endregion
+
+    #region 1678 Goal Parser Interpretation
+    /// <summary>
+    /// Interprets the given command string according to the Goal Parser rules.
+    /// </summary>
+    /// <param name="command">The input command string consisting of "G", "()", and "(al)".</param>
+    /// <returns>The interpreted string.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public string Interpret(string command)
+        => command.Replace("()", "o").Replace("(al)", "al");
+    #endregion
 }

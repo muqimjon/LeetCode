@@ -789,4 +789,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1678 Goal Parser Interpretation
+    [Theory]
+    [InlineData("G()(al)", "Goal")]
+    [InlineData("G()()()()(al)", "Gooooal")]
+    [InlineData("(al)G(al)()()G", "alGalooG")]
+    public void TestGoalParserInterpretation(string command, string expected)
+    {
+        // Act
+        var result = Solution.Interpret(command);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
