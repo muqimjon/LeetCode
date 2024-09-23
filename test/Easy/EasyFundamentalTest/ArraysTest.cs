@@ -39,7 +39,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 27. Remove Element Tests
+    #region 27 Remove Element Tests
     [Theory]
     [InlineData(new[] { 3, 2, 2, 3 }, 3, 2, new[] { 2, 2 })]
     [InlineData(new[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2, 5, new[] { 0, 1, 3, 0, 4 })]
@@ -58,7 +58,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 349. Intersection of Two Arrays
+    #region 349 Intersection of Two Arrays
     [Theory]
     [InlineData(new[] { 1, 2, 2, 1 }, new[] { 2, 2 }, new[] { 2 })]
     [InlineData(new[] { 9, 4, 9, 8, 4 }, new[] { 4, 9, 5 }, new[] { 9, 4 })]
@@ -73,7 +73,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 88. Merge Sorted Array
+    #region 88 Merge Sorted Array
     [Theory]
     [InlineData(new[] { 1, 2, 3, 0, 0, 0 }, 3, new[] { 2, 5, 6 }, 3, new[] { 1, 2, 2, 3, 5, 6 })]
     [InlineData(new[] { 1 }, 1, new int[] { }, 0, new[] { 1 })]
@@ -89,7 +89,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1207. Unique Number of Occurrences
+    #region 1207 Unique Number of Occurrences
     [Theory]
     [InlineData(new[] { 1, 2, 2, 1, 1, 3 }, true)]
     [InlineData(new[] { 1, 2 }, false)]
@@ -104,7 +104,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1672. Richest Customer Wealth
+    #region 1672 Richest Customer Wealth
     [Theory]
     [InlineData(6, new[] { 1, 2, 3 }, new[] { 3, 2, 1 })]
     [InlineData(10, new[] { 1, 5 }, new[] { 7, 3 }, new[] { 3, 5 })]
@@ -119,7 +119,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 645. Set Mismatch
+    #region 645 Set Mismatch
     [Theory]
     [InlineData(new[] { 2, 3 }, new[] { 1, 2, 2, 4 })]
     [InlineData(new[] { 1, 2 }, new[] { 1, 1 })]
@@ -134,7 +134,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2133. Check if Every Row and Column Contains All Numbers
+    #region 2133 Check if Every Row and Column Contains All Numbers
     [Theory]
     [InlineData(true, new[] { 1, 2, 3 }, new[] { 3, 1, 2 }, new[] { 2, 3, 1 })]
     [InlineData(false, new[] { 1, 1, 1 }, new[] { 1, 2, 3 }, new[] { 1, 2, 3 })]
@@ -148,7 +148,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 35. Search Insert Position
+    #region 35 Search Insert Position
     [Theory]
     [InlineData(2, new[] { 1, 3, 5, 6 }, 5)]
     [InlineData(1, new[] { 1, 3, 5, 6 }, 2)]
@@ -164,7 +164,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 455. Assign Cookies
+    #region 455 Assign Cookies
     [Theory]
     [InlineData(1, new[] { 1, 2, 3 }, new[] { 1, 1 })]
     [InlineData(2, new[] { 1, 2 }, new[] { 1, 2, 3 })]
@@ -181,7 +181,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1979. Find Greatest Common Divisor of Array
+    #region 1979 Find Greatest Common Divisor of Array
     [Theory]
     [InlineData(2, new[] { 2, 5, 6, 9, 10 })]
     [InlineData(1, new[] { 7, 5, 6, 8, 3 })]
@@ -196,7 +196,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2855. Minimum Right Shifts to Sort the Array
+    #region 2855 Minimum Right Shifts to Sort the Array
     [Theory]
     [InlineData(2, new[] { 3, 4, 5, 1, 2 })]
     [InlineData(0, new[] { 1, 3, 5 })]
@@ -211,7 +211,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1275. Find Winner in Tic Tac Toe
+    #region 1275 Find Winner in Tic Tac Toe
     [Theory]
     [InlineData("A", new int[] { 0, 0 }, new int[] { 2, 0 }, new int[] { 1, 1 }, new int[] { 2, 1 }, new int[] { 2, 2 })]
     [InlineData("B", new int[] { 0, 0 }, new int[] { 1, 1 }, new int[] { 0, 1 }, new int[] { 0, 2 }, new int[] { 1, 0 }, new int[] { 2, 0 })]
@@ -226,7 +226,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2191. Find Kth Positive Number in the Sequence
+    #region 2191 Find Kth Positive Number in the Sequence
     [Theory]
     [InlineData(new int[] { 7, 12, 9, 8, 9, 15 }, 4, 9)]
     [InlineData(new int[] { 2, 12, 1, 11, 4, 5 }, 6, 0)]
@@ -241,7 +241,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1491. Average Salary Excluding the Minimum and Maximum Salary
+    #region 1491 Average Salary Excluding the Minimum and Maximum Salary
     [Theory]
     [InlineData(new int[] { 4000, 3000, 1000, 2000 }, 2500.0)]
     [InlineData(new int[] { 1000, 2000, 3000 }, 2000.0)]
@@ -255,7 +255,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 169. Majority Element
+    #region 169 Majority Element
     [Theory]
     [InlineData(new int[] { 3, 2, 3 }, 3)]
     [InlineData(new int[] { 2, 2, 1, 1, 1, 2, 2 }, 2)]
@@ -269,7 +269,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2108. Find First Palindromic String in the Array
+    #region 2108 Find First Palindromic String in the Array
     [Theory]
     [InlineData(new string[] { "abc", "car", "ada", "racecar", "cool" }, "ada")]
     [InlineData(new string[] { "notapalindrome", "racecar" }, "racecar")]
@@ -284,7 +284,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 118. Pascal's Triangle
+    #region 118 Pascal's Triangle
     [Theory]
     [InlineData(1, new int[] { 1 })]
     [InlineData(2, new int[] { 1 }, new int[] { 1, 1 })]
@@ -302,7 +302,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 706. Binary Search
+    #region 706 Binary Search
     [Theory]
     [InlineData(new[] { -1, 0, 3, 5, 9, 12 }, 9, 4)]
     [InlineData(new[] { -1, 0, 3, 5, 9, 12 }, 2, -1)]
@@ -323,7 +323,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1646. Get Maximum in Generated Array
+    #region 1646 Get Maximum in Generated Array
     [Theory]
     [InlineData(7, 3)]
     [InlineData(2, 1)]
@@ -339,7 +339,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2535. Difference Between Element Sum and Digit Sum of an Array
+    #region 2535 Difference Between Element Sum and Digit Sum of an Array
     [Theory]
     [InlineData(new int[] { 1, 15, 6, 3 }, 9)]
     [InlineData(new int[] { 1, 2, 3, 4 }, 0)]
@@ -356,7 +356,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2788. Split Strings by Separator
+    #region 2788 Split Strings by Separator
     [Theory]
     [InlineData(new string[] { "one.two.three", "four.five", "six" }, '.', new string[] { "one", "two", "three", "four", "five", "six" })]
     [InlineData(new string[] { "$easy$", "$problem$" }, '$', new string[] { "easy", "problem" })]
@@ -371,7 +371,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 231. Power of Two
+    #region 231 Power of Two
     [Theory]
     [InlineData(1, true)]
     [InlineData(16, true)]
@@ -388,7 +388,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 268. Missing Number
+    #region 268 Missing Number
     [Theory]
     [InlineData(new int[] { 3, 0, 1 }, 2)]
     [InlineData(new int[] { 0, 1 }, 2)]
@@ -403,7 +403,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1502. Can Make Arithmetic Progression From Sequence
+    #region 1502 Can Make Arithmetic Progression From Sequence
     [Theory]
     [InlineData(new int[] { 3, 5, 1 }, true)]
     [InlineData(new int[] { 1, 2, 4 }, false)]
@@ -417,7 +417,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2248. Intersection of Multiple Arrays
+    #region 2248 Intersection of Multiple Arrays
 
     [Theory]
     [InlineData(new int[] { 3, 4 }, new int[] { 3, 1, 2, 4, 5 }, new int[] { 1, 2, 3, 4 }, new int[] { 3, 4, 5, 6 })]
@@ -432,7 +432,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 977. Squares of a Sorted Array
+    #region 977 Squares of a Sorted Array
     [Theory]
     [InlineData(new[] { -4, -1, 0, 3, 10 }, new[] { 0, 1, 9, 16, 100 })]
     [InlineData(new[] { -7, -3, 2, 3, 11 }, new[] { 4, 9, 9, 49, 121 })]
@@ -447,7 +447,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1929. Concatenation of Array
+    #region 1929 Concatenation of Array
     [Theory]
     [InlineData(new[] { 1, 2, 1 }, new[] { 1, 2, 1, 1, 2, 1 })]
     [InlineData(new[] { 1, 3, 2, 1 }, new[] { 1, 3, 2, 1, 1, 3, 2, 1 })]
@@ -462,7 +462,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 744. Find Smallest Letter Greater Than Target
+    #region 744 Find Smallest Letter Greater Than Target
     [Theory]
     [InlineData(new char[] { 'c', 'f', 'j' }, 'a', 'c')]
     [InlineData(new char[] { 'c', 'f', 'j' }, 'c', 'f')]
@@ -477,7 +477,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 3000. Maximum Area of Longest Diogonal Rectangle
+    #region 3000 Maximum Area of Longest Diogonal Rectangle
     [Theory]
     [InlineData(48, new int[] { 9, 3 }, new int[] { 8, 6 })]
     [InlineData(12, new int[] { 3, 4 }, new int[] { 4, 3 })]
@@ -514,7 +514,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 3024. Type of Triangle
+    #region 3024 Type of Triangle
     [Theory]
     [InlineData("equilateral", new int[] { 3, 3, 3 })]
     [InlineData("scalene", new int[] { 3, 4, 5 })]
@@ -530,7 +530,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1816. Truncate Sentence
+    #region 1816 Truncate Sentence
     [Theory]
     [InlineData("Hello how are you Contestant", 4, "Hello how are you")]
     [InlineData("What is the solution to this problem", 4, "What is the solution")]
@@ -545,7 +545,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1636. Sort Array by Increasing Frequency
+    #region 1636 Sort Array by Increasing Frequency
     [Theory]
     [InlineData(new[] { 1, 1, 2, 2, 2, 3 }, new[] { 3, 1, 1, 2, 2, 2 })]
     [InlineData(new[] { 2, 3, 1, 3, 2 }, new[] { 1, 3, 3, 2, 2 })]
@@ -560,7 +560,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1480. Running Sum of 1d Array
+    #region 1480 Running Sum of 1d Array
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 1, 3, 6, 10 })]
     [InlineData(new int[] { 1, 1, 1, 1, 1 }, new int[] { 1, 2, 3, 4, 5 })]
@@ -575,7 +575,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1662. Check If Two String Arrays are Equivalent
+    #region 1662 Check If Two String Arrays are Equivalent
     [Theory]
     [InlineData(new string[] { "ab", "c" }, new string[] { "a", "bc" }, true)]
     [InlineData(new string[] { "a", "cb" }, new string[] { "ab", "c" }, false)]
@@ -590,7 +590,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1460. Make Two Arrays Equal by Reversing Sub-arrays
+    #region 1460 Make Two Arrays Equal by Reversing Sub-arrays
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 2, 4, 1, 3 }, true)]
     [InlineData(new int[] { 7 }, new int[] { 7 }, true)]
@@ -606,7 +606,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1437. Check If All 1's Are at Least Length K Places Away
+    #region 1437 Check If All 1's Are at Least Length K Places Away
     [Theory]
     [InlineData(new[] { 1, 0, 0, 0, 1, 0, 0, 1 }, 2, true)]
     [InlineData(new[] { 1, 0, 0, 1, 0, 1 }, 2, false)]
@@ -623,7 +623,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1920. Build Array from Permutation
+    #region 1920 Build Array from Permutation
     [Theory]
     [InlineData(new int[] { 0, 2, 1, 5, 3, 4 }, new int[] { 0, 1, 2, 4, 5, 3 })]
     [InlineData(new int[] { 5, 0, 1, 2, 3, 4 }, new int[] { 4, 5, 0, 1, 2, 3 })]
@@ -637,7 +637,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1464. Maximum Product of Two Elements in an Array
+    #region 1464 Maximum Product of Two Elements in an Array
     [Theory]
     [InlineData(new int[] { 3, 4, 5, 2 }, 12)]
     [InlineData(new int[] { 1, 5, 4, 5 }, 16)]
@@ -652,7 +652,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2678. Number of Senior Citizens
+    #region 2678 Number of Senior Citizens
     [Theory]
     [InlineData(new string[] { "7868190130M7522", "5303914400F9211", "9273338290F4010" }, 2)]
     [InlineData(new string[] { "1313579440F2036", "2921522980M5644" }, 0)]
@@ -666,7 +666,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1337. The K Weakest Rows in a Matrix
+    #region 1337 The K Weakest Rows in a Matrix
     [Theory]
     [InlineData(3, new int[] { 2, 0, 3 },
         new int[] { 1, 1, 0, 0, 0 },
@@ -690,7 +690,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 205. Isomorphic Strings
+    #region 205 Isomorphic Strings
     [Theory]
     [InlineData("egg", "add", true)]
     [InlineData("foo", "bar", false)]
@@ -706,7 +706,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2255. Count Prefixes of a Given String
+    #region 2255 Count Prefixes of a Given String
     [Theory]
     [InlineData(new string[] { "a", "b", "c", "ab", "bc", "abc" }, "abc", 3)]
     [InlineData(new string[] { "a", "a" }, "aa", 2)]
@@ -721,7 +721,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1550. Three Consecutive Odds
+    #region 1550 Three Consecutive Odds
 
     [Theory]
     [InlineData(new int[] { 2, 6, 4, 1 }, false)]
@@ -739,7 +739,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1436. Destination City
+    #region 1436 Destination City
     [Theory]
     [InlineData("Sao Paulo", new string[] { "London", "New York" }, new string[] { "New York", "Lima" }, new string[] { "Lima", "Sao Paulo" })]
     [InlineData("A", new string[] { "B", "C" }, new string[] { "D", "B" }, new string[] { "C", "A" })]
@@ -759,7 +759,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1710. Maximum Units on a Truck
+    #region 1710 Maximum Units on a Truck
     [Theory]
     [InlineData(4, 8, new[] { 1, 3 }, new[] { 2, 2 }, new[] { 3, 1 })]
     [InlineData(10, 91, new[] { 5, 10 }, new[] { 2, 5 }, new[] { 4, 7 }, new[] { 3, 9 })]
@@ -773,7 +773,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1893. Check if All the Integers in a Range Are Covered
+    #region 1893 Check if All the Integers in a Range Are Covered
     [Theory]
     [InlineData(2, 5, true, new int[] { 1, 2 }, new int[] { 3, 4 }, new int[] { 5, 6 })]
     [InlineData(21, 21, false, new int[] { 1, 10 }, new int[] { 10, 20 })]
@@ -788,7 +788,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1351. Count Negative Numbers in a Sorted Matrix
+    #region 1351 Count Negative Numbers in a Sorted Matrix
     [Theory]
     [InlineData(8, new int[] { 4, 3, 2, -1 }, new int[] { 3, 2, 1, -1 }, new int[] { 1, 1, -1, -2 }, new int[] { -1, -1, -2, -3 })]
     [InlineData(0, new int[] { 3, 2 }, new int[] { 1, 0 })]
@@ -802,7 +802,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2706. Buy Two Chocolates
+    #region 2706 Buy Two Chocolates
     [Theory]
     [InlineData(new int[] { 1, 2, 2 }, 3, 0)]
     [InlineData(new int[] { 3, 2, 3 }, 3, 3)]
@@ -816,7 +816,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2011. Final Value of Variable After Performing Operations
+    #region 2011 Final Value of Variable After Performing Operations
     [Theory]
     [InlineData(new string[] { "--X", "X++", "X++" }, 1)]
     [InlineData(new string[] { "++X", "++X", "X++" }, 3)]
@@ -831,7 +831,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2465. Number of Distinct Averages
+    #region 2465 Number of Distinct Averages
     [Theory]
     [InlineData(new int[] { 4, 1, 4, 0, 3, 5 }, 2)]
     [InlineData(new int[] { 1, 100 }, 1)]
@@ -846,7 +846,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2974. Minimum Number Game
+    #region 2974 Minimum Number Game
     [Theory]
     [InlineData(new int[] { 5, 4, 2, 3 }, new int[] { 3, 2, 5, 4 })]
     [InlineData(new int[] { 2, 5 }, new int[] { 5, 2 })]
@@ -860,7 +860,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2341. Maximum Number of Pairs in Array
+    #region 2341 Maximum Number of Pairs in Array
     [Theory]
     [InlineData(new int[] { 1, 3, 2, 1, 3, 2, 2 }, new int[] { 3, 1 })]
     [InlineData(new int[] { 1, 1 }, new int[] { 1, 0 })]
@@ -875,7 +875,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 941. Valid Mountain Array
+    #region 941 Valid Mountain Array
     [Theory]
     [InlineData(new int[] { 2, 1 }, false)]
     [InlineData(new int[] { 3, 5, 5 }, false)]
@@ -892,7 +892,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1408. String Matching in an Array
+    #region 1408 String Matching in an Array
     [Theory]
     [InlineData(new string[] { "mass", "as", "hero", "superhero" }, new string[] { "as", "hero" })]
     [InlineData(new string[] { "leetcode", "et", "code" }, new string[] { "et", "code" })]
@@ -907,7 +907,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2073. Time Needed to Buy Tickets
+    #region 2073 Time Needed to Buy Tickets
     [Theory]
     [InlineData(new int[] { 2, 3, 2 }, 2, 6)]
     [InlineData(new int[] { 5, 1, 1, 1 }, 0, 8)]
@@ -922,7 +922,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1512. Number of Good Pairs
+    #region 1512 Number of Good Pairs
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 1, 1, 3 }, 4)]
     [InlineData(new int[] { 1, 1, 1, 1 }, 6)]
@@ -937,7 +937,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2824. Count Pairs Whose Sum is Less than Target
+    #region 2824 Count Pairs Whose Sum is Less than Target
     [Theory]
     [InlineData(new int[] { -1, 1, 2, 3, 1 }, 2, 3)]
     [InlineData(new int[] { -6, 2, 5, -2, -7, -1, 3 }, -2, 10)]
@@ -951,7 +951,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2446. Determine if Two Events Have Conflict
+    #region 2446 Determine if Two Events Have Conflict
     [Theory]
     [InlineData(new string[] { "01:15", "02:00" }, new string[] { "02:00", "03:00" }, true)]
     [InlineData(new string[] { "01:00", "02:00" }, new string[] { "01:20", "03:00" }, true)]
@@ -1025,7 +1025,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 628. Maximum Product of Three Numbers
+    #region 628 Maximum Product of Three Numbers
     [Theory]
     [InlineData(new int[] { 1, 2, 3 }, 6)]
     [InlineData(new int[] { 1, 2, 3, 4 }, 24)]
@@ -1041,7 +1041,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2057. Smallest Index With Equal Value
+    #region 2057 Smallest Index With Equal Value
     [Theory]
     [InlineData(new int[] { 0, 1, 2 }, 0)]
     [InlineData(new int[] { 4, 3, 2, 1 }, 2)]
@@ -1058,7 +1058,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1089. Duplicate Zeros
+    #region 1089 Duplicate Zeros
     [Theory]
     [InlineData(new int[] { 1, 0, 2, 3, 0, 4, 5, 0 }, new int[] { 1, 0, 0, 2, 3, 0, 0, 4 })]
     [InlineData(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 })]
@@ -1074,7 +1074,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2549. Count Distinct Numbers on Board
+    #region 2549 Count Distinct Numbers on Board
     [Theory]
     [InlineData(5, 4)]
     [InlineData(3, 2)]
@@ -1089,7 +1089,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1365. How Many Numbers Are Smaller Than the Current Number
+    #region 1365 How Many Numbers Are Smaller Than the Current Number
     [Theory]
     [InlineData(new int[] { 8, 1, 2, 2, 3 }, new int[] { 4, 0, 1, 1, 3 })]
     [InlineData(new int[] { 6, 5, 4, 8 }, new int[] { 2, 1, 0, 3 })]
@@ -1104,7 +1104,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1913. Maximum Product Difference Between Two Pairs
+    #region 1913 Maximum Product Difference Between Two Pairs
     [Theory]
     [InlineData(new int[] { 5, 6, 2, 7, 4 }, 34)]
     [InlineData(new int[] { 4, 2, 5, 9, 7, 4, 8 }, 64)]
@@ -1119,7 +1119,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 961. N-Repeated Element in Size 2N Array
+    #region 961 N-Repeated Element in Size 2N Array
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 3 }, 3)]
     [InlineData(new int[] { 2, 1, 2, 5, 3, 2 }, 2)]
@@ -1134,7 +1134,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 3005. Count Elements With Maximum Frequency
+    #region 3005 Count Elements With Maximum Frequency
     [Theory]
     [InlineData(new int[] { 1, 2, 2, 3, 1, 4 }, 4)]
     [InlineData(new int[] { 1, 2, 3, 4, 5 }, 5)]
@@ -1148,7 +1148,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2806. Account Balance After Rounded Purchase
+    #region 2806 Account Balance After Rounded Purchase
     [Theory]
     [InlineData(9, 90)]
     [InlineData(15, 80)]
@@ -1163,7 +1163,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 905. Sort Array By Parity
+    #region 905 Sort Array By Parity
     [Theory]
     [InlineData(new int[] { 3, 1, 2, 4 }, new int[] { 2, 4, 3, 1 })]
     [InlineData(new int[] { 0 }, new int[] { 0 })]
@@ -1177,7 +1177,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2778. Sum of Squares of Special Elements
+    #region 2778 Sum of Squares of Special Elements
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4 }, 21)]
     [InlineData(new int[] { 2, 7, 1, 19, 18, 3 }, 63)]
@@ -1191,7 +1191,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2148. Count Elements With Strictly Smaller and Greater Elements
+    #region 2148 Count Elements With Strictly Smaller and Greater Elements
     [Theory]
     [InlineData(new int[] { 11, 7, 2, 15 }, 2)]
     [InlineData(new int[] { -3, 3, 3, 90 }, 2)]
@@ -1205,7 +1205,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1720. Decode XORed Array
+    #region 1720 Decode XORed Array
     [Theory]
     [InlineData(new int[] { 1, 2, 3 }, 1, new int[] { 1, 0, 2, 1 })]
     [InlineData(new int[] { 6, 2, 7, 3 }, 4, new int[] { 4, 2, 0, 7, 4 })]
@@ -1219,7 +1219,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2815. Max Pair Sum in an Array
+    #region 2815 Max Pair Sum in an Array
     [Theory]
     [InlineData(new int[] { 112, 131, 411 }, -1)]
     [InlineData(new int[] { 2536, 1613, 3366, 162 }, 5902)]
@@ -1234,7 +1234,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1304. Find N Unique Integers Sum up to Zero
+    #region 1304 Find N Unique Integers Sum up to Zero
     [Theory]
     [InlineData(5)]
     [InlineData(3)]
@@ -1265,7 +1265,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 3069. Distribute Elements Into Two Arrays I
+    #region 3069 Distribute Elements Into Two Arrays I
     [Theory]
     [InlineData(new int[] { 2, 1, 3 }, new int[] { 2, 3, 1 })]
     [InlineData(new int[] { 5, 4, 3, 8 }, new int[] { 5, 3, 4, 8 })]
@@ -1279,7 +1279,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 575. Distribute Candies
+    #region 575 Distribute Candies
     [Theory]
     [InlineData(new int[] { 1, 1, 2, 2, 3, 3 }, 3)]
     [InlineData(new int[] { 1, 1, 2, 3 }, 2)]
@@ -1294,7 +1294,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 705. Design HashSet
+    #region 705 Design HashSet
     [Fact]
     public void TestMyHashSet()
     {
@@ -1311,7 +1311,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2185. Counting Words With a Given Prefix
+    #region 2185 Counting Words With a Given Prefix
     [Theory]
     [InlineData(new string[] { "pay", "attention", "practice", "attend" }, "at", 2)]
     [InlineData(new string[] { "leetcode", "win", "loops", "success" }, "code", 0)]
@@ -1325,7 +1325,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1431. Kids With the Greatest Number of Candies
+    #region 1431 Kids With the Greatest Number of Candies
     [Theory]
     [InlineData(new int[] { 2, 3, 5, 1, 3 }, 3, new bool[] { true, true, true, false, true })]
     [InlineData(new int[] { 4, 2, 1, 1, 2 }, 1, new bool[] { true, false, false, false, false })]
@@ -1340,7 +1340,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2239. Find Closest Number to Zero
+    #region 2239 Find Closest Number to Zero
     [Theory]
     [InlineData(new int[] { -4, -2, 1, 4, 8 }, 1)]
     [InlineData(new int[] { 2, -1, 1 }, 1)]
@@ -1355,7 +1355,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2357. Make Array Zero by Subtracting Equal Amounts
+    #region 2357 Make Array Zero by Subtracting Equal Amounts
     [Theory]
     [InlineData(new int[] { 1, 5, 0, 3, 5 }, 3)]
     [InlineData(new int[] { 0 }, 0)]
@@ -1369,7 +1369,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 2923. Find Champion I
+    #region 2923 Find Champion I
     [Theory]
     [InlineData(0, new int[] { 0, 1 }, new int[] { 0, 0 })]
     [InlineData(1, new int[] { 0, 0, 1 }, new int[] { 1, 0, 1 }, new int[] { 0, 0, 0 })]
@@ -1383,7 +1383,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1475. Final Prices With a Special Discount in a Shop
+    #region 1475 Final Prices With a Special Discount in a Shop
     [Theory]
     [InlineData(new int[] { 8, 4, 6, 2, 3 }, new int[] { 4, 2, 4, 2, 3 })]
     [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 })]
@@ -1398,7 +1398,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1051. Height Checker
+    #region 1051 Height Checker
     [Theory]
     [InlineData(new int[] { 1, 1, 4, 2, 1, 3 }, 3)]
     [InlineData(new int[] { 5, 1, 2, 3, 4 }, 5)]
@@ -1413,7 +1413,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 561. Array Partition
+    #region 561 Array Partition
     [Theory]
     [InlineData(new int[] { 1, 4, 3, 2 }, 4)]
     [InlineData(new int[] { 6, 2, 6, 5, 1, 2 }, 9)]
@@ -1427,7 +1427,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1385. Find the Distance Value Between Two Arrays
+    #region 1385 Find the Distance Value Between Two Arrays
     [Theory]
     [InlineData(new int[] { 4, 5, 8 }, new int[] { 10, 9, 1, 8 }, 2, 2)]
     [InlineData(new int[] { 1, 4, 2, 3 }, new int[] { -4, -3, 6, 10, 20, 30 }, 3, 2)]
@@ -1442,7 +1442,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 3065. Minimum Operations to Exceed Threshold Value I
+    #region 3065 Minimum Operations to Exceed Threshold Value I
     [Theory]
     [InlineData(new int[] { 2, 11, 10, 1, 3 }, 10, 3)]
     [InlineData(new int[] { 1, 1, 2, 4, 9 }, 1, 0)]
@@ -1457,7 +1457,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1748. Sum of Unique Elements
+    #region 1748 Sum of Unique Elements
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 2 }, 4)]
     [InlineData(new int[] { 1, 1, 1, 1, 1 }, 0)]
@@ -1472,7 +1472,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1346. Check If N and Its Double Exist
+    #region 1346 Check If N and Its Double Exist
     [Theory]
     [InlineData(new int[] { 10, 2, 5, 3 }, true)]
     [InlineData(new int[] { 3, 1, 7, 11 }, false)]
@@ -1486,7 +1486,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 1732. Find the Highest Altitude
+    #region 1732 Find the Highest Altitude
     [Theory]
     [InlineData(new int[] { -5, 1, 5, 0, -7 }, 1)]
     [InlineData(new int[] { -4, -3, -2, -1, 4, 3, 2 }, 0)]
@@ -1500,7 +1500,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 832. Flipping an Image >>
+    #region 832 Flipping an Image >>
     [Theory]
     [ClassData(typeof(ImageTestData))]
     public void TestFlipAndInvertImage(int[][] image, int[][] expected)
@@ -1615,7 +1615,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 914. X of a Kind in a Deck of Cards
+    #region 914 X of a Kind in a Deck of Cards
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4, 4, 3, 2, 1 }, true)]
     [InlineData(new int[] { 1, 1, 1, 2, 2, 2, 3, 3 }, false)]
@@ -1911,9 +1911,23 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3162 Find the Number of Good Pairs I
+    [Theory]
+    [InlineData(new int[] { 1, 3, 4 }, new int[] { 1, 3, 4 }, 1, 5)]
+    [InlineData(new int[] { 1, 2, 4, 12 }, new int[] { 2, 4 }, 3, 2)]
+    public void TestFindGoodPairs(int[] nums1, int[] nums2, int k, int expected)
+    {
+        // Act
+        var result = Solution.NumberOfPairs(nums1, nums2, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
-#region 832. Flipping an Image <<
+#region 832 Flipping an Image <<
 public class ImageTestData : IEnumerable<object[]>
 {
     public IEnumerator<object[]> GetEnumerator()

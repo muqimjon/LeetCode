@@ -2,7 +2,7 @@
 
 public class Arrays
 {
-    #region 1.TwoSum
+    #region 1 TwoSum
     /// <summary>
     /// 1 Two Sum
     /// </summary>
@@ -23,7 +23,7 @@ public class Arrays
     }
     #endregion
 
-    #region 26.RemoveDuplicates
+    #region 26 RemoveDuplicates
     /// <summary>
     /// 26 Remove Duplicates from Sorted Array
     /// </summary>
@@ -1623,7 +1623,7 @@ public class Arrays
         => words.Count(word => word.StartsWith(pref));
     #endregion
 
-    #region Kids With the Greatest Number of Candies
+    #region 1431 Kids With the Greatest Number of Candies
     /// <summary>
     /// Determines if each kid, after receiving extra candies, will have the greatest number of candies.
     /// </summary>
@@ -1637,7 +1637,7 @@ public class Arrays
         => candies.Select(c => c + extraCandies >= candies.Max()).ToList();
     #endregion
 
-    #region Find Closest Number to Zero
+    #region 2239 Find Closest Number to Zero
     /// <summary>
     /// Finds the number in the array that is closest to zero If there are multiple answers, returns the largest number.
     /// </summary>
@@ -1650,7 +1650,7 @@ public class Arrays
         => nums.OrderBy(n => (Math.Abs(n), -n)).First();
     #endregion
 
-    #region Make Array Zero by Subtracting Equal Amounts
+    #region 2357 Make Array Zero by Subtracting Equal Amounts
     /// <summary>
     /// Returns the minimum number of operations to make every element in the array equal to 0.
     /// </summary>
@@ -1663,7 +1663,7 @@ public class Arrays
         => nums.Where(n => n > 0).Distinct().Count();
     #endregion
 
-    #region Find Champion I
+    #region 2923 Find Champion I
     /// <summary>
     /// Returns the team that will be the champion of the tournament.
     /// </summary>
@@ -1676,7 +1676,7 @@ public class Arrays
         => Enumerable.Range(0, grid.Length).First(i => grid.All(row => row[i] == 0));
     #endregion
 
-    #region Final Prices With a Special Discount in a Shop
+    #region 1475 Final Prices With a Special Discount in a Shop
     /// <summary>
     /// Returns final prices after applying special discounts.
     /// </summary>
@@ -1689,7 +1689,7 @@ public class Arrays
         => prices.Select((p, i) => p - prices.Skip(i + 1).FirstOrDefault(d => d <= p)).ToArray();
     #endregion
 
-    #region Height Checker
+    #region 1051 Height Checker
     /// <summary>
     /// Returns the number of indices where heights[i] != expected[i].
     /// </summary>
@@ -2245,6 +2245,21 @@ public class Arrays
 
         return sum;
     }
+    #endregion
+
+    #region 3162 Find the Number of Good Pairs I
+    /// <summary>
+    /// Counts the number of good pairs where nums1[i] is divisible by nums2[j] * k.
+    /// </summary>
+    /// <param name="nums1">The first array of integers.</param>
+    /// <param name="nums2">The second array of integers.</param>
+    /// <param name="k">The multiplier applied to nums2[j] in the divisibility check.</param>
+    /// <returns>The total number of good pairs.</returns>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public int NumberOfPairs(int[] nums1, int[] nums2, int k)
+        => nums1.SelectMany(x => nums2, (x, y) => x % (y * k) == 0)
+                .Count(valid => valid);
     #endregion
 }
 
