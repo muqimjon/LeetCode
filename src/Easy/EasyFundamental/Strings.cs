@@ -969,4 +969,17 @@ public class Strings
     public string Interpret(string command)
         => command.Replace("()", "o").Replace("(al)", "al");
     #endregion
+
+    #region 824 Goat Latin
+    /// <summary>
+    /// Converts a given sentence to Goat Latin according to specified rules.
+    /// </summary>
+    /// <param name="sentence">The input sentence consisting of words separated by spaces.</param>
+    /// <returns>The sentence converted to Goat Latin.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string ToGoatLatin(string sentence)
+        => string.Join(" ", sentence.Split(' ').Select((word, i) =>
+            (new string("aeiouAEIOU".Contains(word[0]) ? word : word[1..] + word[0]) + "maa" + new string('a', i))));
+    #endregion
 }
