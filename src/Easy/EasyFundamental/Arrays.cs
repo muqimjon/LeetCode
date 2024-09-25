@@ -2261,6 +2261,20 @@ public class Arrays
         => nums1.SelectMany(x => nums2, (x, y) => x % (y * k) == 0)
                 .Count(valid => valid);
     #endregion
+
+    #region 867 Transpose Matrix
+    /// <summary>
+    /// Transposes the given 2D integer array (matrix), flipping it over its main diagonal.
+    /// </summary>
+    /// <param name="matrix">The input matrix to transpose.</param>
+    /// <returns>The transposed matrix.</returns>
+    /// <time>O(m * n)</time>
+    /// <space>O(m * n)</space>
+    public int[][] Transpose(int[][] matrix)
+        => Enumerable.Range(0, matrix[0].Length)
+            .Select(i => matrix.Select(row => row[i]).ToArray())
+            .ToArray();
+    #endregion
 }
 
 #region 705 Design HashSet

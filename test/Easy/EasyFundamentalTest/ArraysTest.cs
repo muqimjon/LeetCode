@@ -1,7 +1,7 @@
-﻿using EasyFundamental;
-using System.Collections;
+﻿namespace EasyFundamentalTest;
 
-namespace EasyFundamentalTest;
+using EasyFundamental;
+using System.Collections;
 
 public class ArraysTest
 {
@@ -722,7 +722,6 @@ public class ArraysTest
     #endregion
 
     #region 1550 Three Consecutive Odds
-
     [Theory]
     [InlineData(new int[] { 2, 6, 4, 1 }, false)]
     [InlineData(new int[] { 1, 2, 34, 3, 4, 5, 7, 23, 12 }, true)]
@@ -966,7 +965,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region Form Smallest Number From Two Digit Arrays
+    #region 2605 Form Smallest Number From Two Digit Arrays
     [Theory]
     [InlineData(new int[] { 4, 1, 3 }, new int[] { 5, 7 }, 15)]
     [InlineData(new int[] { 3, 5, 2, 6 }, new int[] { 3, 1, 7 }, 3)]
@@ -980,7 +979,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region Check if a String Is an Acronym of Words
+    #region 2828 Check if a String Is an Acronym of Words
     [Theory]
     [InlineData(new string[] { "alice", "bob", "charlie" }, "abc", true)]
     [InlineData(new string[] { "an", "apple" }, "a", false)]
@@ -995,7 +994,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region Row With Maximum Ones
+    #region 2643 Row With Maximum Ones
     [Theory]
     [InlineData(new int[] { 0, 1 }, new int[] { 0, 1 }, new int[] { 1, 0 })]
     [InlineData(new int[] { 1, 2 }, new int[] { 0, 0, 0 }, new int[] { 0, 1, 1 })]
@@ -1011,7 +1010,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region Points That Intersect With Cars
+    #region 2848 Points That Intersect With Cars
     [Theory]
     [InlineData(7, new int[] { 3, 6 }, new int[] { 1, 5 }, new int[] { 4, 7 })]
     [InlineData(7, new int[] { 1, 3 }, new int[] { 5, 8 })]
@@ -1511,6 +1510,33 @@ public class ArraysTest
         // Assert
         Assert.Equal(expected, result);
     }
+    //#region 832 Flipping an Image >>
+    //[Theory]
+    //[MemberData(nameof(GetTestData832))]
+    //public void TestFlipAndInvertImage(int[][] image, int[][] expected)
+    //{
+    //    // Act
+    //    var result = Solution.FlipAndInvertImage(image);
+
+    //    // Assert
+    //    Assert.Equal(expected, result);
+    //}
+
+    //public static IEnumerable<object[]> GetTestData832()
+    //{
+    //    yield return new object[]
+    //    {
+    //        new int[][] { [1, 1, 0], [1, 0, 1], [0, 0, 0] },
+    //        new int[][] { [1, 0, 0], [0, 1, 0], [1, 1, 1] }
+    //    };
+
+    //    yield return new object[]
+    //    {
+    //        new int[][] { [1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0] },
+    //        new int[][] { [1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 0, 1], [1, 0, 1, 0] }
+    //    };
+    //}
+    //#endregion
     #endregion
 
     #region 1684 Count the Number of Consistent Strings
@@ -1923,6 +1949,40 @@ public class ArraysTest
 
         // Assert
         Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 867 Transpose Matrix
+    [Theory]
+    [MemberData(nameof(GetTestData867))]
+    public void TestTransposeMatrix(int[][] matrix, int[][] expected)
+    {
+        // Act
+        var result = Solution.Transpose(matrix);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    public static IEnumerable<object[]> GetTestData867()
+    {
+        yield return new object[]
+        {
+            new int[][] { [1, 2, 3], [4, 5, 6], [7, 8, 9] },
+            new int[][] { [1, 4, 7], [2, 5, 8], [3, 6, 9] }
+        };
+
+        yield return new object[]
+        {
+            new int[][] { [1, 2, 3], [4, 5, 6] },
+            new int[][] { [1, 4], [2, 5], [3, 6] }
+        };
+
+        yield return new object[]
+        {
+            new int[][] { [1] },
+            new int[][] { [1] }
+        };
     }
     #endregion
 }
