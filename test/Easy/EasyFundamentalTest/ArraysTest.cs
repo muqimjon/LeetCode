@@ -1985,6 +1985,21 @@ public class ArraysTest
         };
     }
     #endregion
+
+    #region 2942 Find Words Containing Character
+    [Theory]
+    [InlineData(new string[] { "leet", "code" }, 'e', new int[] { 0, 1 })]
+    [InlineData(new string[] { "abc", "bcd", "aaaa", "cbc" }, 'a', new int[] { 0, 2 })]
+    [InlineData(new string[] { "abc", "bcd", "aaaa", "cbc" }, 'z', new int[] { })]
+    public void TestFindWordsContainingCharacter(string[] words, char x, int[] expected)
+    {
+        // Act
+        var result = Solution.FindWordsContaining(words, x);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

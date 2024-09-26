@@ -2275,6 +2275,19 @@ public class Arrays
             .Select(i => matrix.Select(row => row[i]).ToArray())
             .ToArray();
     #endregion
+
+    #region 2942 Find Words Containing Character
+    /// <summary>
+    /// Finds the indices of words that contain a specific character.
+    /// </summary>
+    /// <param name="words">An array of words.</param>
+    /// <param name="x">The character to search for in the words.</param>
+    /// <returns>A list of indices representing the words that contain the character x.</returns>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public IList<int> FindWordsContaining(string[] words, char x)
+        => words.Select((word, i) => word.Contains(x) ? i : -1).Where(i => i != -1).ToList();
+    #endregion
 }
 
 #region 705 Design HashSet
