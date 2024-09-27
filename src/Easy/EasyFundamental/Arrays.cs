@@ -2288,6 +2288,23 @@ public class Arrays
     public IList<int> FindWordsContaining(string[] words, char x)
         => words.Select((word, i) => word.Contains(x) ? i : -1).Where(i => i != -1).ToList();
     #endregion
+
+    #region 1827 Minimum Operations to Make the Array Increasing
+    /// <summary>
+    /// Calculates the minimum number of operations needed to make the array strictly increasing.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The minimum number of operations.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MinOperations2(int[] nums)
+    {
+        int prev = nums[0];
+        return nums.Skip(1)
+            .Select(n => (prev = Math.Max(prev + 1, n)) - n)
+            .Sum();
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
