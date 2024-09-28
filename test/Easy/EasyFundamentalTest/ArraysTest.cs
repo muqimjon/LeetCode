@@ -2015,6 +2015,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 997 Find the Town Judge - Example Tests
+    [Theory]
+    [InlineData(2, 2, new int[] { 1, 2 })]
+    [InlineData(3, 3, new int[] { 1, 3 }, new int[] { 2, 3 })]
+    [InlineData(3, -1, new int[] { 1, 3 }, new int[] { 2, 3 }, new int[] { 3, 1 })]
+    public void TestFindJudge(int n, int expected, params int[][] trust)
+    {
+        // Act
+        var result = Solution.FindJudge(n, trust);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

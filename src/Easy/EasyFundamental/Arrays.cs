@@ -2305,6 +2305,20 @@ public class Arrays
             .Sum();
     }
     #endregion
+
+    #region 997 Find the Town Judge
+    /// <summary>
+    /// Identifies the town judge based on the trust relationships provided.
+    /// </summary>
+    /// <param name="n">The number of people in the town.</param>
+    /// <param name="trust">An array representing trust relationships where trust[i] = [ai, bi].</param>
+    /// <returns>The label of the town judge, or -1 if no judge exists.</returns>
+    /// <time>O(n)</time> where n is the number of people and t is the number of trust relationships.
+    /// <space>O(1)</space>
+    public int FindJudge(int n, int[][] trust)
+        => Enumerable.Range(1, n).FirstOrDefault(i
+            => trust.Count(t => t[1] == i) == n - 1 && trust.All(t => t[0] != i), -1);
+    #endregion
 }
 
 #region 705 Design HashSet
