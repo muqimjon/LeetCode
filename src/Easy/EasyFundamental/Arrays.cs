@@ -2319,6 +2319,18 @@ public class Arrays
         => Enumerable.Range(1, n).FirstOrDefault(i
             => trust.Count(t => t[1] == i) == n - 1 && trust.All(t => t[0] != i), -1);
     #endregion
+
+    #region 1299 Replace Elements with Greatest Element on Right Side
+    /// <summary>
+    /// Replaces each element in the array with the greatest element to its right, and replaces the last element with -1.
+    /// </summary>
+    /// <param name="arr">The input array of integers.</param>
+    /// <returns>A new array where each element is replaced with the greatest element to its right.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int[] ReplaceElements(int[] arr)
+        => arr.Select((_, i) => i == arr.Length - 1 ? -1 : arr[(i + 1)..].Max()).ToArray();
+    #endregion
 }
 
 #region 705 Design HashSet

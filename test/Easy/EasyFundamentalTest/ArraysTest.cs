@@ -2016,7 +2016,7 @@ public class ArraysTest
     }
     #endregion
 
-    #region 997 Find the Town Judge - Example Tests
+    #region 997 Find the Town Judge
     [Theory]
     [InlineData(2, 2, new int[] { 1, 2 })]
     [InlineData(3, 3, new int[] { 1, 3 }, new int[] { 2, 3 })]
@@ -2025,6 +2025,20 @@ public class ArraysTest
     {
         // Act
         var result = Solution.FindJudge(n, trust);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+    
+    #region 1299 Replace Elements with Greatest Element on Right Side
+    [Theory]
+    [InlineData(new int[] { 17, 18, 5, 4, 6, 1 }, new int[] { 18, 6, 6, 6, 1, -1 })]
+    [InlineData(new int[] { 400 }, new int[] { -1 })]
+    public void TestReplaceElements_Examples(int[] arr, int[] expected)
+    {
+        // Act
+        var result = Solution.ReplaceElements(arr);
 
         // Assert
         Assert.Equal(expected, result);
