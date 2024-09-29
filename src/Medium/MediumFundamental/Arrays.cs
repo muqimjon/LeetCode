@@ -2,7 +2,7 @@
 
 public class Arrays
 {
-    #region 931. Minimum Falling Path Sum
+    #region 931 Minimum Falling Path Sum
     /// <summary>
     /// Calculates the minimum falling path sum in the given matrix.
     /// </summary>
@@ -49,7 +49,7 @@ public class Arrays
     //}
     #endregion
 
-    #region 3. Longest Substring Without Repeating Characters
+    #region 3 Longest Substring Without Repeating Characters
     /// <summary>
     /// Finds the length of the longest substring without repeating characters.
     /// </summary>
@@ -76,7 +76,7 @@ public class Arrays
     }
     #endregion
 
-    #region 198. House Robber
+    #region 198 House Robber
     /// <summary>
     /// Calculates the maximum amount of money that can be robbed from houses.
     /// </summary>
@@ -99,7 +99,7 @@ public class Arrays
     }
     #endregion
 
-    #region 1239. Maximum Length of a Concatenated String with Unique Characters
+    #region 1239 Maximum Length of a Concatenated String with Unique Characters
     /// <summary>
     /// Calculates the max length of a unique-character concatenated string.
     /// </summary>
@@ -123,7 +123,7 @@ public class Arrays
     }
     #endregion
 
-    #region 189. Rotate Array
+    #region 189 Rotate Array
     /// <summary>
     /// Rotates the array to the right by k steps.
     /// </summary>
@@ -143,6 +143,29 @@ public class Arrays
 
         for (int i = 0; i < n; i++)
             nums[i] = temp[i];
+    }
+    #endregion
+
+    #region 1487 Making File Names Unique
+    /// <summary>
+    /// Returns an array of unique folder names by adding the smallest possible integer suffix whenever a name conflict occurs.
+    /// </summary>
+    /// <param name="names">The input array of folder names.</param>
+    /// <returns>An array of unique folder names.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string[] GetFolderNames(string[] names)
+    {
+        Dictionary<string, int> nameCount = [];
+        return names.Select(name => {
+            var originalName = name;
+
+            while (nameCount.ContainsKey(name))
+                name = $"{originalName}({++nameCount[originalName]})";
+
+            nameCount[name] = 0;
+            return name;
+        }).ToArray();
     }
     #endregion
 }
