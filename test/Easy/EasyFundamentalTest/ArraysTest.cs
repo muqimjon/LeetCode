@@ -2044,6 +2044,43 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2363 Merge Similar Items
+    [Theory]
+    [MemberData(nameof(GetTestData2363))]
+    public void TestMergeSimilarItems(int[][] items1, int[][] items2, int[][] expected)
+    {
+        // Act
+        var result = Solution.MergeSimilarItems(items1, items2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    public static IEnumerable<object[]> GetTestData2363()
+    {
+        yield return new object[]
+        {
+        new int[][] { [1, 1], [4, 5], [3, 8] },
+        new int[][] { [3, 1], [1, 5] },
+        new int[][] { [1, 6], [3, 9], [4, 5] }
+        };
+
+        yield return new object[]
+        {
+        new int[][] { [1, 1], [3, 2], [2, 3] },
+        new int[][] { [2, 1], [3, 2], [1, 3] },
+        new int[][] { [1, 4], [2, 4], [3, 4] }
+        };
+
+        yield return new object[]
+        {
+        new int[][] { [1, 3], [2, 2] },
+        new int[][] { [7, 1], [2, 2], [1, 4] },
+        new int[][] { [1, 7], [2, 4], [7, 1] }
+        };
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

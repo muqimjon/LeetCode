@@ -2331,6 +2331,22 @@ public class Arrays
     public int[] ReplaceElements(int[] arr)
         => arr.Select((_, i) => i == arr.Length - 1 ? -1 : arr[(i + 1)..].Max()).ToArray();
     #endregion
+
+    #region 2363 Merge Similar Items
+    /// <summary>
+    /// Merges two item arrays by value, sums weights, and returns a sorted list of lists.
+    /// </summary>
+    /// <param name="items1">First array of items (value, weight).</param>
+    /// <param name="items2">Second array of items (value, weight).</param>
+    /// <returns>A merged list of items with summed weights, sorted by value.</returns>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public IList<IList<int>> MergeSimilarItems(int[][] items1, int[][] items2)
+        => [.. items1.Concat(items2)
+            .GroupBy(item => item[0])
+            .Select(group => new List<int> { group.Key, group.Sum(item => item[1]) })
+            .OrderBy(item => item[0])];
+    #endregion
 }
 
 #region 705 Design HashSet
