@@ -157,7 +157,8 @@ public class Arrays
     public string[] GetFolderNames(string[] names)
     {
         Dictionary<string, int> nameCount = [];
-        return names.Select(name => {
+        return names.Select(name =>
+        {
             var originalName = name;
 
             while (nameCount.ContainsKey(name))

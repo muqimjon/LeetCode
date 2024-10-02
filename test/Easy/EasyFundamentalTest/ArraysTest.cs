@@ -2030,7 +2030,7 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
-    
+
     #region 1299 Replace Elements with Greatest Element on Right Side
     [Theory]
     [InlineData(new int[] { 17, 18, 5, 4, 6, 1 }, new int[] { 18, 6, 6, 6, 1, -1 })]
@@ -2079,6 +2079,21 @@ public class ArraysTest
         new int[][] { [7, 1], [2, 2], [1, 4] },
         new int[][] { [1, 7], [2, 4], [7, 1] }
         };
+    }
+    #endregion
+
+    #region 896 Monotonic Array
+    [Theory]
+    [InlineData(new int[] { 1, 2, 2, 3 }, true)]
+    [InlineData(new int[] { 6, 5, 4, 4 }, true)]
+    [InlineData(new int[] { 1, 3, 2 }, false)]
+    public void TestIsMonotonic(int[] nums, bool expected)
+    {
+        // Act
+        var result = Solution.IsMonotonic(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
     }
     #endregion
 }

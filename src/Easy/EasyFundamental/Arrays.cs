@@ -2122,7 +2122,7 @@ public class Arrays
     /// <space>O(n)</space>
     public int[] CreateTargetArray(int[] nums, int[] index)
         => [.. index.Select((x, i) => (x, nums[i]))
-            .Aggregate(new List<int>(), (t, pair) 
+            .Aggregate(new List<int>(), (t, pair)
             => { t.Insert(pair.x, pair.Item2); return t; })];
     #endregion
 
@@ -2154,7 +2154,7 @@ public class Arrays
     /// <time>O(n)</time>
     /// <space>O(n)</space>
     public bool ContainsDuplicate(int[] nums)
-        =>  nums.Length != nums.Distinct().Count();
+        => nums.Length != nums.Distinct().Count();
     #endregion
 
     #region 1827 Minimum Operations to Make the Array Increasing
@@ -2347,6 +2347,19 @@ public class Arrays
             .Select(group => new List<int> { group.Key, group.Sum(item => item[1]) })
             .OrderBy(item => item[0])];
     #endregion
+
+    #region 896 Monotonic Array
+    /// <summary>
+    /// Checks if the given array is monotonic (either entirely non-increasing or non-decreasing).
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>True if the array is monotonic, false otherwise.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool IsMonotonic(int[] nums)
+        => nums.Zip(nums.Skip(1), (a, b) => a <= b).All(x => x) ||
+           nums.Zip(nums.Skip(1), (a, b) => a >= b).All(x => x);
+    #endregion
 }
 
 #region 705 Design HashSet
@@ -2379,4 +2392,4 @@ public class MyHashSet
     public bool Contains(int key)
         => elements.Contains(key);
 }
-#endregion  
+#endregion
