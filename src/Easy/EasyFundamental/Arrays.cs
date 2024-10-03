@@ -2360,6 +2360,22 @@ public class Arrays
         => nums.Zip(nums.Skip(1), (a, b) => a <= b).All(x => x) ||
            nums.Zip(nums.Skip(1), (a, b) => a >= b).All(x => x);
     #endregion
+
+    #region 350 Intersection of Two Arrays II
+    /// <summary>
+    /// Finds the intersection of two integer arrays, returning each element as many times as it appears in both arrays.
+    /// </summary>
+    /// <param name="nums1">First array of integers.</param>
+    /// <param name="nums2">Second array of integers.</param>
+    /// <returns>An array containing the intersection of the two arrays.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int[] Intersect(int[] nums1, int[] nums2)
+    {
+        var counts = nums1.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
+        return nums2.Where(x => counts.ContainsKey(x) && counts[x]-- > 0).ToArray();
+    }
+    #endregion
 }
 
 #region 705 Design HashSet

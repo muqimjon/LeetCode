@@ -2096,6 +2096,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 350 Intersection of Two Arrays II
+    [Theory]
+    [InlineData(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 }, new int[] { 2, 2 })]
+    [InlineData(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 }, new int[] { 4, 9 })]
+    public void TestIntersect(int[] nums1, int[] nums2, int[] expected)
+    {
+        // Act
+        var result = Solution.Intersect(nums1, nums2);
+
+        // Assert
+        Assert.Equal(expected.OrderBy(x => x), result.OrderBy(x => x));
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
