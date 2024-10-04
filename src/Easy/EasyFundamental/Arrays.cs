@@ -2376,6 +2376,19 @@ public class Arrays
         return nums2.Where(x => counts.ContainsKey(x) && counts[x]-- > 0).ToArray();
     }
     #endregion
+
+    #region 3131 Find the Integer Added to Array I
+    /// <summary>
+    /// Finds the integer added to each element of nums1 to make it equal to nums2.
+    /// </summary>
+    /// <param name="nums1">First array of integers.</param>
+    /// <param name="nums2">Second array of integers.</param>
+    /// <returns>The integer x that was added to each element of nums1.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int AddedInteger(int[] nums1, int[] nums2)
+        => nums2.Min() - nums1.Min();
+    #endregion
 }
 
 #region 705 Design HashSet

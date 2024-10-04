@@ -2110,6 +2110,21 @@ public class ArraysTest
         Assert.Equal(expected.OrderBy(x => x), result.OrderBy(x => x));
     }
     #endregion
+
+    #region 3131 Find the Integer Added to Array I
+    [Theory]
+    [InlineData(new int[] { 2, 6, 4 }, new int[] { 9, 7, 5 }, 3)]
+    [InlineData(new int[] { 10 }, new int[] { 5 }, -5)]
+    [InlineData(new int[] { 1, 1, 1, 1 }, new int[] { 1, 1, 1, 1 }, 0)]
+    public void TestFindIntegerAdded(int[] nums1, int[] nums2, int expected)
+    {
+        // Act
+        var result = Solution.AddedInteger(nums1, nums2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
