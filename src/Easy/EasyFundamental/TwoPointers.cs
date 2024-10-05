@@ -2,7 +2,7 @@
 
 public class TwoPointers
 {
-    #region 2000. Reverse Prefix of Word
+    #region 2000 Reverse Prefix of Word
     /// <summary>
     /// Reverses the segment of a word that starts at index 0 and ends at the index of the first occurrence of a specified character (inclusive).
     /// </summary>
@@ -22,7 +22,7 @@ public class TwoPointers
     }
     #endregion
 
-    #region 344. Reverse String
+    #region 344 Reverse String
     /// <summary>
     /// Reverses a string in place.
     /// </summary>
@@ -39,7 +39,7 @@ public class TwoPointers
     }
     #endregion
 
-    #region 541. Reverse String II
+    #region 541 Reverse String II
     /// <summary>
     /// Reverses a string in place.
     /// </summary>
@@ -60,7 +60,7 @@ public class TwoPointers
     }
     #endregion
 
-    #region 345. Reverse Vowels of a String
+    #region 345 Reverse Vowels of a String
     /// <summary>
     /// Reverses only the vowels in a string.
     /// </summary>
@@ -87,7 +87,7 @@ public class TwoPointers
     }
     #endregion
 
-    #region 925. Long Pressed Name
+    #region 925 Long Pressed Name
     /// <summary>
     /// Checks if the typed string can be obtained from the name string by possibly long pressing some characters.
     /// </summary>
@@ -111,7 +111,7 @@ public class TwoPointers
     }
     #endregion
 
-    #region 1332. Remove Palindromic Subsequences
+    #region 1332 Remove Palindromic Subsequences
     /// <summary>
     /// Removes the palindromic subsequences to make the string empty in minimum steps.
     /// </summary>
@@ -125,7 +125,7 @@ public class TwoPointers
         => s.Equals(string.Concat(s.Reverse())) ? 1 : 2;
     #endregion
 
-    #region 392. Is Subsequence
+    #region 392 Is Subsequence
     /// <summary>
     /// Determines if string 's' is a subsequence of string 't'.
     /// </summary>
@@ -144,5 +144,20 @@ public class TwoPointers
 
         return i.Equals(s.Length);
     }
+    #endregion
+
+    #region 1455 Check If a Word Occurs As a Prefix of Any Word in a Sentence
+    /// <summary>
+    /// Checks if a searchWord is a prefix of any word in a sentence and returns the index (1-indexed).
+    /// </summary>
+    /// <param name="sentence">The sentence consisting of words separated by spaces.</param>
+    /// <param name="searchWord">The word to search for as a prefix.</param>
+    /// <returns>The 1-based index of the first word where searchWord is a prefix, or -1 if not found.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int IsPrefixOfWord(string sentence, string searchWord)
+        => sentence.Split()
+            .Select((word, index) => word.StartsWith(searchWord) ? index + 1 : -1)
+            .FirstOrDefault(i => i != -1, -1);
     #endregion
 }

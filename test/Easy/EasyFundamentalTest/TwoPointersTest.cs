@@ -7,7 +7,7 @@ public class TwoPointersTest
     // Arrange
     readonly TwoPointers Solution = new();
 
-    #region 2000. Reverse Prefix of Word
+    #region 2000 Reverse Prefix of Word
     [Theory]
     [InlineData("abcdefd", 'd', "dcbaefd")]
     [InlineData("xyxzxe", 'z', "zxyxxe")]
@@ -22,7 +22,7 @@ public class TwoPointersTest
     }
     #endregion
 
-    #region 344. Reverse String
+    #region 344 Reverse String
     [Theory]
     [InlineData(new char[] { 'h', 'e', 'l', 'l', 'o' }, new char[] { 'o', 'l', 'l', 'e', 'h' })]
     [InlineData(new char[] { 'H', 'a', 'n', 'n', 'a', 'h' }, new char[] { 'h', 'a', 'n', 'n', 'a', 'H' })]
@@ -38,7 +38,7 @@ public class TwoPointersTest
     }
     #endregion
 
-    #region 541. Reverse String II
+    #region 541 Reverse String II
     [Theory]
     [InlineData("abcdefg", 2, "bacdfeg")]
     [InlineData("abcd", 2, "bacd")]
@@ -54,7 +54,7 @@ public class TwoPointersTest
     }
     #endregion
 
-    #region 345. Reverse Vowels of a String
+    #region 345 Reverse Vowels of a String
     [Theory]
     [InlineData("hello", "holle")]
     [InlineData("leetcode", "leotcede")]
@@ -105,6 +105,21 @@ public class TwoPointersTest
     {
         // Act
         var result = Solution.IsSubsequence(s, t);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
+
+    #region 1455 Check If a Word Occurs As a Prefix of Any Word in a Sentence
+    [Theory]
+    [InlineData("i love eating burger", "burg", 4)]
+    [InlineData("this problem is an easy problem", "pro", 2)]
+    [InlineData("i am tired", "you", -1)]
+    public void TestIsPrefixOfWord(string sentence, string searchWord, int expected)
+    {
+        // Act
+        var result = Solution.IsPrefixOfWord(sentence, searchWord);
 
         // Assert
         Assert.Equal(expected, result);
