@@ -2125,6 +2125,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1539 Kth Missing Positive Number
+    [Theory]
+    [InlineData(new int[] { 2, 3, 4, 7, 11 }, 5, 9)]
+    [InlineData(new int[] { 1, 2, 3, 4 }, 2, 6)]
+    public void TestKthMissingPositiveNumber(int[] arr, int k, int expected)
+    {
+        // Act
+        var result = Solution.FindKthPositive(arr, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

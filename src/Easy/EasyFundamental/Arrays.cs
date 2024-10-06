@@ -2389,6 +2389,21 @@ public class Arrays
     public int AddedInteger(int[] nums1, int[] nums2)
         => nums2.Min() - nums1.Min();
     #endregion
+
+    #region 1539 Kth Missing Positive Number
+    /// <summary>
+    /// Finds the kth positive integer that is missing from a sorted array of positive integers.
+    /// </summary>
+    /// <param name="arr">An array of positive integers sorted in strictly increasing order.</param>
+    /// <param name="k">The k-th missing positive integer to find.</param>
+    /// <returns>The k-th missing positive integer.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int FindKthPositive(int[] arr, int k)
+        => Enumerable.Range(1, arr.Length + k)
+            .Except(arr)
+            .ElementAt(k - 1);
+    #endregion
 }
 
 #region 705 Design HashSet
