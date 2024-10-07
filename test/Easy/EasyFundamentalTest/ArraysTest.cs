@@ -2139,6 +2139,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 283 Move Zeroes
+    [Theory]
+    [InlineData(new int[] { 0, 1, 0, 3, 12 }, new int[] { 1, 3, 12, 0, 0 })]
+    [InlineData(new int[] { 0 }, new int[] { 0 })]
+    public void TestMoveZeroes(int[] nums, int[] expected)
+    {
+        // Act
+        Solution.MoveZeroes(nums);
+
+        // Assert
+        Assert.Equal(expected, nums);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

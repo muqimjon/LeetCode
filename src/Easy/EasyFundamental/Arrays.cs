@@ -2404,6 +2404,22 @@ public class Arrays
             .Except(arr)
             .ElementAt(k - 1);
     #endregion
+
+    #region 283 Move Zeroes
+    /// <summary>
+    /// Moves all 0's to the end of the array while maintaining the relative order of non-zero elements.
+    /// This solution uses additional space for non-zero elements.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public void MoveZeroes(int[] nums)
+    {
+        var nonZeroes = nums.Where(x => x != 0).ToArray();
+        Array.Clear(nums, 0, nums.Length);
+        nonZeroes.CopyTo(nums, 0);
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
