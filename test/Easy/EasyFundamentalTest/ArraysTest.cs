@@ -2153,6 +2153,21 @@ public class ArraysTest
         Assert.Equal(expected, nums);
     }
     #endregion
+
+    #region 836 Rectangle Overlap
+    [Theory]
+    [InlineData(new int[] { 0, 0, 2, 2 }, new int[] { 1, 1, 3, 3 }, true)]
+    [InlineData(new int[] { 0, 0, 1, 1 }, new int[] { 1, 0, 2, 1 }, false)]
+    [InlineData(new int[] { 0, 0, 1, 1 }, new int[] { 2, 2, 3, 3 }, false)]
+    public void TestRectangleOverlap(int[] rec1, int[] rec2, bool expected)
+    {
+        // Act
+        var result = Solution.IsRectangleOverlap(rec1, rec2);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

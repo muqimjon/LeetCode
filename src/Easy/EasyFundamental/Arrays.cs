@@ -2420,6 +2420,22 @@ public class Arrays
         nonZeroes.CopyTo(nums, 0);
     }
     #endregion
+
+    #region 836 Rectangle Overlap
+    /// <summary>
+    /// Determines if two rectangles overlap based on their corner coordinates.
+    /// </summary>
+    /// <param name="rec1">First rectangle coordinates: [x1, y1, x2, y2].</param>
+    /// <param name="rec2">Second rectangle coordinates: [x1, y1, x2, y2].</param>
+    /// <returns>True if rectangles overlap, otherwise false.</returns>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public bool IsRectangleOverlap(int[] rec1, int[] rec2)
+        => rec1[0] < rec2[2] &&
+            rec1[2] > rec2[0] &&
+            rec1[1] < rec2[3] &&
+            rec1[3] > rec2[1];
+    #endregion
 }
 
 #region 705 Design HashSet
