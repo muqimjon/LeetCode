@@ -2436,6 +2436,20 @@ public class Arrays
             rec1[1] < rec2[3] &&
             rec1[3] > rec2[1];
     #endregion
+
+    #region 2639 Find the Width of Columns of a Grid
+    /// <summary>
+    /// Finds the width of each column in the grid based on the maximum length of integers in that column.
+    /// </summary>
+    /// <param name="grid">m x n integer matrix.</param>
+    /// <returns>Array where each element is the width of the respective column.</returns>
+    /// <time>O(m * n)</time>
+    /// <space>O(n)</space>
+    public int[] FindColumnWidth(int[][] grid)
+        => Enumerable.Range(0, grid[0].Length)
+            .Select(j => grid.Max(row => row[j].ToString().Length))
+            .ToArray();
+    #endregion
 }
 
 #region 705 Design HashSet

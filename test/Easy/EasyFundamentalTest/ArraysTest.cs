@@ -2168,6 +2168,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2639 Find the Width of Columns of a Grid
+    [Theory]
+    [InlineData(new int[] { 3 }, new int[] { 1 }, new int[] { 22 }, new int[] { 333 })]
+    [InlineData(new int[] { 3, 1, 2 }, new int[] { -15, 1, 3 }, new int[] { 15, 7, 12 }, new int[] { 5, 6, -2 })]
+    public void TestFindWidthOfColumns(int[] expected, params int[][] grid)
+    {
+        // Act
+        var result = Solution.FindColumnWidth(grid);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
