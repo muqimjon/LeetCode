@@ -604,4 +604,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2652 Sum Multiples
+    [Theory]
+    [InlineData(21, 7)]
+    [InlineData(40, 10)]
+    [InlineData(30, 9)]
+    public void TestSumMultiples(int expected, int n)
+    {
+        // Act
+        var result = Solution.SumOfMultiples(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

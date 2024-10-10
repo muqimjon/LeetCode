@@ -660,4 +660,18 @@ public class Maths
     public int AlternateDigitSum(int n)
         => $"{n}".Select((c, i) => (i % 2 == 0 ? 1 : -1) * (c - 48)).Sum();
     #endregion
+
+    #region 2652 Sum Multiples
+    /// <summary>
+    /// Finds the sum of all integers in the range [1, n] that are divisible by 3, 5, or 7.
+    /// </summary>
+    /// <param name="n">A positive integer.</param>
+    /// <returns>The sum of all integers divisible by 3, 5, or 7 in the range [1, n].</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int SumOfMultiples(int n)
+        => Enumerable.Range(1, n)
+            .Where(x => x % 3 == 0 || x % 5 == 0 || x % 7 == 0)
+            .Sum();
+    #endregion
 }
