@@ -2182,6 +2182,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3248 Snake in Matrix
+    [Theory]
+    [InlineData(3, 2, new string[] { "RIGHT", "DOWN" })]
+    [InlineData(1, 3, new string[] { "DOWN", "RIGHT", "UP" })]
+    public void TestSnakeInMatrix(int expected, int n, string[] commands)
+    {
+        // Act
+        var result = Solution.FinalPositionOfSnake(n, commands);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

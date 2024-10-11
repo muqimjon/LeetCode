@@ -2450,6 +2450,36 @@ public class Arrays
             .Select(j => grid.Max(row => row[j].ToString().Length))
             .ToArray();
     #endregion
+
+    #region 3248 Snake in Matrix
+    /// <summary>
+    /// Finds the final position of the snake in the grid after following the commands.
+    /// </summary>
+    /// <param name="n">The size of the grid (n x n).</param>
+    /// <param name="commands">The list of commands to move the snake.</param>
+    /// <returns>The final position of the snake in the grid.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space> 
+    public int FinalPositionOfSnake(int n, IList<string> commands)
+    {
+        int row = 0;
+        int col = 0;
+
+        foreach (string command in commands)
+        {
+            if (command == "UP" && row > 0)
+                row--;
+            else if (command == "DOWN" && row < n - 1)
+                row++;
+            else if (command == "LEFT" && col > 0)
+                col--;
+            else if (command == "RIGHT" && col < n - 1)
+                col++;
+        }
+
+        return row * n + col;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
