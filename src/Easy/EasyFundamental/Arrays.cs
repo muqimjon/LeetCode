@@ -2480,6 +2480,18 @@ public class Arrays
         return row * n + col;
     }
     #endregion
+
+    #region 2496 Maximum Value of a String in an Array
+    /// <summary>
+    /// Returns the maximum value of any string in the array based on the given criteria.
+    /// </summary>
+    /// <param name="strs">An array of alphanumeric strings.</param>
+    /// <returns>The maximum value of any string in the array.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MaximumValue(string[] strs)
+        => strs.Max(s => int.TryParse(s, out int n) ? n : s.Length);
+    #endregion
 }
 
 #region 705 Design HashSet

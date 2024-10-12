@@ -2196,6 +2196,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2496 Maximum Value of a String in an Array
+    [Theory]
+    [InlineData(5, new string[] { "alic3", "bob", "3", "4", "00000" })]
+    [InlineData(1, new string[] { "1", "01", "001", "0001" })]
+    public void TestMaximumValueOfStringInArray(int expected, string[] strs)
+    {
+        // Act
+        var result = Solution.MaximumValue(strs);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
