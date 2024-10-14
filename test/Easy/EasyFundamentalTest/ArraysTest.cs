@@ -2210,6 +2210,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1822 Sign of the Product of an Array
+    [Theory]
+    [InlineData(1, new int[] { -1, -2, -3, -4, 3, 2, 1 })]
+    [InlineData(0, new int[] { 1, 5, 0, 2, -3 })]
+    [InlineData(-1, new int[] { -1, 1, -1, 1, -1 })]
+    public void TestSignOfProductOfArray(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.ArraySign(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

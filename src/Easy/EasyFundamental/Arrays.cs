@@ -2492,6 +2492,18 @@ public class Arrays
     public int MaximumValue(string[] strs)
         => strs.Max(s => int.TryParse(s, out int n) ? n : s.Length);
     #endregion
+
+    #region 1822 Sign of the Product of an Array
+    /// <summary>
+    /// Returns the sign of the product of all values in the array.
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>1 if the product is positive, -1 if the product is negative, 0 if the product is 0.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int ArraySign(int[] nums)
+        => nums.Contains(0) ? 0 : nums.Count(n => n < 0) % 2 == 0 ? 1 : -1;
+    #endregion
 }
 
 #region 705 Design HashSet
