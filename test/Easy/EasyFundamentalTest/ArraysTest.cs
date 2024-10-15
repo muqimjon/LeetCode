@@ -2225,6 +2225,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3151 Special Array I
+    [Theory]
+    [InlineData(true, new int[] { 1 })]
+    [InlineData(true, new int[] { 2, 1, 4 })]
+    [InlineData(false, new int[] { 4, 3, 1, 6 })]
+    public void TestIsSpecialArray(bool expected, int[] nums)
+    {
+        // Act
+        bool result = Solution.IsArraySpecial(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

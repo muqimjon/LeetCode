@@ -2504,6 +2504,18 @@ public class Arrays
     public int ArraySign(int[] nums)
         => nums.Contains(0) ? 0 : nums.Count(n => n < 0) % 2 == 0 ? 1 : -1;
     #endregion
+
+    #region 3151 Special Array I
+    /// <summary>
+    /// Determines if an array is special, meaning every pair of adjacent elements has different parity
+    /// </summary>
+    /// <param name="nums">An array of integers.</param>
+    /// <returns>True if the array is special, otherwise false.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool IsArraySpecial(int[] nums)
+        => nums.Zip(nums.Skip(1), (a, b) => a % 2 != b % 2).All(x => x);
+    #endregion
 }
 
 #region 705 Design HashSet
