@@ -2240,6 +2240,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2395 Find Subarrays With Equal Sum
+    [Theory]
+    [InlineData(true, new int[] { 4, 2, 4 })]
+    [InlineData(false, new int[] { 1, 2, 3, 4, 5 })]
+    [InlineData(true, new int[] { 0, 0, 0 })]
+    public void TestFindSubarraysWithEqualSum(bool expected, int[] nums)
+    {
+        // Act
+        bool result = Solution.FindSubarrays(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

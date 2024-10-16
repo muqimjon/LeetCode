@@ -2516,6 +2516,30 @@ public class Arrays
     public bool IsArraySpecial(int[] nums)
         => nums.Zip(nums.Skip(1), (a, b) => a % 2 != b % 2).All(x => x);
     #endregion
+
+    #region 2395 Find Subarrays With Equal Sum
+    /// <summary>
+    /// Determines if there exist two subarrays of length 2 with equal sum in the array.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>True if two subarrays with equal sum exist, otherwise false.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool FindSubarrays(int[] nums)
+    {
+        HashSet<int> sums = [];
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            int sum = nums[i] + nums[i - 1];
+
+            if (!sums.Add(sum))
+                return true;
+        }
+
+        return false;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
