@@ -619,4 +619,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 441 Arranging Coins
+    [Theory]
+    [InlineData(2, 5)]
+    [InlineData(3, 8)]
+    public void TestArrangingCoins(int expected, int n)
+    {
+        // Act
+        int result = Solution.ArrangeCoins(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

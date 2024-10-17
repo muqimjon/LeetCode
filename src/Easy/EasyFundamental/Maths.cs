@@ -674,4 +674,23 @@ public class Maths
             .Where(x => x % 3 == 0 || x % 5 == 0 || x % 7 == 0)
             .Sum();
     #endregion
+
+    #region 441 Arranging Coins
+    /// <summary>
+    /// Determines the number of complete rows of the staircase that can be built with n coins.
+    /// </summary>
+    /// <param name="n">The total number of coins.</param>
+    /// <returns>The number of complete rows.</returns>
+    /// <time>O(sqrt(n))</time>
+    /// <space>O(1)</space>
+    public int ArrangeCoins(int n)
+    {
+        int k = 0;
+
+        while (n > k++)
+            n -= k;
+
+        return k - 1;
+    }
+    #endregion
 }
