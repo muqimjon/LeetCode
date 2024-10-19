@@ -633,4 +633,19 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2485 Find the Pivot Integer
+    [Theory]
+    [InlineData(6, 8)]
+    [InlineData(1, 1)]
+    [InlineData(-1, 4)]
+    public void TestFindPivotInteger(int expected, int n)
+    {
+        // Act
+        int result = Solution.PivotInteger(n);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

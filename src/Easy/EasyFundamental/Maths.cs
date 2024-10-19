@@ -693,4 +693,21 @@ public class Maths
         return k - 1;
     }
     #endregion
+
+    #region 2485 Find the Pivot Integer
+    /// <summary>
+    /// Finds the pivot integer x such that the sum of all integers from 1 to x
+    /// equals the sum of all integers from x to n.
+    /// </summary>
+    /// <param name="n">A positive integer n.</param>
+    /// <returns>The pivot integer x if it exists, otherwise -1.</returns>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public int PivotInteger(int n)
+    {
+        int sum = n * (n + 1) / 2;
+        int x = (int)Math.Sqrt(sum);
+        return x * x == sum ? x : -1;
+    }
+    #endregion
 }
