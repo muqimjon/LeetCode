@@ -710,4 +710,27 @@ public class Maths
         return x * x == sum ? x : -1;
     }
     #endregion
+
+    #region 2525 Categorize Box According to Criteria
+    /// <summary>
+    /// Categorizes the box based on its dimensions and mass.
+    /// </summary>
+    /// <param name="length">The length of the box.</param>
+    /// <param name="width">The width of the box.</param>
+    /// <param name="height">The height of the box.</param>
+    /// <param name="mass">The mass of the box.</param>
+    /// <returns>A string representing the category of the box.</returns>
+    /// <time>O(1)</time>
+    /// <space>O(1)</space>
+    public string CategorizeBox(int length, int width, int height, int mass)
+    {
+        bool bulky = length >= 10000 || width >= 10000 || height >= 10000 || (long)length * width * height >= 1_000_000_000;
+        bool heavy = mass >= 100;
+
+        if (bulky && heavy) return "Both";
+        if (bulky) return "Bulky";
+        if (heavy) return "Heavy";
+        return "Neither";
+    }
+    #endregion
 }

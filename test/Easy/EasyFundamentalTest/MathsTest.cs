@@ -648,4 +648,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2525 Categorize Box According to Criteria
+    [Theory]
+    [InlineData("Heavy", 1000, 35, 700, 300)]
+    [InlineData("Neither", 200, 50, 800, 50)]
+    public void TestCategorizeBox(string expected, int length, int width, int height, int mass)
+    {
+        // Act
+        string result = Solution.CategorizeBox(length, width, height, mass);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
