@@ -2255,6 +2255,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1608 Special Array With X Elements Greater Than or Equal X
+    [Theory]
+    [InlineData(2, new int[] { 3, 5 })]
+    [InlineData(-1, new int[] { 0, 0 })]
+    [InlineData(3, new int[] { 0, 4, 3, 0, 4 })]
+    public void TestSpecialArray(int expected, int[] nums)
+    {
+        // Act
+        int result = Solution.SpecialArray(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

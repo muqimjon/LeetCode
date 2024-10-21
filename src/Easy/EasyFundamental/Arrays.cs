@@ -2540,6 +2540,24 @@ public class Arrays
         return false;
     }
     #endregion
+
+    #region 1608 Special Array With X Elements Greater Than or Equal X
+    /// <summary>
+    /// Finds the special number x such that exactly x numbers are greater than or equal to x.
+    /// </summary>
+    /// <param name="nums">The array of non-negative integers.</param>
+    /// <returns>The special number x or -1 if it doesn't exist.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int SpecialArray(int[] nums)
+    {
+        for (int x = 0; x <= nums.Length; ++x)
+            if (x == nums.Count(num => num >= x))
+                return x;
+
+        return -1;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
