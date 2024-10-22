@@ -2270,6 +2270,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1313 Decompress Run-Length Encoded List
+    [Theory]
+    [InlineData(new int[] { 2, 4, 4, 4 }, new int[] { 1, 2, 3, 4 })]
+    [InlineData(new int[] { 1, 3, 3 }, new int[] { 1, 1, 2, 3 })]
+    public void TestDecompressRLEList(int[] expected, int[] nums)
+    {
+        // Act
+        int[] result = Solution.DecompressRLElist(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

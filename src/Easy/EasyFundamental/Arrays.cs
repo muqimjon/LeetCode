@@ -2547,7 +2547,7 @@ public class Arrays
     /// </summary>
     /// <param name="nums">The array of non-negative integers.</param>
     /// <returns>The special number x or -1 if it doesn't exist.</returns>
-    /// <time>O(n)</time>
+    /// <time>O(n^2)</time>
     /// <space>O(1)</space>
     public int SpecialArray(int[] nums)
     {
@@ -2556,6 +2556,25 @@ public class Arrays
                 return x;
 
         return -1;
+    }
+    #endregion
+
+    #region 1313 Decompress Run-Length Encoded List
+    /// <summary>
+    /// Decompresses the run-length encoded list into its original form.
+    /// </summary>
+    /// <param name="nums">The run-length encoded array of integers.</param>
+    /// <returns>The decompressed list of integers.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public int[] DecompressRLElist(int[] nums)
+    {
+        List<int> result = [];
+
+        for (int i = 0; i < nums.Length; i += 2)
+            result.AddRange(Enumerable.Repeat(nums[i + 1], nums[i]));
+
+        return [.. result];
     }
     #endregion
 }
