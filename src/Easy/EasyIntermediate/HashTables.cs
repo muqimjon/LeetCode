@@ -325,4 +325,36 @@ public class HashTables
     public bool AreOccurrencesEqual(string s)
         => s.GroupBy(c => c).Select(g => g.Count()).Distinct().Count() == 1;
     #endregion
+
+    #region 1496 Path Crossing
+    /// <summary>
+    /// Determines if the given path crosses itself on a 2D plane.
+    /// </summary>
+    /// <param name="path">The string representing the path taken.</param>
+    /// <returns>True if the path crosses itself, otherwise false.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool IsPathCrossing(string path)
+    {
+        int x = 0, y = 0;
+        HashSet<(int, int)> visited = [(0, 0)];
+
+        foreach (var step in path)
+        {
+            (x, y) = step switch
+            {
+                'N' => (x, y + 1),
+                'S' => (x, y - 1),
+                'E' => (x + 1, y),
+                'W' => (x - 1, y),
+                _ => (x, y)
+            };
+
+            if (!visited.Add((x, y)))
+                return true;
+        }
+
+        return false;
+    }
+    #endregion
 }

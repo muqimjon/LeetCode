@@ -264,4 +264,18 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1496 Path Crossing
+    [Theory]
+    [InlineData(false, "NES")]
+    [InlineData(true, "NESWW")]
+    public void TestPathCrossing(bool expected, string path)
+    {
+        // Act
+        var result = Solution.IsPathCrossing(path);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
