@@ -357,4 +357,35 @@ public class HashTables
         return false;
     }
     #endregion
+
+    #region 290 Word Pattern
+    /// <summary>
+    /// Checks if a given string follows a specified pattern, ensuring a bijective mapping between
+    /// each unique letter in the pattern and each unique word in the string.
+    /// </summary>
+    /// <param name="pattern">The pattern represented as a string of characters.</param>
+    /// <param name="s">The string containing words separated by spaces.</param>
+    /// <returns>True if the string follows the pattern, otherwise false.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public bool WordPattern(string pattern, string s)
+    {
+        var words = s.Split(' ');
+        if (pattern.Length != words.Length)
+            return false;
+
+        Dictionary<char, string> map = [];
+        Dictionary<string, char> reverseMap = [];
+
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            if (!map.TryAdd(pattern[i], words[i]) && map[pattern[i]] != words[i])
+                return false;
+
+            if (!reverseMap.TryAdd(words[i], pattern[i]) && reverseMap[words[i]] != pattern[i])
+                return false;
+        }
+        return true;
+    }
+    #endregion
 }

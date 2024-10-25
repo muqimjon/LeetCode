@@ -278,4 +278,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 290 Word Pattern
+    [Theory]
+    [InlineData(true, "abba", "dog cat cat dog")]
+    [InlineData(false, "abba", "dog cat cat fish")]
+    [InlineData(false, "aaaa", "dog cat cat dog")]
+    public void TestWordPattern(bool expected, string pattern, string s)
+    {
+        // Act
+        var result = Solution.WordPattern(pattern, s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
