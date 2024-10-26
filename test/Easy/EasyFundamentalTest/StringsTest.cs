@@ -818,4 +818,19 @@ public class StringsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 3210 Find the Encrypted String
+    [Theory]
+    [InlineData("tdar", "dart", 3)]
+    [InlineData("aaa", "aaa", 1)]
+    [InlineData("bca", "abc", 1)]
+    public void TestFindEncryptedString(string expected, string s, int k)
+    {
+        // Act
+        var result = Solution.GetEncryptedString(s, k);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

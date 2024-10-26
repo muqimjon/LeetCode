@@ -982,4 +982,20 @@ public class Strings
         => string.Join(" ", sentence.Split(' ').Select((word, i) =>
             (new string("aeiouAEIOU".Contains(word[0]) ? word : word[1..] + word[0]) + "maa" + new string('a', i))));
     #endregion
+
+    #region 3210 Find the Encrypted String
+    /// <summary>
+    /// Encrypts the input string by replacing each character with the k-th character after it in a cyclic manner.
+    /// </summary>
+    /// <param name="s">The original string to be encrypted.</param>
+    /// <param name="k">The number of positions to shift each character in a cyclic order.</param>
+    /// <returns>The encrypted string after applying the k-shift on each character.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(n)</space>
+    public string GetEncryptedString(string s, int k)
+    {
+        k %= s.Length;
+        return string.Concat(s.Select((c, i) => s[(i + k) % s.Length]));
+    }
+    #endregion
 }
