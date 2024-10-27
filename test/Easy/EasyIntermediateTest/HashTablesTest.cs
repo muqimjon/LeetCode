@@ -293,4 +293,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1935 Maximum Number of Words You Can Type
+    [Theory]
+    [InlineData(1, "hello world", "ad")]
+    [InlineData(1, "leet code", "lt")]
+    [InlineData(0, "leet code", "e")]
+    public void TestMaximumWordsYouCanType(int expected, string text, string brokenLetters)
+    {
+        // Act
+        var result = Solution.CanBeTypedWords(text, brokenLetters);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

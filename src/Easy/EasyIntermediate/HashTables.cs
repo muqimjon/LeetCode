@@ -388,4 +388,17 @@ public class HashTables
         return true;
     }
     #endregion
+
+    #region 1935 Maximum Number of Words You Can Type
+    /// <summary>
+    /// Returns the number of words that can be fully typed without using broken keyboard letters.
+    /// </summary>
+    /// <param name="text">The input string of words separated by spaces.</param>
+    /// <param name="brokenLetters">String containing all broken keyboard letters.</param>
+    /// <returns>The count of fully typeable words.</returns>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public int CanBeTypedWords(string text, string brokenLetters)
+        => text.Split().Count(word => !word.Any(brokenLetters.Contains));
+    #endregion
 }
