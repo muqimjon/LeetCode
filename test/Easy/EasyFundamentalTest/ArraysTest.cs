@@ -2284,6 +2284,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1295 Find Numbers with Even Number of Digits
+    [Theory]
+    [InlineData(2, new int[] { 12, 345, 2, 6, 7896 })]
+    [InlineData(1, new int[] { 555, 901, 482, 1771 })]
+    public void TestFindNumbersWithEvenNumberOfDigits(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.FindNumbers(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

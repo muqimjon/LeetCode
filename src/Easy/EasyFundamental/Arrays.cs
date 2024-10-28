@@ -2577,6 +2577,18 @@ public class Arrays
         return [.. result];
     }
     #endregion
+
+    #region 1295 Find Numbers with Even Number of Digits
+    /// <summary>
+    /// Returns the count of numbers with an even number of digits in the given array.
+    /// </summary>
+    /// <param name="nums">Array of integers.</param>
+    /// <returns>The count of numbers containing an even number of digits.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int FindNumbers(int[] nums)
+        => nums.Count(n => (n.ToString().Length & 1) == 0);
+    #endregion
 }
 
 #region 705 Design HashSet
