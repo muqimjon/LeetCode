@@ -2298,6 +2298,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2016 Maximum Difference Between Increasing Elements
+    [Theory]
+    [InlineData(4, new int[] { 7, 1, 5, 4 })]
+    [InlineData(-1, new int[] { 9, 4, 3, 2 })]
+    [InlineData(9, new int[] { 1, 5, 2, 10 })]
+    public void TestMaximumDifferenceBetweenIncreasingElements(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.MaximumDifference(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

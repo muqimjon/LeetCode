@@ -2589,6 +2589,28 @@ public class Arrays
     public int FindNumbers(int[] nums)
         => nums.Count(n => (n.ToString().Length & 1) == 0);
     #endregion
+
+    #region 2016 Maximum Difference Between Increasing Elements
+    /// <summary>
+    /// Finds the maximum difference nums[j] - nums[i] where 0 <= i < j < n and nums[i] < nums[j].
+    /// </summary>
+    /// <param name="nums">An integer array.</param>
+    /// <returns>The maximum difference satisfying the conditions, or -1 if none exists.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int MaximumDifference(int[] nums)
+    {
+        int maxDiff = -1, min = nums[0];
+
+        foreach (var num in nums[1..])
+            if (num > min)
+                maxDiff = Math.Max(maxDiff, num - min);
+            else
+                min = num;
+
+        return maxDiff;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
