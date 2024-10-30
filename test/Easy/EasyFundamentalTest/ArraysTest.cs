@@ -2313,6 +2313,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1637 Widest Vertical Area Between Two Points Containing No Points
+    [Theory]
+    [InlineData(1, new int[] { 8, 7 }, new int[] { 9, 9 }, new int[] { 7, 4 }, new int[] { 9, 7 })]
+    [InlineData(3, new int[] { 3, 1 }, new int[] { 9, 0 }, new int[] { 1, 0 }, new int[] { 1, 4 }, new int[] { 5, 3 }, new int[] { 8, 8 })]
+    public void TestWidestVerticalAreaBetweenTwoPoints(int expected, params int[][] points)
+    {
+        // Act
+        var result = Solution.MaxWidthOfVerticalArea(points);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

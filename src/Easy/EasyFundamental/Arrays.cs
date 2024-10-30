@@ -2611,6 +2611,21 @@ public class Arrays
         return maxDiff;
     }
     #endregion
+
+    #region 1637 Widest Vertical Area Between Two Points Containing No Points
+    /// <summary>
+    /// Finds the maximum width of a vertical area between two points in a 2D plane such that no points are inside the area.
+    /// </summary>
+    /// <param name="points">An array of points represented as integer arrays.</param>
+    /// <returns>The maximum width of the vertical area.</returns>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public int MaxWidthOfVerticalArea(int[][] points)
+    {
+        var x = points.Select(p => p[0]).OrderBy(x => x).ToArray();
+        return x.Zip(x.Skip(1), (a, b) => b - a).DefaultIfEmpty(0).Max();
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
