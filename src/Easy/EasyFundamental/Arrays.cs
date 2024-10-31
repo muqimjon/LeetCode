@@ -2626,6 +2626,18 @@ public class Arrays
         return x.Zip(x.Skip(1), (a, b) => b - a).DefaultIfEmpty(0).Max();
     }
     #endregion
+
+    #region 136 Single Number
+    /// <summary>
+    /// Finds the single number in an array where every element appears twice except for one.
+    /// </summary>
+    /// <param name="nums">An integer array where each element appears twice except one.</param>
+    /// <returns>The single element that appears only once.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int SingleNumber(int[] nums)
+        => nums.Aggregate(0, (xor, i) => xor ^ i);
+    #endregion
 }
 
 #region 705 Design HashSet

@@ -2327,6 +2327,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 136 Single Number
+    [Theory]
+    [InlineData(1, new int[] { 2, 2, 1 })]
+    [InlineData(4, new int[] { 4, 1, 2, 1, 2 })]
+    [InlineData(1, new int[] { 1 })]
+    public void TestSingleNumber(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.SingleNumber(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
