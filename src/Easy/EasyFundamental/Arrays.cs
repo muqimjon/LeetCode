@@ -2638,6 +2638,18 @@ public class Arrays
     public int SingleNumber(int[] nums)
         => nums.Aggregate(0, (xor, i) => xor ^ i);
     #endregion
+
+    #region 2114 Maximum Number of Words Found in Sentences
+    /// <summary>
+    /// Finds the maximum number of words in a single sentence from an array of sentences.
+    /// </summary>
+    /// <param name="sentences">An array of strings where each string represents a sentence.</param>
+    /// <returns>The maximum word count found in any sentence.</returns>
+    /// <time>O(n * m)</time>
+    /// <space>O(1)</space>
+    public int MostWordsFound(string[] sentences)
+        => sentences.Max(s => s.Count(c => c == ' ') + 1);
+    #endregion
 }
 
 #region 705 Design HashSet

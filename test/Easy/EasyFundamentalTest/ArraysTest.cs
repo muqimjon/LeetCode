@@ -2342,6 +2342,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2114 Maximum Number of Words Found in Sentences
+    [Theory]
+    [InlineData(6, new string[] { "alice and bob love leetcode", "i think so too", "this is great thanks very much" })]
+    [InlineData(3, new string[] { "please wait", "continue to fight", "continue to win" })]
+    public void TestMaximumWordsInSentence(int expected, string[] sentences)
+    {
+        // Act
+        var result = Solution.MostWordsFound(sentences);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
