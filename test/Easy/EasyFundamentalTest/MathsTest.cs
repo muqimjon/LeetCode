@@ -662,4 +662,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 258 Add Digits
+    [Theory]
+    [InlineData(2, 38)]
+    [InlineData(0, 0)]
+    public void TestAddDigits(int expected, int num)
+    {
+        // Act
+        var result = Solution.AddDigits(num);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

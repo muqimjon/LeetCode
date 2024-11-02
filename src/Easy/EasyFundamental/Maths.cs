@@ -733,4 +733,16 @@ public class Maths
         return "Neither";
     }
     #endregion
+
+    #region 258 Add Digits
+    /// <summary>
+    /// Repeatedly adds all digits of an integer until a single-digit result is obtained.
+    /// </summary>
+    /// <param name="num">The integer to process.</param>
+    /// <returns>The resulting single-digit integer.</returns>
+    /// <time>O(1)</time> 
+    /// <space>O(1)</space>
+    public int AddDigits(int num)
+        => 1 + (num - 1) % 9;
+    #endregion
 }
