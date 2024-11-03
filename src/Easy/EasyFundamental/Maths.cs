@@ -745,4 +745,22 @@ public class Maths
     public int AddDigits(int num)
         => 1 + (num - 1) % 9;
     #endregion
+
+    #region 1486 XOR Operation in an Array
+    /// <summary>
+    /// Calculates the bitwise XOR of all elements in an array where nums[i] = start + 2 * i.
+    /// </summary>
+    /// <param name="n">The length of the array.</param>
+    /// <param name="start">The starting integer for calculating array elements.</param>
+    /// <returns>The bitwise XOR of all elements in the array.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int XorOperation(int n, int start)
+    {
+        int result = 0;
+        for (int i = 0; i < n; i++)
+            result ^= start + 2 * i;
+        return result;
+    }
+    #endregion
 }

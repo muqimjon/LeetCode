@@ -676,4 +676,18 @@ public class MathsTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1486 XOR Operation in an Array
+    [Theory]
+    [InlineData(8, 5, 0)]
+    [InlineData(8, 4, 3)]
+    public void TestXorOperationInArray(int expected, int n, int start)
+    {
+        // Act
+        var result = Solution.XorOperation(n, start);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
