@@ -2356,6 +2356,24 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 80 Remove Duplicates from Sorted Array II
+    [Theory]
+    [InlineData(5, new[] { 1, 1, 1, 2, 2, 3 }, new[] { 1, 1, 2, 2, 3 })]
+    [InlineData(7, new[] { 0, 0, 1, 1, 1, 1, 2, 3, 3 }, new[] { 0, 0, 1, 1, 2, 3, 3 })]
+    public void TestRemoveDuplicatesFromSortedArrayII(int expectedK, int[] nums, int[] expectedNums)
+    {
+        // Act
+        var result = Solution.RemoveDuplicates2(nums);
+
+        // Assert
+        Assert.Equal(expectedK, result);
+        for (int i = 0; i < expectedK; i++)
+        {
+            Assert.Equal(expectedNums[i], nums[i]);
+        }
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

@@ -2650,6 +2650,26 @@ public class Arrays
     public int MostWordsFound(string[] sentences)
         => sentences.Max(s => s.Count(c => c == ' ') + 1);
     #endregion
+
+    #region 80 Remove Duplicates from Sorted Array II
+    /// <summary>
+    /// Removes duplicates in-place from a sorted array so that each unique element appears at most twice.
+    /// </summary>
+    /// <param name="nums">A sorted array of integers.</param>
+    /// <returns>The length k, where the first k elements of nums contain the result with at most two duplicates per unique element.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public int RemoveDuplicates2(int[] nums)
+    {
+        int k = Math.Min(2, nums.Length);
+
+        foreach (var num in nums.Skip(2))
+            if (num != nums[k - 2])
+                nums[k++] = num;
+
+        return k;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
