@@ -2374,6 +2374,21 @@ public class ArraysTest
         }
     }
     #endregion
+
+    #region 3300 Minimum Element After Replacement With Digit Sum
+    [Theory]
+    [InlineData(1, new int[] { 10, 12, 13, 14 })]
+    [InlineData(1, new int[] { 1, 2, 3, 4 })]
+    [InlineData(10, new int[] { 999, 19, 199 })]
+    public void TestMinElementAfterReplacement(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.MinElement(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

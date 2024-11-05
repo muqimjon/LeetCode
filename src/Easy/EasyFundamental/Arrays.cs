@@ -2670,6 +2670,28 @@ public class Arrays
         return k;
     }
     #endregion
+
+    #region 3300 Minimum Element After Replacement With Digit Sum
+    /// <summary>
+    /// Replaces each element in the input array with the sum of its digits and returns the minimum element after replacement.
+    /// </summary>
+    /// <param name="nums">The input integer array.</param>
+    /// <returns>The minimum element in the array after all replacements with the sum of digits.</returns>
+    /// <time>O(n * d)</time>
+    /// <space>O(1)</space>
+    public int MinElement(int[] nums)
+    {
+        int minElement = int.MaxValue;
+
+        foreach (int num in nums)
+        {
+            int digitSum = num.ToString().Sum(c => c - '0');
+            minElement = Math.Min(minElement, digitSum);
+        }
+
+        return minElement;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
