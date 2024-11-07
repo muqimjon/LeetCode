@@ -308,4 +308,19 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 2062 Count Vowel Substrings of a String
+    [Theory]
+    [InlineData(2, "aeiouu")]
+    [InlineData(0, "unicornarihan")]
+    [InlineData(7, "cuaieuouac")]
+    public void TestCountVowelSubstrings(int expected, string word)
+    {
+        // Act
+        var result = Solution.CountVowelSubstrings(word);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

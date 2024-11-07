@@ -401,4 +401,37 @@ public class HashTables
     public int CanBeTypedWords(string text, string brokenLetters)
         => text.Split().Count(word => !word.Any(brokenLetters.Contains));
     #endregion
+
+    #region 2062 Count Vowel Substrings of a String
+    /// <summary>
+    /// Counts the number of substrings consisting only of vowels and containing all five vowels (a, e, i, o, u).
+    /// </summary>
+    /// <param name="word">The input word</param>
+    /// <returns>The number of vowel substrings</returns>
+    /// <time>O(n^2)</time>
+    /// <space>O(1)</space>
+    public int CountVowelSubstrings(string word)
+    {
+        int count = 0;
+        var vowels = "aeiou";
+
+        for (int i = 0; i < word.Length; i++)
+            if (vowels.Contains(word[i]))
+            {
+                HashSet<char> foundVowels = new HashSet<char>();
+
+                for (int j = i; j < word.Length && vowels.Contains(word[j]); j++)
+                {
+                    foundVowels.Add(word[j]);
+
+                    if (foundVowels.Count == 5)
+                        count++;
+                }
+            }
+
+        return count;
+    }
+    #endregion
+
+
 }
