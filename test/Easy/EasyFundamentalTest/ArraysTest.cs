@@ -2389,6 +2389,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 860 Lemonade Change
+    [Theory]
+    [InlineData(true, new int[] { 5, 5, 5, 10, 20 })]
+    [InlineData(false, new int[] { 5, 5, 10, 10, 20 })]
+    public void TestLemonadeChange(bool expected, int[] bills)
+    {
+        // Act
+        var result = Solution.LemonadeChange(bills);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

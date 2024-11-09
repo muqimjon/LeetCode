@@ -2692,6 +2692,44 @@ public class Arrays
         return minElement;
     }
     #endregion
+
+    #region 860 Lemonade Change
+    /// <summary>
+    /// Determines if it's possible to provide the correct change for every customer in line at a lemonade stand.
+    /// </summary>
+    /// <param name="bills">An array where each element represents a bill ($5, $10, or $20) that a customer pays.</param>
+    /// <returns>True if every customer can receive the correct change, otherwise false.</returns>
+    /// <time>O(n)</time>
+    /// <space>O(1)</space>
+    public bool LemonadeChange(int[] bills)
+    {
+        int fiveCount = 0, tenCount = 0;
+
+        foreach (int bill in bills)
+            switch (bill)
+            {
+                case 5:
+                    fiveCount++;
+                    break;
+                case 10:
+                    if (fiveCount == 0) return false;
+                    fiveCount--;
+                    tenCount++;
+                    break;
+                case 20:
+                    if (tenCount > 0 && fiveCount > 0)
+                    {
+                        tenCount--;
+                        fiveCount--;
+                    }
+                    else if (fiveCount >= 3) fiveCount -= 3;
+                    else return false;
+                    break;
+            }
+
+        return true;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
