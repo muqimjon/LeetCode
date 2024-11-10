@@ -2730,6 +2730,20 @@ public class Arrays
         return true;
     }
     #endregion
+
+    #region 1863 Sum of All Subset XOR Totals
+    /// <summary>
+    /// Calculates the sum of XOR totals for all subsets of the given array.
+    /// </summary>
+    /// <param name="nums">An array of integers</param>
+    /// <returns>The sum of XOR totals for every subset</returns>
+    /// <time>O(2^n)</time>
+    /// <space>O(n)</space>
+    public int SubsetXORSum(int[] nums) => Calculate(nums, 0, 0);
+
+    private int Calculate(int[] nums, int index, int currentXor) =>
+        index == nums.Length ? currentXor : Calculate(nums, index + 1, currentXor) + Calculate(nums, index + 1, currentXor ^ nums[index]);
+    #endregion
 }
 
 #region 705 Design HashSet

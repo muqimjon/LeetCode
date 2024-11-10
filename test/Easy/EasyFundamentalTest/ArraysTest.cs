@@ -2403,6 +2403,21 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1863 Sum of All Subset XOR Totals
+    [Theory]
+    [InlineData(6, new int[] { 1, 3 })]
+    [InlineData(28, new int[] { 5, 1, 6 })]
+    [InlineData(480, new int[] { 3, 4, 5, 6, 7, 8 })]
+    public void TestSumOfAllSubsetXORTotals(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.SubsetXORSum(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<
