@@ -2418,6 +2418,20 @@ public class ArraysTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 976 Largest Perimeter Triangle
+    [Theory]
+    [InlineData(5, new int[] { 2, 1, 2 })]
+    [InlineData(0, new int[] { 1, 2, 1, 10 })]
+    public void TestLargestPerimeterTriangle(int expected, int[] nums)
+    {
+        // Act
+        var result = Solution.LargestPerimeter(nums);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion  
 }
 
 #region 832 Flipping an Image <<

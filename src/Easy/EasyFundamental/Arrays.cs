@@ -2744,6 +2744,24 @@ public class Arrays
     private int Calculate(int[] nums, int index, int currentXor) =>
         index == nums.Length ? currentXor : Calculate(nums, index + 1, currentXor) + Calculate(nums, index + 1, currentXor ^ nums[index]);
     #endregion
+
+    #region 976 Largest Perimeter Triangle
+    /// <summary>
+    /// Finds the largest perimeter of a triangle that can be formed from three lengths in the array.
+    /// </summary>
+    /// <param name="nums">An array of integers representing the lengths</param>
+    /// <returns>The largest perimeter of a valid triangle or 0 if none can be formed</returns>
+    /// <time>O(n log n)</time>
+    /// <space>O(1)</space>
+    public int LargestPerimeter(int[] nums)
+    {
+        Array.Sort(nums);
+        for (int i = nums.Length - 3; i >= 0; i--)
+            if (nums[i] + nums[i + 1] > nums[i + 2])
+                return nums[i] + nums[i + 1] + nums[i + 2];
+        return 0;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
