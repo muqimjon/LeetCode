@@ -323,4 +323,18 @@ public class HashTablesTest
         Assert.Equal(expected, result);
     }
     #endregion
+
+    #region 1796 Second Largest Digit in a String
+    [Theory]
+    [InlineData(2, "dfa12321afd")]
+    [InlineData(-1, "abc1111")]
+    public void TestSecondLargestDigit(int expected, string s)
+    {
+        // Act
+        var result = Solution.SecondHighest(s);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }

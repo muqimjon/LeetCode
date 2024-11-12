@@ -432,4 +432,24 @@ public class HashTables
         return count;
     }
     #endregion
+
+    #region 1796 Second Largest Digit in a String
+    /// <summary>
+    /// Returns the second largest digit found in the alphanumeric string, or -1 if there is no second largest digit.
+    /// </summary>
+    /// <param name="s">An alphanumeric string containing digits and lowercase letters</param>
+    /// <returns>The second largest digit or -1 if it doesn't exist</returns>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public int SecondHighest(string s)
+    {
+        HashSet<int> digits = [];
+
+        foreach (var ch in s)
+            if (char.IsDigit(ch))
+                digits.Add(ch - '0');
+
+        return digits.Count < 2 ? -1 : digits.OrderByDescending(d => d).Skip(1).First();
+    }
+    #endregion
 }
