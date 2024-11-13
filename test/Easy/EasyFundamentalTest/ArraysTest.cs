@@ -2431,7 +2431,21 @@ public class ArraysTest
         // Assert
         Assert.Equal(expected, result);
     }
-    #endregion  
+    #endregion
+
+    #region 506 Relative Ranks
+    [Theory]
+    [InlineData(new string[] { "Gold Medal", "Silver Medal", "Bronze Medal", "4", "5" }, new int[] { 5, 4, 3, 2, 1 })]
+    [InlineData(new string[] { "Gold Medal", "5", "Bronze Medal", "Silver Medal", "4" }, new int[] { 10, 3, 8, 9, 4 })]
+    public void TestRelativeRanks(string[] expected, int[] score)
+    {
+        // Act
+        var result = Solution.FindRelativeRanks(score);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+    #endregion
 }
 
 #region 832 Flipping an Image <<

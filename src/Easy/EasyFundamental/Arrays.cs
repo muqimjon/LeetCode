@@ -2762,6 +2762,37 @@ public class Arrays
         return 0;
     }
     #endregion
+
+    #region 506 Relative Ranks
+    /// <summary>
+    /// Assigns relative ranks to athletes based on their scores.
+    /// </summary>
+    /// <param name="score">An array of unique integers representing scores of athletes.</param>
+    /// <returns>An array of strings where each string represents the rank of the corresponding athlete.</returns>
+    /// <time>O(n log n)</time>
+    /// <space>O(n)</space>
+    public string[] FindRelativeRanks(int[] score)
+    {
+        int n = score.Length;
+        string[] result = new string[n];
+
+        var ranked = score
+            .Select((s, i) => new { Score = s, Index = i })
+            .OrderByDescending(x => x.Score)
+            .ToList();
+
+        for (int i = 0; i < n; i++)
+            result[ranked[i].Index] = i switch
+            {
+                0 => "Gold Medal",
+                1 => "Silver Medal",
+                2 => "Bronze Medal",
+                _ => (i + 1).ToString()
+            };
+
+        return result;
+    }
+    #endregion
 }
 
 #region 705 Design HashSet
